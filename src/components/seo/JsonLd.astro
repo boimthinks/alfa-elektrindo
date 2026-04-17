@@ -1,0 +1,16 @@
+---
+interface Props {
+  schemaType: string;
+  data: any;
+}
+
+const { schemaType, data } = Astro.props;
+---
+
+<script type="application/ld+json">
+  {JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": schemaType,
+    ...data
+  })}
+</script>

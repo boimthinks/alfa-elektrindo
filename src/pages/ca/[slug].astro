@@ -1,0 +1,57 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getAllData } from '../../lib/api';
+
+export async function getStaticPaths() {
+  const { category, part } = await getAllData();
+  return category.map((cat) => {
+    const products = part.filter(p => p.category === cat.name);
+    return {
+      params: { slug: cat.slug },
+      props: { categoryName: cat.name, products },
+    };
+  });
+}
+
+const { categoryName, products } = Astro.props;
+---
+
+<Layout title={`Jual ${categoryName} - Komponen Elektronik | Alfa Elektrindo`} description={`Cari dan temukan berbagai produk ${categoryName} berkualitas. Hubungi kami untuk penawaran harga.`}>
+  <div class="bg-gray-50 py-16 border-b border-gray-200">
+    <div class="container mx-auto px-4">
+      <nav class="flex text-sm text-gray-500 mb-4">
+        <a href="/" class="hover:text-primary">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/products" class="hover:text-primary">Categories</a>
+        <span class="mx-2">/</span>
+        <span class="text-gray-900 font-medium">{categoryName}</span>
+      </nav>
+      <h1 class="text-4xl font-bold text-gray-900 mb-4 text-primary">Distributor {categoryName} #1 Indonesia</h1>
+      <p class="text-gray-600 max-w-3xl leading-relaxed">
+        Temukan berbagai komponen elektronik {categoryName} yang diperlukan dalam industri dan proses pabrikasi. Kami menyediakan akses tidak hanya untuk komponen baru, tetapi juga untuk komponen yang sudah tidak umum atau sulit ditemukan di pasaran. Saat ini kami memiliki {products.length} produk dalam kategori ini yang tersedia dalam database kami.
+      </p>
+    </div>
+  </div>
+
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        {products.map(product => (
+          <a href={`/part/${product.slug}`} class="group border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl transition-all bg-white flex flex-col h-full">
+            <div 
+              class="product-image-container group-hover:scale-105 transition-transform duration-300" 
+              style={`background-image: url('${product.fifu_image_url || '/placeholder-product.png'}');`}
+              role="img"
+              aria-label={product.title}
+            >
+            </div>
+            <div class="p-4 flex flex-grow flex-col">
+              <h3 class="text-sm font-bold text-gray-900 line-clamp-2 mb-2 group-hover:text-primary transition-colors">{product.title}</h3>
+              <p class="text-xs text-gray-500 mt-auto">{product.category} • {product.manufacturer}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

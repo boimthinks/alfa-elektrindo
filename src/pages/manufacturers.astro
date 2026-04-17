@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getAllData } from '../lib/api';
+
+const { manufacturer } = await getAllData();
+---
+
+<Layout title="Produsen Komponen Elektronik (Manufacturers) | Alfa Elektrindo" description="Daftar brand dan produsen komponen elektronik terkemuka yang kami sediakan.">
+  <div class="bg-gray-50 py-16 border-b border-gray-200">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Manufacturers</h1>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        Kami bekerja sama dengan berbagai produsen komponen elektronik terkemuka di dunia untuk memastikan kualitas produk terbaik.
+      </p>
+    </div>
+  </div>
+
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        {manufacturer.map(m => (
+          <a href={`/ma/${m.slug}`} class="px-6 py-4 border border-gray-100 rounded-xl bg-white hover:border-primary hover:shadow-md transition-all text-center font-semibold text-gray-700 hover:text-primary">
+            {m.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

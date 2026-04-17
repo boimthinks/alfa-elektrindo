@@ -1,0 +1,190 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getAllData, shuffle } from '../lib/api';
+
+const { part, blog, category, manufacturer } = await getAllData();
+
+const popularCategories = category.slice(0, 10);
+const popularManufacturers = manufacturer.slice(0, 8);
+const randomProducts = shuffle(part).slice(0, 30);
+const latestBlogs = blog
+  .sort((a, b) => new Date(b.date) - new Date(a.date))
+  .slice(0, 10);
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "url": "https://alfa.elektrindo.co.id/",
+      "name": "Alfa Elektrindo",
+      "description": "Supplier Komponen Elektronik Industri dan Pabrikasi"
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "CV. Alfa Elektrindo",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jln. Jend Sudirman Komp. Ruko Mega Legenda 2 Blok B2 No.7 Baloi Permai",
+        "addressLocality": "Batam",
+        "addressRegion": "Kepulauan Riau",
+        "postalCode": "29431",
+        "addressCountry": "ID"
+      },
+      "telephone": "+628126826672"
+    }
+  ]
+});
+---
+
+<Layout title="Supplier Komponen Elektronik | Alfa Elektrindo" schema={schema}>
+  <!-- Hero Section -->
+  <section 
+    class="relative bg-[#004799] bg-blend-multiply bg-cover bg-center py-[130px] px-[30px] border-b border-gray-100 overflow-hidden"
+    style="background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjPJ1ne5fdV5WRoqr4tN-Tptmg97f5f243xEO7mbFXLBhE-W3hEXUe_M88CVgh6tMJMAFJvBX4RhAiUnQdWuDSCfDMGaUlNUXaEHbJPQZAiTD3a6ZYWgH4Oj_qGuuULqOwb9813SMDbAa485vnf09AMbzPCl1YvatDzO8Ybln2ixxJg1ERwqKpPYmGPBPtm/s800/hero_alfa_elektrindo.webp');"
+  >
+    <div class="container mx-auto relative z-10 text-center">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight drop-shadow-lg">
+          Supplier <span class="text-blue-300">Komponen Elektronik</span>
+        </h1>
+        <p class="text-xl text-blue-50 mb-8 leading-relaxed drop-shadow-md">
+          Cari Dan Temukan Produk Komponen Elektronik Industri Dan Pabrikasi, Bahkan Komponen Usang Ataupun Komponen Elektronik Yang Sulit Ditemukan.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="#products" class="bg-white text-primary hover:bg-gray-100 px-8 py-3 rounded-full font-bold transition-all shadow-xl">
+            Lihat Produk
+          </a>
+          <a href="https://wa.me/628126826672" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#004799] px-8 py-3 rounded-full font-bold transition-all">
+            Hubungi Kami
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Overlay for better readability -->
+    <div class="absolute inset-0 bg-blue-900/40 pointer-events-none"></div>
+  </section>
+
+  <!-- Popular Categories -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">Popular Categories</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+        {popularCategories.map(cat => (
+          <a href={`/ca/${cat.slug}`} class="bg-gray-50 hover:bg-primary hover:text-white p-4 rounded-xl text-center transition-all border border-gray-100 font-medium">
+            {cat.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Manufacturers -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">Popular Manufacturers</h2>
+      <div class="flex flex-wrap justify-center gap-6">
+        {popularManufacturers.map(m => (
+          <a href={`/ma/${m.slug}`} class="bg-white px-6 py-3 rounded-lg shadow-sm border border-gray-100 hover:shadow-md hover:border-primary transition-all font-semibold text-gray-700">
+            {m.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Grid -->
+  <section id="products" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Product Komponen Elektronik</h2>
+      <p class="text-gray-600 text-center max-w-3xl mx-auto mb-12">
+        Kami memiliki berbagai produk komponen elektronika dan spare part elektronik untuk memenuhi berbagai kebutuhan. Produk-produk kami mencakup, namun tidak terbatas pada: Komponen Elektronika Industri, Pabrikasi Elektronik, dan Komponen Usang...
+      </p>
+      
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        {randomProducts.map(product => (
+          <a href={`/part/${product.slug}`} class="group border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl transition-all bg-white flex flex-col h-full">
+            <div 
+              class="product-image-container group-hover:scale-105 transition-transform duration-300" 
+              style={`background-image: url('${product.fifu_image_url || '/placeholder-product.png'}');`}
+              role="img"
+              aria-label={product.title}
+            >
+            </div>
+            <div class="p-4 flex flex-grow flex-col">
+              <h3 class="text-sm font-bold text-gray-900 line-clamp-2 mb-2 group-hover:text-primary transition-colors">{product.title}</h3>
+              <p class="text-xs text-gray-500 mt-auto">{product.category} • {product.manufacturer}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Artikel Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center mb-12 text-center md:text-left">
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900 mb-2">Artikel & Berita Terbaru</h2>
+          <p class="text-gray-600">Wawasan teknis dan informasi industri komponen elektronik</p>
+        </div>
+        <a href="/blog" class="mt-4 md:mt-0 bg-white text-primary border border-primary/20 hover:bg-primary hover:text-white px-6 py-2 rounded-full font-bold transition-all shadow-sm">
+          Lihat Semua Artikel →
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {latestBlogs && latestBlogs.length > 0 ? (
+          latestBlogs.map(post => (
+            <a href={`/blog/${post.slug}`} class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 flex flex-col h-full">
+              <div class="aspect-video overflow-hidden bg-gray-100">
+                <img 
+                  src={post.fifu_image_url || '/placeholder-blog.png'} 
+                  alt={post.long_title || post.title || "Blog Alfa Elektrindo"}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <h3 class="text-xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors line-clamp-2">
+                  {post.long_title || post.title}
+                </h3>
+                <div class="mt-auto flex items-center text-primary font-semibold text-sm">
+                  Baca Selengkapnya <span class="ml-2 group-hover:translate-x-2 transition-transform">→</span>
+                </div>
+              </div>
+            </a>
+          ))
+        ) : (
+          <div class="col-span-full py-20 text-center bg-white rounded-3xl border border-dashed border-gray-300">
+            <div class="text-4xl mb-4">📰</div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Belum Ada Artikel</h3>
+            <p class="text-gray-500">Silakan cek kembali nanti untuk informasi terbaru dari kami.</p>
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-primary overflow-hidden relative">
+    <div class="container mx-auto px-4 text-center relative z-10">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Butuh Komponen Spesifik?</h2>
+      <p class="text-blue-100 text-lg max-w-2xl mx-auto mb-10">
+        Jika Komponen Elektronik yang sedang Anda butuhkan tidak dapat Anda temukan pada halaman ini, pertimbangkan untuk langsung menghubungi kami. melalui Telpon, WhatsApp ataupun Email.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="tel:08126826672" class="bg-white text-primary px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition-all shadow-xl">
+          📞 Hubungi 0812-682-6672
+        </a>
+        <a href="https://wa.me/628126826672" class="bg-green-500 text-white px-10 py-4 rounded-full font-bold hover:bg-green-600 transition-all shadow-xl">
+          💬 WhatsApp Sekarang
+        </a>
+      </div>
+    </div>
+    <!-- Background patterns -->
+    <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl"></div>
+  </section>
+</Layout>

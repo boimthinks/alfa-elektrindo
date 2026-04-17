@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pages = [
+  { slug: 'about-us', title: 'About Us', content: 'CV. Alfa Elektrindo adalah supplier komponen elektronik yang berdedikasi untuk menyediakan solusi spare part elektronik terbaik bagi industri dan pabrikasi di seluruh Indonesia.' },
+  { slug: 'contact-us', title: 'Contact Us', content: 'Hubungi kami melalui WhatsApp di 0812-682-6672 atau email ke mail@elektrindo.co.id.' },
+  { slug: 'privacy-policy', title: 'Privacy Policy', content: 'Kami menjaga privasi data Anda dengan sangat serius. Informasi yang Anda berikan hanya digunakan untuk keperluan transaksi dan komunikasi bisnis.' },
+  { slug: 'terms', title: 'Terms', content: 'Syarat dan ketentuan penggunaan layanan Alfa Elektrindo.' },
+  { slug: 'cookie-policy', title: 'Cookie Policy', content: 'Kami menggunakan cookie untuk meningkatkan pengalaman pengguna di website kami.' }
+];
+
+export async function getStaticPaths() {
+  return [
+    { params: { slug: 'about-us' }, props: { title: 'About Us', content: 'CV. Alfa Elektrindo adalah supplier komponen elektronik yang berdedikasi untuk menyediakan solusi spare part elektronik terbaik bagi industri dan pabrikasi di seluruh Indonesia.' } },
+    { params: { slug: 'contact-us' }, props: { title: 'Contact Us', content: 'Hubungi kami melalui WhatsApp di 0812-682-6672 atau email ke mail@elektrindo.co.id.' } },
+    { params: { slug: 'privacy-policy' }, props: { title: 'Privacy Policy', content: 'Kami menjaga privasi data Anda dengan sangat serius. Informasi yang Anda berikan hanya digunakan untuk keperluan transaksi dan komunikasi bisnis.' } },
+    { params: { slug: 'terms' }, props: { title: 'Terms', content: 'Syarat dan ketentuan penggunaan layanan Alfa Elektrindo.' } },
+    { params: { slug: 'cookie-policy' }, props: { title: 'Cookie Policy', content: 'Kami menggunakan cookie untuk meningkatkan pengalaman pengguna di website kami.' } }
+  ];
+}
+
+const { title, content } = Astro.props;
+---
+
+<Layout title={`${title} | Alfa Elektrindo`}>
+  <div class="bg-gray-50 py-16 border-b border-gray-200">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-4xl font-bold text-gray-900">{title}</h1>
+    </div>
+  </div>
+
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <div class="prose prose-lg prose-blue max-w-none text-gray-700">
+        <p>{content}</p>
+        <p class="mt-8">Untuk informasi lebih lanjut, silakan hubungi tim kami.</p>
+      </div>
+    </div>
+  </section>
+</Layout>

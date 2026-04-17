@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #007aff;
+  --font-roboto: "Roboto", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900;
+    font-family: var(--font-roboto);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-roboto);
+  }
+
+  .product-image-container {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-origin: content-box;
+    background-blend-mode: normal;
+    height: 140px;
+    background-color: white;
+    padding: 12px;
+  }
+}
