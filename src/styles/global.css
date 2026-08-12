@@ -2,27 +2,145 @@
 
 @theme {
   --color-primary: #007aff;
-  --font-roboto: "Roboto", sans-serif;
+  --color-primary-dark: #002d5f;
+  --color-accent: #00c6ff;
+  --color-navy: #001e42;
+  --color-paper: #f6f8fa;
+  --color-divider: #e1e6ec;
+  --color-ink: #0a1428;
+
+  --font-sans: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --shadow-premium: 0 10px 30px -10px rgba(0, 45, 95, 0.1);
+  --shadow-premium-hover: 0 20px 40px -15px rgba(0, 122, 255, 0.2);
+  --shadow-hard: 6px 6px 0 0 rgba(0, 122, 255, 0.18);
+  --shadow-hard-white: 6px 6px 0 0 rgba(255, 255, 255, 0.14);
+}
+
+@font-face {
+  font-family: 'Material Icons Round';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/MaterialIconsRound-Regular.otf') format('opentype');
+}
+
+.material-icons-round {
+  font-family: 'Material Icons Round';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: clip;
+  }
+
   body {
-    @apply bg-white text-gray-900;
-    font-family: var(--font-roboto);
+    @apply bg-paper text-ink;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+
+  @media (max-width: 768px) {
+    body {
+      padding-bottom: 5rem;
+    }
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-roboto);
+    @apply font-bold tracking-tight;
+    font-family: var(--font-mono);
+  }
+
+  :where(a, button, [tabindex]):focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 
   .product-image-container {
+    @apply relative overflow-hidden flex items-center justify-center bg-white;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
     background-origin: content-box;
-    background-blend-mode: normal;
-    height: 140px;
-    background-color: white;
-    padding: 12px;
+    height: 180px;
+    padding: 1.5rem;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   }
+
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-premium;
+  }
+
+  .premium-button {
+    @apply inline-flex items-center justify-center px-8 py-4 rounded-lg font-bold transition-all duration-300 transform hover:-translate-y-1 active:scale-95 shadow-premium hover:shadow-premium-hover;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply font-mono text-[11px] font-bold uppercase tracking-[0.25em];
+  }
+
+  .data-tag {
+    @apply font-mono text-[10px] font-bold uppercase tracking-[0.25em] px-3 py-1 rounded bg-white/5 border border-white/15;
+  }
+
+  .hard-card {
+    @apply bg-white border rounded-lg shadow-hard;
+    border-color: var(--color-divider);
+  }
+
+  .blueprint-grid {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .blueprint-grid-light {
+    background-image:
+      linear-gradient(to right, rgba(0, 30, 66, 0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 30, 66, 0.045) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
 }

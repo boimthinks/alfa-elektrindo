@@ -1,198 +1,210 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { getAllData, shuffle } from '../../lib/api';
+import PageHeader from '../../components/PageHeader.astro';
+import { getCollection, render } from 'astro:content';
+import { getAllData, shuffle } from '../../lib/data';
 
 export async function getStaticPaths() {
-  const { blog, part } = await getAllData();
-  return blog.map((post) => {
+  const { part } = await getAllData();
+  const posts = await getCollection('blogs');
+
+  const STOPWORDS = new Set([
+    'yang','untuk','dari','dan','dengan','pada','anda','serta','dalam','adalah','benar','agar','tanpa','ketika','karena','setelah','cara','beserta','dunia','teknologi','industri','elektronik','komponen','aplikasi','fungsi','memahami','mengenal','panduan','lengkap','mengapa','bagaimana','kenapa','jitu','praktis','mengatakan','secara','hingga','sebuah','tentang','tersebut'
+  ]);
+
+  const tokenize = (t) => (t || '').toLowerCase().split(/[^a-z0-9]+/).filter(w => w.length >= 4 && !STOPWORDS.has(w));
+
+  const relatedArticles = (current) => {
+    const currentTokens = new Set(tokenize(current.data.long_title || current.data.title));
+    return posts
+      .filter(b => b.data.slug !== current.data.slug)
+      .map(b => {
+        const score = tokenize(b.data.long_title || b.data.title).filter(w => currentTokens.has(w)).length;
+        return { article: b.data, score };
+      })
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 6)
+      .map(x => x.article);
+  };
+
+  return await Promise.all(posts.map(async (post) => {
+    const { Content, headings } = await render(post);
     const randomProducts = shuffle(part).slice(0, 6);
-    const otherArticles = blog.filter(b => b.slug !== post.slug).slice(0, 6);
+    const otherArticles = relatedArticles(post);
     return {
-      params: { slug: post.slug },
-      props: { post, randomProducts, otherArticles },
+      params: { slug: post.data.slug },
+      props: { post: post.data, Content, headings, randomProducts, otherArticles },
     };
-  });
+  }));
 }
 
-const { post, randomProducts = [], otherArticles = [] } = Astro.props;
+const { post, Content, headings = [], randomProducts = [], otherArticles = [] } = Astro.props;
+const tocHeadings = headings.filter(h => h.depth <= 3);
+
+const formatDate = (d) => d
+  ? new Date(d).toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' })
+  : '-';
 
 const schema = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": post.long_title,
   "image": post.fifu_image_url,
-  "author": {
-    "@type": "Person",
-    "name": "Ressiana"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Alfa Elektrindo",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://alfa.elektrindo.co.id/favicon.png"
-    }
-  },
+  "author": { "@type": "Person", "name": "Ressiana" },
+  "publisher": { "@type": "Organization", "name": "Alfa Elektrindo", "logo": { "@type": "ImageObject", "url": "https://alfa.elektrindo.co.id/favicon.png" } },
   "datePublished": post.date
 });
 ---
 
 <Layout title={`${post.long_title} | Alfa Elektrindo Blog`} description={post.long_title} schema={schema}>
-  <article class="bg-white">
-    <!-- Header -->
-    <header class="py-16 bg-gray-50 border-b border-gray-100">
-      <div class="container mx-auto px-4 max-w-4xl text-center">
-        <nav class="flex justify-center text-sm text-gray-500 mb-6">
-          <a href="/" class="hover:text-primary transition-colors">Home</a>
-          <span class="mx-2">/</span>
-          <a href="/blog" class="hover:text-primary transition-colors">Blog</a>
-        </nav>
-        <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
-          {post.long_title}
-        </h1>
-        <div class="flex items-center justify-center gap-4 text-gray-500 font-medium">
-          {post.date && (
-            <time datetime={post.date}>
-              {new Date(post.date).toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' })}
-            </time>
-          )}
-          <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
-          <span>{post.kategori || 'Artikel'}</span>
-        </div>
-      </div>
-    </header>
-
-    <div class="container mx-auto px-4 py-12 max-w-4xl">
-      <!-- Featured Image 16:9 -->
-      {post.fifu_image_url && (
-        <div class="aspect-video rounded-3xl overflow-hidden shadow-2xl mb-12 -mt-24 bg-white ring-8 ring-white">
-          <img 
-            src={post.fifu_image_url} 
-            alt={post.long_title}
-            class="w-full h-full object-cover"
-          />
-        </div>
-      )}
-
-      <!-- Introduction Section -->
-      <div class="mb-12">
-        <h2 class="text-3xl font-bold text-gray-900 mb-6">{post.title}</h2>
-        {post.pendahuluan && (
-          <div class="prose prose-lg prose-blue max-w-none text-gray-700 leading-relaxed mb-8" set:html={post.pendahuluan} />
-        )}
-        
-        <!-- CTA Div -->
-        <div class="bg-primary/5 border-l-4 border-primary p-8 rounded-r-2xl mb-12">
-          <p class="text-xl text-gray-800 font-medium mb-6">
-            Sedang mencari komponen elektronik untuk industri dan manufaktur? Kami siap menyediakan berbagai komponen elektronik, termasuk komponen yang langka atau sulit ditemukan. Segera hubungi kami.
-          </p>
-          <a href="https://wa.me/628126826672" class="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold hover:shadow-lg hover:scale-105 transition-all text-lg">
-            <span>💬 Hubungi via WhatsApp</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- Random Components -->
-      <div class="mb-16">
-        <h3 class="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-          <span class="w-8 h-1 bg-primary rounded-full"></span>
-          Rekomendasi Komponen
-        </h3>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
-          {randomProducts.map(product => (
-            <a href={`/part/${product.slug}`} class="group border border-gray-100 rounded-xl overflow-hidden hover:shadow-lg transition-all bg-white flex flex-col h-full shadow-sm">
-              <div class="product-image-container group-hover:scale-105 transition-transform duration-300 !h-[120px] !p-2" style={`background-image: url('${product.fifu_image_url || '/placeholder-product.png'}');`}></div>
-              <div class="p-3 flex flex-grow flex-col">
-                <h4 class="text-xs font-bold text-gray-900 line-clamp-2 mb-1 group-hover:text-primary transition-colors">{product.title}</h4>
-                <p class="text-[10px] text-gray-500 mt-auto uppercase font-semibold">{product.manufacturer}</p>
-              </div>
-            </a>
-          ))}
-        </div>
-      </div>
-
-      <!-- Main Content -->
-      <div class="prose prose-lg prose-blue max-w-none text-gray-700 leading-relaxed mb-16" set:html={post.content} />
-
-      <!-- Author Section -->
-      <div class="bg-gray-50 rounded-3xl p-8 flex flex-col md:flex-row items-center gap-6 mb-16 border border-gray-100">
-        <div class="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center text-3xl shrink-0">
-          👩‍💼
-        </div>
-        <div>
-          <h4 class="text-xl font-bold text-gray-900 mb-2">Ressiana</h4>
-          <p class="text-gray-600 leading-relaxed">
-            Menyukai eksplorasi komponen elektronik terkini, dan Selalu siap menjawab semua pertanyaan pelanggan untuk solusi spare part terbaik bagi bisnis Anda.
-          </p>
-        </div>
-      </div>
-
-      <!-- Kesimpulan -->
-      {post.kesimpulan && (
-        <div class="mb-16">
-          <h2 class="text-2xl font-bold text-gray-900 mb-6">Kesimpulan</h2>
-          <div class="prose prose-lg prose-blue max-w-none text-gray-700" set:html={post.kesimpulan} />
-        </div>
-      )}
-
-      <!-- Meta Post -->
-      <div class="py-8 border-t border-b border-gray-100 flex flex-wrap gap-6 mb-16 text-sm">
-        <div class="flex flex-col">
-          <span class="text-gray-400 uppercase tracking-widest text-[10px] font-bold mb-1">Diterbitkan</span>
-          <span class="text-gray-900 font-semibold">{post.date ? new Date(post.date).toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' }) : '-'}</span>
-        </div>
-        <div class="flex flex-col">
-          <span class="text-gray-400 uppercase tracking-widest text-[10px] font-bold mb-1">Kategori</span>
-          <span class="text-gray-900 font-semibold">{post.kategori || 'Artikel'}</span>
-        </div>
-        <div class="flex flex-col ml-auto">
-          <span class="text-gray-400 uppercase tracking-widest text-[10px] font-bold mb-1">Share</span>
-          <div class="flex gap-3">
-            <button class="text-gray-400 hover:text-primary transition-colors">Twitter</button>
-            <button class="text-gray-400 hover:text-primary transition-colors">Facebook</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Other Articles -->
-      {otherArticles.length > 0 && (
-        <section>
-          <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">Artikel Lainnya</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {otherArticles.map(article => (
-              <a href={`/blog/${article.slug}`} class="group flex items-start gap-4">
-                <div class="w-32 h-20 shrink-0 rounded-xl overflow-hidden shadow-sm">
-                  <img src={article.fifu_image_url || '/placeholder-blog.png'} alt={article.title} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                </div>
-                <div>
-                  <h4 class="text-lg font-bold text-gray-900 group-hover:text-primary transition-colors line-clamp-2 leading-tight mb-2">
-                    {article.long_title || article.title}
-                  </h4>
-                  <span class="text-xs text-gray-500 uppercase font-bold tracking-wider">{article.date ? new Date(article.date).toLocaleDateString('id-ID', { month: 'short', day: 'numeric' }) : ''}</span>
-                </div>
-              </a>
-            ))}
-          </div>
-        </section>
-      )}
+  <PageHeader
+    eyebrow={`Ref: ALFA-DOC / BLOG`}
+    title={post.long_title}
+  >
+    <nav slot="breadcrumb" class="flex text-blue-200 text-[10px] font-mono uppercase tracking-widest mb-6">
+      <a href="/" class="hover:text-white">Home</a>
+      <span class="mx-3 text-blue-400">/</span>
+      <a href="/blog" class="hover:text-white">Blog</a>
+    </nav>
+    <div slot="meta" class="flex flex-wrap gap-x-8 gap-y-3 border-t border-white/10 pt-6 mt-8 font-mono text-[11px] uppercase tracking-widest text-gray-400">
+      <span>{post.kategori || 'Artikel'}</span>
+      <span class="text-white font-bold">{formatDate(post.date)}</span>
     </div>
-  </article>
+  </PageHeader>
+
+  <section class="py-16 bg-paper">
+    <div class="container mx-auto px-4 max-w-[1100px]">
+      <div class="lg:grid lg:grid-cols-[2fr_1fr] lg:gap-14 lg:items-start">
+        
+        <!-- Konten -->
+        <div class="min-w-0">
+          {post.fifu_image_url && (
+            <div class="hard-card mb-10 overflow-hidden">
+              <img src={post.fifu_image_url} alt={post.long_title} class="w-full aspect-video object-cover" fetchpriority="high" decoding="async" />
+            </div>
+          )}
+
+          {post.pendahuluan && (
+            <div class="mb-12 border-l-4 border-primary/30 pl-6">
+              <p class="text-base text-gray-700 leading-[1.8] font-medium">{post.pendahuluan}</p>
+            </div>
+          )}
+
+          <div class="prose prose-lg prose-blue max-w-none text-gray-700 leading-[1.8] font-medium">
+            <Content />
+          </div>
+
+          <!-- CTA -->
+          <div class="mt-20 bg-navy text-white rounded-lg p-10 md:p-14 shadow-hard relative overflow-hidden text-center">
+            <div class="absolute inset-0 blueprint-grid opacity-50"></div>
+            <div class="relative z-10">
+              <h3 class="eyebrow text-accent mb-6">Butuh Komponen Industri?</h3>
+              <p class="text-gray-300 mb-10 font-sans">Kami membantu menemukan komponen elektronik yang langka. Chat tim kami untuk penawaran terbaik.</p>
+              <a href="https://wa.me/628126826672" class="premium-button bg-[#25D366] text-white text-xs">
+                <span class="material-icons-round mr-2 text-xl">chat</span> WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <!-- Artikel Terkait (setelah CTA) -->
+          {otherArticles.length > 0 && (
+            <div class="mt-20 pt-16 border-t border-divider">
+              <div class="flex items-center gap-6 mb-10">
+                <h3 class="eyebrow text-navy">Artikel Terkait</h3>
+                <div class="h-px flex-grow bg-divider"></div>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                {otherArticles.map(article => (
+                  <a href={`/blog/${article.slug}`} class="hard-card overflow-hidden group flex flex-col h-full hover:-translate-y-1 transition-transform duration-300">
+                    <div class="aspect-video overflow-hidden bg-gray-100">
+                      <img src={article.fifu_image_url || '/placeholder-blog.png'} alt={article.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow">
+                      <h4 class="font-mono text-xs font-bold text-navy group-hover:text-primary transition-colors line-clamp-2 leading-snug mb-3">
+                        {article.long_title || article.title}
+                      </h4>
+                      <span class="mt-auto text-[9px] font-mono text-gray-400 uppercase tracking-widest">{article.date ? new Date(article.date).toLocaleDateString('id-ID', { month: 'short', day: 'numeric' }) : ''}</span>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+
+        <!-- TOC -->
+        {tocHeadings.length > 0 && (
+          <aside class="hidden lg:block sticky top-24 self-start hard-card p-6 max-h-[calc(100vh-7rem)] overflow-y-auto">
+            <h3 class="eyebrow text-navy mb-5">Daftar Isi</h3>
+            <ul class="space-y-2 text-sm font-mono text-gray-600">
+              {tocHeadings.map(h => (
+                <li class={h.depth === 3 ? 'pl-4' : ''}>
+                  <a href={`#${h.slug}`} class="block py-1 hover:text-primary transition-colors">{h.text}</a>
+                </li>
+              ))}
+            </ul>
+          </aside>
+        )}
+      </div>
+    </div>
+  </section>
 </Layout>
 
 <style is:global>
+  @reference "tailwindcss";
+
+  /* Content area typography: H2 clearly bigger than paragraph, generous spacing */
   .prose h2 {
-    color: #111827;
-    font-weight: 700;
-    margin-top: 2.5rem;
-    margin-bottom: 1.25rem;
-    font-size: 1.875rem;
+    @apply text-3xl font-black mt-20 mb-6 uppercase tracking-tight scroll-mt-28;
+    color: var(--color-navy);
   }
+
+  .prose h3 {
+    @apply text-xl font-bold mt-14 mb-5 scroll-mt-28;
+    color: var(--color-navy);
+  }
+
   .prose p {
-    margin-bottom: 1.5rem;
+    @apply mb-7 leading-[1.9] text-base text-gray-700;
   }
-  .prose ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
-    margin-bottom: 1.5rem;
+
+  .prose ul, .prose ol {
+    @apply my-8 pl-8 space-y-3 text-gray-700;
+  }
+
+  .prose ul { @apply list-disc; }
+  .prose ol { @apply list-decimal; }
+
+  .prose li {
+    @apply mb-3 leading-relaxed;
+  }
+
+  /* Tables */
+  .prose table {
+    @apply w-full my-12 border-collapse rounded-lg overflow-hidden;
+    box-shadow: var(--shadow-premium);
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .prose th, .prose td {
+    @apply p-5 text-left border-b;
+    border-bottom-color: var(--color-divider);
+  }
+  .prose th {
+    @apply bg-gray-50 text-xs font-mono font-bold uppercase tracking-widest text-gray-500;
+  }
+  .prose td {
+    @apply text-sm text-gray-700 font-medium;
+  }
+
+  .prose strong {
+    @apply font-black;
+    color: var(--color-navy);
+  }
+
+  .prose img {
+    @apply w-full h-auto rounded-lg my-12;
+    box-shadow: var(--shadow-hard);
   }
 </style>

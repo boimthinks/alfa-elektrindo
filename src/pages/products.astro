@@ -1,29 +1,31 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { getAllData } from '../lib/api';
+import PageHeader from '../components/PageHeader.astro';
+import { getAllData } from '../lib/data';
 
 const { category } = await getAllData();
 ---
 
-<Layout title="Kategori Produk Komponen Elektronik | Alfa Elektrindo" description="Jelajahi berbagai kategori komponen elektronik industri dan pabrikasi.">
-  <div class="bg-gray-50 py-16 border-b border-gray-200">
-    <div class="container mx-auto px-4 text-center">
-      <h1 class="text-4xl font-bold text-gray-900 mb-4">Categories</h1>
-      <p class="text-gray-600 max-w-2xl mx-auto">
-        Temukan berbagai jenis komponen elektronik yang Anda butuhkan melalui kategori produk kami yang lengkap.
-      </p>
+<Layout title="Kategori Produk Komponen Elektronik | Alfa Elektrindo" description="Jelajahi berbagai kategori komponen elektronik industri dan pabrikasi untuk kebutuhan bisnis Anda.">
+  <PageHeader
+    eyebrow={`Ref: ALFA-DOC / CATEGORIES`}
+    title={`Product`}
+    titleAccent={`Categories`}
+    description="Eksplorasi ekosistem komponen elektronik industri melalui klasifikasi kategori yang terorganisir."
+  >
+    <div slot="meta" class="flex flex-wrap gap-x-8 gap-y-3 border-t border-white/10 pt-6 mt-8 font-mono text-[11px] uppercase tracking-widest text-gray-400">
+      <span>Total: <span class="text-white font-bold">{category.length}</span></span>
     </div>
-  </div>
+  </PageHeader>
 
-  <section class="py-16 bg-white">
+  <section class="py-16 bg-paper">
     <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-5">
         {category.map(cat => (
-          <a href={`/ca/${cat.slug}`} class="group p-8 border border-gray-100 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-xl hover:border-primary transition-all text-center">
-            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:text-white transition-all text-primary">
-              <span class="text-2xl">📦</span>
-            </div>
-            <h3 class="text-lg font-bold text-gray-900 group-hover:text-primary transition-colors">{cat.name}</h3>
+          <a href={`/ca/${cat.slug}`} class="hard-card p-5 group hover:-translate-y-1 transition-transform duration-300 flex flex-col">
+            <span class="block w-2 h-2 bg-primary mb-3"></span>
+            <span class="font-mono text-sm font-bold text-navy leading-snug group-hover:text-primary transition-colors">{cat.name}</span>
+            <span class="mt-auto pt-3 text-[10px] font-mono text-gray-400 uppercase tracking-widest">OPEN</span>
           </a>
         ))}
       </div>

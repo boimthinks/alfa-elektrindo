@@ -1,0 +1,91 @@
+---
+---
+<div id="contact-popup-overlay" class="fixed inset-0 bg-navy/40 backdrop-blur-md z-[1000] hidden opacity-0 transition-opacity duration-500 flex items-center justify-center p-4">
+  <div id="contact-popup" class="bg-white rounded-lg max-w-lg w-full shadow-2xl overflow-hidden transform scale-95 opacity-0 transition-all duration-500 relative border border-divider">
+    
+    <button id="close-popup" class="absolute top-4 right-4 text-gray-400 hover:text-navy transition-colors">
+      <span class="material-icons-round">close</span>
+    </button>
+
+    <div class="p-8">
+      <div class="w-12 h-12 bg-primary/10 rounded flex items-center justify-center mb-6">
+        <span class="material-icons-round text-primary text-2xl">support_agent</span>
+      </div>
+
+      <h2 class="text-2xl font-mono font-black text-navy mb-4 uppercase tracking-tight">Butuh Bantuan?</h2>
+      
+      <p class="text-gray-600 text-sm leading-relaxed mb-8 font-sans">
+        Tidak menemukan komponen yang dibutuhkan? Hubungi kami segera untuk pengecekan stok offline.
+      </p>
+
+      <div class="space-y-3 font-mono">
+        <a href="https://wa.me/628126826672" class="w-full flex items-center justify-center gap-2 py-3 rounded bg-[#25D366] text-white font-bold text-xs uppercase tracking-widest shadow-hard">
+          <span class="material-icons-round">chat</span> WhatsApp Chat
+        </a>
+        
+        <div class="flex flex-col md:flex-row gap-3">
+          <a href="tel:08126826672" class="flex-grow flex items-center justify-center gap-2 py-3 rounded border border-divider text-gray-700 font-bold text-xs uppercase tracking-widest hover:bg-gray-50 transition-colors">
+            <span class="material-icons-round text-primary text-sm">call</span> 0812-682-6672
+          </a>
+          <a href="mailto:mail@elektrindo.co.id" class="flex-grow flex items-center justify-center gap-2 py-3 rounded border border-divider text-gray-700 font-bold text-xs uppercase tracking-widest hover:bg-gray-50 transition-colors">
+            <span class="material-icons-round text-primary text-sm">mail</span> Email
+          </a>
+        </div>
+      </div>
+      
+      <p class="text-[9px] text-gray-400 mt-6 text-center uppercase tracking-widest font-mono font-bold">Alfa Elektrindo - Industrial Partner</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  const POPUP_STORAGE_KEY = 'alfa_contact_popup_count';
+  const MAX_SHOW_COUNT = 3;
+  const DELAY_MS = 20000; // 20 seconds
+
+  function showPopup() {
+    const overlay = document.getElementById('contact-popup-overlay');
+    const popup = document.getElementById('contact-popup');
+    const currentCount = parseInt(localStorage.getItem(POPUP_STORAGE_KEY) || '0');
+
+    if (currentCount < MAX_SHOW_COUNT) {
+      setTimeout(() => {
+        overlay?.classList.remove('hidden');
+        setTimeout(() => {
+          overlay?.classList.remove('opacity-0');
+          overlay?.classList.add('opacity-100');
+          popup?.classList.remove('scale-90', 'opacity-0');
+          popup?.classList.add('scale-100', 'opacity-100');
+        }, 10);
+        
+        localStorage.setItem(POPUP_STORAGE_KEY, (currentCount + 1).toString());
+      }, DELAY_MS);
+    }
+  }
+
+  function hidePopup() {
+    const overlay = document.getElementById('contact-popup-overlay');
+    const popup = document.getElementById('contact-popup');
+
+    overlay?.classList.remove('opacity-100');
+    overlay?.classList.add('opacity-0');
+    popup?.classList.remove('scale-100', 'opacity-100');
+    popup?.classList.add('scale-90', 'opacity-0');
+
+    setTimeout(() => {
+      overlay?.classList.add('hidden');
+    }, 500);
+  }
+
+  document.getElementById('close-popup')?.addEventListener('click', hidePopup);
+  document.getElementById('contact-popup-overlay')?.addEventListener('click', (e) => {
+    if (e.target === e.currentTarget) hidePopup();
+  });
+
+  // Run on page load
+  if (document.readyState === 'complete') {
+    showPopup();
+  } else {
+    window.addEventListener('load', showPopup);
+  }
+</script>

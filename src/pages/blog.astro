@@ -1,44 +1,46 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { getAllData } from '../lib/api';
+import PageHeader from '../components/PageHeader.astro';
+import { getAllData } from '../lib/data';
 
 const { blog } = await getAllData();
 const sortedBlog = blog.sort((a, b) => new Date(b.date) - new Date(a.date));
 ---
 
 <Layout title="Blog & Artikel Komponen Elektronik | Alfa Elektrindo" description="Dapatkan informasi terbaru seputar komponen elektronik, industri, dan tips pabrikasi.">
-  <div class="bg-primary py-20 text-white relative overflow-hidden">
-    <div class="container mx-auto px-4 relative z-10">
-      <h1 class="text-4xl md:text-5xl font-bold mb-6">Blog & Resources</h1>
-      <p class="text-blue-100 text-xl max-w-2xl">
-        Kumpulan artikel teknis, berita industri, dan panduan penggunaan komponen elektronik untuk mendukung efisiensi bisnis Anda.
-      </p>
+  <PageHeader
+    eyebrow={`Ref: ALFA-DOC / INDUSTRIAL-BLOG`}
+    title={`Industrial`}
+    titleAccent={`Blog`}
+    description="Wawasan teknis, berita industri terbaru, dan solusi pengadaan komponen elektronik global."
+  >
+    <div slot="meta" class="flex flex-wrap gap-x-8 gap-y-3 border-t border-white/10 pt-6 mt-8 font-mono text-[11px] uppercase tracking-widest text-gray-400">
+      <span>Articles: <span class="text-white font-bold">{sortedBlog.length}</span></span>
     </div>
-    <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl"></div>
-  </div>
+  </PageHeader>
 
-  <section class="py-16 bg-white">
+  <section class="py-16 bg-paper">
     <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {sortedBlog.map(post => (
-          <a href={`/blog/${post.slug}`} class="group flex flex-col bg-white border border-gray-100 rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-300">
-            <div class="aspect-video overflow-hidden bg-gray-50">
-              <img 
-                src={post.fifu_image_url || '/placeholder-blog.png'} 
+          <a href={`/blog/${post.slug}`} class="hard-card overflow-hidden group flex flex-col h-full hover:-translate-y-1 transition-transform duration-300">
+            <div class="aspect-video overflow-hidden bg-gray-100">
+              <img
+                src={post.fifu_image_url || '/placeholder-blog.png'}
                 alt={post.long_title}
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"
               />
             </div>
-            <div class="p-8 flex flex-col flex-grow">
-              <time class="text-sm font-bold text-primary uppercase tracking-widest mb-3">
+            <div class="p-5 flex flex-col flex-grow border-t border-divider">
+              <p class="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-3">
                 {post.date ? new Date(post.date).toLocaleDateString('id-ID', { year: 'numeric', month: 'short', day: 'numeric' }) : 'Article'}
-              </time>
-              <h3 class="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors mb-4 line-clamp-2">
+              </p>
+              <h3 class="font-mono text-base font-bold text-navy group-hover:text-primary transition-colors line-clamp-2 leading-snug mb-4">
                 {post.long_title}
               </h3>
-              <div class="mt-auto flex items-center text-gray-900 font-bold">
-                Read Article <span class="ml-2 group-hover:translate-x-2 transition-transform">→</span>
+              <div class="mt-auto flex items-center text-[10px] font-mono text-primary font-bold uppercase tracking-widest">
+                Read More <span class="ml-2 group-hover:translate-x-2 transition-transform text-base">→</span>
               </div>
             </div>
           </a>

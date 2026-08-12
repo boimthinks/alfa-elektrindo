@@ -1,0 +1,27 @@
+---
+interface Props {
+  product: {
+    slug: string;
+    title: string;
+    fifu_image_url?: string;
+    category?: string;
+    manufacturer?: string;
+  };
+  imageHeight?: string;
+}
+
+const { product, imageHeight = 'h-[110px]' } = Astro.props;
+---
+
+<a href={`/part/${product.slug}`} class="hard-card overflow-hidden group flex flex-col h-full hover:-translate-y-1 transition-transform duration-300">
+  <div class={`product-image-container ${imageHeight} !p-3`}>
+    <div
+      class="w-full h-full group-hover:scale-105 transition-transform duration-500"
+      style={`background-image: url('${product.fifu_image_url || '/placeholder-product.png'}'); background-size: contain; background-position: center; background-repeat: no-repeat;`}
+    ></div>
+  </div>
+  <div class="p-4 flex flex-col flex-grow border-t border-divider">
+    <h3 class="font-mono text-xs font-bold text-navy line-clamp-2 group-hover:text-primary transition-colors leading-snug">{product.title}</h3>
+    <p class="mt-auto pt-2 text-[9px] font-mono text-gray-400 uppercase tracking-widest">{product.category} · {product.manufacturer}</p>
+  </div>
+</a>

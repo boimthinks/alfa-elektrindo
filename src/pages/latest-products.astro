@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { getAllData } from '../lib/api';
+import PageHeader from '../components/PageHeader.astro';
+import ProductCard from '../components/ProductCard.astro';
+import { getAllData } from '../lib/data';
 
 const { part } = await getAllData();
 const latestProducts = part
@@ -9,32 +11,22 @@ const latestProducts = part
 ---
 
 <Layout title="Produk Terbaru | Alfa Elektrindo" description="Daftar komponen elektronik terbaru yang tersedia di gudang kami.">
-  <div class="bg-gray-50 py-16 border-b border-gray-200">
-    <div class="container mx-auto px-4 text-center">
-      <h1 class="text-4xl font-bold text-gray-900 mb-4">Latest Products</h1>
-      <p class="text-gray-600 max-w-2xl mx-auto">
-        Produk komponen elektronik terbaru yang baru saja kami update dalam sistem database kami.
-      </p>
+  <PageHeader
+    eyebrow={`Ref: ALFA-DOC / NEW-ARRIVALS`}
+    title={`New`}
+    titleAccent={`Arrivals`}
+    description="Katalog komponen elektronik industri terbaru yang baru saja diperbarui dalam sistem database global kami."
+  >
+    <div slot="meta" class="flex flex-wrap gap-x-8 gap-y-3 border-t border-white/10 pt-6 mt-8 font-mono text-[11px] uppercase tracking-widest text-gray-400">
+      <span>Displayed: <span class="text-white font-bold">{latestProducts.length}</span> / {part.length}</span>
     </div>
-  </div>
+  </PageHeader>
 
-  <section class="py-16 bg-white">
+  <section class="py-16 bg-paper">
     <div class="container mx-auto px-4">
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-5">
         {latestProducts.map(product => (
-          <a href={`/part/${product.slug}`} class="group border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl transition-all bg-white flex flex-col h-full">
-            <div 
-              class="product-image-container group-hover:scale-105 transition-transform duration-300" 
-              style={`background-image: url('${product.fifu_image_url || '/placeholder-product.png'}');`}
-              role="img"
-              aria-label={product.title}
-            >
-            </div>
-            <div class="p-4 flex flex-grow flex-col">
-              <h3 class="text-sm font-bold text-gray-900 line-clamp-2 mb-2 group-hover:text-primary transition-colors">{product.title}</h3>
-              <p class="text-xs text-gray-500 mt-auto">{product.category} • {product.manufacturer}</p>
-            </div>
-          </a>
+          <ProductCard product={product} />
         ))}
       </div>
     </div>

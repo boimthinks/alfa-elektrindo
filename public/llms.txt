@@ -1,0 +1,38 @@
+# Alfa Elektrindo
+
+> CV. Alfa Elektrindo adalah penyalur komponen elektronik industri dan pabrikasi di Batam, Kepulauan Riau, Indonesia. Kami menyediakan komponen elektronika industri, spare part pabrikasi, serta komponen usang (obsolete) dan sulit ditemukan untuk kebutuhan industri.
+
+Kami membantu industri dan pabrikasi menemukan komponen elektronik yang tepat, termasuk komponen yang sudah tidak diproduksi massal. Melayani kebutuhan produsen dari skala kecil hingga korporat di Kepulauan Riau dan sekitarnya.
+
+Kontak:
+- WhatsApp: https://wa.me/628126826672
+- Email: mail@elektrindo.co.id
+- Alamat: Jln. Jend Sudirman Komp. Ruko Mega Legenda 2 Blok B2 No.7 Baloi Permai, Batam, Kepulauan Riau 29431, Indonesia
+
+## Tentang
+
+- [Tentang Kami](https://alfa.elektrindo.co.id/about-us): Profil CV. Alfa Elektrindo
+- [Hubungi Kami](https://alfa.elektrindo.co.id/contact-us): Informasi kontak dan alamat
+
+## Produk
+
+- [Kategori Produk](https://alfa.elektrindo.co.id/products): Daftar kategori komponen elektronik industri
+- [Katalog Lengkap](https://alfa.elektrindo.co.id/latest-products): Semua produk yang tersedia
+- [Produsen / Merek](https://alfa.elektrindo.co.id/manufacturers): Daftar brand produsen komponen
+
+Detail produk individual tersedia pada URL dengan pola `/part/[slug]` (contoh: /part/3rw3014-1bb04).
+
+## Layanan
+
+- [Jual Komponen](https://alfa.elektrindo.co.id/jual-komponen): Penawaran jual komponen elektronik tertentu
+- [Area Layanan](https://alfa.elektrindo.co.id/products): Melayani kebutuhan industri di Kepulauan Riau dan sekitarnya
+
+## Blog
+
+- [Blog & Artikel](https://alfa.elektrindo.co.id/blog): Artikel tentang komponen elektronik industri, sensor, VFD, IGBT, otomasi, dan tips perawatan mesin
+
+## Optional
+
+- [Kebijakan Privasi](https://alfa.elektrindo.co.id/privacy-policy): Cara kami menangani data pengunjung
+- [Syarat dan Ketentuan](https://alfa.elektrindo.co.id/terms): Ketentuan penggunaan situs
+- [Kebijakan Cookie](https://alfa.elektrindo.co.id/cookie-policy): Informasi penggunaan cookie

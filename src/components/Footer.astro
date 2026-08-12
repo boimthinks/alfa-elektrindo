@@ -2,63 +2,81 @@
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="bg-gray-50 border-t border-gray-200 pt-12 pb-8">
-  <div class="container mx-auto px-4">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-      <!-- CUSTOMER SERVICE -->
+<footer class="bg-navy text-white pt-20 pb-12 relative overflow-hidden border-t-4 border-[#007aff]">
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+      <div class="col-span-1 md:col-span-1">
+        <a href="/" class="flex items-center gap-3 mb-8 group">
+          <img src="/icon.png" alt="Alfa Elektrindo Logo" class="w-10 h-10 object-contain" />
+          <div class="flex flex-col">
+            <span class="text-xl font-bold font-mono tracking-tighter text-white uppercase">Alfa <span class="text-primary">Elektrindo</span></span>
+            <span class="eyebrow text-[9px] text-gray-400">Industrial Supply</span>
+          </div>
+        </a>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+          Penyalur komponen elektronik industri dan pabrikasi. Spesialis komponen sulit ditemukan.
+        </p>
+      </div>
+
       <div>
-        <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wider mb-4">Customer Service</h3>
-        <ul class="space-y-3">
+        <h3 class="eyebrow text-white mb-8">Customer Service</h3>
+        <ul class="space-y-4 font-mono text-sm">
           <li class="flex items-start">
-            <span class="text-primary mr-2">📞</span>
-            <span class="text-gray-600">Telp: 0812-682-6672</span>
+            <span class="material-icons-round text-primary mr-3">call</span>
+            <span class="text-gray-400">0812-682-6672</span>
           </li>
           <li class="flex items-start">
-            <span class="text-primary mr-2">💬</span>
-            <a href="https://wa.me/628126826672" class="text-gray-600 hover:text-primary transition-colors">WhatsApp</a>
+            <span class="material-icons-round text-primary mr-3">chat_bubble</span>
+            <a href="https://wa.me/628126826672" class="text-gray-400 hover:text-white transition-colors">WhatsApp Chat</a>
           </li>
           <li class="flex items-start">
-            <span class="text-primary mr-2">✉️</span>
-            <a href="mailto:mail@elektrindo.co.id" class="text-gray-600 hover:text-primary transition-colors">mail@elektrindo.co.id</a>
-          </li>
-          <li class="flex items-start">
-            <span class="text-primary mr-2">📍</span>
-            <span class="text-gray-600 text-sm">
-              Jln. Jend Sudirman Komp. Ruko Mega Legenda 2 Blok B2 No.7 Baloi Permai - Batam Kota Batam - Kepri 29431
-            </span>
+            <span class="material-icons-round text-primary mr-3">mail</span>
+            <a href="mailto:mail@elektrindo.co.id" class="text-gray-400 hover:text-white transition-colors">mail@elektrindo.co.id</a>
           </li>
         </ul>
       </div>
 
-      <!-- COMPANY -->
       <div>
-        <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wider mb-4">Company</h3>
-        <ul class="space-y-3">
-          <li><a href="/about-us" class="text-gray-600 hover:text-primary transition-colors">About Us</a></li>
-          <li><a href="/contact-us" class="text-gray-600 hover:text-primary transition-colors">Contact Us</a></li>
-          <li><a href="/privacy-policy" class="text-gray-600 hover:text-primary transition-colors">Privacy Policy</a></li>
-          <li><a href="/terms" class="text-gray-600 hover:text-primary transition-colors">Terms</a></li>
-          <li><a href="/cookie-policy" class="text-gray-600 hover:text-primary transition-colors">Cookie Policy</a></li>
+        <h3 class="eyebrow text-white mb-8">Company</h3>
+        <ul class="space-y-4 font-mono text-sm">
+          <li><a href="/about-us" class="text-gray-400 hover:text-white transition-all hover:pl-2">About Us</a></li>
+          <li><a href="/contact-us" class="text-gray-400 hover:text-white transition-all hover:pl-2">Contact Us</a></li>
+          <li><a href="/privacy-policy" class="text-gray-400 hover:text-white transition-all hover:pl-2">Privacy</a></li>
+          <li><a href="/terms" class="text-gray-400 hover:text-white transition-all hover:pl-2">Terms</a></li>
         </ul>
       </div>
 
-      <!-- RESOURCES -->
       <div>
-        <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wider mb-4">Resources</h3>
-        <ul class="space-y-3">
-          <li><a href="/products" class="text-gray-600 hover:text-primary transition-colors">Products</a></li>
-          <li><a href="/manufacturers" class="text-gray-600 hover:text-primary transition-colors">Manufacturers</a></li>
-          <li><a href="/latest-products" class="text-gray-600 hover:text-primary transition-colors">Latest Products</a></li>
-          <li><a href="/blog" class="text-gray-600 hover:text-primary transition-colors">Blog</a></li>
-          <li><a href="/jual-komponen" class="text-gray-600 hover:text-primary transition-colors">Jual Komponen</a></li>
+        <h3 class="eyebrow text-white mb-8">Resources</h3>
+        <ul class="space-y-4 font-mono text-sm">
+          <li><a href="/products" class="text-gray-400 hover:text-white transition-all hover:pl-2">Catalog</a></li>
+          <li><a href="/manufacturers" class="text-gray-400 hover:text-white transition-all hover:pl-2">Brands</a></li>
+          <li><a href="/blog" class="text-gray-400 hover:text-white transition-all hover:pl-2">Industrial Blog</a></li>
         </ul>
       </div>
     </div>
 
-    <div class="border-t border-gray-200 pt-8 text-center">
-      <p class="text-gray-500 text-sm">
-        Copyright ©{currentYear} CV. Alfa Elektrindo. Alfa Elektrindo adalah Penyalur komponen elektronik untuk Industri dan Pabrikasi yang berkantor di Batam, Indonesia.
+    <!-- ADDRESS BOX -->
+    <div class="bg-white/5 border border-divider rounded-lg p-8 mb-12 flex flex-col md:flex-row items-center justify-between gap-6 font-mono">
+      <div class="flex items-center gap-4">
+        <div class="w-10 h-10 bg-white/5 rounded flex items-center justify-center">
+          <span class="material-icons-round text-primary">location_on</span>
+        </div>
+        <p class="text-gray-400 text-xs max-w-xl">
+          Jln. Jend Sudirman Komp. Ruko Mega Legenda 2 Blok B2 No.7 Baloi Permai - Batam, Kepri 29431
+        </p>
+      </div>
+      <a href="https://maps.google.com" target="_blank" class="text-xs font-bold text-white hover:text-primary transition-colors shrink-0 uppercase tracking-widest">Maps →</a>
+    </div>
+
+    <div class="pt-8 border-t border-divider flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-gray-600 text-[10px] text-center md:text-left font-mono uppercase tracking-widest">
+        © {currentYear} CV. Alfa Elektrindo. Industrial Precision.
       </p>
+      <div class="flex flex-wrap justify-center gap-6">
+        <a href="https://www.linkedin.com/in/alfaelektrindo" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-white transition-colors text-[10px] uppercase font-bold tracking-widest">LI</a>
+        <a href="https://www.facebook.com/profile.php?id=61585672250917" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-white transition-colors text-[10px] uppercase font-bold tracking-widest">FB</a>
+      </div>
     </div>
   </div>
 </footer>

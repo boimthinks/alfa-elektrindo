@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alfa.elektrindo.co.id/sitemap.xml

@@ -1,6 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { getAllData } from '../../lib/api';
+import PageHeader from '../../components/PageHeader.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import SeoGenerator from '../../components/SeoGenerator.astro';
+import { getAllData } from '../../lib/data';
 
 export async function getStaticPaths() {
   const { category, part } = await getAllData();
@@ -14,43 +17,115 @@ export async function getStaticPaths() {
 }
 
 const { categoryName, products } = Astro.props;
+
+const brands = [...new Set(products.map(p => p.manufacturer).filter(Boolean))];
+const sampleParts = products.slice(0, 6);
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://alfa.elektrindo.co.id/" },
+        { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://alfa.elektrindo.co.id/products" },
+        { "@type": "ListItem", "position": 3, "name": categoryName }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": `Katalog ${categoryName}`,
+      "numberOfItems": products.length,
+      "itemListElement": products.map((p, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "name": p.title,
+        "url": `https://alfa.elektrindo.co.id/part/${p.slug}`
+      }))
+    }
+  ]
+});
+
+const metaDescription = `Distributor komponen elektronik kategori ${categoryName} di Batam. Sedia spare part industri, stok terupdate, dan harga kompetitif. Request quote via WhatsApp.`;
 ---
 
-<Layout title={`Jual ${categoryName} - Komponen Elektronik | Alfa Elektrindo`} description={`Cari dan temukan berbagai produk ${categoryName} berkualitas. Hubungi kami untuk penawaran harga.`}>
-  <div class="bg-gray-50 py-16 border-b border-gray-200">
-    <div class="container mx-auto px-4">
-      <nav class="flex text-sm text-gray-500 mb-4">
-        <a href="/" class="hover:text-primary">Home</a>
-        <span class="mx-2">/</span>
-        <a href="/products" class="hover:text-primary">Categories</a>
-        <span class="mx-2">/</span>
-        <span class="text-gray-900 font-medium">{categoryName}</span>
-      </nav>
-      <h1 class="text-4xl font-bold text-gray-900 mb-4 text-primary">Distributor {categoryName} #1 Indonesia</h1>
-      <p class="text-gray-600 max-w-3xl leading-relaxed">
-        Temukan berbagai komponen elektronik {categoryName} yang diperlukan dalam industri dan proses pabrikasi. Kami menyediakan akses tidak hanya untuk komponen baru, tetapi juga untuk komponen yang sudah tidak umum atau sulit ditemukan di pasaran. Saat ini kami memiliki {products.length} produk dalam kategori ini yang tersedia dalam database kami.
-      </p>
+<Layout title={`Jual Komponen ${categoryName} di Indonesia | Alfa Elektrindo`} description={metaDescription} schema={schema}>
+  <PageHeader
+    eyebrow={`Ref: ALFA-DOC / CATEGORY`}
+    title={`Distributor ${categoryName}`}
+    titleAccent={'di Indonesia'}
+    description={`Koleksi ${products.length} komponen ${categoryName} dengan spesifikasi terverifikasi untuk industri dan pabrikasi.`}
+  >
+    <nav slot="breadcrumb" class="flex text-blue-200 text-[10px] font-mono uppercase tracking-widest mb-6">
+      <a href="/" class="hover:text-white">Home</a>
+      <span class="mx-3 text-blue-400">/</span>
+      <a href="/products" class="hover:text-white">Products</a>
+    </nav>
+    <div slot="meta" class="flex flex-wrap gap-x-8 gap-y-3 border-t border-white/10 pt-6 mt-8 font-mono text-[11px] uppercase tracking-widest text-gray-400">
+      <span>Total: <span class="text-white font-bold">{products.length}</span></span>
+      <span>Brand: <span class="text-accent font-bold">{brands.length}</span></span>
     </div>
-  </div>
+  </PageHeader>
 
-  <section class="py-16 bg-white">
+  <section class="py-16 bg-paper">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <SeoGenerator title={categoryName} items={products} type="category" />
+    </div>
+  </section>
+
+  <section class="py-20 bg-white border-t border-divider">
     <div class="container mx-auto px-4">
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-        {products.map(product => (
-          <a href={`/part/${product.slug}`} class="group border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl transition-all bg-white flex flex-col h-full">
-            <div 
-              class="product-image-container group-hover:scale-105 transition-transform duration-300" 
-              style={`background-image: url('${product.fifu_image_url || '/placeholder-product.png'}');`}
-              role="img"
-              aria-label={product.title}
-            >
-            </div>
-            <div class="p-4 flex flex-grow flex-col">
-              <h3 class="text-sm font-bold text-gray-900 line-clamp-2 mb-2 group-hover:text-primary transition-colors">{product.title}</h3>
-              <p class="text-xs text-gray-500 mt-auto">{product.category} • {product.manufacturer}</p>
-            </div>
+      <div class="flex items-center gap-6 mb-6">
+        <h2 class="eyebrow text-navy">Brand di Kategori Ini</h2>
+        <div class="h-px flex-grow bg-divider"></div>
+        <span class="eyebrow text-gray-400">{brands.length} Brands</span>
+      </div>
+      <div class="flex flex-wrap gap-3 mb-14">
+        {brands.map(b => (
+          <a href={`/ma/${b.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} class="font-mono text-xs font-bold uppercase tracking-widest text-gray-700 bg-white border border-divider rounded px-4 py-2.5 hover:border-primary hover:text-primary transition-all shadow-hard">
+            {b}
           </a>
         ))}
+      </div>
+
+      <div class="flex items-center gap-6 mb-6">
+        <h2 class="eyebrow text-navy">Contoh Part Number</h2>
+        <div class="h-px flex-grow bg-divider"></div>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-16">
+        {sampleParts.map(p => (
+          <a href={`/part/${p.slug}`} class="hard-card p-4 hover:border-primary transition-colors">
+            <span class="font-mono text-xs font-bold text-navy leading-snug block">{p.title}</span>
+            <span class="text-[9px] font-mono text-gray-400 uppercase tracking-widest mt-1 block">{p.manufacturer}</span>
+          </a>
+        ))}
+      </div>
+
+      <div class="flex items-center gap-6 mb-6">
+        <h2 class="eyebrow text-navy">Katalog {categoryName}</h2>
+        <div class="h-px flex-grow bg-divider"></div>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-5">
+        {products.map(product => (
+          <ProductCard product={product} />
+        ))}
+      </div>
+
+      <div class="mt-16 bg-navy text-white rounded-lg p-10 relative overflow-hidden text-center">
+        <div class="absolute inset-0 blueprint-grid opacity-40"></div>
+        <div class="relative z-10">
+          <span class="eyebrow text-accent mb-4 inline-block">Batam Logistics</span>
+          <h2 class="text-3xl md:text-4xl font-mono font-bold uppercase tracking-tight mb-6">Butuh {categoryName} untuk Pabrik Anda?</h2>
+          <p class="text-gray-400 mb-8 max-w-xl mx-auto font-sans">Request Quote untuk mendapatkan penawaran harga terbaik dan stok terupdate.</p>
+          <div class="flex flex-wrap justify-center gap-4 font-mono">
+            <a href="https://wa.me/628126826672" class="premium-button bg-[#25D366] text-white text-xs">
+              <span class="material-icons-round mr-2 text-xl">chat</span> WhatsApp
+            </a>
+            <a href="tel:08126826672" class="premium-button bg-white text-navy text-xs">
+              <span class="material-icons-round mr-2 text-xl">call</span> 0812-682-6672
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>

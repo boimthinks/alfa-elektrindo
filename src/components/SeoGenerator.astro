@@ -1,0 +1,37 @@
+---
+interface Props {
+  title: string;
+  items: Array<any>;
+  type: 'category' | 'manufacturer';
+}
+
+const { title, items, type } = Astro.props;
+
+const getSummary = (name: string, count: number) => {
+  if (type === 'category') {
+    return `Koleksi ${count} komponen ${name} industri dengan spesifikasi teknis terverifikasi. Kami menyediakan solusi pengadaan spare part elektronik terbaik untuk kebutuhan pabrikasi Anda.`;
+  }
+  return `Suplai resmi dan distribusi komponen elektronik dari ${name}. Kami menjamin ketersediaan spare part orisinal dan dukungan teknis untuk sistem industri Anda.`;
+};
+
+const getKeywords = (name: string) => {
+  return type === 'category' 
+    ? `Jual ${name} industri, distributor ${name} elektronik, spare part ${name} pabrikasi, komponen ${name} Batam`
+    : `Distributor resmi ${name} Indonesia, supplier ${name} industri, spare part ${name} Batam, komponen elektronik ${name}`;
+};
+
+const summary = getSummary(title, items.length);
+---
+
+<div class="prose prose-lg prose-blue max-w-none text-gray-700 leading-relaxed font-medium">
+  <p>{summary}</p>
+  <p>Cari komponen <strong>{title}</strong> yang tepat untuk lini produksi Anda? Kami melayani pengiriman spare part industri ke seluruh Indonesia dengan jaminan keaslian.</p>
+  
+  <div class="bg-gray-50 border-l-4 border-primary p-6 my-8">
+    <h3 class="text-lg font-bold text-navy mb-2">Mengapa Memilih Komponen {title}?</h3>
+    <p class="text-sm">Dalam sistem industri, penggunaan komponen yang sesuai dengan spesifikasi teknis sangat krusial. {title} yang tersedia di Alfa Elektrindo telah melalui verifikasi data untuk memastikan kompatibilitas dan keandalan di lingkungan pabrikasi yang menuntut presisi tinggi.</p>
+  </div>
+
+  <h3 class="text-xl font-bold text-navy mt-10 mb-4">Aplikasi Industri</h3>
+  <p>Komponen dalam kelompok {type === 'category' ? 'kategori' : 'brand'} ini banyak diaplikasikan pada mesin otomatisasi, panel kontrol daya, inverter drive (VFD), serta sistem robotika pabrik. Penggunaan {title} yang tepat membantu menjaga operasional tetap stabil dan meminimalkan risiko downtime mesin.</p>
+</div>

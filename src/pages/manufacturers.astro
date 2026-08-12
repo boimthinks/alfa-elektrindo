@@ -1,25 +1,28 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { getAllData } from '../lib/api';
+import PageHeader from '../components/PageHeader.astro';
+import { getAllData } from '../lib/data';
 
 const { manufacturer } = await getAllData();
 ---
 
-<Layout title="Produsen Komponen Elektronik (Manufacturers) | Alfa Elektrindo" description="Daftar brand dan produsen komponen elektronik terkemuka yang kami sediakan.">
-  <div class="bg-gray-50 py-16 border-b border-gray-200">
-    <div class="container mx-auto px-4 text-center">
-      <h1 class="text-4xl font-bold text-gray-900 mb-4">Manufacturers</h1>
-      <p class="text-gray-600 max-w-2xl mx-auto">
-        Kami bekerja sama dengan berbagai produsen komponen elektronik terkemuka di dunia untuk memastikan kualitas produk terbaik.
-      </p>
+<Layout title="Produsen Komponen Elektronik | Alfa Elektrindo" description="Daftar brand dan produsen komponen elektronik terkemuka yang kami sediakan.">
+  <PageHeader
+    eyebrow={`Ref: ALFA-DOC / MANUFACTURERS`}
+    title={`Global`}
+    titleAccent={`Brands`}
+    description="Kemitraan strategis dengan produsen komponen elektronik terkemuka dunia untuk menjamin keaslian dan performa spare part industri Anda."
+  >
+    <div slot="meta" class="flex flex-wrap gap-x-8 gap-y-3 border-t border-white/10 pt-6 mt-8 font-mono text-[11px] uppercase tracking-widest text-gray-400">
+      <span>Total: <span class="text-white font-bold">{manufacturer.length}</span></span>
     </div>
-  </div>
+  </PageHeader>
 
-  <section class="py-16 bg-white">
+  <section class="py-16 bg-paper">
     <div class="container mx-auto px-4">
-      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+      <div class="flex flex-wrap gap-3">
         {manufacturer.map(m => (
-          <a href={`/ma/${m.slug}`} class="px-6 py-4 border border-gray-100 rounded-xl bg-white hover:border-primary hover:shadow-md transition-all text-center font-semibold text-gray-700 hover:text-primary">
+          <a href={`/ma/${m.slug}`} class="font-mono text-xs font-bold uppercase tracking-widest text-gray-700 bg-white border border-divider rounded px-5 py-3 hover:border-primary hover:text-primary transition-all shadow-hard">
             {m.name}
           </a>
         ))}

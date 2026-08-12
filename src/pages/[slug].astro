@@ -1,39 +1,285 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const pages = [
-  { slug: 'about-us', title: 'About Us', content: 'CV. Alfa Elektrindo adalah supplier komponen elektronik yang berdedikasi untuk menyediakan solusi spare part elektronik terbaik bagi industri dan pabrikasi di seluruh Indonesia.' },
-  { slug: 'contact-us', title: 'Contact Us', content: 'Hubungi kami melalui WhatsApp di 0812-682-6672 atau email ke mail@elektrindo.co.id.' },
-  { slug: 'privacy-policy', title: 'Privacy Policy', content: 'Kami menjaga privasi data Anda dengan sangat serius. Informasi yang Anda berikan hanya digunakan untuk keperluan transaksi dan komunikasi bisnis.' },
-  { slug: 'terms', title: 'Terms', content: 'Syarat dan ketentuan penggunaan layanan Alfa Elektrindo.' },
-  { slug: 'cookie-policy', title: 'Cookie Policy', content: 'Kami menggunakan cookie untuk meningkatkan pengalaman pengguna di website kami.' }
-];
-
 export async function getStaticPaths() {
-  return [
-    { params: { slug: 'about-us' }, props: { title: 'About Us', content: 'CV. Alfa Elektrindo adalah supplier komponen elektronik yang berdedikasi untuk menyediakan solusi spare part elektronik terbaik bagi industri dan pabrikasi di seluruh Indonesia.' } },
-    { params: { slug: 'contact-us' }, props: { title: 'Contact Us', content: 'Hubungi kami melalui WhatsApp di 0812-682-6672 atau email ke mail@elektrindo.co.id.' } },
-    { params: { slug: 'privacy-policy' }, props: { title: 'Privacy Policy', content: 'Kami menjaga privasi data Anda dengan sangat serius. Informasi yang Anda berikan hanya digunakan untuk keperluan transaksi dan komunikasi bisnis.' } },
-    { params: { slug: 'terms' }, props: { title: 'Terms', content: 'Syarat dan ketentuan penggunaan layanan Alfa Elektrindo.' } },
-    { params: { slug: 'cookie-policy' }, props: { title: 'Cookie Policy', content: 'Kami menggunakan cookie untuk meningkatkan pengalaman pengguna di website kami.' } }
+  const pagesData = [
+    {
+      slug: 'about-us',
+      title: 'About Us',
+      intro: 'CV. Alfa Elektrindo adalah penyalur komponen elektronik industri dan pabrikasi yang berkantor di Batam, Kepulauan Riau. Kami membantu industri menemukan komponen elektronik yang tepat, termasuk komponen yang sulit ditemukan dan sudah tidak diproduksi massal.',
+      sections: [
+        {
+          heading: 'Siapa Kami',
+          body: [
+            'CV. Alfa Elektrindo berdedikasi menyediakan solusi komponen elektronik yang lengkap dan terpercaya untuk industri di Kepulauan Riau dan sekitarnya. Dengan fokus pada kebutuhan industri dan pabrikasi, kami memastikan setiap komponen yang kami tawarkan memenuhi standar kebutuhan teknis industri.',
+            'Kami melayani kebutuhan produsen dari skala kecil hingga korporat, membantu mereka menemukan komponen yang tepat sesuai spesifikasi teknis yang dibutuhkan untuk lini produksi.'
+          ]
+        },
+        {
+          heading: 'Lokasi dan Jangkauan Layanan',
+          body: [
+            'Berkantor di Jln. Jend Sudirman Komp. Ruko Mega Legenda 2 Blok B2 No.7 Baloi Permai, Batam, Kepulauan Riau 29431, kami berada di jantung kawasan industri yang berkembang pesat di Indonesia.',
+            'Kami melayani kebutuhan industri di Kepulauan Riau dan sekitarnya, termasuk pengiriman untuk kebutuhan industri di berbagai daerah.'
+          ]
+        },
+        {
+          heading: 'Apa yang Kami Tawarkan',
+          body: [
+            'Kami menyediakan berbagai komponen elektronik industri dan spare part pabrikasi, di antaranya microcontroller I/O, DC-DC converter, modul display, relay dan kontrol, sensor industri, komponen usang (obsolete), serta aksesori dan komponen pendukung.',
+            'Banyak komponen elektronik industri dan pabrikasi yang sulit ditemukan di pasaran. Kami berkomitmen membantu industri dan produsen menemukan komponen tersebut, mulai dari komponen yang umum hingga komponen usang yang tidak lagi diproduksi massal.'
+          ]
+        },
+        {
+          heading: 'Keunggulan Kami',
+          body: [
+            'Fokus khusus pada komponen industri dan pabrikasi, bukan hanya pasar ritel.',
+            'Menyediakan komponen yang sulit ditemukan dan komponen usang.',
+            'Konsultasi dan bantuan teknis untuk mencari komponen yang tepat.',
+            'Respon cepat via WhatsApp dengan layanan Request Quote.'
+          ]
+        },
+        {
+          heading: 'Komitmen Kami',
+          body: [
+            'Setiap komponen yang kami salurkan diusahakan sesuai spesifikasi teknis yang dibutuhkan lini produksi Anda. Kami juga membantu mencarikan komponen pengganti yang kompatibel ketika komponen asli sudah tidak tersedia.',
+            'Untuk informasi stok, harga, dan penawaran terbaik, hubungi kami melalui WhatsApp atau gunakan tombol Request Quote di halaman produk.'
+          ]
+        }
+      ]
+    },
+    {
+      slug: 'contact-us',
+      title: 'Contact Us',
+      intro: 'Kami siap membantu Anda menemukan komponen elektronik industri yang tepat, bahkan yang sulit ditemukan. Gunakan salah satu saluran berikut untuk bertanya, meminta penawaran, atau berkonsultasi.',
+      sections: [
+        {
+          heading: 'WhatsApp',
+          body: [
+            'Nomor: 0812-682-6672 (internasional: +628126826672)',
+            'Link: https://wa.me/628126826672',
+            'WhatsApp adalah saluran tercepat untuk Request Quote, menanyakan ketersediaan stok, dan konsultasi produk.'
+          ]
+        },
+        {
+          heading: 'Email',
+          body: [
+            'Alamat: mail@elektrindo.co.id',
+            'Gunakan email untuk inquiry dan permintaan penawaran yang lebih detail.'
+          ]
+        },
+        {
+          heading: 'Telepon',
+          body: [
+            'Nomor: 0812-682-6672',
+            'Anda dapat menghubungi kami untuk pertanyaan langsung.'
+          ]
+        },
+        {
+          heading: 'Alamat',
+          body: [
+            'Jln. Jend Sudirman Komp. Ruko Mega Legenda 2 Blok B2 No.7 Baloi Permai, Batam, Kepulauan Riau 29431, Indonesia.'
+          ]
+        },
+        {
+          heading: 'Cara Request Quote',
+          body: [
+            'Gunakan tombol Request Quote di halaman produk, atau chat WhatsApp dengan menyebutkan part number yang diinginkan.',
+            'Untuk respons yang lebih cepat, sertakan informasi berikut: part number atau spesifikasi komponen, jumlah yang dibutuhkan, dan detail aplikasi atau mesin yang memerlukan komponen tersebut.'
+          ]
+        },
+        {
+          heading: 'Pengiriman',
+          body: [
+            'Kami melayani kebutuhan industri di Kepulauan Riau dan sekitarnya, termasuk pengiriman ke luar Batam.',
+            'Sebutkan lokasi pengiriman Anda saat menghubungi kami untuk informasi estimasi waktu dan biaya.'
+          ]
+        }
+      ]
+    },
+    {
+      slug: 'privacy-policy',
+      title: 'Privacy Policy',
+      intro: 'Kami di CV. Alfa Elektrindo menghormati dan melindungi privasi Anda. Kebijakan privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, menyimpan, dan melindungi informasi pribadi yang Anda berikan saat menggunakan situs kami.',
+      sections: [
+        {
+          heading: 'Informasi yang Kami Kumpulkan',
+          body: [
+            'Kami mengumpulkan informasi yang Anda berikan secara langsung saat menghubungi kami, antara lain melalui form Request Quote, WhatsApp, email, atau telepon. Informasi tersebut dapat mencakup nama, nomor telepon, alamat email, nama perusahaan, dan detail kebutuhan komponen.',
+            'Kami juga dapat mengumpulkan data teknis non-pribadi, seperti halaman yang dikunjungi dan perangkat yang digunakan, untuk meningkatkan pengalaman pengguna di situs.'
+          ]
+        },
+        {
+          heading: 'Cara Kami Menggunakan Informasi',
+          body: [
+            'Informasi yang Anda berikan digunakan untuk memproses permintaan penawaran, menjawab pertanyaan, memberikan informasi stok dan harga, serta menjaga komunikasi bisnis.',
+            'Kami tidak menjual, menyewakan, atau memperdagangkan data pribadi Anda kepada pihak mana pun.'
+          ]
+        },
+        {
+          heading: 'Keamanan Data',
+          body: [
+            'Kami menerapkan prosedur yang wajar untuk melindungi informasi pribadi Anda dari akses, penggunaan, atau pengungkapan yang tidak sah.',
+            'Akses terhadap data Anda dibatasi hanya untuk keperluan operasional dan layanan.'
+          ]
+        },
+        {
+          heading: 'Pembagian Data dengan Pihak Ketiga',
+          body: [
+            'Data pribadi Anda hanya dibagikan kepada pihak ketiga apabila diperlukan untuk menjalankan transaksi atau pengiriman, atau apabila diwajibkan oleh hukum dan peraturan yang berlaku.',
+            'Kami tidak memberikan data Anda kepada pihak ketiga untuk keperluan pemasaran tanpa persetujuan Anda.'
+          ]
+        },
+        {
+          heading: 'Penggunaan Cookie',
+          body: [
+            'Situs ini dapat menggunakan cookie untuk meningkatkan pengalaman pengguna, seperti mengingat preferensi kunjungan Anda.',
+            'Informasi lebih lanjut dapat Anda lihat pada halaman Cookie Policy kami.'
+          ]
+        },
+        {
+          heading: 'Hak Anda',
+          body: [
+            'Anda berhak meminta akses, perbaikan, atau penghapusan data pribadi yang kami simpan.',
+            'Untuk menggunakan hak tersebut, hubungi kami melalui email di mail@elektrindo.co.id.'
+          ]
+        },
+        {
+          heading: 'Perubahan Kebijakan',
+          body: [
+            'Kebijakan privasi ini dapat diperbarui sewaktu-waktu. Perubahan akan diumumkan pada halaman ini, dan penggunaan lanjutan atas situs kami dianggap sebagai persetujuan terhadap kebijakan terbaru.'
+          ]
+        }
+      ]
+    },
+    {
+      slug: 'terms',
+      title: 'Terms of Service',
+      intro: 'Dengan mengakses dan menggunakan situs https://alfa.elektrindo.co.id, Anda dianggap telah membaca, memahami, dan menyetujui syarat dan ketentuan berikut.',
+      sections: [
+        {
+          heading: 'Penggunaan Situs',
+          body: [
+            'Situs ini menyediakan informasi mengenai produk dan layanan CV. Alfa Elektrindo. Anda diharapkan menggunakan situs ini untuk tujuan yang sah dan tidak melanggar hukum yang berlaku.',
+            'Anda tidak diperbolehkan menggunakan konten situs ini untuk tujuan yang merugikan, menyesatkan, atau melanggar hak pihak lain.'
+          ]
+        },
+        {
+          heading: 'Informasi Produk dan Harga',
+          body: [
+            'Katalog produk yang ditampilkan merupakan gambaran ketersediaan komponen yang kami salurkan. Ketersediaan stok dapat berubah sewaktu-waktu.',
+            'Harga tidak ditampilkan sebagai harga final di situs. Harga dan penawaran diperoleh melalui Request Quote atau komunikasi langsung melalui WhatsApp, dan dapat berubah tanpa pemberitahuan terlebih dahulu.'
+          ]
+        },
+        {
+          heading: 'Permintaan Penawaran',
+          body: [
+            'Permintaan penawaran (Request Quote) yang Anda kirimkan bersifat tidak mengikat sampai terdapat kesepakatan antara kedua belah pihak.',
+            'Pastikan part number atau spesifikasi yang Anda berikan sudah benar untuk mempercepat proses penawaran.'
+          ]
+        },
+        {
+          heading: 'Kekayaan Intelektual',
+          body: [
+            'Seluruh konten pada situs ini, termasuk teks, desain, logo, dan materi lainnya, adalah milik CV. Alfa Elektrindo dan tidak boleh digunakan, digandakan, atau didistribusikan tanpa izin tertulis.'
+          ]
+        },
+        {
+          heading: 'Disclaimer',
+          body: [
+            'Spesifikasi teknis produk yang kami sampaikan mengikuti informasi dari produsen. Kami berusaha menyajikan informasi seakurat mungkin, namun tidak menjamin kesesuaian mutlak untuk setiap aplikasi tertentu.',
+            'Pemilihan dan pemasangan komponen tetap menjadi tanggung jawab pengguna dengan mempertimbangkan kebutuhan teknis sistem masing-masing.'
+          ]
+        },
+        {
+          heading: 'Pembatasan Tanggung Jawab',
+          body: [
+            'CV. Alfa Elektrindo tidak bertanggung jawab atas kerugian atau kerusakan yang timbul dari penggunaan informasi yang terdapat pada situs ini atau dari keputusan pembelian yang diambil berdasarkan informasi tersebut.'
+          ]
+        },
+        {
+          heading: 'Hukum yang Berlaku',
+          body: [
+            'Syarat dan ketentuan ini diatur dan ditafsitkan berdasarkan hukum Republik Indonesia.'
+          ]
+        },
+        {
+          heading: 'Perubahan Syarat',
+          body: [
+            'Syarat dan ketentuan ini dapat diperbarui sewaktu-waktu. Penggunaan lanjutan atas situs ini setelah perubahan dianggap sebagai persetujuan terhadap syarat terbaru.'
+          ]
+        },
+        {
+          heading: 'Kontak',
+          body: [
+            'Apabila Anda memiliki pertanyaan mengenai syarat dan ketentuan ini, silakan hubungi kami melalui email di mail@elektrindo.co.id.'
+          ]
+        }
+      ]
+    },
+    {
+      slug: 'cookie-policy',
+      title: 'Cookie Policy',
+      intro: 'Kebijakan cookie ini menjelaskan bagaimana situs CV. Alfa Elektrindo menggunakan cookie dan teknologi serupa untuk meningkatkan pengalaman Anda.',
+      sections: [
+        {
+          heading: 'Apa Itu Cookie',
+          body: [
+            'Cookie adalah file teks kecil yang disimpan di perangkat Anda saat mengunjungi situs web. Cookie membantu situs mengingat preferensi dan aktivitas Anda.',
+            'Kami dapat menggunakan cookie untuk memahami cara pengunjung menggunakan situs sehingga layanan dapat terus ditingkatkan.'
+          ]
+        },
+        {
+          heading: 'Jenis Cookie yang Digunakan',
+          body: [
+            'Cookie sesi, yang berfungsi sementara dan terhapus saat Anda menutup browser.',
+            'Cookie fungsional, yang membantu mengingat preferensi Anda untuk kenyamanan kunjungan.'
+          ]
+        },
+        {
+          heading: 'Mengelola Cookie',
+          body: [
+            'Anda dapat mengatur atau menonaktifkan cookie melalui pengaturan browser Anda. Perlu diperhatikan bahwa sebagian fitur situs mungkin tidak berfungsi optimal jika cookie dinonaktifkan.'
+          ]
+        }
+      ]
+    }
   ];
+
+  return pagesData.map(({ slug, title, intro, sections }) => ({
+    params: { slug },
+    props: { title, intro, sections }
+  }));
 }
 
-const { title, content } = Astro.props;
+const { title, intro, sections } = Astro.props;
 ---
 
 <Layout title={`${title} | Alfa Elektrindo`}>
-  <div class="bg-gray-50 py-16 border-b border-gray-200">
-    <div class="container mx-auto px-4 text-center">
-      <h1 class="text-4xl font-bold text-gray-900">{title}</h1>
+  <div class="bg-navy py-20 text-white relative border-b-4 border-[#007aff]">
+    <div class="container mx-auto px-4 relative z-10">
+      <span class="font-mono text-[10px] tracking-widest text-accent uppercase">ref. 2026-ALFA-DOC</span>
+      <h1 class="text-5xl font-black mt-4 uppercase tracking-tighter font-mono">{title}</h1>
     </div>
   </div>
 
-  <section class="py-16 bg-white">
-    <div class="container mx-auto px-4 max-w-3xl">
-      <div class="prose prose-lg prose-blue max-w-none text-gray-700">
-        <p>{content}</p>
-        <p class="mt-8">Untuk informasi lebih lanjut, silakan hubungi tim kami.</p>
+  <section class="py-20 bg-paper">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <div class="hard-card p-10 md:p-14 shadow-[10px_10px_0_0_rgba(0,122,255,0.18)]">
+        <p class="text-lg leading-relaxed text-gray-800 font-medium mb-16 border-l-4 border-[#007aff] pl-6">{intro}</p>
+
+        {sections.map((sec, idx) => (
+          <div class="mt-16 first:mt-0">
+            <h2 class="text-sm font-mono font-bold text-[#007aff] uppercase tracking-[0.2em] mb-6 flex items-center">
+              <span class="mr-4 text-2xl text-gray-300">{(idx + 1).toString().padStart(2, '0')}</span>
+              {sec.heading}
+            </h2>
+            <div class="space-y-4 pl-10 border-l border-line">
+              {sec.body.map(p => (
+                <p class="text-base leading-relaxed text-gray-700">{p}</p>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   </section>
