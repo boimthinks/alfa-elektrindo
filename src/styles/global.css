@@ -1,4 +1,9 @@
 @import "tailwindcss";
+@import "@fontsource-variable/plus-jakarta-sans";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/500.css";
+@import "@fontsource/ibm-plex-mono/600.css";
+@import "@fontsource/ibm-plex-mono/700.css";
 
 @theme {
   --color-primary: #007aff;
@@ -9,7 +14,7 @@
   --color-divider: #e1e6ec;
   --color-ink: #0a1428;
 
-  --font-sans: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+  --font-sans: "Plus Jakarta Sans Variable", "Plus Jakarta Sans", "Segoe UI", sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
   --shadow-premium: 0 10px 30px -10px rgba(0, 45, 95, 0.1);
@@ -22,6 +27,7 @@
   font-family: 'Material Icons Round';
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: url('/MaterialIconsRound-Regular.otf') format('opentype');
 }
 

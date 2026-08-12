@@ -8,7 +8,7 @@ export default defineConfig({
   site: 'https://alfa.elektrindo.co.id',
   compressHTML: true,
   build: {
-    inlineStylesheets: 'auto'
+    inlineStylesheets: 'always'
   },
   prefetch: {
     prefetchAll: true,
