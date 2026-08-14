@@ -3,6 +3,7 @@ import '../styles/global.css';
 import Footer from '../components/Footer.astro';
 import ContactPopup from '../components/ContactPopup.astro';
 import MobileNav from '../components/MobileNav.astro';
+import { ClientRouter } from 'astro:transitions';
 
 interface Props {
 	title: string;
@@ -36,6 +37,8 @@ const { title, description = "Supplier Komponen Elektronik Industri dan Pabrikas
 		<meta property="twitter:url" content={Astro.url} />
 		<meta property="twitter:title" content={title} />
 		<meta property="twitter:description" content={description} />
+
+		<ClientRouter />
 
 		{schema && <script type="application/ld+json" set:html={schema} />}
 	</head>
@@ -89,39 +92,44 @@ const { title, description = "Supplier Komponen Elektronik Industri dan Pabrikas
 		</div>
 
 		<script>
-			const menuButton = document.getElementById('mobile-menu-button');
-			const closeButton = document.getElementById('mobile-menu-close');
-			const menu = document.getElementById('mobile-menu');
-			const overlay = document.getElementById('mobile-menu-overlay');
+			function initMobileMenu() {
+				const menuButton = document.getElementById('mobile-menu-button');
+				const closeButton = document.getElementById('mobile-menu-close');
+				const menu = document.getElementById('mobile-menu');
+				const overlay = document.getElementById('mobile-menu-overlay');
 
-			function openMenu() {
-				menu?.classList.remove('hidden');
-				overlay?.classList.remove('hidden');
-				setTimeout(() => {
-					menu?.classList.remove('translate-x-full');
-					menu?.classList.add('translate-x-0');
-					overlay?.classList.remove('opacity-0');
-					overlay?.classList.add('opacity-100');
-				}, 10);
-				document.body.classList.add('overflow-hidden');
+				function openMenu() {
+					menu?.classList.remove('hidden');
+					overlay?.classList.remove('hidden');
+					setTimeout(() => {
+						menu?.classList.remove('translate-x-full');
+						menu?.classList.add('translate-x-0');
+						overlay?.classList.remove('opacity-0');
+						overlay?.classList.add('opacity-100');
+					}, 10);
+					document.body.classList.add('overflow-hidden');
+				}
+
+				function closeMenu() {
+					menu?.classList.remove('translate-x-0');
+					menu?.classList.add('translate-x-full');
+					overlay?.classList.remove('opacity-100');
+					overlay?.classList.add('opacity-0');
+					
+					setTimeout(() => {
+						menu?.classList.add('hidden');
+						overlay?.classList.add('hidden');
+					}, 300);
+					document.body.classList.remove('overflow-hidden');
+				}
+
+				menuButton?.addEventListener('click', openMenu);
+				closeButton?.addEventListener('click', closeMenu);
+				overlay?.addEventListener('click', closeMenu);
 			}
 
-			function closeMenu() {
-				menu?.classList.remove('translate-x-0');
-				menu?.classList.add('translate-x-full');
-				overlay?.classList.remove('opacity-100');
-				overlay?.classList.add('opacity-0');
-				
-				setTimeout(() => {
-					menu?.classList.add('hidden');
-					overlay?.classList.add('hidden');
-				}, 300);
-				document.body.classList.remove('overflow-hidden');
-			}
-
-			menuButton?.addEventListener('click', openMenu);
-			closeButton?.addEventListener('click', closeMenu);
-			overlay?.addEventListener('click', closeMenu);
+			initMobileMenu();
+			document.addEventListener('astro:page-load', initMobileMenu);
 		</script>
 
 		<main class="flex-grow">

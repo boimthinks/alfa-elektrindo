@@ -166,9 +166,10 @@ Daftar ini memuat kategori, brand, artikel yang sudah terbit, dan ide artikel ya
 - Coherent (1 part)
 - Schneider Electric (1 part)
 
-## 3. Indeks Artikel Terbit (62)
+## 3. Indeks Artikel Terbit (63)
 | Judul Artikel | Slug | Tanggal |
 | :--- | :--- | :--- |
+| Pentingnya Kalibrasi Sensor Suhu dalam Menjaga Kualitas Produk Industri | pentingnya-kalibrasi-sensor-suhu-industri | 2026-08-15 |
 | Mesin CNC mati mendadak karena modul servo Fanuc usang | mesin-cnc-mati-mendadak | 2026-08-14 |
 | Panduan Memilih High Speed Fuse Eaton Bussmann untuk Perlindungan Panel Industri | panduan-memilih-high-speed-fuse-eaton-bussmann | 2026-08-13 |
 | Mengapa Semikron Mendominasi Aplikasi IGBT di Pabrik | mengapa-semikron-mendominasi-aplikasi-igbt-di-pabrik | 2026-08-12 |
