@@ -128,9 +128,9 @@ const schema = JSON.stringify({
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {latestBlogs.map(post => (
-          <a href={`/blog/${post.slug}`} class="bg-white/5 border border-line rounded-lg overflow-hidden hover:border-primary transition-all flex flex-col h-full">
-            <div class="aspect-[16/9] bg-gray-100">
-              <img src={post.fifu_image_url || '/placeholder-blog.png'} alt={post.long_title} class="w-full h-full object-cover" loading="lazy" decoding="async" />
+          <a href={`/blog/${post.slug}`} class="bg-white/5 rounded-lg overflow-hidden hover:border-primary transition-all flex flex-col h-full">
+            <div class="w-full overflow-hidden bg-gray-100" style="aspect-ratio: 16 / 9;">
+              <img src={post.fifu_image_url || '/placeholder-blog.png'} alt={post.long_title} class="w-full h-full object-cover" style="aspect-ratio: 16 / 9; object-fit: cover;" loading="lazy" decoding="async" />
             </div>
             <div class="p-6 flex flex-col flex-grow">
               <p class="font-mono text-[9px] text-gray-400 uppercase tracking-widest mb-3">

@@ -23,12 +23,13 @@ const sortedBlog = blog.sort((a, b) => new Date(b.date) - new Date(a.date));
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {sortedBlog.map(post => (
-          <a href={`/blog/${post.slug}`} class="hard-card overflow-hidden group flex flex-col h-full hover:-translate-y-1 transition-transform duration-300">
-            <div class="aspect-video overflow-hidden bg-gray-100">
+          <a href={`/blog/${post.slug}`} class="overflow-hidden group flex flex-col h-full hover:-translate-y-1 transition-transform duration-300">
+            <div class="w-full overflow-hidden bg-gray-100" style="aspect-ratio: 16 / 9;">
               <img
                 src={post.fifu_image_url || '/placeholder-blog.png'}
                 alt={post.long_title}
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                style="aspect-ratio: 16 / 9; object-fit: cover;"
                 loading="lazy"
               />
             </div>

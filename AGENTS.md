@@ -16,7 +16,7 @@
 - **Update data**: Ubah-edit file MD di `src/content/` lalu `npm run build`. Untuk migrasi massal dari Google Sheets, gunakan `node src/lib/export-to-md.js` (ambil data dari Google Apps Script lama, default di dalam file tersebut).
 
 ## Skill Penulisan
-- Gunakan skill **`penulis-ahli`** untuk menulis/mengedit artikel blog atau konten SEO. Skill ini menangani humanisasi (hapus pola AI), SEO/GEO (Google AI 2026), dan konten non-komoditas dalam satu pass, lalu otomatis membaca SUMBER-PENGETAHUAN.md.
+- Gunakan skill **`penulis-ahli`** untuk menulis/mengedit artikel blog atau konten SEO. Skill ini menangani humanisasi (hapus pola AI), SEO/GEO (Generative Engine Optimization Google AI 2026), dan konten non-komoditas dalam satu pass, lalu otomatis membaca SUMBER-PENGETAHUAN.md.
 
 ## Mekanisme Saran Judul Artikel (WAJIB)
 Saat pengguna meminta saran judul artikel blog, WAJIB mengikuti alur ini sebelum memberi saran:
@@ -24,7 +24,7 @@ Saat pengguna meminta saran judul artikel blog, WAJIB mengikuti alur ini sebelum
 1. **Baca `CONTENT_INDEX.md`** di root project untuk melihat daftar kategori, brand, dan judul artikel yang sudah terbit.
 2. **Jangan menyarankan judul duplikat** — selalu cek `## 3. Indeks Artikel Terbit` dan gunakan kata kunci/topik yang belum ditulis.
 3. **Dasarkan saran pada data nyata**: kategori produk & brand dari `## 1. Kategori Produk` dan `## 2. Brand / Manufacturer` (bersumber dari `src/content/parts/`), serta topik relevan di SUMBER-PENGETAHUAN.md.
-4. **Tawarkan draft judul** (problem-centric, non-komoditas, ber-GEO), dan sebelum menulis tunggu persetujuan pengguna.
+4. **Tawarkan draft judul** (problem-centric, non-komoditas, ter-optimasi Generative Engine), dan sebelum menulis tunggu persetujuan pengguna.
 
 **Setelah artikel selesai ditulis**, jalankan `node scripts/gen-content-index.js` agar `CONTENT_INDEX.md` diperbarui (artikel baru masuk ke indeks; kategori/brand ikut tersinkron dari katalog). Jangan lupa update `SUMBER-PENGETAHUAN.md` (section Insight) sebagaimana konvensi project.
 

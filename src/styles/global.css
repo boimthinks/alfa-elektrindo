@@ -32,20 +32,55 @@
 }
 
 .material-icons-round {
-  font-family: 'Material Icons Round';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  -webkit-font-feature-settings: 'liga';
-  -webkit-font-smoothing: antialiased;
-}
+    font-family: 'Material Icons Round';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: -4px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    text-decoration: none;
+    color: var(--color-divider);
+    transition: all 0.3s ease;
+    border-radius: 8px;
+  }
+
+  .social-icons a:hover {
+    background-color: var(--color-background);
+    color: var(--color-accent);
+    transform: translateY(-2px);
+  }
+
+  .font-awesome {
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 16px;
+  }
+
+  .font-awesome.brands {
+    font-weight: 400;
+  }
 
 @layer base {
   html {

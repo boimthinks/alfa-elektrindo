@@ -2,7 +2,7 @@
 
 > File ini adalah **sumber kebenaran tunggal** untuk semua informasi tentang CV. Alfa Elektrindo. Digunakan oleh AI Agent untuk menulis artikel blog, materi marketing, dan konten SEO.
 >
-> Gunakan bersama skill **`penulis-ahli`** untuk seluruh penulisan artikel (humanizer + SEO/GEO + konten non-komoditas dalam satu pass). Skill ini otomatis membaca file ini.
+> Gunakan bersama skill **`penulis-ahli`** untuk seluruh penulisan artikel (humanizer + SEO/GEO Generative Engine Optimization + konten non-komoditas dalam satu pass). Skill ini otomatis membaca file ini.
 
 **Cara baca untuk AI Agent:**
 1. Mulai dari `## 1. Identitas Bisnis` untuk data diri singkat.
@@ -39,6 +39,8 @@
 | WhatsApp | https://wa.me/628126826672 (Request Quote, chat produk, konsultasi) |
 | Email | mail@elektrindo.co.id (Quote Request, inquiry) |
 | Telepon | 0812-682-6672 |
+| YouTube | https://www.youtube.com/@elektrindo |
+| Instagram | https://www.instagram.com/elektrindo_alfa |
 
 ---
 
@@ -290,7 +292,11 @@ Gunakan secara natural di artikel, jangan keyword stuffing.
 
 ### 10.1 Topik yang Sudah Ditulis
 
-Semua 59 artikel blog lama telah ditulis ulang dengan standar **`penulis-ahli`** (humanizer, non-komoditas, GEO Batam/Kepri, bebas em dash, dan dilengkapi field `img_prompt` untuk pembuatan cover visual).
+Semua 59 artikel blog lama telah ditulis ulang dengan standar **`penulis-ahli`** (humanizer, non-komoditas, SEO/GEO Generative Engine, bebas em dash, dan dilengkapi field `img_prompt` untuk pembuatan cover visual).
+
+Catatan artikel baru (update per terbit):
+
+- **13-08-2026** — `panduan-memilih-high-speed-fuse-eaton-bussmann` (High Speed Fuse Eaton Bussmann). Sudah pakai data part nyata (E170M5015 800A 690V, E170M5418 900A 690V) dan struktur GEO (langsung jawab pertanyaan, tabel parameter, contoh perhitungan derating).
 
 Format frontmatter blog standar:
 ```yaml
