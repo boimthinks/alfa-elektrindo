@@ -33,6 +33,12 @@ Saat pengguna meminta saran judul artikel blog, WAJIB mengikuti alur ini sebelum
 - TypeScript strict (lihat `tsconfig.json`). Site URL: `https://alfa.elektrindo.co.id` (set di `astro.config.mjs`).
 - **Data source of truth**: Content Collections markdown (`src/content/`), schema Zod di `src/content.config.ts`.
 - **Data helper**: `src/lib/data.ts` — `getAllData()` (membaca semua collection, menurunkan kategori/manufacturer) + `shuffle()`.
+- **Autolink internal (blog)**:
+  - `scripts/gen-autolink-terms.js` → `src/lib/autolink-terms.js` — pemetaan kategori (`/ca/[slug]`) & brand (`/ma/[slug]`) yang diturunkan otomatis dari `src/content/parts/`. Dijalankan ulang saat katalog berubah (juga otomatis via `node scripts/gen-content-index.js`).
+  - `src/lib/remark-autolink-terms.js` — remark plugin: **otomatis** menautkan kata kategori/brand yang muncul di body artikel blog ke halaman arsip terkait.
+  - Rules: first-mention per artikel, case-insensitive, word-boundary, skip heading/link/code/inlineCode, dan skip-list kata generik (sensor, switch, diode, dll. — lihat `skipList` di script).
+  - Wiring: `markdown.processor = unified({ remarkPlugins: [...] })` di `astro.config.mjs` (Astro 7 menerapkan ini global ke semua Markdown collection).
+  - Konten yang dirender via `set:html` (frontmatter HTML parts/blog) **tidak** ikut diproses autolink.
 - **Migrasi GS → MD**: `src/lib/export-to-md.js` — export semua tab Google Apps Script (`part`, `blog`, `area`, `jual`) menjadi file MD.
 - Rendering konten dinamis (tabel HTML dari sumber data lama) memakai direktif **`set:html`** — jangan rebuild HTML di Astro.
 - Font global: Plus Jakarta Sans (via Google Fonts). Ikon: Material Icons Round (`material-icons-round`).

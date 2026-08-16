@@ -296,7 +296,9 @@ Semua 59 artikel blog lama telah ditulis ulang dengan standar **`penulis-ahli`**
 
 Catatan artikel baru (update per terbit):
 
+- **16-08-2026** — `terminal-block-longgar-pemicu-downtime-mesin` (Terminal Block). Fokus pada masalah teknis *hotspot* akibat getaran, pemilihan material *polyamide*, dan penggunaan *torque screwdriver* serta *pluggable terminal block* (Phoenix Contact 1757051 & 1803617) sebagai solusi.
 - **13-08-2026** — `panduan-memilih-high-speed-fuse-eaton-bussmann` (High Speed Fuse Eaton Bussmann). Sudah pakai data part nyata (E170M5015 800A 690V, E170M5418 900A 690V) dan struktur GEO (langsung jawab pertanyaan, tabel parameter, contoh perhitungan derating).
+- **16-08-2026** — `terminal-block-longgar-pemicu-downtime-mesin` (Terminal Block). Fokus pada masalah teknis *hotspot* akibat getaran, pemilihan material *polyamide*, dan penggunaan *torque screwdriver* serta *pluggable terminal block* (Phoenix Contact 1757051 & 1803617) sebagai solusi.
 
 Format frontmatter blog standar:
 ```yaml

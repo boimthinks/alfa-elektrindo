@@ -8,6 +8,7 @@
  * (Bagian "Ide Artikel Baru" manual dipertahankan agar ide yang belum terpakai tidak hilang.)
  */
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
+import { execSync } from 'node:child_process';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -16,6 +17,7 @@ const ROOT = join(__dirname, '..');
 const PARTS_DIR = join(ROOT, 'src/content/parts');
 const BLOG_DIR = join(ROOT, 'src/content/blog');
 const INDEX_PATH = join(ROOT, 'CONTENT_INDEX.md');
+const AUTOLINK_SCRIPT = join(ROOT, 'scripts/gen-autolink-terms.js');
 
 function readBlockScalar(content, key) {
   const m = content.match(new RegExp(`^${key}:\\s*\\|-\\s*\\n\\s*([^\\n]+)`, 'm'));
@@ -78,7 +80,7 @@ if (splitIdx !== -1) {
 }
 
 const output = `# CONTENT_INDEX
-
+ 
 Daftar ini memuat kategori, brand, artikel yang sudah terbit, dan ide artikel yang akan datang.
 > File ini di-generate otomatis oleh \`scripts/gen-content-index.js\`. Jangan edit bagian Kategori/Brand/Artikel secara manual; jalankan ulang script setelah ada perubahan katalog atau artikel baru.
 
@@ -86,7 +88,12 @@ Daftar ini memuat kategori, brand, artikel yang sudah terbit, dan ide artikel ya
 ${catLines.join('\n')}
 
 ## 2. Brand / Manufacturer (${brands.size})
-${brandLines.join('\n')}
+${brandLines.join('\n')} 
+ 
+## 3. Indeks Artikel Terbit (${articles.length})
+| Judul Artikel | Slug | Tanggal |
+| :--- | :--- | :--- |
+${articleLines.join('\n')}
 
 ## 3. Indeks Artikel Terbit (${articles.length})
 | Judul Artikel | Slug | Tanggal |
@@ -99,3 +106,11 @@ ${backlog.join('\n')}
 
 writeFileSync(INDEX_PATH, output, 'utf8');
 console.log(`CONTENT_INDEX.md diperbarui: ${categories.size} kategori, ${brands.size} brand, ${articles.length} artikel.`);
+
+// Build autolink model dari data parts terbaru
+try {
+  execSync(`node "${AUTOLINK_SCRIPT}"`, { stdio: 'ignore' });
+  console.log('Autolink model (src/lib/autolink-terms.ts) generated.');
+} catch (err) {
+  console.warn('Gagal generate autolink model:', err.message);
+}
