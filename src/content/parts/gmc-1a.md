@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   Eaton
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg67gKkybtg-9lF6OXTq0-KenszKqQjJXRW_OJHEKCJUV7Ym17fD57Exz9OtNSadmHbL4LfQG27248Nz7w_UEqaurlCV9bjoP_hm1OZTKVIRCaLgcqwfQ4YSr3anG2MskWTkLQFU6iAGtcNYpRj6MhjuGO4SYq5iOYWxLrwTKz2YzN9En84I6RqEc2PCfM/s400/Screenshot%202024-11-11%207.59.41%20PM.png
+  /placeholder-product.png
 pendahuluan: |-
   GMC-1A Eaton Cartridge Fuse dirancang untuk memberikan proteksi maksimal terhadap lonjakan arus yang dapat merusak perangkat. Berkat desainnya yang handal, sekering ini mampu menahan beban arus berlebih hingga 250VAC dengan kapasitas ampere sebesar 1A. Keunggulan utama dari GMC-1A adalah kemampuannya dalam menonaktifkan aliran arus listrik secara otomatis ketika terjadi lonjakan arus berlebih, sehingga komponen listrik terhindar dari kerusakan. Dengan konstruksi yang tahan lama dan presisi yang tinggi, GMC-1A menawarkan kehandalan dan perlindungan optimal bagi sistem kelistrikan yang kompleks.
 spesifikasi: |-

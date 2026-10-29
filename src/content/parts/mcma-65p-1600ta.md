@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   IXYS
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhAg3meHT3xYsaEe6xmaMQIzENyBa-QyHw-eHmDGSq0X23-euOMHf93k5B9ZHq_njVjbR2mvFU_FvQZx0452hU8ClaZ1Ch4XXP3zLZ3DXMHxddcF0uDbP5NtNB3bqWOwTh48UMbENK8HbHDPKdkfoWWYF3wzXV2pbUUd5SFwDmtc2FQDOQfwQuzoKp-aMk/s400/Screenshot%202024-10-28%208.45.20%20PM.png
+  /img/mcma-65p-1600ta.webp
 pendahuluan: |-
   MCMA65P1600TA memiliki performa luar biasa dalam mengatur aliran daya besar dengan presisi dan efisiensi tinggi. Modul ini menggabungkan kemampuan kontrol fase (phase control) dengan tingkat kehilangan daya rendah, sehingga cocok untuk berbagai aplikasi seperti pengendali motor, pengatur suhu, dan konverter daya. Modul SCR ini mampu beroperasi dalam lingkungan keras dengan rentang suhu lebar dan memiliki daya tahan tinggi terhadap lonjakan arus, menjadikannya solusi yang andal bagi industri modern.
 spesifikasi: |-

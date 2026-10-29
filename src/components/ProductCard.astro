@@ -13,7 +13,7 @@ interface Props {
 const { product, imageHeight = 'h-[110px]' } = Astro.props;
 ---
 
-<a href={`/part/${product.slug}`} class="hard-card overflow-hidden group flex flex-col h-full hover:-translate-y-1 transition-transform duration-300">
+<a href={`/part/${product.slug}/`} class="hard-card overflow-hidden group flex flex-col h-full hover:-translate-y-1 transition-transform duration-300">
   <div class={`product-image-container ${imageHeight} !p-3`}>
     <div
       class="w-full h-full group-hover:scale-105 transition-transform duration-500"

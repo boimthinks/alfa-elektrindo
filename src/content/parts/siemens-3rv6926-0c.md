@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   Siemens
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgWHZ2DPzOmuhIpCrNTXz92TRu9baOx5T6gAXciskLqFiedXQKWZvvRwtJHbEmhRX5AOwfjEPaCFO_b7M_gSds6k46t0MHWWWWxs3Pmcmh7xTnEevQdKlTLJ6VJtiJxZfXOhOb-xswwSJfI3oWpm6U6_f7XKaTBvVk5U8WNFHu-fe-jmFMeAjrmD5p9HUY/s600/Screenshot%202025-01-05%2012.37.24%20PM.png
+  /placeholder-product.png
 pendahuluan: |-
   Siemens 3RV6926-0C Door-Coupling Rotary Operating menawarkan perlindungan optimal untuk panel listrik dengan tingkat perlindungan IP64, yang menjamin ketahanan terhadap debu dan percikan air. Desainnya yang ergonomis memungkinkan pengoperasian mudah, bahkan dalam situasi darurat. Dengan poros sepanjang 130 mm, produk ini sangat cocok untuk aplikasi yang memerlukan fleksibilitas dan keselamatan tinggi. Manfaat utamanya meliputi peningkatan efisiensi operasional, keselamatan pengguna, dan keandalan dalam berbagai lingkungan industri.
 spesifikasi: |-

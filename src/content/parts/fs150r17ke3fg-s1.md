@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   Infineon
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgaWc32geLkEXv8FgGamsxyryBrIlUOoI8QrPvfejtmiD_qNOaPb2qr0Z7R4zJnhAtQw3m-IpaZe3dcaQHA4NaYRwVDR8oXdRnjjNJVvCGgTcMSl4FoIC2pJyNpM3BdvIDYbz9iw14Ht0Gi1jV0ug5KmWZ0rrhGf8Tr1GevvUPeaohSj8mgNq_M3U_0aFE/s400/Screenshot%202024-10-27%207.53.03%20PM.png
+  /placeholder-product.png
 pendahuluan: |-
   Modul IGBT FS150R17KE3FG-S1 menawarkan efisiensi energi tinggi, pengurangan panas berlebih, dan umur panjang, menjadikannya solusi ideal untuk berbagai aplikasi industri. Kemampuannya dalam menangani arus dan tegangan besar dengan kehilangan daya minimal membuat modul ini sangat diandalkan pada sistem inverter, motor industri, dan konversi energi terbarukan. Selain itu, desainnya meminimalkan interferensi elektromagnetik (EMI), sehingga meningkatkan stabilitas operasi dan keamanan.
 spesifikasi: |-

@@ -15,6 +15,7 @@ const parts = defineCollection({
     aplikasi_dalam_industri: z.coerce.string().optional(),
     penutup: z.coerce.string().optional(),
     published: z.boolean().default(true),
+    featured: z.boolean().default(false).optional(),
   }),
 });
 
@@ -36,6 +37,8 @@ const areas = defineCollection({
   schema: z.object({
     title: z.string(),
     slug: z.string(),
+    date: z.string().optional(),
+    kategori: z.string().optional(),
     description: z.string().optional(),
     image: z.string().optional(),
   }),

@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   Fairchild
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEidPpwMQ0YNkKFb7-DSfijgSR0kxmQwBkjFk-t9ImcLOYY2h3G0nfCp2aEgnYyyFlqELBTm6g2TWpyYFvmnGjOhpD8VceilUFOPfyK13PhqCblx8lGwyvsvM0Q8Rbx2__F9P46e8oQNaFIFpv7V-9bUYr34z2PYmNu14btdUziCtjdWW-AQUbTB2Ok4NsY/s400/Screenshot%202024-10-27%2011.24.42%20AM.png
+  /placeholder-product.png
 pendahuluan: |-
   FFP08S60S adalah diode rectifier berkinerja tinggi dengan arus maksimum 8 A dan tegangan breakdown hingga 600 V. Salah satu keunggulan utamanya adalah penggunaan teknologi STEALTH™, yang memastikan switching loss rendah dan respons cepat. Komponen ini sangat ideal untuk aplikasi konversi daya seperti catu daya switching dan inverter. Efisiensinya yang tinggi membantu mengurangi konsumsi energi sekaligus meminimalkan panas, membuat sistem bekerja lebih dingin dan stabil. Selain itu, FFP08S60S memiliki kemampuan pemulihan cepat, menjadikannya pilihan sempurna untuk aplikasi frekuensi tinggi.
 spesifikasi: |-

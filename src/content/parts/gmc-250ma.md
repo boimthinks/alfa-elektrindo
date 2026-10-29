@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   Eaton
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiX7C6pRmxC-42-v-Lg31Q6ws2lAP0YdLkkxnorW6xt6fFPIRrieJXm8xu3L-dgtHZyvtSZ2hTVXk_Bf6EHz3W_lkK_e0W5GRQM-dth-46qFv4iS5n1qdMMXSpGTAg3coVGi8pEapKYH4hKUMfoHlkWAPa2Zj0qaJB2N_RePT9361-qquPyBhTW8QCKgkw/s400/Screenshot%202024-11-11%207.32.54%20PM.png
+  /placeholder-product.png
 pendahuluan: |-
   Sekering tipe GMC-250MA dari Eaton ini adalah solusi optimal bagi sistem yang memerlukan perlindungan terhadap arus berlebih dan potensi kerusakan komponen. Dirancang khusus dengan spesifikasi 250mA dan 250VAC, sekering ini tidak hanya memiliki kemampuan untuk melindungi sistem dari lonjakan arus, tetapi juga memiliki sifat tahan lama serta responsif dalam menjaga performa sistem. Dengan fitur “time-delay,” sekering ini mampu menangani fluktuasi arus sementara tanpa langsung memutuskan rangkaian, menjadikannya pilihan unggul di berbagai aplikasi elektronik.
 spesifikasi: |-

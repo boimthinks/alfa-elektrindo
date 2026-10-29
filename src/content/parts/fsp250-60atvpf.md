@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   Hengfu
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgKnZrqPiwQ5tVSB0-VONH0NjqtJZc9S1x93u-G8HHQQbY-kRdKEIfMNCGf9AGmeWTN9UotmBlmHd_Ju_QqP-uJ98PjKM9AbD7JR2dpweMuXvOP8ONf2uvlL5fwS-bG-VwjXwafoJFTUwgAziP-MIGSu1Lqg6TFDsVBVHm9SLwLg15Qvx8EWaZXznseflQ/s400/Screenshot%202024-10-26%2010.53.55%20AM.png
+  /placeholder-product.png
 pendahuluan: |-
   Switching Power Supply ini dirancang untuk memberikan efisiensi konversi daya yang optimal sambil menjaga kestabilan tegangan dalam berbagai kondisi beban. Berkat fitur Power Factor Correction (PFC), FSP250-60ATV(PF) mampu meminimalkan distorsi arus, menghasilkan kinerja yang lebih stabil dan hemat energi. Selain itu, perangkat ini memiliki proses pendinginan pasif yang tidak hanya mengurangi kebisingan, tetapi juga memperpanjang umur komponen. Ini menjadikannya pilihan sempurna untuk industri yang membutuhkan keandalan tinggi dalam kondisi operasi 24/7.
 spesifikasi: |-

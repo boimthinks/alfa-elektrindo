@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   IXYS
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjVKFU-WGcqSffiC8fGzxedTQpYupTVxOkOqhx2e-i7mQo5TgDncmiQ0QeCufV1Ap9Lt5eQDA5-DZBPzCPs-1YxSGOGCeFQczmo40elHLRMGCvBH4-IvZcMSUvrHhX9WJ-KU95O5jF-Ww4_u7bzDd4gAXZiu-kZ38AqVu-BA-ATtlYXbTsBHlGSRKfYysU/s400/Screenshot%202024-10-27%208.51.52%20PM.png
+  /img/ixfk64n50p.webp
 pendahuluan: |-
   IXFK64N50P merupakan MOSFET dengan tegangan drain-source (Vds) hingga 500V dan arus maksimal 64A, menawarkan efisiensi luar biasa dalam penanganan beban tinggi. Produk ini memadukan kemampuan switching cepat dengan disipasi daya rendah, membuatnya sangat cocok untuk aplikasi yang membutuhkan kinerja optimal dan efisiensi energi. Selain itu, dengan kemampuan pengoperasian pada suhu tinggi dan desain rugged, IXFK64N50P dapat bertahan dalam kondisi lingkungan yang ekstrem, memastikan umur panjang serta keandalan perangkat yang menggunakannya.
 spesifikasi: |-

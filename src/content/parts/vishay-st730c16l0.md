@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   Vishay
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjn7LhxDLcYEdBmJMZHnFDYuEJRoWhiva12Q_TEQodztN47jqzdDbSM27jbG2PUm3aR7iRvaV8qNBUH1REIjGZMy4xLBU-IeiyZujHpBBoVghjfUb3s0h4zYl93qIMrgZHiovCMnZPVEIZrtLOyWmvj9kj0LMdBn0CVjrwJXcZTwKqosDkV9aTaIR68Hsw/s400/Screenshot%202024-11-28%207.17.26%20AM.png
+  /placeholder-product.png
 pendahuluan: |-
   SCR Vishay ST730C16L0 menonjol dengan kemampuan menangani arus tinggi hingga 990 Ampere pada tegangan kerja hingga 1600 Volt. Dirancang untuk performa optimal dalam lingkungan industri yang keras, komponen ini menghadirkan solusi tangguh untuk sistem daya, dengan efisiensi energi yang tinggi, ketahanan termal yang luar biasa, dan desain yang compact. Dengan karakteristik tersebut, ST730C16L0 memberikan ketenangan pikiran bagi para insinyur dalam mengelola distribusi daya yang aman dan andal.
 spesifikasi: |-

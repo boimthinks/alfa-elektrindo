@@ -7,6 +7,7 @@ import { remarkAutolinkTerms } from './src/lib/remark-autolink-terms.js';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://alfa.elektrindo.co.id',
+  trailingSlash: 'always',
   compressHTML: true,
   markdown: {
     processor: unified({

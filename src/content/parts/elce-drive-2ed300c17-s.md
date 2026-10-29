@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   Infineon
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiKqyoPX-RjCtYR-UDpvXwHHuXi0O49OSUGLvYvuigh8nqNu8lMP54cXyHAqKCxNAY-Ekv8gv6BFySaxiVUn-cyPVZLj1eF0Bfs0jAr0wYFZscUkxziGQv7rFl7kIxNFjPu7UmhqbHR40ZLIwVql5ob-kM8F6ROMUN3KtFBadpU_fATnRSG1Z2Zk5m6ots/s400/Screenshot%202024-10-27%203.28.29%20PM.png
+  /placeholder-product.png
 pendahuluan: |-
   Elce Drive 2ED300C17-S menawarkan beragam keunggulan yang menjadikannya solusi ideal untuk berbagai aplikasi industri. Dengan kemampuan untuk mengendalikan IGBT dengan efisiensi tinggi, driver ini meningkatkan performa keseluruhan dari sistem yang menggunakannya. Selain itu, produk ini memiliki desain yang kompak, sehingga memudahkan integrasi dalam berbagai skema desain. Keandalannya dalam memberikan sinyal pemicu yang tepat dan cepat menjadikannya pilihan yang sangat baik untuk aplikasi yang membutuhkan kecepatan tinggi dan kestabilan dalam pengoperasian.
 spesifikasi: |-

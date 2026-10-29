@@ -95,11 +95,6 @@ ${brandLines.join('\n')}
 | :--- | :--- | :--- |
 ${articleLines.join('\n')}
 
-## 3. Indeks Artikel Terbit (${articles.length})
-| Judul Artikel | Slug | Tanggal |
-| :--- | :--- | :--- |
-${articleLines.join('\n')}
-
 ## 4. Ide Artikel Baru (Backlog)
 ${backlog.join('\n')}
 `;
@@ -113,4 +108,13 @@ try {
   console.log('Autolink model (src/lib/autolink-terms.ts) generated.');
 } catch (err) {
   console.warn('Gagal generate autolink model:', err.message);
+}
+
+// Generate llms-full.txt dari data terbaru
+const LLMS_FULL_SCRIPT = join(ROOT, 'scripts/gen-llms-full.js');
+try {
+  execSync(`node "${LLMS_FULL_SCRIPT}"`, { stdio: 'ignore' });
+  console.log('llms-full.txt (public/llms-full.txt) generated.');
+} catch (err) {
+  console.warn('Gagal generate llms-full.txt:', err.message);
 }

@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   Balluff
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjD9u0HSEqjbODuNZTv9dqSZ5seZ41iHsr1YUXMftsBIR5pOByJOzDYHXDH3OxNMkqlLyxoNl_AI0ry6vh1P2mziD86HofdR95C1VJWZTUl-rP4GtVSS-Pu4ZpUkgR5XzjVf4B6zD0jK7fF04Uk4swnmW08on9o6D6WF29HyndztNSRfKS5nP5KSvjftaU/s600/Screenshot%202025-01-21%2010.29.09%20AM.png
+  /placeholder-product.png
 pendahuluan: |-
   Balluff Micropulse Transducer BTL5-E17-M1750-P-S32 merupakan sensor posisi linier yang menggabungkan presisi tinggi dengan keandalan luar biasa. Dirancang untuk aplikasi industri yang membutuhkan pengukuran posisi non-kontak dengan akurasi mikrometer, perangkat ini menawarkan ketahanan terhadap kondisi lingkungan ekstrem, memastikan performa optimal dalam aplikasi yang paling menuntut.
 spesifikasi: |-

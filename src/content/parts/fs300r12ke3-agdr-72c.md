@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   ABB
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjO6w6X1Ubs-_RRzFmUeZyTRCuEC3M8UZDOUhM6Y2o2g70hZZ8dRSAGaZgg9dV_byv2J3Uezv9iksontoeRVCreRHZoMgBDzK07ei7gbp_jrMZDgb2rfdKTS8D6rM0IyWm1YQ-Ohd8domy0TmfjgA7VZqcRy4sXI46nuwaTyZ9zHEwcaO_Kp1CfJhU9B-A/s400/Screenshot%202024-10-25%2012.06.24%20PM.png
+  /placeholder-product.png
 pendahuluan: |-
   Modul IGBT FS300R12KE3/AGDR-72C dirancang untuk mengatasi tantangan dalam pengendalian daya tinggi dengan efisiensi optimal. Dengan arus 300A dan tegangan 1200V, produk ini sangat cocok untuk aplikasi yang memerlukan pengaturan energi presisi tanpa mengorbankan stabilitas. Kelebihan utama dari komponen ini adalah kemampuannya dalam mengurangi panas berlebih dan meningkatkan masa pakai peralatan, yang berujung pada penghematan energi dan biaya operasional yang signifikan.
 spesifikasi: |-

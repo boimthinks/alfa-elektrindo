@@ -2,633 +2,653 @@
 export const categories = [
   {
     "name": "Power Supplies",
-    "slug": "/ca/power-supplies"
+    "slug": "/ca/power-supplies/"
   },
   {
     "name": "Soft Starter",
-    "slug": "/ca/soft-starter"
+    "slug": "/ca/soft-starter/"
   },
   {
     "name": "Fuse",
-    "slug": "/ca/fuse"
+    "slug": "/ca/fuse/"
   },
   {
     "name": "IGBT Modules",
-    "slug": "/ca/igbt-modules"
+    "slug": "/ca/igbt-modules/"
   },
   {
     "name": "Inverter Drive",
-    "slug": "/ca/inverter-drive"
+    "slug": "/ca/inverter-drive/"
   },
   {
     "name": "Servo Motor",
-    "slug": "/ca/servo-motor"
+    "slug": "/ca/servo-motor/"
   },
   {
     "name": "Servo Module",
-    "slug": "/ca/servo-module"
+    "slug": "/ca/servo-module/"
   },
   {
     "name": "Spindle Amplifier Module",
-    "slug": "/ca/spindle-amplifier-module"
+    "slug": "/ca/spindle-amplifier-module/"
   },
   {
     "name": "Servo Amplifier",
-    "slug": "/ca/servo-amplifier"
+    "slug": "/ca/servo-amplifier/"
   },
   {
     "name": "Main Board",
-    "slug": "/ca/main-board"
+    "slug": "/ca/main-board/"
   },
   {
     "name": "PLC",
-    "slug": "/ca/plc"
+    "slug": "/ca/plc/"
   },
   {
     "name": "Contactors",
-    "slug": "/ca/contactors"
+    "slug": "/ca/contactors/"
   },
   {
     "name": "Printed Circuit Board",
-    "slug": "/ca/printed-circuit-board"
+    "slug": "/ca/printed-circuit-board/"
   },
   {
     "name": "Cooling Fan",
-    "slug": "/ca/cooling-fan"
+    "slug": "/ca/cooling-fan/"
   },
   {
     "name": "Integrated Circuits",
-    "slug": "/ca/integrated-circuits"
+    "slug": "/ca/integrated-circuits/"
   },
   {
     "name": "Transistors Module",
-    "slug": "/ca/transistors-module"
+    "slug": "/ca/transistors-module/"
   },
   {
     "name": "Semiconductor Fuse",
-    "slug": "/ca/semiconductor-fuse"
+    "slug": "/ca/semiconductor-fuse/"
   },
   {
     "name": "Transformers",
-    "slug": "/ca/transformers"
+    "slug": "/ca/transformers/"
   },
   {
     "name": "Pulse Encoder",
-    "slug": "/ca/pulse-encoder"
+    "slug": "/ca/pulse-encoder/"
   },
   {
     "name": "Industrial Relay",
-    "slug": "/ca/industrial-relay"
+    "slug": "/ca/industrial-relay/"
   },
   {
     "name": "Solid State Relay",
-    "slug": "/ca/solid-state-relay"
+    "slug": "/ca/solid-state-relay/"
   },
   {
     "name": "Analog Input",
-    "slug": "/ca/analog-input"
+    "slug": "/ca/analog-input/"
   },
   {
     "name": "Drives",
-    "slug": "/ca/drives"
+    "slug": "/ca/drives/"
   },
   {
     "name": "IGBT Transistors",
-    "slug": "/ca/igbt-transistors"
+    "slug": "/ca/igbt-transistors/"
   },
   {
     "name": "Blade Fuse",
-    "slug": "/ca/blade-fuse"
+    "slug": "/ca/blade-fuse/"
   },
   {
     "name": "Block Heater",
-    "slug": "/ca/block-heater"
+    "slug": "/ca/block-heater/"
   },
   {
     "name": "Tubing kit",
-    "slug": "/ca/tubing-kit"
+    "slug": "/ca/tubing-kit/"
   },
   {
     "name": "I/O MODULE",
-    "slug": "/ca/i-o-module"
+    "slug": "/ca/i-o-module/"
   },
   {
     "name": "Capacitors",
-    "slug": "/ca/capacitors"
+    "slug": "/ca/capacitors/"
   },
   {
     "name": "High Speed Fuse",
-    "slug": "/ca/high-speed-fuse"
+    "slug": "/ca/high-speed-fuse/"
   },
   {
     "name": "Power Factor Correction",
-    "slug": "/ca/power-factor-correction"
+    "slug": "/ca/power-factor-correction/"
   },
   {
     "name": "Micropulse transducer",
-    "slug": "/ca/micropulse-transducer"
+    "slug": "/ca/micropulse-transducer/"
   },
   {
     "name": "Incremental Rotary Encoder",
-    "slug": "/ca/incremental-rotary-encoder"
+    "slug": "/ca/incremental-rotary-encoder/"
   },
   {
     "name": "Photoelectric Sensors",
-    "slug": "/ca/photoelectric-sensors"
+    "slug": "/ca/photoelectric-sensors/"
   },
   {
     "name": "Sensors",
-    "slug": "/ca/sensors"
-  },
-  {
-    "name": "Board Mount Pressure Sensors",
-    "slug": "/ca/board-mount-pressure-sensors"
-  },
-  {
-    "name": "IGBT",
-    "slug": "/ca/igbt"
-  },
-  {
-    "name": "Fuse Holder",
-    "slug": "/ca/fuse-holder"
-  },
-  {
-    "name": "Specialty Fuses",
-    "slug": "/ca/specialty-fuses"
-  },
-  {
-    "name": "Diode Modul",
-    "slug": "/ca/diode-modul"
-  },
-  {
-    "name": "PLC Modules",
-    "slug": "/ca/plc-modules"
+    "slug": "/ca/sensors/"
   },
   {
     "name": "Proximity Sensors",
-    "slug": "/ca/proximity-sensors"
+    "slug": "/ca/proximity-sensors/"
+  },
+  {
+    "name": "Board Mount Pressure Sensors",
+    "slug": "/ca/board-mount-pressure-sensors/"
+  },
+  {
+    "name": "IGBT",
+    "slug": "/ca/igbt/"
+  },
+  {
+    "name": "Fuse Holder",
+    "slug": "/ca/fuse-holder/"
+  },
+  {
+    "name": "Specialty Fuses",
+    "slug": "/ca/specialty-fuses/"
+  },
+  {
+    "name": "Diode Modul",
+    "slug": "/ca/diode-modul/"
+  },
+  {
+    "name": "PLC Modules",
+    "slug": "/ca/plc-modules/"
   },
   {
     "name": "Switching Power Supplies",
-    "slug": "/ca/switching-power-supplies"
+    "slug": "/ca/switching-power-supplies/"
   },
   {
     "name": "Micro Controllers",
-    "slug": "/ca/micro-controllers"
+    "slug": "/ca/micro-controllers/"
   },
   {
     "name": "Bridge Rectifiers",
-    "slug": "/ca/bridge-rectifiers"
+    "slug": "/ca/bridge-rectifiers/"
   },
   {
     "name": "Rectifiers",
-    "slug": "/ca/rectifiers"
+    "slug": "/ca/rectifiers/"
   },
   {
     "name": "Distance Sensor",
-    "slug": "/ca/distance-sensor"
+    "slug": "/ca/distance-sensor/"
   },
   {
     "name": "Controllers",
-    "slug": "/ca/controllers"
+    "slug": "/ca/controllers/"
   },
   {
     "name": "Transducers",
-    "slug": "/ca/transducers"
+    "slug": "/ca/transducers/"
   },
   {
     "name": "Gate Drivers",
-    "slug": "/ca/gate-drivers"
+    "slug": "/ca/gate-drivers/"
   },
   {
     "name": "Sensor Modules",
-    "slug": "/ca/sensor-modules"
-  },
-  {
-    "name": "Thyristors",
-    "slug": "/ca/thyristors"
-  },
-  {
-    "name": "Braking Resistor",
-    "slug": "/ca/braking-resistor"
-  },
-  {
-    "name": "Smart Camera",
-    "slug": "/ca/smart-camera"
-  },
-  {
-    "name": "Connectors",
-    "slug": "/ca/connectors"
-  },
-  {
-    "name": "Circuit Protection",
-    "slug": "/ca/circuit-protection"
-  },
-  {
-    "name": "Laser Diodes",
-    "slug": "/ca/laser-diodes"
-  },
-  {
-    "name": "Cartridge Fuses",
-    "slug": "/ca/cartridge-fuses"
-  },
-  {
-    "name": "Pressure Sensors",
-    "slug": "/ca/pressure-sensors"
-  },
-  {
-    "name": "Molded Case Circuit Breakers",
-    "slug": "/ca/molded-case-circuit-breakers"
-  },
-  {
-    "name": "MOSFETs",
-    "slug": "/ca/mosfets"
-  },
-  {
-    "name": "Terminal Blocks",
-    "slug": "/ca/terminal-blocks"
-  },
-  {
-    "name": "Speed Sensors",
-    "slug": "/ca/speed-sensors"
-  },
-  {
-    "name": "Sensor Suhu",
-    "slug": "/ca/sensor-suhu"
+    "slug": "/ca/sensor-modules/"
   },
   {
     "name": "Thyristor Modules",
-    "slug": "/ca/thyristor-modules"
+    "slug": "/ca/thyristor-modules/"
   },
   {
-    "name": "SCR Modules",
-    "slug": "/ca/scr-modules"
+    "name": "Thyristors",
+    "slug": "/ca/thyristors/"
   },
   {
-    "name": "SCRs",
-    "slug": "/ca/scrs"
+    "name": "Braking Resistor",
+    "slug": "/ca/braking-resistor/"
   },
   {
-    "name": "Solid State Drive",
-    "slug": "/ca/solid-state-drive"
+    "name": "Smart Camera",
+    "slug": "/ca/smart-camera/"
   },
   {
-    "name": "Actuator",
-    "slug": "/ca/actuator"
+    "name": "Connectors",
+    "slug": "/ca/connectors/"
   },
   {
-    "name": "DC Fans",
-    "slug": "/ca/dc-fans"
+    "name": "Circuit Protection",
+    "slug": "/ca/circuit-protection/"
   },
   {
-    "name": "Image Sensors",
-    "slug": "/ca/image-sensors"
+    "name": "Laser Diodes",
+    "slug": "/ca/laser-diodes/"
   },
   {
-    "name": "Fuse Link Protistor",
-    "slug": "/ca/fuse-link-protistor"
+    "name": "Cartridge Fuses",
+    "slug": "/ca/cartridge-fuses/"
   },
   {
-    "name": "Power Distribution Block",
-    "slug": "/ca/power-distribution-block"
+    "name": "Pressure Sensors",
+    "slug": "/ca/pressure-sensors/"
   },
   {
-    "name": "Power Thyristor",
-    "slug": "/ca/power-thyristor"
-  },
-  {
-    "name": "Safety Relays",
-    "slug": "/ca/safety-relays"
-  },
-  {
-    "name": "Rotary Encoder",
-    "slug": "/ca/rotary-encoder"
-  },
-  {
-    "name": "Control Switches",
-    "slug": "/ca/control-switches"
-  },
-  {
-    "name": "Servo Valve",
-    "slug": "/ca/servo-valve"
-  },
-  {
-    "name": "Flow Sensors",
-    "slug": "/ca/flow-sensors"
-  },
-  {
-    "name": "Circuit Breaker",
-    "slug": "/ca/circuit-breaker"
-  },
-  {
-    "name": "Coupling Rotary",
-    "slug": "/ca/coupling-rotary"
-  },
-  {
-    "name": "Relay Sockets",
-    "slug": "/ca/relay-sockets"
+    "name": "Molded Case Circuit Breakers",
+    "slug": "/ca/molded-case-circuit-breakers/"
   },
   {
     "name": "Thermostat Controller",
-    "slug": "/ca/thermostat-controller"
+    "slug": "/ca/thermostat-controller/"
+  },
+  {
+    "name": "MOSFETs",
+    "slug": "/ca/mosfets/"
+  },
+  {
+    "name": "Terminal Blocks",
+    "slug": "/ca/terminal-blocks/"
+  },
+  {
+    "name": "Speed Sensors",
+    "slug": "/ca/speed-sensors/"
+  },
+  {
+    "name": "Sensor Suhu",
+    "slug": "/ca/sensor-suhu/"
+  },
+  {
+    "name": "SCR Modules",
+    "slug": "/ca/scr-modules/"
+  },
+  {
+    "name": "SCRs",
+    "slug": "/ca/scrs/"
+  },
+  {
+    "name": "Solid State Drive",
+    "slug": "/ca/solid-state-drive/"
+  },
+  {
+    "name": "Actuator",
+    "slug": "/ca/actuator/"
+  },
+  {
+    "name": "DC Fans",
+    "slug": "/ca/dc-fans/"
+  },
+  {
+    "name": "Image Sensors",
+    "slug": "/ca/image-sensors/"
+  },
+  {
+    "name": "Fuse Link Protistor",
+    "slug": "/ca/fuse-link-protistor/"
+  },
+  {
+    "name": "Power Distribution Block",
+    "slug": "/ca/power-distribution-block/"
+  },
+  {
+    "name": "Power Thyristor",
+    "slug": "/ca/power-thyristor/"
+  },
+  {
+    "name": "Safety Relays",
+    "slug": "/ca/safety-relays/"
+  },
+  {
+    "name": "Rotary Encoder",
+    "slug": "/ca/rotary-encoder/"
+  },
+  {
+    "name": "Control Switches",
+    "slug": "/ca/control-switches/"
+  },
+  {
+    "name": "Servo Valve",
+    "slug": "/ca/servo-valve/"
+  },
+  {
+    "name": "Flow Sensors",
+    "slug": "/ca/flow-sensors/"
+  },
+  {
+    "name": "Circuit Breaker",
+    "slug": "/ca/circuit-breaker/"
+  },
+  {
+    "name": "Coupling Rotary",
+    "slug": "/ca/coupling-rotary/"
+  },
+  {
+    "name": "Relay Sockets",
+    "slug": "/ca/relay-sockets/"
   },
   {
     "name": "Switches",
-    "slug": "/ca/switches"
+    "slug": "/ca/switches/"
   },
   {
     "name": "Pressure Switch",
-    "slug": "/ca/pressure-switch"
+    "slug": "/ca/pressure-switch/"
   },
   {
     "name": "Ambient Light Sensors",
-    "slug": "/ca/ambient-light-sensors"
+    "slug": "/ca/ambient-light-sensors/"
   }
 ];
 export const manufacturers = [
   {
     "name": "PULS",
-    "slug": "/ma/puls"
+    "slug": "/ma/puls/"
   },
   {
     "name": "Siemens",
-    "slug": "/ma/siemens"
+    "slug": "/ma/siemens/"
   },
   {
     "name": "Ferraz Shawmut",
-    "slug": "/ma/ferraz-shawmut"
+    "slug": "/ma/ferraz-shawmut/"
   },
   {
     "name": "Fuji Electric",
-    "slug": "/ma/fuji-electric"
+    "slug": "/ma/fuji-electric/"
   },
   {
     "name": "Eaton Bussmann",
-    "slug": "/ma/eaton-bussmann"
+    "slug": "/ma/eaton-bussmann/"
   },
   {
     "name": "Fanuc",
-    "slug": "/ma/fanuc"
+    "slug": "/ma/fanuc/"
   },
   {
     "name": "Allen Bradley",
-    "slug": "/ma/allen-bradley"
+    "slug": "/ma/allen-bradley/"
   },
   {
     "name": "Eaton Cutler Hammer",
-    "slug": "/ma/eaton-cutler-hammer"
+    "slug": "/ma/eaton-cutler-hammer/"
   },
   {
     "name": "Davitu",
-    "slug": "/ma/davitu"
+    "slug": "/ma/davitu/"
   },
   {
     "name": "Panasonic",
-    "slug": "/ma/panasonic"
+    "slug": "/ma/panasonic/"
   },
   {
     "name": "Carlo Gavazzi",
-    "slug": "/ma/carlo-gavazzi"
+    "slug": "/ma/carlo-gavazzi/"
   },
   {
     "name": "ABB",
-    "slug": "/ma/abb"
+    "slug": "/ma/abb/"
   },
   {
     "name": "Microchip Technology",
-    "slug": "/ma/microchip-technology"
+    "slug": "/ma/microchip-technology/"
   },
   {
     "name": "Bussmann",
-    "slug": "/ma/bussmann"
+    "slug": "/ma/bussmann/"
   },
   {
     "name": "Epcos",
-    "slug": "/ma/epcos"
+    "slug": "/ma/epcos/"
   },
   {
     "name": "Mersen",
-    "slug": "/ma/mersen"
+    "slug": "/ma/mersen/"
   },
   {
     "name": "EPCOS TDK",
-    "slug": "/ma/epcos-tdk"
+    "slug": "/ma/epcos-tdk/"
   },
   {
     "name": "Balluff",
-    "slug": "/ma/balluff"
+    "slug": "/ma/balluff/"
   },
   {
     "name": "BEI Sensors",
-    "slug": "/ma/bei-sensors"
+    "slug": "/ma/bei-sensors/"
   },
   {
     "name": "Autonics",
-    "slug": "/ma/autonics"
+    "slug": "/ma/autonics/"
+  },
+  {
+    "name": "Turck",
+    "slug": "/ma/turck/"
   },
   {
     "name": "Bosch",
-    "slug": "/ma/bosch"
+    "slug": "/ma/bosch/"
   },
   {
     "name": "Infineon",
-    "slug": "/ma/infineon"
+    "slug": "/ma/infineon/"
   },
   {
     "name": "Powerex",
-    "slug": "/ma/powerex"
+    "slug": "/ma/powerex/"
   },
   {
     "name": "Omron",
-    "slug": "/ma/omron"
+    "slug": "/ma/omron/"
   },
   {
     "name": "Mitsubishi Electric",
-    "slug": "/ma/mitsubishi-electric"
+    "slug": "/ma/mitsubishi-electric/"
   },
   {
     "name": "Sick",
-    "slug": "/ma/sick"
+    "slug": "/ma/sick/"
   },
   {
     "name": "TDK Lambda",
-    "slug": "/ma/tdk-lambda"
+    "slug": "/ma/tdk-lambda/"
   },
   {
     "name": "SanRex",
-    "slug": "/ma/sanrex"
+    "slug": "/ma/sanrex/"
   },
   {
     "name": "IXYS",
-    "slug": "/ma/ixys"
+    "slug": "/ma/ixys/"
   },
   {
     "name": "Veris Industries",
-    "slug": "/ma/veris-industries"
+    "slug": "/ma/veris-industries/"
   },
   {
     "name": "Danoterm",
-    "slug": "/ma/danoterm"
+    "slug": "/ma/danoterm/"
   },
   {
     "name": "HellermannTyton",
-    "slug": "/ma/hellermanntyton"
+    "slug": "/ma/hellermanntyton/"
   },
   {
     "name": "Fairchild",
-    "slug": "/ma/fairchild"
+    "slug": "/ma/fairchild/"
   },
   {
     "name": "Eaton",
-    "slug": "/ma/eaton"
+    "slug": "/ma/eaton/"
   },
   {
     "name": "Hengfu",
-    "slug": "/ma/hengfu"
+    "slug": "/ma/hengfu/"
   },
   {
     "name": "STARPOWER",
-    "slug": "/ma/starpower"
+    "slug": "/ma/starpower/"
   },
   {
     "name": "Sharp Microelectronics",
-    "slug": "/ma/sharp-microelectronics"
+    "slug": "/ma/sharp-microelectronics/"
   },
   {
     "name": "Honeywell",
-    "slug": "/ma/honeywell"
+    "slug": "/ma/honeywell/"
+  },
+  {
+    "name": "Baumer",
+    "slug": "/ma/baumer/"
   },
   {
     "name": "Rechner Sensors",
-    "slug": "/ma/rechner-sensors"
+    "slug": "/ma/rechner-sensors/"
   },
   {
     "name": "KB Electronics",
-    "slug": "/ma/kb-electronics"
+    "slug": "/ma/kb-electronics/"
   },
   {
     "name": "Phoenix Contact",
-    "slug": "/ma/phoenix-contact"
+    "slug": "/ma/phoenix-contact/"
   },
   {
     "name": "Littelfuse",
-    "slug": "/ma/littelfuse"
+    "slug": "/ma/littelfuse/"
+  },
+  {
+    "name": "LEM",
+    "slug": "/ma/lem/"
   },
   {
     "name": "Texas Instruments",
-    "slug": "/ma/texas-instruments"
+    "slug": "/ma/texas-instruments/"
   },
   {
     "name": "Telemecanique",
-    "slug": "/ma/telemecanique"
+    "slug": "/ma/telemecanique/"
   },
   {
     "name": "Crydom",
-    "slug": "/ma/crydom"
+    "slug": "/ma/crydom/"
   },
   {
     "name": "Sanyo",
-    "slug": "/ma/sanyo"
+    "slug": "/ma/sanyo/"
   },
   {
     "name": "Miller Electric",
-    "slug": "/ma/miller-electric"
+    "slug": "/ma/miller-electric/"
   },
   {
     "name": "Westcode",
-    "slug": "/ma/westcode"
+    "slug": "/ma/westcode/"
   },
   {
     "name": "Poweralia",
-    "slug": "/ma/poweralia"
+    "slug": "/ma/poweralia/"
   },
   {
     "name": "Pepperl Fuchs",
-    "slug": "/ma/pepperl-fuchs"
+    "slug": "/ma/pepperl-fuchs/"
   },
   {
     "name": "Melexis",
-    "slug": "/ma/melexis"
+    "slug": "/ma/melexis/"
   },
   {
     "name": "Minarik Drives",
-    "slug": "/ma/minarik-drives"
+    "slug": "/ma/minarik-drives/"
   },
   {
     "name": "Micron",
-    "slug": "/ma/micron"
+    "slug": "/ma/micron/"
   },
   {
     "name": "SMC Corporation",
-    "slug": "/ma/smc-corporation"
+    "slug": "/ma/smc-corporation/"
   },
   {
     "name": "NMB Technologies",
-    "slug": "/ma/nmb-technologies"
+    "slug": "/ma/nmb-technologies/"
   },
   {
     "name": "Kokonoe",
-    "slug": "/ma/kokonoe"
+    "slug": "/ma/kokonoe/"
   },
   {
     "name": "STMicroelectronics",
-    "slug": "/ma/stmicroelectronics"
+    "slug": "/ma/stmicroelectronics/"
   },
   {
     "name": "Banner Engineering",
-    "slug": "/ma/banner-engineering"
+    "slug": "/ma/banner-engineering/"
   },
   {
     "name": "VINCOTECH",
-    "slug": "/ma/vincotech"
+    "slug": "/ma/vincotech/"
   },
   {
     "name": "Pilz",
-    "slug": "/ma/pilz"
+    "slug": "/ma/pilz/"
   },
   {
     "name": "MOOG",
-    "slug": "/ma/moog"
+    "slug": "/ma/moog/"
   },
   {
     "name": "Sensirion",
-    "slug": "/ma/sensirion"
+    "slug": "/ma/sensirion/"
   },
   {
     "name": "Semikron",
-    "slug": "/ma/semikron"
+    "slug": "/ma/semikron/"
   },
   {
     "name": "Semikron Danfoss",
-    "slug": "/ma/semikron-danfoss"
+    "slug": "/ma/semikron-danfoss/"
   },
   {
     "name": "IDEC",
-    "slug": "/ma/idec"
+    "slug": "/ma/idec/"
   },
   {
     "name": "Vishay",
-    "slug": "/ma/vishay"
+    "slug": "/ma/vishay/"
   },
   {
     "name": "Stork Tronic",
-    "slug": "/ma/stork-tronic"
+    "slug": "/ma/stork-tronic/"
+  },
+  {
+    "name": "Koyo",
+    "slug": "/ma/koyo/"
   },
   {
     "name": "WAGO Corporation",
-    "slug": "/ma/wago-corporation"
+    "slug": "/ma/wago-corporation/"
   },
   {
     "name": "Wago",
-    "slug": "/ma/wago"
+    "slug": "/ma/wago/"
+  },
+  {
+    "name": "Weidmuller",
+    "slug": "/ma/weidmuller/"
   },
   {
     "name": "Coherent",
-    "slug": "/ma/coherent"
+    "slug": "/ma/coherent/"
   },
   {
     "name": "Schneider Electric",
-    "slug": "/ma/schneider-electric"
+    "slug": "/ma/schneider-electric/"
   }
 ];
 export const skipList = [

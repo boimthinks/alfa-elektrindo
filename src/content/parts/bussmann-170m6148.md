@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   Eaton Bussmann
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjHhd4q5C8TXRXdF0ErzNXlsII1iwn40juDCougLdGTd9dWq8nZhCC6P25rR55GdIp8SR0QWOlh69dszs4ZtQh3TVMQt8gNBT8d1ayKwvg1S6yK3HVtITpetbSkySFq-QdjiG-JVvRKw00u78B2gHgPYywLCD0O7kdhyphenhyphenkDOIjKbHnrVaRFfOMkv1UhVSVA/s400/Screenshot%202024-11-13%209.03.52%20PM.png
+  /placeholder-product.png
 pendahuluan: |-
   Sekering Eaton 170M6148 memiliki banyak keunggulan, mulai dari perlindungan arus yang andal hingga ketahanan dalam lingkungan industri yang keras. Produk ini menggabungkan teknologi termutakhir untuk menjamin keamanan dan efisiensi dalam berbagai aplikasi kelistrikan. Dengan desainnya yang kokoh dan penggunaan material berkualitas tinggi, sekering ini mampu memberikan perlindungan lebih lama dengan tingkat kinerja yang konsisten. Di sisi lain, ukurannya yang kompak menjadikannya pilihan ideal untuk perangkat yang memerlukan efisiensi ruang tanpa mengorbankan kemampuan teknis.
 spesifikasi: |-

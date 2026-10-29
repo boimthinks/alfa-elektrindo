@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   PULS
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjkcpGsbuv64kDHIl0Glc65aFney0jl3mBi5NgUj25IgWoPjaaNMkr9pAJZCAsrG2jt3Dd-26zCQAVaeT0jB4M0ks7_Gi9spR17S1RbUaOTMxcQ9X_7Nxp8avb4YKhoEIE87xY9kfFnWkYeqLmSnefLHAyEYjKIkEuCPv_OdqsIFl4pGnNsJpNE3kbsOZI/s600/Screenshot%202025-01-21%2010.40.48%20AM.png
+  /placeholder-product.png
 pendahuluan: |-
   Power Supply PULS UB20.241 adalah solusi cerdas untuk menjaga kestabilan daya dalam aplikasi industri. Dengan desain yang efisien dan teknologi mutakhir, UB20.241 memastikan perangkat tetap beroperasi meskipun terjadi gangguan listrik. Produk ini memberikan perlindungan terhadap lonjakan tegangan, memastikan daya tetap optimal, serta memperpanjang umur komponen elektronik yang terhubung.
 spesifikasi: |-

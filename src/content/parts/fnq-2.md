@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   Eaton
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiggLlTkvw2pIB25FRnyjWGvH6wuF-EgsEZbphlwZsyX2cDSzwPRsWN3Z7QuGxzyc_rL-7qYNskxqNJW91movC9TkHhiz7Hr3Ru2QBGwUVD-66SoIFRnCEm5UZk1dmeOQe1PZl7G-YThDK0EmNznUWkx0B4ae_oV_C4b3qzhPSTt9y2oQpXA_jMa3elMuw/s400/Screenshot%202024-11-19%205.36.38%20PM.png
+  /placeholder-product.png
 pendahuluan: |-
   FNQ-2 Eaton Industrial & Electrical Fuses menghadirkan solusi yang ideal untuk melindungi sistem listrik dari kerusakan akibat lonjakan arus berlebih. Dengan teknologi Time Delay, sekering ini memungkinkan arus sementara yang tinggi seperti saat mesin atau motor dinyalakan, tanpa memutuskan aliran listrik utama. Produk ini menawarkan efisiensi, daya tahan, dan keandalan untuk berbagai aplikasi, mulai dari sistem kontrol industri hingga peralatan rumah tangga berteknologi canggih.
 spesifikasi: |-

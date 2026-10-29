@@ -4,6 +4,11 @@
 - **Bahasa**: Selalu gunakan Bahasa Indonesia dalam semua respon, pesan, dan percakapan tanpa terkecuali.
 - Nama teknis, istilah, dan kode tetap dalam bahasa Inggris (wajar).
 
+## Prioritas Kerja Aktif (WAJIB DIIKUTI)
+- **`PRIORITAS-OPTIMASI-KATALOG.md`** (di root project) adalah **prioritas kerja utama** yang harus dikerjakan terlebih dahulu.
+- Dokumen tersebut memuat daftar brand & series target pengoptimalan trafik dan penjualan (Semikron, IXYS, Infineon, SanRex, LEM, MTL, Telemecanique, Fuji Electric, Bussmann, Mitsubishi, Ferraz, dll.).
+- Pengerjaan dilakukan **secara bertahap** (tidak sekaligus): melengkapi file part number di `src/content/parts/` sesuai batch data dari pengguna, menyusun artikel pilar pendukung (via `pakar-entity-seo` dan `penulis-ahli`), dan memperbarui status progres di `PRIORITAS-OPTIMASI-KATALOG.md`.
+
 ## Akses Data
 - **SUMBER-PENGETAHUAN.md** (di root project) wajib dibaca untuk data fakta brand, layanan, produk, aturan menulis, dan daftar konten.
 - **Seluruh data berasal dari file markdown** (Content Collections Astro). Tidak ada lagi fetch API/Google Sheets pada runtime.

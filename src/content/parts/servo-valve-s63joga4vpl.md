@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   MOOG
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjPLxH6pKQFyf1OhK0FF2pkpeQG9NI5RtTaUkWWzf65A1ug_A1__LKlpBr0xlBRgW5rJPc_Bpp3A4UirGUvBr6sLW07nHNG6v0YMZwInO0e7NZwmCEtnSmiSmVYpHmIlvQK3976CvyrCXy3cpMBT4f4XWTkJdIvLvG7KbzgaDKufa6cAFVMck6E4QDBP3g/s400/Screenshot%202024-11-14%209.35.17%20AM.png
+  /placeholder-product.png
 pendahuluan: |-
   Servo Valve S63JOGA4VPL MOOG dikenal akan keandalan dan ketahanannya di lingkungan industri yang keras. Dengan teknologi canggih, servo valve ini mampu memberikan kontrol aliran hidraulik yang akurat, respons cepat, dan sangat stabil dalam berbagai aplikasi. Keunggulannya yang mencakup presisi tinggi dan daya tahan membuat produk ini sangat bermanfaat untuk berbagai sektor, mulai dari otomasi industri hingga industri pertahanan. Alhasil, servo valve ini tidak hanya meningkatkan performa sistem tetapi juga meminimalkan kebutuhan perawatan dan memperpanjang masa pakai peralatan industri.
 spesifikasi: |-

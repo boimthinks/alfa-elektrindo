@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   Siemens
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFXGN1g-hbEosx7pYuekyDywNkfoSn1C9X-9T7DOD7LGv1hWxPpNslBDmrApKEkS2D7skBWIEUIH8a1RT-QOZSuD91QwXADqWuEiN6Xxo1Mifshyphenhyphenw1rIiOwGCXdGoZ944mG7ZuTLMdqNQOz8S1pZVadO7KWBvjSPCMil0VnSOqg4L9T_kZsSCprYLHrUk/s600/Screenshot%202025-01-04%208.28.34%20AM.png
+  /placeholder-product.png
 pendahuluan: |-
   3RV6011-1JA10 Siemens Circuit Breaker adalah solusi unggulan untuk perlindungan motor yang menawarkan keandalan tinggi dan efisiensi operasional. Dengan desain yang kompak dan spesifikasi kelas dunia, produk ini memberikan perlindungan yang optimal terhadap arus lebih dan korsleting, memastikan motor tetap bekerja dengan aman dan efisien. Penggunaannya tidak hanya meningkatkan umur motor, tetapi juga mengurangi risiko kerusakan dan downtime yang mahal.
 spesifikasi: |-

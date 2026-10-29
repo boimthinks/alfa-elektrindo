@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   Bussmann
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjfV0wUZPwZ3iWSJpvrHjFRmWEVVjetdB2-sMLJnXqJJJOI2am8LzfHn6CtSKuymbSPIoeE-IfLf-n4HfefatPL1RnIYbwvKwZ-ZxiGZduThgUjMI-Lw0jXFseKhhaVA6YIiXrW5XOlEI7koM5y7AVvr48S5HJoXm_00c065kI7epePgrQa_lMcunO-v0w/s600/Screenshot%202025-01-24%2010.46.00%20AM.png
+  /placeholder-product.png
 pendahuluan: |-
   170M6462 Bussmann Square Body Fuse merupakan sekering industri berkinerja tinggi yang dirancang untuk melindungi sistem kelistrikan dari arus lebih dan gangguan yang dapat merusak peralatan. Dengan kemampuan handling arus sebesar 800A pada tegangan 660V, sekering ini menjadi pilihan utama untuk aplikasi daya tinggi seperti sistem distribusi listrik, inverter industri, dan perlindungan mesin berat. Teknologi material fusible berkualitas tinggi memastikan daya tahan optimal serta pemutusan arus yang cepat dan aman.
 spesifikasi: |-

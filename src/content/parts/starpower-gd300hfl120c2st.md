@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   STARPOWER
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh60SLNVZ4D002mOlzJMDVCdGPIVmhbr5kwPTChqyqbHZbqVzGOun6b6FHsN6dgVaZlp6SGKYo0ceGzBnKEsxwbK0ZafwAkvRwX7gtRDGvSRAr9RQtEBssGV16IicWy_Mj5i-NhSOr054QMFDhpuY-wfzPhj5a0FcJe6UR-lUlhcjnfC17DLIVMi-Zxwpk/s400/Screenshot%202024-11-21%209.17.56%20PM.png
+  /placeholder-product.png
 pendahuluan: |-
   Modul IGBT GD300HFL120C2ST menawarkan solusi ideal untuk berbagai aplikasi yang membutuhkan pengelolaan daya tinggi dengan efisiensi termal unggul dan kemampuan switching cepat. Produk ini dirancang untuk mengurangi kerugian daya secara signifikan, memperpanjang masa pakai sistem, dan memberikan performa stabil pada berbagai kondisi lingkungan yang ekstrem. Dengan keunggulan ini, modul ini menjadi pilihan utama bagi industri yang mengutamakan efisiensi operasional dan pengurangan biaya jangka panjang.
 spesifikasi: |-

@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   Eaton
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjDlX2B2MkF081gZlagvFv5mJUfA40hCQkhf7Jer6hiFDy8yuD0oQBulMNP4iIH13ZQkPrjq8y1TifSabcsfvejHB80XrXvBvjj_lWV6J50S5k3s7dGOC4JA8CRONWSaHmdbT9Rz9wBK6S4rKBmgz6m4N85nPhgcmmyuKHecKxGtX6zU3uxSJ70TDZsDIM/s400/Screenshot%202024-11-19%205.43.43%20PM.png
+  /placeholder-product.png
 pendahuluan: |-
   FNQ-5 Eaton adalah sekering tipe Time Delay Tron yang dirancang untuk mengatasi lonjakan arus sementara tanpa memutuskan aliran listrik yang stabil. Dengan kapasitas kerja hingga 500VAC dan kemampuan untuk menangani arus hingga 5A, sekering ini memberikan perlindungan andal untuk peralatan listrik dan elektronik berharga, memastikan keandalan sistem serta memperpanjang usia komponen.
 spesifikasi: |-

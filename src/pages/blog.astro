@@ -5,9 +5,18 @@ import { getAllData } from '../lib/data';
 
 const { blog } = await getAllData();
 const sortedBlog = blog.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://alfa.elektrindo.co.id/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://alfa.elektrindo.co.id/blog/" }
+  ]
+});
 ---
 
-<Layout title="Blog & Artikel Komponen Elektronik | Alfa Elektrindo" description="Dapatkan informasi terbaru seputar komponen elektronik, industri, dan tips pabrikasi.">
+<Layout title="Blog & Artikel Komponen Elektronik | Alfa Elektrindo" description="Dapatkan informasi terbaru seputar komponen elektronik, industri, dan tips pabrikasi." schema={schema}>
   <PageHeader
     eyebrow={`Ref: ALFA-DOC / INDUSTRIAL-BLOG`}
     title={`Industrial`}
@@ -23,7 +32,7 @@ const sortedBlog = blog.sort((a, b) => new Date(b.date) - new Date(a.date));
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {sortedBlog.map(post => (
-          <a href={`/blog/${post.slug}`} class="overflow-hidden group flex flex-col h-full hover:-translate-y-1 transition-transform duration-300">
+          <a href={`/blog/${post.slug}/`} class="overflow-hidden group flex flex-col h-full hover:-translate-y-1 transition-transform duration-300">
             <div class="w-full overflow-hidden bg-gray-100" style="aspect-ratio: 16 / 9;">
               <img
                 src={post.fifu_image_url || '/placeholder-blog.png'}

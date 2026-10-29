@@ -19,6 +19,15 @@ export async function getStaticPaths() {
 
 const { product, relatedProducts } = Astro.props;
 
+const absoluteImageUrl = product.fifu_image_url
+  ? (product.fifu_image_url.startsWith('http') ? product.fifu_image_url : `https://alfa.elektrindo.co.id${product.fifu_image_url}`)
+  : 'https://alfa.elektrindo.co.id/placeholder-product.png';
+
+const categorySlug = (product.category || '')
+  .toLowerCase()
+  .replace(/[^a-z0-9]+/g, '-')
+  .replace(/^-+|-+$/g, '');
+
 const schema = JSON.stringify({
   "@context": "https://schema.org",
   "@graph": [
@@ -26,7 +35,7 @@ const schema = JSON.stringify({
       "@type": "Product",
       "name": product.title,
       "description": `${product.title} ${product.category} by ${product.manufacturer}. Supplier Komponen Elektronik Batam.`,
-      "image": product.fifu_image_url,
+      "image": absoluteImageUrl,
       "brand": { "@type": "Brand", "name": product.manufacturer },
       "offers": {
         "@type": "Offer",
@@ -40,9 +49,9 @@ const schema = JSON.stringify({
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://alfa.elektrindo.co.id/" },
-        { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://alfa.elektrindo.co.id/products" },
-        { "@type": "ListItem", "position": 3, "name": product.category || "Part", "item": `https://alfa.elektrindo.co.id/ca/${(product.category || '').toLowerCase().replace(/[^a-z0-9]+/g, '-')}` },
-        { "@type": "ListItem", "position": 4, "name": product.title }
+        { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://alfa.elektrindo.co.id/products/" },
+        ...(categorySlug ? [{ "@type": "ListItem", "position": 3, "name": product.category, "item": `https://alfa.elektrindo.co.id/ca/${categorySlug}/` }] : []),
+        { "@type": "ListItem", "position": categorySlug ? 4 : 3, "name": product.title, "item": `https://alfa.elektrindo.co.id/part/${product.slug}/` }
       ]
     }
   ]
@@ -60,7 +69,7 @@ const metaDescription = `Jual ${product.title} ${product.category} ${product.man
     <nav slot="breadcrumb" class="flex text-blue-200 text-[10px] font-mono uppercase tracking-widest mb-6">
       <a href="/" class="hover:text-white">Home</a>
       <span class="mx-3 text-blue-400">/</span>
-      <a href="/products" class="hover:text-white">Products</a>
+      <a href="/products/" class="hover:text-white">Products</a>
     </nav>
     <div slot="meta" class="flex flex-wrap gap-x-8 gap-y-3 border-t border-white/10 pt-6 mt-8 font-mono text-[11px] uppercase tracking-widest text-gray-400">
       <span>Part No: <span class="text-accent font-bold">{product.title}</span></span>
@@ -90,11 +99,11 @@ const metaDescription = `Jual ${product.title} ${product.category} ${product.man
             </div>
             <div class="flex items-center justify-between py-4">
               <span class="eyebrow text-gray-400">Manufacturer</span>
-              <a href={`/ma/${(product.manufacturer || '').toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} class="font-mono text-sm font-bold text-primary text-right hover:text-primary-dark">{product.manufacturer}</a>
+              <a href={`/ma/${(product.manufacturer || '').toLowerCase().replace(/[^a-z0-9]+/g, '-')}/`} class="font-mono text-sm font-bold text-primary text-right hover:text-primary-dark">{product.manufacturer}</a>
             </div>
             <div class="flex items-center justify-between py-4">
               <span class="eyebrow text-gray-400">Category</span>
-              <a href={`/ca/${(product.category || '').toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} class="font-mono text-sm font-bold text-gray-700 text-right hover:text-primary">{product.category}</a>
+              <a href={`/ca/${(product.category || '').toLowerCase().replace(/[^a-z0-9]+/g, '-')}/`} class="font-mono text-sm font-bold text-gray-700 text-right hover:text-primary">{product.category}</a>
             </div>
           </div>
 

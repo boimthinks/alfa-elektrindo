@@ -2,22 +2,29 @@
 import Layout from '../../layouts/Layout.astro';
 import PageHeader from '../../components/PageHeader.astro';
 import ProductCard from '../../components/ProductCard.astro';
+import { getCollection, render } from 'astro:content';
 import { getAllData, shuffle } from '../../lib/data';
 
 export async function getStaticPaths() {
-  const { area, part, category, manufacturer } = await getAllData();
-  return area.map((item) => ({
-    params: { slug: item.slug },
-    props: { 
-      item,
-      allPart: part,
-      allCategory: category,
-      allManufacturer: manufacturer
-    },
+  const { part, category, manufacturer } = await getAllData();
+  const areaEntries = await getCollection('areas');
+
+  return await Promise.all(areaEntries.map(async (entry) => {
+    const { Content } = await render(entry);
+    return {
+      params: { slug: entry.data.slug },
+      props: { 
+        item: entry.data,
+        Content,
+        allPart: part,
+        allCategory: category,
+        allManufacturer: manufacturer
+      },
+    };
   }));
 }
 
-const { item, allPart, allCategory, allManufacturer } = Astro.props;
+const { item, Content, allPart, allCategory, allManufacturer } = Astro.props;
 
 const popularCategories = allCategory.slice(0, 10);
 const popularManufacturers = allManufacturer.slice(0, 8);
@@ -50,14 +57,6 @@ const schema = JSON.stringify({
     </div>
   </PageHeader>
 
-  {item.content && (
-    <section class="py-16 bg-white border-b border-divider">
-      <div class="container mx-auto px-4 max-w-4xl">
-        <div class="prose prose-lg prose-blue max-w-none text-gray-600 leading-relaxed font-medium border-l-4 border-primary/20 pl-8" set:html={item.content} />
-      </div>
-    </section>
-  )}
-
   <section class="py-16 bg-paper">
     <div class="container mx-auto px-4">
       <div class="flex items-center gap-6 mb-10">
@@ -66,7 +65,7 @@ const schema = JSON.stringify({
       </div>
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
         {popularCategories.map(cat => (
-          <a href={`/ca/${cat.slug}`} class="hard-card p-5 group hover:-translate-y-1 transition-transform duration-300">
+          <a href={`/ca/${cat.slug}/`} class="hard-card p-5 group hover:-translate-y-1 transition-transform duration-300">
             <span class="font-mono text-sm font-bold text-navy leading-snug group-hover:text-primary transition-colors block">{cat.name}</span>
           </a>
         ))}
@@ -96,7 +95,7 @@ const schema = JSON.stringify({
       </div>
       <div class="flex flex-wrap gap-3">
         {popularManufacturers.map(m => (
-          <a href={`/ma/${m.slug}`} class="font-mono text-xs font-bold uppercase tracking-widest text-gray-700 bg-white border border-divider rounded px-5 py-3 hover:border-primary hover:text-primary transition-all shadow-hard">
+          <a href={`/ma/${m.slug}/`} class="font-mono text-xs font-bold uppercase tracking-widest text-gray-700 bg-white border border-divider rounded px-5 py-3 hover:border-primary hover:text-primary transition-all shadow-hard">
             {m.name}
           </a>
         ))}
@@ -104,7 +103,7 @@ const schema = JSON.stringify({
     </div>
   </section>
 
-  <section class="py-24 bg-white">
+  <section class="py-20 bg-white border-t border-divider">
     <div class="container mx-auto px-4">
       <div class="max-w-4xl mx-auto bg-navy text-white rounded-lg shadow-[10px_10px_0_0_rgba(0,122,255,0.25)] p-10 md:p-16 relative overflow-hidden text-center">
         <div class="absolute inset-0 blueprint-grid opacity-50"></div>
@@ -126,4 +125,78 @@ const schema = JSON.stringify({
       </div>
     </div>
   </section>
+
+  <section class="py-20 bg-paper border-t border-divider">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <div class="bg-white p-8 md:p-14 rounded-xl border border-divider shadow-hard">
+        <div class="prose prose-lg prose-blue max-w-none text-gray-700 leading-relaxed font-medium">
+          <Content />
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>
+
+<style is:global>
+  @reference "tailwindcss";
+
+  .prose h2 {
+    @apply text-2xl md:text-3xl font-black mt-14 mb-6 uppercase tracking-tight scroll-mt-28;
+    color: var(--color-navy);
+  }
+
+  .prose h3 {
+    @apply text-lg md:text-xl font-bold mt-10 mb-4 scroll-mt-28;
+    color: var(--color-navy);
+  }
+
+  .prose p {
+    @apply mb-6 leading-[1.85] text-base text-gray-700;
+  }
+
+  .prose ul, .prose ol {
+    @apply my-6 pl-6 space-y-2.5 text-gray-700;
+  }
+
+  .prose ul { @apply list-disc; }
+  .prose ol { @apply list-decimal; }
+
+  .prose li {
+    @apply leading-relaxed;
+  }
+
+  .prose table {
+    @apply w-full my-10 border-collapse rounded-lg overflow-hidden;
+    box-shadow: var(--shadow-premium);
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .prose th, .prose td {
+    @apply p-4 text-left border-b;
+    border-bottom-color: var(--color-divider);
+  }
+
+  .prose th {
+    @apply bg-gray-50 text-xs font-mono font-bold uppercase tracking-widest text-gray-500;
+  }
+
+  .prose td {
+    @apply text-sm text-gray-700 font-medium;
+  }
+
+  .prose a {
+    @apply text-blue-700 font-bold no-underline hover:text-blue-800 transition-colors;
+  }
+  
+  .prose strong {
+    @apply font-black;
+    color: var(--color-navy);
+  }
+
+  .prose img {
+    @apply w-full h-auto rounded-lg my-10;
+    box-shadow: var(--shadow-hard);
+  }
+</style>

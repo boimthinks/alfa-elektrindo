@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   Infineon
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhgmRJJbIu6O-n2ZhBXFUSvgOgAZX9TVf2MNIltAahgd-Z3jHioI3-fFJq42ml6prXLVx5Xp01nthP_9adOeBLD8zsxRuQLA0OMAKPtpFs9F_bIHAOoxLKIntNC_GzUiPmljUwuVxaarQBEqQWdylcclExYdCbilaJksqyiAiPoSGo8enz-KyVEcoZ57pY/s400/Screenshot%202024-10-27%2012.10.45%20PM.png
+  /placeholder-product.png
 pendahuluan: |-
   BSM300GB120DLC merupakan salah satu IGBT module terbaik di kelasnya. Produk ini menawarkan kombinasi sempurna antara efisiensi energi, reliabilitas jangka panjang, dan kapasitas arus tinggi hingga 300A dengan tegangan kerja maksimal 1200V. Berkat desain modular dual-IGBT, komponen ini memastikan performa optimal dan dapat menahan stres termal yang tinggi. Dengan demikian, produk ini cocok diaplikasikan pada berbagai skenario industri seperti inverter tenaga surya, pengendali motor listrik, hingga catu daya UPS.
 spesifikasi: |-

@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   IXYS
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2kCNbiU2yaAUP0rvlPu_vs0ox10Yin9I-TXTxdeMLTDbW_zwafpDv22nI9rpRUYpbPKG0UWIjA8Uc-utKStNNn_NIjtctp5pLpnmpdhfKCLXeImliJvTWY3IUinsDYn4FO6Q7x5FlMAwaTVDG3vsfFuvPWMGIQqHYNCOQo07wLK_q-U19KNWB3YxvZ7Q/s400/Screenshot%202024-10-27%208.27.05%20PM.png
+  /img/dsei2x61-12b.webp
 pendahuluan: |-
   DSEI2X61-12B menawarkan kombinasi unggul antara kapasitas arus tinggi (120 Ampere) dan ketahanan tegangan maksimal 1200 Volt, menjadikannya pilihan utama dalam aplikasi yang membutuhkan rectifikasi arus tinggi dengan efisiensi optimal. Dengan loss rendah dan kapasitas disipasi panas yang baik, produk ini dirancang untuk memberikan kinerja stabil bahkan dalam kondisi operasional ekstrem. Bukan hanya andal, tapi juga mampu memperpanjang usia pakai peralatan dan mengurangi biaya operasional pada jangka panjang.
 spesifikasi: |-

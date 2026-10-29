@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   IDEC
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFEbIjT-mZXlo0Cb4LcO5PWxa_F_p6wj2qMvJvhTyjPMptaLk2YMnMQDCMuO7FWZtRt5fjRQLizcmNS3Z0BpBK48ihO2-FTXfgrI5sIj36BEzQILgLVQyB1Bbde0ad2KkjJwOPbLINoxS_RYUJiX453F5iH-cyc8mU3GuQX0DJVDeTTpAOlAMj9Vlj00Q/s400/Screenshot%202024-11-15%205.45.33%20PM.png
+  /placeholder-product.png
 pendahuluan: |-
   Socket SR3P-05 IDEC dikenal karena kualitas dan keandalannya dalam mendukung berbagai aplikasi listrik dan elektronik. Produk ini dirancang dengan material berkualitas tinggi untuk memberikan koneksi listrik yang stabil dan tahan lama. Dengan kemampuan pemasangan yang mudah pada DIN Mount Screw Type, socket ini memastikan instalasi yang cepat, aman, dan kompatibel dengan berbagai sistem. Keunggulan utamanya adalah desain yang hemat ruang dan kemampuan untuk mengurangi waktu pemeliharaan, menjadikannya pilihan utama di dunia industri.
 spesifikasi: |-

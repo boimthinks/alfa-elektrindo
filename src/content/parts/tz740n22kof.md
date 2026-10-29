@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   Infineon
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEho8bU3vgD9TawgNEeo9uSBEjhchsXrRAWMmlbBB_glTyvuLjruDya-b4PSpHkCHI52m4jDTWetOjh4cz8Pw-b9JqfLyKKs-KbhS5tVOOABq_VUyu7uXRv22-_4EzkepSfBEerTFTyN6ypMsUPdNOeZ0N_FSrlNsoLstFhGj3PYu6RqM-UKwdHdeZyEOmo/s400/Screenshot%202024-10-27%207.13.26%20PM.png
+  /placeholder-product.png
 pendahuluan: |-
   Modul thyristor TZ740N22KOF dari Infineon hadir dengan kemampuan unggul dalam menangani arus dan tegangan tinggi, menjadikannya solusi ideal untuk berbagai aplikasi industri berat. Produk ini menggabungkan efisiensi energi, daya tahan terhadap suhu tinggi, serta kemampuan switching cepat. Manfaat utama dari modul ini adalah kemampuannya mengurangi kerugian daya sekaligus meningkatkan keandalan operasi jangka panjang. Selain itu, desainnya memungkinkan pemakaian di lingkungan keras tanpa mengorbankan kinerja, menjadikan modul ini pilihan terbaik bagi industri seperti tenaga listrik, otomotif, hingga pabrik metalurgi.
 spesifikasi: |-

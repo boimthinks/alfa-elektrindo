@@ -4,9 +4,18 @@ import PageHeader from '../components/PageHeader.astro';
 import { getAllData } from '../lib/data';
 
 const { manufacturer } = await getAllData();
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://alfa.elektrindo.co.id/" },
+    { "@type": "ListItem", "position": 2, "name": "Manufacturers", "item": "https://alfa.elektrindo.co.id/manufacturers/" }
+  ]
+});
 ---
 
-<Layout title="Produsen Komponen Elektronik | Alfa Elektrindo" description="Daftar brand dan produsen komponen elektronik terkemuka yang kami sediakan.">
+<Layout title="Produsen Komponen Elektronik | Alfa Elektrindo" description="Daftar brand dan produsen komponen elektronik terkemuka yang kami sediakan." schema={schema}>
   <PageHeader
     eyebrow={`Ref: ALFA-DOC / MANUFACTURERS`}
     title={`Global`}
@@ -22,7 +31,7 @@ const { manufacturer } = await getAllData();
     <div class="container mx-auto px-4">
       <div class="flex flex-wrap gap-3">
         {manufacturer.map(m => (
-          <a href={`/ma/${m.slug}`} class="font-mono text-xs font-bold uppercase tracking-widest text-gray-700 bg-white border border-divider rounded px-5 py-3 hover:border-primary hover:text-primary transition-all shadow-hard">
+          <a href={`/ma/${m.slug}/`} class="font-mono text-xs font-bold uppercase tracking-widest text-gray-700 bg-white border border-divider rounded px-5 py-3 hover:border-primary hover:text-primary transition-all shadow-hard">
             {m.name}
           </a>
         ))}

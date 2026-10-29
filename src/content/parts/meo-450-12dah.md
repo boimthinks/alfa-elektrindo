@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   IXYS
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi6zeCbIwflKe2uIM9VKfrngyFJJ-5AJ1mzL6IOURxonVaM3D9IHlmnjtsMPx6lqe2D0ds-K1CTqQBMFcPwhrcTEQ5TgMHfkg-m8hTTXXYlmSJ3iV2xD1-GBKOBuJO_I8aSxzT7aruSoydnd0MKMutakf6NhTTypVhsJl5Iijj4JpxJaiO96Y2EjAImWSc/s400/Screenshot%202024-10-28%2010.18.54%20PM.png
+  /img/meo-450-12dah.webp
 pendahuluan: |-
   Modul dioda MEO450-12DA(H) menawarkan sejumlah keunggulan yang membuatnya ideal untuk berbagai aplikasi industri. Dengan rating tegangan maksimum mencapai 1200V dan arus nominal sebesar 453A, produk ini dirancang untuk menghadapi tantangan dalam pengelolaan daya yang tinggi. Salah satu manfaat utama dari modul ini adalah kemampuannya dalam mengurangi kerugian daya, yang berkontribusi terhadap efisiensi sistem secara keseluruhan. Selain itu, dengan desain yang kompak, modul ini memungkinkan integrasi yang lebih mudah dalam berbagai sistem kelistrikan, meningkatkan keandalan dan kinerja operasional.
 spesifikasi: |-

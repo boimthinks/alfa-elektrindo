@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   Mitsubishi Electric
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg3bnCpf8Kv94T1ZxDFi2QcTmPZgsmVF0FIhB4FsN5UEq-YaR0Aq0hMYiUgITmOqYDALmI4qOcjd3UtBW6xMvSehhKQOWuzI8_E6q27z1x0bk_ed5tSrlrS16RQEXw8NvMrTEv9UkUFeY5xq3EZHpkz50iH_lvcryFDGPx-S3Ao4xFZ1XU9t7lbQ654UWY/s600/Screenshot%202025-01-16%209.14.05%20AM.png
+  /placeholder-product.png
 pendahuluan: |-
   CM300DY1-24NF menawarkan kombinasi kinerja yang optimal, efisiensi energi, dan keandalan yang tak tertandingi. Dengan kemampuan untuk menangani arus hingga 150A dan tegangan hingga 1200V, modul ini memungkinkan pengoperasian perangkat yang lebih hemat energi dan stabil. Desainnya yang kompak memudahkan integrasi dalam berbagai sistem, menjadikannya solusi ideal untuk pengendalian daya di sektor industri, transportasi, dan energi terbarukan.
 spesifikasi: |-

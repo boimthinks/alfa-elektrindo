@@ -5,16 +5,16 @@ export async function GET() {
   const baseUrl = 'https://alfa.elektrindo.co.id';
   
   const pages = [
-    '',
-    '/products',
-    '/manufacturers',
-    '/blog',
-    '/latest-products',
-    ...part.map(p => `/part/${p.slug}`),
-    ...blog.map(b => `/blog/${b.slug}`),
-    ...area.map(a => `/area/${a.slug}`),
-    ...category.map(c => `/ca/${c.slug}`),
-    ...manufacturer.map(m => `/ma/${m.slug}`)
+    '/',
+    '/products/',
+    '/manufacturers/',
+    '/blog/',
+    '/latest-products/',
+    ...part.map(p => `/part/${p.slug}/`),
+    ...blog.map(b => `/blog/${b.slug}/`),
+    ...area.map(a => `/area/${a.slug}/`),
+    ...category.map(c => `/ca/${c.slug}/`),
+    ...manufacturer.map(m => `/ma/${m.slug}/`)
   ];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

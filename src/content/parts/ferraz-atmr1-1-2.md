@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   Ferraz Shawmut
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhUyMMsrY3L_amkHnC5mc5s3HUIWV7LRoLEn8kjNf8yqtRq7SO6uORDoeOkjvFP-6FIqG6nXOHClPHZdstu0elXiR-62huJmOatAx4pRi9knF0rJLz4TApeae04b0yVYLLp_Aoqtm189OEplqUTWQBR9stXPnoWck8Vm8Mah0dJQoN0y_xoA0IgO4xTZIs/s600/Screenshot%202025-01-24%2010.57.45%20AM.png
+  /placeholder-product.png
 pendahuluan: |-
   Ferraz ATMR1 1/2 adalah sekering kelas CC yang dirancang untuk memberikan perlindungan maksimal terhadap kelebihan arus dan korsleting dalam sistem listrik industri. Dengan rating tegangan hingga 600V dan arus 1,5A, sekering ini memberikan keandalan tinggi, waktu respons cepat, dan kapasitas pemutusan yang unggul. Desainnya yang kompak memastikan kompatibilitas dengan berbagai aplikasi, mulai dari panel kontrol hingga peralatan manufaktur, sehingga meningkatkan efisiensi dan keamanan operasional.
 spesifikasi: |-

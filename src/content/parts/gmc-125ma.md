@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   Eaton
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhEg-d-DSYRg5HarIew5RB8fifE3qesfG4epweJAZMTUFE5a49va_FvP8h0QQ5UDZSJZ1aUaBg5fHibWd0RMRpvMO0z3_82mOEUknadKK6JNh2X2AmgkzeH85RII8myQZzouC8Wy1GDKYLcbhQIipc4LF0nhzyXBY7mITD43Cc6o3mo4LHV9ZwxH9o8FRs/s400/Screenshot%202024-11-11%207.50.51%20PM.png
+  /placeholder-product.png
 pendahuluan: |-
   GMC-125MA Eaton Cartridge Fuse dirancang dengan teknologi mutakhir untuk memberikan proteksi maksimal terhadap lonjakan arus dan kerusakan listrik pada sistem elektronik. Dengan kemampuan menahan arus hingga 125mA dan tegangan hingga 250VAC, GMC-125MA tidak hanya menjamin kinerja optimal, tetapi juga memperpanjang umur perangkat dan meningkatkan efisiensi sistem. Keunggulan utama produk ini terletak pada ketangguhannya, yang mampu melindungi perangkat elektronik dengan presisi tinggi dari ancaman listrik berlebihan atau korsleting.
 spesifikasi: |-

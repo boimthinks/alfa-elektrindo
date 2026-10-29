@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   Powerex
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhBteWde_sXczLAS9EpVaSztHONuV0G4fDUrDbCP9TUpeoh-jhOoNAqvbjkjWfv2SEmYcauxMCcpAGeyN7LG9Ojsskzciw7cD6kDPiyBKczwietCR3FaFTphg_2FMy2MQa3m2QKcKpE24YCu7kclaJ5mThamIYlMFhzEw9PFGgZbNOU7HvMPfQyQb2lEqU/s400/Screenshot%202024-11-26%2010.32.10%20AM.png
+  /placeholder-product.png
 pendahuluan: |-
   Modul LD431650 menawarkan kemampuan switching daya yang unggul dengan keandalan luar biasa di lingkungan yang keras. Dengan desain compact dan efisien, modul ini mendukung aplikasi yang memerlukan pengendalian daya tinggi tanpa mengorbankan stabilitas atau umur operasional. Keunggulannya meliputi kemampuan handling arus besar, disipasi panas optimal, serta kemudahan instalasi, menjadikannya investasi yang cerdas untuk pengelolaan daya dalam berbagai sektor industri.
 spesifikasi: |-

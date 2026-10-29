@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   Eaton
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgGtS45d8Xb-tliQGXyJMYmvO0RpzDnXcTsbG3xiMGbL5JgpHMhG4_DxUWs7eh60_xRsbmdKgM-4uLLykd3uQpAR0hZ4gVxAtwE93M_lTpMK42F4PQX0PBSBoI3K3VoDs4WEetxExIqWfI3k-xPdv-k4Cv9GfqRAOSSl-Wnq-mukt45z1FcOdj3NXlAcfM/s400/Screenshot%202024-11-11%208.26.24%20PM.png
+  /placeholder-product.png
 pendahuluan: |-
   GMC-5A Eaton Cartridge Fuse menawarkan perlindungan yang andal dan tahan lama untuk berbagai aplikasi elektronik. Dengan kemampuan memutus arus yang cepat dan aman, fuse ini melindungi komponen-komponen sensitif dari lonjakan arus berbahaya yang dapat menyebabkan kerusakan atau bahkan kebakaran. Selain itu, desainnya yang kompak dan efisien memungkinkan pemasangan di ruang terbatas, menjadikannya solusi ideal untuk perlindungan rangkaian listrik di berbagai perangkat elektronik dan aplikasi industri.
 spesifikasi: |-

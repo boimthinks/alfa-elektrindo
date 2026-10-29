@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   Eaton
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi-v0DLMfkERYKBdNB5oqnGFKw2Jrfa10TJE2ikjeax1La9QmDMpATX4DW9anz9itG_qLDvN-NrmdNmGAWi8GC35x6MyI63k7HO_5INX-lEa5EeXWfV9_qbHi2YyspwVxWQ0dNmYeq1ezDiQHvecVZB95emOycM7e_gweZFaGFDMtICq2IVz32SSH-WiA8/s400/Screenshot%202024-11-11%208.40.36%20PM.png
+  /placeholder-product.png
 pendahuluan: |-
   Sekering Eaton GMC-6,3A adalah solusi proteksi ideal yang menawarkan kinerja tinggi dan keandalan dalam melindungi peralatan elektronik dari arus lebih (overcurrent). Dengan desain cartridge yang kompak dan daya tahan yang teruji, sekering ini menjamin perlindungan jangka panjang tanpa memakan banyak ruang. Penggunaan sekering ini juga mendukung pengoperasian alat-alat listrik secara aman dan berkesinambungan, sekaligus membantu mengurangi risiko kerusakan komponen yang bisa menyebabkan kerugian finansial maupun waktu.
 spesifikasi: |-

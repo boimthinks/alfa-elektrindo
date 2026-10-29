@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   Eaton
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjXPnt-vTqM_NmL2vzDQPmHe8WgJN0RbAHSKNY_5RIDrWp_K3S0KWvpc6ds1tp2Yhiyw5yZGxvZLF69-9j8li5ldVXPxhC36_CgBKYcSJTd3a3xnERRvEuafMdrphDZUYGPS22Sqrky00kopsL-z2Pb09nDzJ1b15tqfhodfnyC6qV6Mnul0KQ4PxRTGFw/s400/Screenshot%202024-11-11%208.08.32%20PM.png
+  /placeholder-product.png
 pendahuluan: |-
   GMC-2A Eaton Cartridge Fuse menawarkan keunggulan dalam hal perlindungan sistem yang optimal, efisiensi, dan ketahanan terhadap arus berlebih. Fuse ini memiliki kemampuan untuk menghentikan aliran listrik secara efektif saat terdeteksi adanya arus lebih, sehingga mencegah kerusakan pada peralatan elektronik dan menjaga keamanan instalasi. Dengan desain yang sederhana namun kuat, GMC-2A Eaton Cartridge Fuse dari GMC Series memberikan perlindungan berkelanjutan dan mudah diintegrasikan ke dalam sistem listrik yang lebih besar, sehingga memastikan kinerja perangkat yang lebih stabil dan aman.
 spesifikasi: |-

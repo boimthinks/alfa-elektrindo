@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   Eaton
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbJtwBm3pz-Lof84MpLWwHpe8pekQXFeW3iIdZZNDT_PRzE0zjn-TAHoOS18OenVHH21XR4iYWPnXJwEEY4eP6ghyphenhyphenTXHU3MW74VXrfhI8T1VhQ7e3dbTZVT7_LJqrKQ5yBTIkwi00okS_pYskKAoYwya7VXOQyADinUM-WrCT4oEDqZL5_u7KSAYhjUbI/s400/Screenshot%202024-11-14%209.45.16%20AM.png
+  /placeholder-product.png
 pendahuluan: |-
   Fitur utama dari GMA-5-R Eaton Cartridge Fuse adalah kemampuannya dalam melindungi sirkuit dari kerusakan yang diakibatkan oleh lonjakan arus atau kelebihan beban. Fitur cartridge fuse ini bekerja cepat dan responsif sehingga dapat menghentikan arus yang berlebihan sebelum merusak perangkat elektronik. Selain itu, ukuran yang kompak membuatnya mudah diaplikasikan dalam berbagai perangkat, mulai dari peralatan elektronik konsumen hingga sistem industri. Kemudahan integrasi ini menjadikannya pilihan populer dalam pengamanan komponen elektronik yang membutuhkan proteksi tinggi namun tetap praktis.
 spesifikasi: |-

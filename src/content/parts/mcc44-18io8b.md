@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   IXYS
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjK98y2PHHj9bARDMwGKxfQD6cc_JgJAFRtFcSzUUJ0CsyMuYIpSIRgrGquCCxzh8tbiUa82y_1i8QGEZ3C2x0YQsz9pIEY2RDUPSuGnOfMfIMmFE2tD1TZPDwBsvi1hHbs67LWBVEK2ZseUKz1y7GRo0xSyjHq4LN48B_z5ith96qLTlLljyEt1ZQEWAA/s400/Screenshot%202024-10-28%2010.14.34%20PM.png
+  /img/mcc44-18io8b.webp
 pendahuluan: |-
   MCC44-18IO8B IXYS Thyristor Modules dirancang untuk memberikan performa tinggi dan keandalan dalam berbagai aplikasi industri. Dengan arsitektur yang kuat, modul ini menawarkan kemampuan pengendalian daya yang luar biasa, memastikan efisiensi energi yang lebih baik dan mengurangi pemborosan. Keunggulan utama dari produk ini adalah kemampuannya untuk menangani beban berat, menjadikannya pilihan ideal untuk aplikasi yang memerlukan daya tinggi. Selain itu, modul ini dilengkapi dengan perlindungan termal dan kelebihan tegangan, sehingga memberikan ketahanan yang lebih baik dalam lingkungan operasional yang keras.
 spesifikasi: |-

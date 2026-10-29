@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   Eaton
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhbPOXpDh95MEvD-JHXLUgpZC4hH_3x38gYrjouTxo6skGzW7bByEWrkR2W-JS39rTqu-ihQSbxzqg8XVc1CdLYvzZ2GBgGaSGWDes6aTfcp0lLNdQgQuWxcIVkWLsLXSVnhvm1zNGdyuonpMRYmepUCHCiJrMvkVRETlrtGCc6s7Z0ihJ4FwXE6kRRhHs/s400/Screenshot%202024-11-11%208.16.05%20PM.png
+  /placeholder-product.png
 pendahuluan: |-
   GMC-3A Eaton Cartridge Fuses menawarkan perlindungan sirkuit yang sangat efektif terhadap arus lebih, keunggulan ini menjadikan produk ini sebagai pilihan tepat dalam industri yang mengutamakan keamanan dan efisiensi operasional. Kualitas proteksi yang dihasilkan oleh sekering ini melindungi perangkat dari kerusakan dan potensi gangguan yang dapat disebabkan oleh arus berlebih atau lonjakan listrik, sehingga mengurangi risiko downtime dan memperpanjang umur peralatan.
 spesifikasi: |-

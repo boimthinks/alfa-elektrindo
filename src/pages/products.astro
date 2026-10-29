@@ -4,9 +4,18 @@ import PageHeader from '../components/PageHeader.astro';
 import { getAllData } from '../lib/data';
 
 const { category } = await getAllData();
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://alfa.elektrindo.co.id/" },
+    { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://alfa.elektrindo.co.id/products/" }
+  ]
+});
 ---
 
-<Layout title="Kategori Produk Komponen Elektronik | Alfa Elektrindo" description="Jelajahi berbagai kategori komponen elektronik industri dan pabrikasi untuk kebutuhan bisnis Anda.">
+<Layout title="Kategori Produk Komponen Elektronik | Alfa Elektrindo" description="Jelajahi berbagai kategori komponen elektronik industri dan pabrikasi untuk kebutuhan bisnis Anda." schema={schema}>
   <PageHeader
     eyebrow={`Ref: ALFA-DOC / CATEGORIES`}
     title={`Product`}
@@ -22,7 +31,7 @@ const { category } = await getAllData();
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-5">
         {category.map(cat => (
-          <a href={`/ca/${cat.slug}`} class="hard-card p-5 group hover:-translate-y-1 transition-transform duration-300 flex flex-col">
+          <a href={`/ca/${cat.slug}/`} class="hard-card p-5 group hover:-translate-y-1 transition-transform duration-300 flex flex-col">
             <span class="block w-2 h-2 bg-primary mb-3"></span>
             <span class="font-mono text-sm font-bold text-navy leading-snug group-hover:text-primary transition-colors">{cat.name}</span>
             <span class="mt-auto pt-3 text-[10px] font-mono text-gray-400 uppercase tracking-widest">OPEN</span>

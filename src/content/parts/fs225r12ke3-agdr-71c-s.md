@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   ABB
 fifu_image_url: |-
-  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEidlDPcCvVywtDU1QOHl1fZi8IUx1aUvjtfctNH6sts4LjNwIxB3mHuIkg_QlLSoDU2nWtxo28_Xh4HcnQtUQKTWn5ScTXEDK_BoVtVZzxvM_EpyqhT9X1kCBNGRfmczcdq4KDftIB43JxbQn0cm-0gs4SBXAK8tunmpukqbyR0AprycHHlm2LXjSMZpfo/s400/Screenshot%202024-10-25%2011.26.50%20AM.png
+  /placeholder-product.png
 pendahuluan: |-
   Modul IGBT ABB FS225R12KE3/AGDR-71C S menawarkan kombinasi sempurna antara efisiensi daya tinggi dan kemampuan switching cepat. Dengan desain tahan lama dan tingkat kerugian switching rendah, modul ini memastikan kinerja optimal pada drive inverter, mengurangi panas yang dihasilkan dan memperpanjang umur komponen. Keunggulannya dalam pengurangan rugi-rugi energi menjadikan modul ini solusi hemat biaya yang sangat relevan bagi perusahaan yang ingin meningkatkan produktivitas sekaligus mengurangi biaya operasional.
 spesifikasi: |-
