@@ -326,7 +326,7 @@ Setelah menambah part atau artikel baru:
   - Konten produksi terverifikasi: section "Perjalanan Kami" beserta ketiga domain historis tampil, modal awal tidak lagi muncul, JSON-LD `AboutPage` + `LocalBusiness` valid, artikel Fuji Electric memuat 10 link part plus autolink brand/kategori, `Article.image` absolut, dan seluruh gambar produk lokal merespons 200.
   - `sitemap.xml` produksi berisi 896 URL termasuk `/about-us/`.
 
-- **[2026-11-14]**: Sinkronisasi `llms.txt` dan `llms-full.txt` dengan data katalog. Commit `4480e54`.
+- **[2026-11-14]**: Sinkronisasi `llms.txt` dan `llms-full.txt` dengan data katalog. Commit `d064e89`.
   - `scripts/gen-llms.js` dibuat baru: `public/llms.txt` dihitung otomatis dari sumber data (16.453 karakter, 611 part, 74 kategori, 73 brand, 78 artikel, 49 area). Isinya mencakup data badan usaha, sejarah singkat brand, statistik katalog, artikel pilar terbaru, dan cakupan area layanan.
   - `scripts/gen-llms-full.js` diperbaiki: parser frontmatter block scalar (`|-`) kini membaca nilai multi-baris utuh, dan seksi baru **"Daftar Part Tergressor per Brand"** (sic: "Terdaftar") dibangkitkan otomatis dari `src/content/parts`. Part baru Fuji Electric (6MBP seri RH/RA, 2MBI, 6DI, A50L), MTL (TP48, SD07-SD55), dan Infineon DDB6U otomatis masuk. Ukuran file naik dari 411 KB ke 600 KB.
   - `package.json` menambah script `gen:index`, `gen:llms`, `gen:llms-full`, `gen:all`.
