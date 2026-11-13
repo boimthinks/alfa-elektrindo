@@ -4,7 +4,7 @@ title: |-
 slug: |-
   xckmr54d1h29
 category: |-
-  Switches
+  Limit Switches
 manufacturer: |-
   Telemecanique
 fifu_image_url: |-

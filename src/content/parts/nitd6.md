@@ -4,7 +4,7 @@ title: |-
 slug: |-
   nitd6
 category: |-
-  Fuse
+  Fuses
 manufacturer: |-
   Eaton Bussmann
 fifu_image_url: |-

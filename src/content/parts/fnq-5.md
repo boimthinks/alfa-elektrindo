@@ -4,7 +4,7 @@ title: |-
 slug: |-
   fnq-5
 category: |-
-  Fuse
+  Fuses
 manufacturer: |-
   Eaton
 fifu_image_url: |-

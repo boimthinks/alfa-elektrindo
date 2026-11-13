@@ -4,7 +4,7 @@ title: |-
 slug: |-
   vishay-st730c16l0
 category: |-
-  SCRs
+  Thyristors
 manufacturer: |-
   Vishay
 fifu_image_url: |-

@@ -72,7 +72,7 @@ const schema = JSON.stringify({
 });
 ---
 
-<Layout title={`${post.long_title} | Alfa Elektrindo Blog`} description={post.long_title} schema={schema}>
+<Layout title={`${post.long_title} | Alfa Elektrindo Blog`} description={post.meta_description || post.pendahuluan || post.long_title} schema={schema}>
   <PageHeader
     eyebrow={`Ref: ALFA-DOC / BLOG`}
     title={post.long_title}

@@ -4,7 +4,7 @@ title: |-
 slug: |-
   dsei2x61-12b
 category: |-
-  Rectifiers
+  Diodes
 manufacturer: |-
   IXYS
 fifu_image_url: |-

@@ -13,7 +13,7 @@ Kerusakan pada konverter daya industri sering meninggalkan pemandangan yang sama
 
 Komponen semikonduktor modern seperti transistor bipolar gerbang terisolasi dan penyearah silikon bekerja dengan kepadatan daya luar biasa tinggi. Ketahanan fisik sambungan silikon terhadap lonjakan arus hubung singkat hanya bertahan dalam hitungan mikrodetik. Mengandalkan pemutus arus mekanis biasa untuk melindungi komponen cepat tersebut sama saja membiarkan peralatan hancur sebelum sistem proteksi sempat bereaksi.
 
-Pengamanan modul daya membutuhkan sekring khusus berkemampuan pemutusan ultra cepat. Standar industri global mengandalkan seri high speed fuse seperti [Bussmann](/ma/bussmann/) seri 170M dan [Ferraz Shawmut](/ma/ferraz-shawmut/) seri Protistor PC untuk memotong gangguan sebelum energi bus DC menghancurkan seluruh blok inverter.
+Pengamanan modul daya membutuhkan sekring khusus berkemampuan pemutusan ultra cepat. Standar industri global mengandalkan seri high speed fuse seperti [Bussmann](/ma/eaton-bussmann/) seri 170M dan [Ferraz Shawmut](/ma/ferraz-shawmut/) seri Protistor PC untuk memotong gangguan sebelum energi bus DC menghancurkan seluruh blok inverter.
 
 ## Kegagalan pemutus mekanis melindungi semikonduktor daya
 

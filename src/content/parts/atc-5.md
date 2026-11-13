@@ -4,7 +4,7 @@ title: |-
 slug: |-
   atc-5
 category: |-
-  Blade Fuse
+  Fuses
 manufacturer: |-
   Eaton Bussmann
 fifu_image_url: |-

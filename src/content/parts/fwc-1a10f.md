@@ -4,7 +4,7 @@ title: |-
 slug: |-
   fwc-1a10f
 category: |-
-  Fuse
+  Fuses
 manufacturer: |-
   Eaton Bussmann
 fifu_image_url: |-

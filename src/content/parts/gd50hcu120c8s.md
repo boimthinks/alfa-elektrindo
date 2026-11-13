@@ -6,7 +6,7 @@ slug: |-
 category: |-
   IGBT Modules
 manufacturer: |-
-  STARPOWER
+  Starpower
 fifu_image_url: |-
   https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhuC5gLQNm_jsyUjdwQo5PCf7mmEEI4nCfxYgKr71rW8Cwb9J6PDW4Ly2Aj-jCVncMjFWayY-e4a0HaoZrX4lnz-nupLBv-j76razGDqZ5unxdMapEdTcTbadIM9duDTVyK7SebNGOj1xVcoRYxkUTa98uOzErj1xTbjGKUJiuiOzd_ZLu1eRDHwUOI1vfh/s320/Screenshot%202024-07-19%202.56.44%20PM.png
 pendahuluan: |-

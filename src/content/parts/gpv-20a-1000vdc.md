@@ -4,9 +4,9 @@ title: |-
 slug: |-
   gpv-20a-1000vdc
 category: |-
-  Fuse
+  Fuses
 manufacturer: |-
-  Bussmann
+  Eaton Bussmann
 fifu_image_url: |-
   https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgUycdWk7VAPBlFqMOC0qIft_fuXJ9jH57vz0xu_9nB9KhIWH3HLVa5rg5r-SCPetlQMjWHZ3zp5audnsV18II053IhWrDgoC-Esf9OnIo5wS6Dd400_UG3ZIimpo2TlwdDTovfP_qlUnJGwjZvp2yjbAqdGqbSjETqorGKtTpdso3B5tE0HBqQ615MAZN7/s320/Screenshot%202024-07-18%204.10.18%20PM.png
 pendahuluan: |-

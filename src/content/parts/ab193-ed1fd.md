@@ -4,7 +4,7 @@ title: |-
 slug: |-
   ab193-ed1fd
 category: |-
-  Solid State Relay
+  Solid State Relays
 manufacturer: |-
   Allen Bradley
 fifu_image_url: |-

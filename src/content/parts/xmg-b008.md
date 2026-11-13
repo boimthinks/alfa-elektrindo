@@ -4,7 +4,7 @@ title: |-
 slug: |-
   xmg-b008
 category: |-
-  Pressure Switch
+  Pressure Switches
 manufacturer: |-
   Telemecanique
 fifu_image_url: |-

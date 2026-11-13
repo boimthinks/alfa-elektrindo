@@ -4,7 +4,7 @@ title: |-
 slug: |-
   buschcc1du
 category: |-
-  Fuse Holder
+  Fuse Holders
 manufacturer: |-
   Eaton Bussmann
 fifu_image_url: |-

@@ -4,7 +4,7 @@ title: |-
 slug: |-
   et112dinav11xs1x
 category: |-
-  Sensor Modules
+  Sensors
 manufacturer: |-
   Carlo Gavazzi
 fifu_image_url: |-

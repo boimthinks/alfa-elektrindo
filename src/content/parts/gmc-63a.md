@@ -4,7 +4,7 @@ title: |-
 slug: |-
   gmc-63a
 category: |-
-  Cartridge Fuses
+  Fuses
 manufacturer: |-
   Eaton
 fifu_image_url: |-

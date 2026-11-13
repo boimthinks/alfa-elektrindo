@@ -4,9 +4,9 @@ title: |-
 slug: |-
   ktk-15
 category: |-
-  Fuse
+  Fuses
 manufacturer: |-
-  Bussmann
+  Eaton Bussmann
 fifu_image_url: |-
   https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhbmNd7x624w9zPFo5_TRkBdX2mnZnrZkKDnEeNNyetYPiK2dc20zNN5PlaeJyTMlwP8LEsRblWrWMvuyxawpICGt14_n8b-Kpj7SXzPyz-g-ML495PjruR5ysZ7QvmSd5EQBBYemHJSyA5c3nWKfXVhacAnJZhFvPsEe33YJSfVphpoKKfMeRqea-UbVba/s320/Screenshot%202024-07-18%204.32.18%20PM.png
 pendahuluan: |-

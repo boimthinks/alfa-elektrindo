@@ -4,7 +4,7 @@ title: |-
 slug: |-
   meo-450-12dah
 category: |-
-  Diode Modul
+  Diodes
 manufacturer: |-
   IXYS
 fifu_image_url: |-

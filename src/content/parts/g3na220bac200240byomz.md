@@ -4,7 +4,7 @@ title: |-
 slug: |-
   g3na220bac200240byomz
 category: |-
-  Solid State Relay
+  Solid State Relays
 manufacturer: |-
   Omron
 fifu_image_url: |-

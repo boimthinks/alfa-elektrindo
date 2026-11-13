@@ -4,7 +4,7 @@ title: |-
 slug: |-
   bk-atc-15
 category: |-
-  Blade Fuse
+  Fuses
 manufacturer: |-
   Eaton Bussmann
 fifu_image_url: |-

@@ -1,0 +1,65 @@
+# ============================================================
+# Konfigurasi Apache — alfa.elektrindo.co.id (DomaiNesia cPanel)
+# 1. Redirect 301 — Konsolidasi taksonomi kategori & brand (2026-11-11)
+#    Tujuan: menjaga peringkat URL arsip lama yang digabung/rename
+#    sehingga tidak menghasilkan 404 setelah build ulang.
+# 2. Canonical host: http -> https dan www -> non-www
+# Catatan: JANGAN memakai directive `Options` di shared hosting
+#          DomaiNesia karena dapat memicu HTTP 500.
+# ============================================================
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # --- Canonical host: www ke non-www ---
+  RewriteCond %{HTTP_HOST} ^www\.alfa\.elektrindo\.co\.id$ [NC]
+  RewriteRule ^(.*)$ https://alfa.elektrindo.co.id/$1 [R=301,L]
+
+  # --- Canonical protokol: paksa HTTPS ---
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+  # --- Kategori: Diodes ---
+  RewriteRule ^ca/diode-modul/?$ /ca/diodes/ [R=301,L]
+  RewriteRule ^ca/diode/?$ /ca/diodes/ [R=301,L]
+  RewriteRule ^ca/rectifiers/?$ /ca/diodes/ [R=301,L]
+
+  # --- Kategori: Thyristors / Thyristor Modules ---
+  RewriteRule ^ca/scr-modules/?$ /ca/thyristor-modules/ [R=301,L]
+  RewriteRule ^ca/scrs/?$ /ca/thyristors/ [R=301,L]
+
+  # --- Kategori: Fuses / Fuse Holders ---
+  RewriteRule ^ca/fuse/?$ /ca/fuses/ [R=301,L]
+  RewriteRule ^ca/cartridge-fuses/?$ /ca/fuses/ [R=301,L]
+  RewriteRule ^ca/blade-fuse/?$ /ca/fuses/ [R=301,L]
+  RewriteRule ^ca/specialty-fuses/?$ /ca/fuses/ [R=301,L]
+  RewriteRule ^ca/high-speed-fuse/?$ /ca/fuses/ [R=301,L]
+  RewriteRule ^ca/semiconductor-fuse/?$ /ca/fuses/ [R=301,L]
+  RewriteRule ^ca/fuse-link-protistor/?$ /ca/fuses/ [R=301,L]
+  RewriteRule ^ca/fuse-holder/?$ /ca/fuse-holders/ [R=301,L]
+
+  # --- Kategori: IGBT Modules ---
+  RewriteRule ^ca/igbt/?$ /ca/igbt-modules/ [R=301,L]
+  RewriteRule ^ca/transistors-module/?$ /ca/igbt-modules/ [R=301,L]
+  RewriteRule ^ca/integrated-circuits/?$ /ca/igbt-modules/ [R=301,L]
+
+  # --- Kategori: Sensors ---
+  RewriteRule ^ca/sensor/?$ /ca/sensors/ [R=301,L]
+  RewriteRule ^ca/sensor-modules/?$ /ca/sensors/ [R=301,L]
+  RewriteRule ^ca/sensor-suhu/?$ /ca/temperature-sensors/ [R=301,L]
+
+  # --- Kategori: normalisasi bentuk jamak ---
+  RewriteRule ^ca/solid-state-relay/?$ /ca/solid-state-relays/ [R=301,L]
+  RewriteRule ^ca/pressure-switch/?$ /ca/pressure-switches/ [R=301,L]
+  RewriteRule ^ca/soft-starter/?$ /ca/soft-starters/ [R=301,L]
+  RewriteRule ^ca/distance-sensor/?$ /ca/distance-sensors/ [R=301,L]
+  RewriteRule ^ca/industrial-relay/?$ /ca/industrial-relays/ [R=301,L]
+  RewriteRule ^ca/switches/?$ /ca/limit-switches/ [R=301,L]
+
+  # --- Brand (manufacturer) ---
+  RewriteRule ^ma/bussmann/?$ /ma/eaton-bussmann/ [R=301,L]
+  RewriteRule ^ma/epcos-tdk/?$ /ma/epcos/ [R=301,L]
+  RewriteRule ^ma/wago-corporation/?$ /ma/wago/ [R=301,L]
+  RewriteRule ^ma/semikron-danfoss/?$ /ma/semikron/ [R=301,L]
+</IfModule>

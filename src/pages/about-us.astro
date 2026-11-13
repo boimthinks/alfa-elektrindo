@@ -1,0 +1,460 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getAllData } from '../lib/data';
+
+const { part, category, manufacturer } = await getAllData();
+const partCount = part.length;
+const categoryCount = category.length;
+const brandCount = manufacturer.length;
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": "https://alfa.elektrindo.co.id/about-us/#aboutpage",
+      "url": "https://alfa.elektrindo.co.id/about-us/",
+      "name": "Tentang CV. Alfa Elektrindo",
+      "description": "Profil resmi CV. Alfa Elektrindo, supplier komponen elektronik industri dan pabrikasi di Batam, Kepulauan Riau, berikut data izin usaha resmi.",
+      "inLanguage": "id-ID",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://alfa.elektrindo.co.id/#website",
+        "name": "Alfa Elektrindo",
+        "url": "https://alfa.elektrindo.co.id/"
+      },
+      "about": { "@id": "https://alfa.elektrindo.co.id/about-us/#organization" }
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://alfa.elektrindo.co.id/about-us/#organization",
+      "name": "CV. Alfa Elektrindo",
+      "legalName": "CV. Alfa Elektrindo",
+      "alternateName": "Alfa Elektrindo",
+      "url": "https://alfa.elektrindo.co.id/",
+      "telephone": "+628126826672",
+      "email": "mail@elektrindo.co.id",
+      "description": "Supplier komponen elektronik untuk industri dan pabrikasi. Menyediakan modul IGBT, thyristor, sensor industri, transduser, drive, power supply, fuse, serta komponen usang yang sulit ditemukan.",
+      "priceRange": "$$",
+      "foundingDate": "2018-02-10",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jln. Jend Sudirman Komp. Ruko Mega Legenda 2 Blok B2 No.7 Baloi Permai",
+        "addressLocality": "Batam",
+        "addressRegion": "Kepulauan Riau",
+        "postalCode": "29431",
+        "addressCountry": "ID"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "17:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.youtube.com/@elektrindo",
+        "https://www.instagram.com/elektrindo_alfa"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Richa Anggraini Putri",
+        "jobTitle": "Direktur"
+      },
+      "employee": {
+        "@type": "Person",
+        "name": "Arni Sutarni",
+        "jobTitle": "Pesero Komanditer"
+      },
+      "identifier": [
+        { "@type": "PropertyValue", "name": "NPWP", "value": "84.157.615.0-225.000" },
+        { "@type": "PropertyValue", "name": "TDP", "value": "33.10.3.46.11617" },
+        { "@type": "PropertyValue", "name": "SIUP", "value": "00334/DPMPTSP-BTM/PK/III/2018" },
+        { "@type": "PropertyValue", "name": "Akta Pendirian", "value": "Notaris Krisnanti Soesilowati, S.H., M.Kn., Nomor 1 tanggal 10 Februari 2018" }
+      ],
+      "knowsAbout": [
+        "Modul IGBT dan IPM",
+        "Modul thyristor dan dioda",
+        "Sensor industri",
+        "Transduser arus",
+        "Inverter drive dan servo",
+        "Fuse semikonduktor",
+        "Power supply industri",
+        "Komponen usang dan obsolete"
+      ]
+    }
+  ]
+});
+
+const legalDocs = [
+  {
+    label: 'Akta Pendirian',
+    detail: 'Notaris Krisnanti Soesilowati, S.H., M.Kn. Kota Batam, Nomor 1, 10 Februari 2018',
+    note: 'Telah didaftarkan ke Kepaniteraan Pengadilan Negeri Batam Nomor 120/2018/PN BTM pada 27 Februari 2018'
+  },
+  {
+    label: 'NPWP',
+    detail: '84.157.615.0-225.000, KPP Pratama Batam Selatan',
+    note: 'CV. Alfa Elektrindo'
+  },
+  {
+    label: 'Tanda Daftar Perusahaan',
+    detail: 'Nomor 33.10.3.46.11617, Penetapan Modal Kota Batam, KBLI 46591',
+    note: 'Berlaku sampai 5 Maret 2023, kegiatan usaha pokok perdagangan besar mesin kantor dan industri beserta suku cadang dan perlengkapannya'
+  },
+  {
+    label: 'SIUP Kecil',
+    detail: 'Nomor 00334/DPMPTSP-BTM/PK/III/2018, Penetapan Modal Kota Batam',
+    note: 'KBLI 46591 dan 46521, berlaku untuk seluruh wilayah Republik Indonesia'
+  },
+  {
+    label: 'Surat Keterangan Domisili Usaha',
+    detail: 'Nomor 40/CSB/II/2018, Kecamatan Sungai Beduk, 15 Februari 2018',
+    note: 'Bidang usaha jasa, supplier, perdagangan, dan subkon'
+  }
+];
+
+const stats = [
+  { value: '2018', label: 'Tahun Pendirian' },
+  { value: String(partCount), label: 'Part Katalog' },
+  { value: String(categoryCount), label: 'Kategori Komponen' },
+  { value: String(brandCount), label: 'Brand Produsen' }
+];
+
+const timeline = [
+  {
+    period: 'Juli 2017',
+    title: 'Awal dari Blogspot Sederhana',
+    body: 'Bisnis ini bermula dari sebuah blog Blogspot sederhana dengan custom domain arjunaputrastore.com. Pada masa awal sekitar bulan Juli 2017, branding dan legalitas memang belum menjadi prioritas kami. Tujuan kami waktu itu sederhana, hanya ingin memberikan produk dan layanan terbaik kepada konsumen. Pada tahap ini, banyak produk yang sulit dicari di pasaran, dan itulah yang menjadi alasan utama orang mencari kami.'
+  },
+  {
+    period: '10 Februari 2018',
+    title: 'Pendirian CV Alfa Elektrindo',
+    body: 'Barulah pada tanggal 10 Februari 2018 kami mendaftarkan CV Alfa Elektrindo secara resmi, melalui Akta Pendirian Nomor 1 di kantor Notaris Krisnanti Soesilowati, S.H., M.Kn. Kota Batam. Pada saat itu website masih berjalan di domain arjunaputrastore.com, jadi pendirian badan usaha belum mengubah cara kami menjangkau konsumen.'
+  },
+  {
+    period: 'Sekitar 20 September 2018',
+    title: 'Domain Sendiri dan Pindah ke WordPress',
+    body: 'Pada sekitar tanggal 20 September 2018 kami mendaftarkan domain elektrindo.co.id dan memindahkan website ke platform WordPress. Domain milik sendiri ini penting supaya alamat katalog tidak lagi bergantung pada domain pribadi, dan katalog produk bisa ditata dengan benar.'
+  },
+  {
+    period: 'September 2026',
+    title: 'Rebuild ke Astro dan Static Site Generation',
+    body: 'Pada sekitar bulan September 2026 kami mengubah website menjadi Astro dengan pendekatan static site generation. Hasilnya, halaman katalog kini dimuat jauh lebih cepat, katalog ratusan part bisa ditelusuri tanpa menambah beban server, dan setiap halaman punya struktur data yang rapi untuk mesin pencari.'
+  }
+];
+
+const legalFacts = [
+  { label: 'Bentuk Badan Usaha', value: 'Perseroan Komanditer (CV)' },
+  { label: 'Nama Resmi', value: 'CV Alfa Elektrindo' },
+  { label: 'Tanggal Pendirian', value: '10 Februari 2018' },
+  { label: 'Pesero Pengurus', value: 'Richa Anggraini Putri, Direktur' },
+  { label: 'Pesero Komanditer', value: 'Arni Sutarni' },
+  { label: 'Alamat Terdaftar', value: 'Perum. Puri Agung 4 Blok C No. 29, Kelurahan Mangsang, Kecamatan Sungai Beduk, Kota Batam' },
+  { label: 'Alamat Operasional', value: 'Jln. Jend Sudirman Komp. Ruko Mega Legenda 2 Blok B2 No.7 Baloi Permai, Batam 29431' },
+  { label: 'Nomor Telepon Resmi', value: '0778-385407' }
+];
+---
+
+<Layout
+  title="Tentang CV. Alfa Elektrindo | Supplier Komponen Elektronik Batam"
+  description="Profil resmi CV. Alfa Elektrindo, supplier komponen elektronik industri dan pabrikasi di Batam. Akta pendirian 10 Februari 2018, NPWP 84.157.615.0-225.000, TDP 33.10.3.46.11617, dan SIUP Kecil 00334/DPMPTSP-BTM/PK/III/2018."
+  schema={schema}
+>
+  <!-- HERO -->
+  <section class="relative bg-navy text-white overflow-hidden py-20 md:py-28">
+    <div class="absolute inset-0 blueprint-grid opacity-30"></div>
+    <div class="absolute -right-16 -top-16 w-72 h-72 border-2 border-primary/30"></div>
+
+    <div class="container mx-auto px-4 relative z-10">
+      <nav class="flex items-center gap-3 font-mono text-[10px] uppercase tracking-widest text-blue-200 mb-8">
+        <a href="/" class="hover:text-white">Home</a>
+        <span class="text-blue-400">/</span>
+        <span class="text-accent">About Us</span>
+      </nav>
+
+      <span class="eyebrow text-accent mb-6 inline-flex items-center gap-3">
+        <span class="block w-2 h-2 bg-accent"></span>
+        Ref: ALFA-DOC / BADAN USAHA
+      </span>
+
+      <h1 class="text-3xl md:text-5xl font-mono font-bold uppercase tracking-tight leading-[1.1] mb-8 max-w-4xl">
+        CV Alfa Elektrindo <span class="text-primary">Supplier Komponen</span> Industri dan Pabrikasi di Batam
+      </h1>
+
+      <p class="text-lg text-gray-400 leading-relaxed max-w-3xl font-sans">
+        CV Alfa Elektrindo adalah society dagang perseroan komanditer yang didirikan di Batam pada 10 Februari 2018
+        dengan izin perdagangan resmi dari Pemerintah Kota Batam. Selama hampir delapan tahun, entitas ini supplying
+        komponen elektronik industri ke pabrik, kontraktor, dan bengkel di Kepulauan Riau dan sekitarnya.
+      </p>
+
+      <div class="flex flex-wrap gap-4 mt-10 font-mono">
+        <a href="https://wa.me/628126826672" class="premium-button bg-white text-navy text-xs hover:bg-accent hover:text-white">
+          Konsultasi via WhatsApp
+        </a>
+        <a href="/products/" class="premium-button bg-transparent border-2 border-gray-500 text-white text-xs hover:bg-primary/20">
+          Lihat Katalog
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="bg-white border-b border-line">
+    <div class="container mx-auto px-4 py-12">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        {stats.map(s => (
+          <div class="border-l-4 border-primary pl-5">
+            <span class="block font-mono text-3xl md:text-4xl font-bold text-navy">{s.value}</span>
+            <span class="block font-mono text-[10px] uppercase tracking-widest text-gray-500 mt-2">{s.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- NARASI + LEGALITAS -->
+  <section class="py-20 bg-paper">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-14">
+
+        <div>
+          <div class="flex items-center gap-6 mb-10">
+            <h2 class="eyebrow text-navy">Profil Badan Usaha</h2>
+            <div class="h-px flex-grow bg-line"></div>
+          </div>
+
+          <div class="space-y-5 text-base leading-relaxed text-gray-700 font-medium">
+            <p>
+              CV Alfa Elektrindo berdiri pada Sabtu, 10 Februari 2018, dengan Akta Pendirian Nomor 1 yang dibuat di
+              kantor Notaris Krisnanti Soesilowati, S.H., M.Kn. di Kota Batam. Akta itu ditandatangani oleh dua
+              pesero, Richa Anggraini Putri yang memegang jabatan Direktur, dan Arni Sutarni sebagai pesero
+              komanditer.
+            </p>
+            <p>
+              Akta pendirian sudah didaftarkan ke Kepaniteraan Pengadilan Negeri Batam pada 27 Februari 2018 dengan
+              nomor 120/2018/PN BTM. Nine hari setelah akta itu dibuat, pada 19 Februari 2018, perusahaan ini juga
+              menerima Surat Keterangan Domisili Usaha dari Kecamatan Sungai Beduk.
+            </p>
+            <p>
+              Surat ini masih berlaku sepanjang perusahaan menjalankan kegiatan usaha di alamat dan nama
+              penanggung jawab yang sama. Perubahan alamat wajib dilaporkan ke kecamatan agar surat keterangan dapat
+              diperbarui.
+            </p>
+            <p>
+              Sebelas hari kemudian, pada 5 Maret 2018, Pemerintah Kota Batam lewat Dinas Penanaman Modal dan
+              Pelayanan Terpadu Satu Pintu menerbitkan Tanda Daftar Perusahaan dengan nomor 33.10.3.46.11617. Izin ini
+             Dokumen itu menetapkan CV Alfa Elektrindo sebagai kantor pusat dengan kegiatan usaha pokok perdagangan besar
+              mesin kantor dan industri beserta suku cadang dan perlengkapannya, KBLI 46591.
+            </p>
+            <p>
+              Surat Izin Usaha Perdagangan Kecil bernomor 00334/DPMPTSP-BTM/PK/III/2018 menandai operasional
+              perdagangan. Izin ini berlaku untuk seluruh wilayah Republik Indonesia selama perusahaan masih
+              menjalankan usahanya. Selain KBLI 46591, izin tersebut mencakup KBLI 46521 untuk perdagangan besar suku
+              cadang elektronik.
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex items-center gap-6 mb-10">
+            <h2 class="eyebrow text-navy">Data Legal Terverifikasi</h2>
+            <div class="h-px flex-grow bg-line"></div>
+          </div>
+
+          <div class="hard-card overflow-hidden shadow-[10px_10px_0_0_rgba(0,122,255,0.18)]">
+            <table class="w-full text-sm">
+              <tbody>
+                {legalFacts.map(row => (
+                  <tr class="border-b border-line last:border-0">
+                    <th scope="row" class="text-left align-top font-mono text-[10px] uppercase tracking-widest text-gray-500 bg-[#f1f5f9] px-4 py-3 w-2/5">{row.label}</th>
+                    <td class="px-4 py-3 text-gray-800 font-medium">{row.value}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mt-8 space-y-4">
+            {legalDocs.map(doc => (
+              <div class="border-l-4 border-accent pl-5 py-1">
+                <span class="block font-mono text-[10px] uppercase tracking-widest text-accent mb-1">{doc.label}</span>
+                <p class="text-sm text-gray-800 font-medium leading-relaxed">{doc.detail}</p>
+                <p class="text-xs text-gray-500 leading-relaxed mt-1">{doc.note}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SEJARAH -->
+  <section class="py-20 bg-navy text-white">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center gap-6 mb-12">
+        <h2 class="eyebrow text-white">Perjalanan Kami</h2>
+        <div class="h-px flex-grow bg-white/15"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-14 gap-y-10">
+        {timeline.map((item, idx) => (
+          <div class="relative pl-8 border-l-2 border-primary/40">
+            <span class="absolute -left-[9px] top-1 w-4 h-4 bg-accent"></span>
+            <span class="block font-mono text-[11px] uppercase tracking-widest text-accent mb-2">{item.period}</span>
+            <h3 class="font-mono font-bold text-white text-lg uppercase tracking-tight mb-3">{item.title}</h3>
+            <p class="text-gray-400 leading-relaxed font-medium">{item.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- VISI MISI DAN CAPABILITAS -->
+  <section class="py-20 bg-white border-y border-line">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center gap-6 mb-12">
+        <h2 class="eyebrow text-navy">Fokus Layanan dan Keunggulan</h2>
+        <div class="h-px flex-grow bg-line"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div>
+          <h3 class="font-mono font-bold text-navy text-xl uppercase tracking-tight mb-6">Bidang Keahlian</h3>
+          <ul class="space-y-4">
+            <li class="flex gap-4 text-gray-700 leading-relaxed">
+              <span class="mt-2 w-2 h-2 bg-primary shrink-0"></span>
+              <span>Semikonduktor daya, termasuk modul IGBT dan IPM, modul thyristor, dioda, dan bridge rectifier dari Semikron, Infineon, Fuji Electric, Mitsubishi, IXYS, Starpower, dan SanRex.</span>
+            </li>
+            <li class="flex gap-4 text-gray-700 leading-relaxed">
+              <span class="mt-2 w-2 h-2 bg-primary shrink-0"></span>
+              <span>Proteksi daya, mulai dari fuse semikonduktor kecepatan tinggi, fuse NH dan gG, cartridge, blade, sampai fuse holder.</span>
+            </li>
+            <li class="flex gap-4 text-gray-700 leading-relaxed">
+              <span class="mt-2 w-2 h-2 bg-primary shrink-0"></span>
+              <span>Sensor dan instrumentasi industri, seperti proximity, photoelectric, distance, pressure, temperature, serta transduser arus closed loop.</span>
+            </li>
+            <li class="flex gap-4 text-gray-700 leading-relaxed">
+              <span class="mt-2 w-2 h-2 bg-primary shrink-0"></span>
+              <span>Otomasi dan drive, termasuk PLC, inverter drive, soft starter, servo motor, servo module, contactor, dan solid state relay.</span>
+            </li>
+            <li class="flex gap-4 text-gray-700 leading-relaxed">
+              <span class="mt-2 w-2 h-2 bg-primary shrink-0"></span>
+              <span>Komponen usang yang sudah tidak diproduksi massal, tetap dicari melalui jaringan sourcing dan pemeriksaan part number lama.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-mono font-bold text-navy text-xl uppercase tracking-tight mb-6">Cara Kerja Kami</h3>
+          <ul class="space-y-4">
+            <li class="flex gap-4 text-gray-700 leading-relaxed">
+              <span class="mt-2 w-2 h-2 bg-primary shrink-0"></span>
+              <span>Setiap permintaan penawaran disertai konfirmasi ketersediaan, jenjang harga, dan estimasi pengiriman ke alamat pelanggan.</span>
+            </li>
+            <li class="flex gap-4 text-gray-700 leading-relaxed">
+              <span class="mt-2 w-2 h-2 bg-primary shrink-0"></span>
+              <span>Spesifikasi teknis pada halaman produk disalin dari datasheet produsen, bukan estimasi, supaya teknisi dapat mencocokkan sendiri sebelum membeli.</span>
+            </li>
+            <li class="flex gap-4 text-gray-700 leading-relaxed">
+              <span class="mt-2 w-2 h-2 bg-primary shrink-0"></span>
+              <span>Permintaan komponen pengganti yang kompatibel tetap kami bantu carikan, termasuk saat part asli sudah berhenti diproduksi dan tidak ada lagi di katalog.</span>
+            </li>
+            <li class="flex gap-4 text-gray-700 leading-relaxed">
+              <span class="mt-2 w-2 h-2 bg-primary shrink-0"></span>
+              <span>Artikel teknis di blog ditulis dari kebutuhan lapangan yang nyata dan ditulis ulang bila ada bagian yang meragukan.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEBIJAKAN REDAKSI -->
+  <section class="py-20 bg-paper">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl">
+        <div class="flex items-center gap-6 mb-10">
+          <h2 class="eyebrow text-navy">Kebijakan Redaksi dan Integritas Konten</h2>
+          <div class="h-px flex-grow bg-line"></div>
+        </div>
+
+        <div class="space-y-5 text-base leading-relaxed text-gray-700 font-medium">
+          <p>
+            Setiap panduan teknis, perbandingan seri, dan rekomendasi part di situs ini disusun dari datasheet
+            produsen sebagai rujukan utama. Angka pada tabel spesifikasi selalu disertai sumbernya, dan klaim yang tidak
+            bisa diverifikasi dari dokumen pabrikan dibuang, bukan ditebak.
+          </p>
+          <p>
+            Artikel ditulis oleh tim operasional yang sudah menangani permintaan spare part di lapangan, lalu
+            direview ulang sebelum terbit. Bila pembaca menemukan bagian yang tidak sesuai dengan datasheet, kami terbuka
+            untuk koreksi.
+          </p>
+          <p>
+            Ketersediaan stok dan harga berubah mengikuti pasar, sehingga tidak ditampilkan sebagai angka final di
+            situs. Harga yang berlaku adalah harga yang berlaku pada saat konfirmasi penawaran melalui WhatsApp atau
+            email.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRANSPARANSI KONTAK -->
+  <section class="py-20 bg-white border-y border-line">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-14">
+        <div>
+          <div class="flex items-center gap-6 mb-10">
+            <h2 class="eyebrow text-navy">Alamat dan Kontak</h2>
+            <div class="h-px flex-grow bg-line"></div>
+          </div>
+
+          <div class="hard-card p-8 shadow-[10px_10px_0_0_rgba(0,122,255,0.18)]">
+            <ul class="space-y-5 text-gray-700">
+              <li>
+                <span class="block font-mono text-[10px] uppercase tracking-widest text-gray-500 mb-1">Alamat Operasional</span>
+                <span class="block leading-relaxed">Jln. Jend Sudirman Komp. Ruko Mega Legenda 2 Blok B2 No.7 Baloi Permai, Batam Kota, Batam, Kepulauan Riau 29431</span>
+              </li>
+              <li>
+                <span class="block font-mono text-[10px] uppercase tracking-widest text-gray-500 mb-1">Jam Kerja</span>
+                <span class="block leading-relaxed">Senin sampai Jumat, pukul 08.00 sampai 17.00 WIB</span>
+              </li>
+              <li>
+                <span class="block font-mono text-[10px] uppercase tracking-widest text-gray-500 mb-1">Telepon dan WhatsApp</span>
+                <span class="block leading-relaxed">0812-682-6672</span>
+              </li>
+              <li>
+                <span class="block font-mono text-[10px] uppercase tracking-widest text-gray-500 mb-1">Email</span>
+                <span class="block leading-relaxed">mail@elektrindo.co.id</span>
+              </li>
+              <li>
+                <span class="block font-mono text-[10px] uppercase tracking-widest text-gray-500 mb-1">Wilayah Layanan</span>
+                <span class="block leading-relaxed">Kepulauan Riau dan sekitarnya, dengan pengiriman ke luar Batam atas permintaan</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flex flex-col justify-center">
+          <h3 class="font-mono font-bold text-navy text-2xl uppercase tracking-tight mb-6">Butuh Komponen yang Sulit Ditemukan?</h3>
+          <p class="text-gray-700 leading-relaxed font-medium mb-8">
+            Kirim part number, foto nameplate, atau spesifikasi teknis yang sedang dicari. Tim kami akan menindaklanjuti
+            lewat WhatsApp dengan konfirmasi ketersediaan, harga, dan estimasi pengiriman dalam waktu kerja.
+          </p>
+          <div class="flex flex-wrap gap-4 font-mono">
+            <a href="https://wa.me/628126826672" class="premium-button bg-[#25D366] text-white text-xs">
+              Chat WhatsApp
+            </a>
+            <a href="/contact-us/" class="premium-button bg-navy text-white text-xs hover:bg-primary-dark">
+              Semua Saluran Kontak
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

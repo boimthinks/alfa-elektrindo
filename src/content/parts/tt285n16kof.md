@@ -4,7 +4,7 @@ title: |-
 slug: |-
   tt285n16kof
 category: |-
-  Thyristors
+  Thyristor Modules
 manufacturer: |-
   Infineon
 fifu_image_url: |-

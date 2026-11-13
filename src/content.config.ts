@@ -29,6 +29,7 @@ const blogs = defineCollection({
     kategori: z.string().optional(),
     fifu_image_url: z.string().optional(),
     pendahuluan: z.string().optional(),
+    meta_description: z.string().optional(),
   }),
 });
 

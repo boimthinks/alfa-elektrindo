@@ -4,7 +4,7 @@ title: |-
 slug: |-
   tt120n16sof
 category: |-
-  Thyristors
+  Thyristor Modules
 manufacturer: |-
   Infineon
 fifu_image_url: |-

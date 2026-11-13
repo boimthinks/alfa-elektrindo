@@ -5,12 +5,12 @@ export const categories = [
     "slug": "/ca/power-supplies/"
   },
   {
-    "name": "Soft Starter",
-    "slug": "/ca/soft-starter/"
+    "name": "Soft Starters",
+    "slug": "/ca/soft-starters/"
   },
   {
-    "name": "Fuse",
-    "slug": "/ca/fuse/"
+    "name": "Fuses",
+    "slug": "/ca/fuses/"
   },
   {
     "name": "IGBT Modules",
@@ -57,18 +57,6 @@ export const categories = [
     "slug": "/ca/cooling-fan/"
   },
   {
-    "name": "Integrated Circuits",
-    "slug": "/ca/integrated-circuits/"
-  },
-  {
-    "name": "Transistors Module",
-    "slug": "/ca/transistors-module/"
-  },
-  {
-    "name": "Semiconductor Fuse",
-    "slug": "/ca/semiconductor-fuse/"
-  },
-  {
     "name": "Transformers",
     "slug": "/ca/transformers/"
   },
@@ -77,12 +65,12 @@ export const categories = [
     "slug": "/ca/pulse-encoder/"
   },
   {
-    "name": "Industrial Relay",
-    "slug": "/ca/industrial-relay/"
+    "name": "Industrial Relays",
+    "slug": "/ca/industrial-relays/"
   },
   {
-    "name": "Solid State Relay",
-    "slug": "/ca/solid-state-relay/"
+    "name": "Solid State Relays",
+    "slug": "/ca/solid-state-relays/"
   },
   {
     "name": "Analog Input",
@@ -95,10 +83,6 @@ export const categories = [
   {
     "name": "IGBT Transistors",
     "slug": "/ca/igbt-transistors/"
-  },
-  {
-    "name": "Blade Fuse",
-    "slug": "/ca/blade-fuse/"
   },
   {
     "name": "Block Heater",
@@ -115,10 +99,6 @@ export const categories = [
   {
     "name": "Capacitors",
     "slug": "/ca/capacitors/"
-  },
-  {
-    "name": "High Speed Fuse",
-    "slug": "/ca/high-speed-fuse/"
   },
   {
     "name": "Power Factor Correction",
@@ -149,20 +129,12 @@ export const categories = [
     "slug": "/ca/board-mount-pressure-sensors/"
   },
   {
-    "name": "IGBT",
-    "slug": "/ca/igbt/"
+    "name": "Fuse Holders",
+    "slug": "/ca/fuse-holders/"
   },
   {
-    "name": "Fuse Holder",
-    "slug": "/ca/fuse-holder/"
-  },
-  {
-    "name": "Specialty Fuses",
-    "slug": "/ca/specialty-fuses/"
-  },
-  {
-    "name": "Diode Modul",
-    "slug": "/ca/diode-modul/"
+    "name": "Diodes",
+    "slug": "/ca/diodes/"
   },
   {
     "name": "PLC Modules",
@@ -181,12 +153,8 @@ export const categories = [
     "slug": "/ca/bridge-rectifiers/"
   },
   {
-    "name": "Rectifiers",
-    "slug": "/ca/rectifiers/"
-  },
-  {
-    "name": "Distance Sensor",
-    "slug": "/ca/distance-sensor/"
+    "name": "Distance Sensors",
+    "slug": "/ca/distance-sensors/"
   },
   {
     "name": "Controllers",
@@ -199,10 +167,6 @@ export const categories = [
   {
     "name": "Gate Drivers",
     "slug": "/ca/gate-drivers/"
-  },
-  {
-    "name": "Sensor Modules",
-    "slug": "/ca/sensor-modules/"
   },
   {
     "name": "Thyristor Modules",
@@ -233,10 +197,6 @@ export const categories = [
     "slug": "/ca/laser-diodes/"
   },
   {
-    "name": "Cartridge Fuses",
-    "slug": "/ca/cartridge-fuses/"
-  },
-  {
     "name": "Pressure Sensors",
     "slug": "/ca/pressure-sensors/"
   },
@@ -261,20 +221,16 @@ export const categories = [
     "slug": "/ca/speed-sensors/"
   },
   {
-    "name": "Sensor Suhu",
-    "slug": "/ca/sensor-suhu/"
-  },
-  {
-    "name": "SCR Modules",
-    "slug": "/ca/scr-modules/"
-  },
-  {
-    "name": "SCRs",
-    "slug": "/ca/scrs/"
+    "name": "Temperature Sensors",
+    "slug": "/ca/temperature-sensors/"
   },
   {
     "name": "Solid State Drive",
     "slug": "/ca/solid-state-drive/"
+  },
+  {
+    "name": "Surge Protection Devices",
+    "slug": "/ca/surge-protection-devices/"
   },
   {
     "name": "Actuator",
@@ -287,10 +243,6 @@ export const categories = [
   {
     "name": "Image Sensors",
     "slug": "/ca/image-sensors/"
-  },
-  {
-    "name": "Fuse Link Protistor",
-    "slug": "/ca/fuse-link-protistor/"
   },
   {
     "name": "Power Distribution Block",
@@ -333,12 +285,12 @@ export const categories = [
     "slug": "/ca/relay-sockets/"
   },
   {
-    "name": "Switches",
-    "slug": "/ca/switches/"
+    "name": "Limit Switches",
+    "slug": "/ca/limit-switches/"
   },
   {
-    "name": "Pressure Switch",
-    "slug": "/ca/pressure-switch/"
+    "name": "Pressure Switches",
+    "slug": "/ca/pressure-switches/"
   },
   {
     "name": "Ambient Light Sensors",
@@ -399,20 +351,12 @@ export const manufacturers = [
     "slug": "/ma/microchip-technology/"
   },
   {
-    "name": "Bussmann",
-    "slug": "/ma/bussmann/"
-  },
-  {
     "name": "Epcos",
     "slug": "/ma/epcos/"
   },
   {
     "name": "Mersen",
     "slug": "/ma/mersen/"
-  },
-  {
-    "name": "EPCOS TDK",
-    "slug": "/ma/epcos-tdk/"
   },
   {
     "name": "Balluff",
@@ -491,7 +435,7 @@ export const manufacturers = [
     "slug": "/ma/hengfu/"
   },
   {
-    "name": "STARPOWER",
+    "name": "Starpower",
     "slug": "/ma/starpower/"
   },
   {
@@ -571,6 +515,10 @@ export const manufacturers = [
     "slug": "/ma/micron/"
   },
   {
+    "name": "MTL",
+    "slug": "/ma/mtl/"
+  },
+  {
     "name": "SMC Corporation",
     "slug": "/ma/smc-corporation/"
   },
@@ -611,10 +559,6 @@ export const manufacturers = [
     "slug": "/ma/semikron/"
   },
   {
-    "name": "Semikron Danfoss",
-    "slug": "/ma/semikron-danfoss/"
-  },
-  {
     "name": "IDEC",
     "slug": "/ma/idec/"
   },
@@ -629,10 +573,6 @@ export const manufacturers = [
   {
     "name": "Koyo",
     "slug": "/ma/koyo/"
-  },
-  {
-    "name": "WAGO Corporation",
-    "slug": "/ma/wago-corporation/"
   },
   {
     "name": "Wago",

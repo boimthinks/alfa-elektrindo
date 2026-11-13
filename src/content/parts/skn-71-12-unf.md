@@ -4,7 +4,7 @@ title: |-
 slug: |-
   skn-71-12-unf
 category: |-
-  Diode
+  Diodes
 manufacturer: |-
   Semikron
 fifu_image_url: |-

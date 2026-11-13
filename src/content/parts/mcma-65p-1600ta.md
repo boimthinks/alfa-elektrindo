@@ -4,7 +4,7 @@ title: |-
 slug: |-
   mcma-65p-1600ta
 category: |-
-  SCR Modules
+  Thyristor Modules
 manufacturer: |-
   IXYS
 fifu_image_url: |-

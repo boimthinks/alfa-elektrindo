@@ -4,9 +4,9 @@ title: |-
 slug: |-
   fwx-80a
 category: |-
-  Fuse
+  Fuses
 manufacturer: |-
-  Bussmann
+  Eaton Bussmann
 fifu_image_url: |-
   https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgtYynsEpdZNRHlHA82vKXlA6eAQHInmvYTjFFWWCc601ndlnBzOKjvzZAfG-geHHmpH9Qq13qGwSfHVVgUKdS7pPcjzdydTIedA3vMjRzQbvllR0YAUiNX-uSYlmdnIRPku8FlHYusaI9L-Rf3PTXXrVI2r29FFAZwVEBs3zHqHUAzKVHIsBnIgbmnqtkj/s320/%20FWX-80A.webp
 pendahuluan: |-

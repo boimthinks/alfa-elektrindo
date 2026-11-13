@@ -4,7 +4,7 @@ title: |-
 slug: |-
   a30qs
 category: |-
-  Fuse
+  Fuses
 manufacturer: |-
   Ferraz Shawmut
 fifu_image_url: |-

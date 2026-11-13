@@ -32,6 +32,36 @@
 | Warna brand aksen | Biru Elektrik `#007aff` |
 | Bahasa konten | Bahasa Indonesia (utama), istilah teknis boleh Inggris |
 
+### Data Legalitas Badan Usaha (dari Akta Pendirian, sumber `legalitas_cv_alfa_elektrindo.md`)
+
+| Field | Value |
+|---|---|
+| Bentuk badan usaha | Perseroan Komanditer (CV) |
+| Nama resmi | CV Alfa Elektrindo |
+| Tanggal pendirian | 10 Februari 2018 |
+| Notaris pembuat akta | Krisnanti Soesilowati, S.H., M.Kn., Notaris Kota Batam |
+| Nomor akta pendirian | 1 |
+| Pengesahan Pengadilan Negeri Batam | Nomor 120/2018/PN BTM, 27 Februari 2018 |
+| Pesero | Richa Anggraini Putri (Direktur), Arni Sutarni (Pesero Komanditer) |
+| NPWP | 84.157.615.0-225.000 (KPP Pratama Batam Selatan) |
+| Tanda Daftar Perusahaan (TDP) | 33.10.3.46.11617, Penetapan Modal Kota Batam, KBLI 46591 |
+| SIUP Kecil | 00334/DPMPTSP-BTM/PK/III/2018, KBLI 46591 dan 46521, berlaku se-Republik Indonesia |
+| Surat Keterangan Domisili Usaha | 40/CSB/II/2018, Kecamatan Sungai Beduk, 15 Februari 2018 |
+| Alamat terdaftar | Perum. Puri Agung 4 Blok C No. 29, Kelurahan Mangsang, Kecamatan Sungai Beduk, Kota Batam |
+| Telepon resmi | 0778-385407 |
+| Domisili hukum | Kantor Kepaniteraan Pengadilan Negeri Batam |
+
+### Sejarah Singkat (Perjalanan Brand)
+
+| Periode | Peristiwa |
+|---|---|
+| Sekitar Juli 2017 | Awal usaha dari blog Blogspot sederhana dengan custom domain `arjunaputrastore.com`. Branding dan legalitas belum menjadi prioritas, tujuan awal hanya memberikan produk dan layanan terbaik kepada konsumen. |
+| 10 Februari 2018 | CV Alfa Elektrindo didaftarkan melalui Akta Pendirian Nomor 1. Website saat itu masih memakai domain `arjunaputrastore.com`. |
+| Sekitar 20 September 2018 | Domain `elektrindo.co.id` didaftarkan dan website dipindahkan ke platform WordPress. |
+| Sekitar September 2026 | Website dibangun ulang dengan Astro dan static site generation, katalog ratusan part ditata ulang, dan struktur data ditambahkan. |
+
+> Catatan: tanggal-tanggal di atas bersifat perkiraan ("sekitar") dan ditulis apa adanya, tanpa pembulatan ke tanggal yang lebih presisi.
+
 ### Media Kontak
 
 | Platform | Detail |
@@ -88,15 +118,15 @@ Tagline siap copy-paste untuk heading, CTA, atau caption media sosial. Semua dit
 
 ### Kategori Komponen yang Umum Tersedia
 
-Kategori komponen yang tersedia di katalog markdown:
+Kategori komponen utama yang tersedia di katalog markdown (nama kategori bersifat kanonik, lihat `PRIORITAS-OPTIMASI-KATALOG.md` bagian 2A):
 
-1. **Microcontroller I/O** — microcontroller I/O industri dan pabrikasi.
-2. **DC-DC Converter** — konverter tegangan untuk aplikasi industri.
-3. **Display / Display Backpack** — modul display industri.
-4. **Relay & Kontrol** — relay, kontroller, modul otomasi.
-5. **Sensor** — sensor suhu, kelembapan, tekanan, dll.
-6. **Komponen Usang (Obsolete)** — komponen yang tidak lagi diproduksi massal.
-7. **Aksesori & Komponen Pendukung** — kabel, driver, konektor, alat ukur.
+1. **Semikonduktor Daya** — `IGBT Modules` (91 part), `IGBT Transistors`, `Thyristor Modules` (37 part), `Thyristors` (19 part), `Diodes` (44 part), `Bridge Rectifiers` (14 part). Ini klaster komponen inti: Semikron, Infineon, IXYS, Mitsubishi Electric, Fuji Electric, Starpower, SanRex.
+2. **Proteksi Daya** — `Fuses` (64 part: high speed Bussmann 170M, Ferraz Protistor, NH/gG, cartridge, blade) dan `Fuse Holders`. Termasuk klaster semikonduktor fuse aR/IEC 60269-4.
+3. **Sensor Industri** — `Proximity Sensors` (22 part), `Photoelectric Sensors` (21 part), `Distance Sensors`, `Pressure Sensors`, `Pressure Switches`, `Temperature Sensors`, `Sensors`.
+4. **Instrumentasi & Transduser** — `Transducers` (13 part: LEM LF series/closed-loop Hall, Carlo Gavazzi), `Micropulse transducer`.
+5. **Otomasi & Drive** — `PLC`, `Drives`, `Inverter Drive`, `Soft Starters`, `Servo Motor`, `Servo Module`, `Servo Amplifier`, `Contactors`, `Solid State Relays`, `Industrial Relays`, `Limit Switches`.
+6. **Power Supply & Pasif** — `Power Supplies`, `Switching Power Supplies`, `Transformers`, `Capacitors`, `Braking Resistor`.
+7. **Komponen Usang (Obsolete)** — komponen yang tidak lagi diproduksi massal, tetap tersedia lewat jaringan sourcing kami.
 
 > Catatan: daftar kategori di atas adalah gambaran umum. Rujuk file di `src/content/parts/` untuk daftar spesifik part yang terdaftar.
 
@@ -296,6 +326,13 @@ Semua 59 artikel blog lama telah ditulis ulang dengan standar **`penulis-ahli`**
 
 Catatan artikel baru (update per terbit):
 
+- **14-11-2026** — `panduan-memilih-modul-igbt-fuji-electric-6mbp-rh-vs-ra` (Modul IGBT Fuji Electric 6MBP seri RH vs RA). Artikel pilar pertama untuk brand Fuji Electric di katalog. Membandingkan dua platform R-IPM 600 V yang sama-sama bertulis 6MBP namun tidak saling menggantikan: seri RH (P617, 50 gram, 15/20/30 A, tDOC 5,0 µs tipikal, IOC 21/27/33 A pada 15 A dan 44/54/64 A pada 30 A, alarm hanya lengan bawah, torsi M4 2,0 N·m) versus seri RA (P610/P611, 440 gram, 50/75/100 A, IOC 75/113/150 A minimum, tDOC tipikal 10 µs, tSC maks 12 µs, alarm di kedua lengan plus proteksi overheat case TcOH 110-125 °C dengan histeresis 20 °C, torsi M5 2,5-3,0 N·m, fSW 1-20 kHz). Menegaskan bahwa angka 600 V adalah rating kolektor-emitter, bukan tegangan bus DC, sehingga bus DC maksimum tetap 450 V dengan surge 500 V. Memetakan penggunaan 6MBP untuk inverter dengan proteksi onboard, seri 2MBI (IGBT 2 in 1) untuk penggerak besar dengan heatsink sendiri, dan seri 6DI untuk rectifier bridge, serta membedakan peran alarm lengan atas (hubung singkat sisi output) dan lengan bawah (hubung singkat sisi DC). Semua angka diambil dari datasheet resmi Fuji Electric untuk 6MBP30RH060 dan 6MBP50RA060.
+
+- **11-11-2026** — `surge-protector-mtl-loop-instrumen-4-20-ma` (Surge Protector MTL untuk Loop 4-20 mA). Membedah dua pendekatan proteksi sinyal MTL: field-mounted `TP48` yang disekrup ke port conduit transmitter (316 stainless steel, IP66, ATEX Ex ia/Ex d, 20 kA 8/20 us, Iimp 2,5 kA, Up < 76 V, bandwidth 1 MHz) versus modul rail DIN `SD07/SD16/SD32/SD55` berlebar 7 mm dengan rangkaian hybrid, loop disconnect, dan sekring 250 mA replaceable. Menjelaskan pemilihan rating tegangan berbasis tegangan kerja maksimum sistem (Uc 7,7 V sampai 62 V) agar pengkleman tidak terlambat merusak kartu input, jebakan arus bocor 500 uA pada SD07, serta perbedaan varian X (resistansi rendah), R (bandwidth 50 MHz), T3 (loop 3 kawat), dan SDRTD (RTD 3 kawat). Menyajikan tiga kegagalan pemasangan yang berulang di lapangan, yaitu rail DIN tidak terhubung ke earth bar, sekring modul putus tanpa terdeteksi, dan screen kabel dibumikan ganda.
+
+- **09-11-2026** — `fungsi-brake-chopper-modul-rectifier-infineon-ddb6u` (Modul Rectifier Infineon DDB6U). Membedah arsitektur terpadu kemasan EconoBRIDGE yang menyatukan enam dioda penyearah 1600 V, IGBT brake chopper 1200 V dengan fast recovery diode, dan NTC thermistor 5 kΩ pada satu substrat keramik Al2O3 berisolasi 2,5 kV. Menguraikan mekanisme regenerasi motor inersia tinggi yang memompa energi balik ke DC bus hingga menembus 800 V, serta peran pensaklaran PWM chopper membuang daya ke braking resistor eksternal. Memetakan lima part katalog (DDB6U84N16RR 85 A, DDB6U104N16RR 105 A, DDB6U134N16RR 134 A, DDB6U145N16L 145 A IsoPACK, DDB6U205N16L 205 A AG-ISOPACK-1) lengkap dengan batas IFSM 550 A hingga 1500 A. Menyajikan SOP uji multimeter mode dioda untuk enam junction penyearah, verifikasi NTC, aplikasi pasta termal 50 hingga 100 µm, serta batas torsi EconoBRIDGE 2 (3,0 hingga 4,0 Nm) dan IsoPACK M5 (4,0 hingga 5,0 Nm).
+- **05-11-2026** — `perbedaan-stud-diode-semikron-skn-dan-skr-pada-heatsink` (Stud Diode Rectifier Semikron SKN dan SKR). Membedah perbedaan fundamental polaritas elektroda pada dioda penyearah tipe stud baut industri: seri SKN (Normal Polarity: baut stud anoda, kabel fleksibel atas katoda) versus seri SKR (Reverse Polarity: baut stud katoda, kabel fleksibel atas anoda). Menguraikan risiko fatal hubung singkat fasa ke fasa jika tertukar pada pelat pendingin heatsink bersama (common busbar), metode pengujian multimeter digital dioda (forward bias 0,4-0,75 V vs reverse open loop), batas toleransi torsi mekanis pengencangan kunci torsi M8 (4 Nm), M12 / UNF (12 Nm), M16 (30 Nm), bahaya keretakan wafer kristal silikon internal akibat over-torque, bahaya thermal runaway akibat under-torque, aplikasi pasta termal 50 mikrometer, koordinasi perlindungan tegangan surja modul varistor MOV SKVC 20A-460, snubber RC, serta batas integral lebur I2t sekring semikonduktor berkecepatan tinggi.
+- **02-11-2026** — `troubleshooting-sensor-proximity-telemecanique-osisense-xs` (Sensor Proximity Telemecanique OsiSense XS). Membedah akar penyebab kegagalan deteksi dan sinyal semu (false triggering) pada sensor induktif pabrik. Menguraikan aturan jarak bebas logam (metal-free zone) tipe flush vs non-flush ($3 \times Sn$), jarak spasi antar sensor ($2 \times D$) untuk mencegah interferensi silang frekuensi osilator, dampak kontaminasi serbuk gram besi pada kubah sensor, mitigasi induksi derau elektromagnetik dari kabel daya motor inverter (VFD), penanganan arus bocor off-state sensor 2-kawat (XS618B1MAL2) ke modul input digital PLC via resistor bleeder paralel, serta rumus penyesuaian jarak jangkau efektif berdasarkan faktor reduksi material target (mild steel, stainless steel, kuningan, aluminium, tembaga).
 - **29-10-2026** — `spesifikasi-power-supply-weidmuller-pro-eco-24v-3a` (Power Supply Weidmuller PRO ECO 72W 24V 3A 1469470000). Membedah switch-mode power supply unit hemat ruang (lebar 34 mm) untuk DIN Rail TS 35 pada panel otomasi industri. Menjelaskan rentang input fleksibel universal AC 85-264V dan DC 80-370V, penyesuaian voltase 22-28V DC via potensiometer muka untuk mengatasi drop tegangan jalur panjang, efisiensi 87%, residual ripple rendah <50 mVPP, indikator visual tri-color LED (hijau, kuning >90% beban, merah fault), kontak relai diagnostik bebas potensial (terminal 13-14) untuk integrasi alarm PLC/SCADA, serta panduan instalasi dan proteksi beban industri di Batam dan sekitarnya.
 - **27-10-2026** — `mengatasi-gangguan-noise-pemicu-thyristor-infineon-etd630n16` (Thyristor Modules Infineon eTD630N16P60 SFH756V). Membedah risiko salah picu (false triggering / misfire) akibat induksi medan elektromagnetik (EMI/RFI) busbar daya ratusan ampere pada kabel gate konvensional. Menguraikan solusi transmisi optik serat kaca/polimer 650nm dengan penerima terintegrasi SFH756V, konstruksi casing 60mm ECOBLOCK bertekanan tinggi (pressure contact), kapasitas lonjakan arus $I_{TSM} = 19.5\text{ kA}$ dan $I^2t = 1,9 \times 10^6\text{ A}^2\text{s}$, koordinasi sekring semikonduktor kecepatan tinggi (high-speed fuse), serta SOP mounting baseplate dengan torsi presisi 5 Nm dan pasta pendingin termal.
 - **27-10-2026** — `panduan-wiring-rotary-encoder-koyo-trd-2t-ke-modul-plc` (Rotary Encoder Koyo TRD-2T100BF-2M). Membedah interfacing sinyal rotary encoder industri dengan modul high-speed counter PLC. Menjelaskan keunggulan output Totem Pole (Push-Pull kompatibel sink NPN dan source PNP tanpa resistor pull-up eksternal), diagram pinout kabel (Coklat DC 24V, Biru 0V, Hitam Fase A, Putih Fase B, Oranye Fase Z, Shield GND), pemanfaatan kuadratur 90° listrik untuk deteksi arah putaran (CW/CCW), resolusi 100 P/R hingga 400 hitungan per putaran, fungsi indeks penanda posisi awal (homing marker), serta rekomendasi mekanis flexible coupling untuk poros 8mm guna mencegah kerusakan bearing akibat beban radial berlebih.
@@ -319,9 +356,16 @@ date: "YYYY-MM-DDTHH:mm:ss.000Z"
 kategori: "Blog"
 fifu_image_url: "https://..."
 pendahuluan: "..."
+meta_description: "Meta description 110-160 karakter (opsional, dipakai sejak 14-11-2026)"
 img_prompt: "Photorealistic wide 16:9 industrial banner photograph..."
 ---
 ```
+
+> **Aturan judul dan heading (skill `penulis-ahli`)**:
+> - `long_title` adalah H1 dan sekaligus judul SERP. Panjang **50-60 karakter**, tanpa titik dua, tanpa angka Arab/Romawi.
+> - Semua heading (H2-H4) **dilarang memakai angka Arab, angka Romawi, maupun tanda titik dua**.
+> - Jumlah H2 per artikel sebaiknya 4-7. Rincian teknis dipisah sebagai H3.
+> - `meta_description` terpisah dari `pendahuluan` bila panjang `pendahuluan` tidak berada di rentang 110-160 karakter.
 
 ### 10.2 Topik yang Masih Terbuka
 

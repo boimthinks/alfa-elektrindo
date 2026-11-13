@@ -4,7 +4,7 @@ title: |-
 slug: |-
   xckm121
 category: |-
-  Switches
+  Limit Switches
 manufacturer: |-
   Telemecanique
 fifu_image_url: |-

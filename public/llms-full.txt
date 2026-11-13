@@ -62,81 +62,68 @@ Mengganti satu unit mesin utuh hanya karena sebuah modul saklar daya atau sensor
 
 ---
 
-## 4. Katalog Kategori Komponen Elektronik Industri (88 Kategori)
+## 4. Katalog Kategori Komponen Elektronik Industri (74 Kategori)
 
 Daftar seluruh kategori komponen elektronik industri yang tersedia di Alfa Elektrindo beserta jumlah part number terdaftar:
 
-- [IGBT Modules](https://alfa.elektrindo.co.id/ca/igbt-modules/): Memuat 86 part number terdaftar.
-- [Fuse](https://alfa.elektrindo.co.id/ca/fuse/): Memuat 42 part number terdaftar.
+- [IGBT Modules](https://alfa.elektrindo.co.id/ca/igbt-modules/): Memuat 97 part number terdaftar.
+- [Fuses](https://alfa.elektrindo.co.id/ca/fuses/): Memuat 64 part number terdaftar.
+- [Diodes](https://alfa.elektrindo.co.id/ca/diodes/): Memuat 44 part number terdaftar.
+- [Thyristor Modules](https://alfa.elektrindo.co.id/ca/thyristor-modules/): Memuat 37 part number terdaftar.
 - [Power Supplies](https://alfa.elektrindo.co.id/ca/power-supplies/): Memuat 30 part number terdaftar.
-- [Thyristors](https://alfa.elektrindo.co.id/ca/thyristors/): Memuat 26 part number terdaftar.
 - [Proximity Sensors](https://alfa.elektrindo.co.id/ca/proximity-sensors/): Memuat 22 part number terdaftar.
 - [Photoelectric Sensors](https://alfa.elektrindo.co.id/ca/photoelectric-sensors/): Memuat 21 part number terdaftar.
-- [Diode Modul](https://alfa.elektrindo.co.id/ca/diode-modul/): Memuat 21 part number terdaftar.
-- [Diode](https://alfa.elektrindo.co.id/ca/diode/): Memuat 21 part number terdaftar.
-- [Thyristor Modules](https://alfa.elektrindo.co.id/ca/thyristor-modules/): Memuat 19 part number terdaftar.
+- [Thyristors](https://alfa.elektrindo.co.id/ca/thyristors/): Memuat 19 part number terdaftar.
 - [Servo Motor](https://alfa.elektrindo.co.id/ca/servo-motor/): Memuat 17 part number terdaftar.
 - [Drives](https://alfa.elektrindo.co.id/ca/drives/): Memuat 15 part number terdaftar.
+- [Bridge Rectifiers](https://alfa.elektrindo.co.id/ca/bridge-rectifiers/): Memuat 14 part number terdaftar.
 - [Transducers](https://alfa.elektrindo.co.id/ca/transducers/): Memuat 13 part number terdaftar.
-- [Soft Starter](https://alfa.elektrindo.co.id/ca/soft-starter/): Memuat 11 part number terdaftar.
+- [Sensors](https://alfa.elektrindo.co.id/ca/sensors/): Memuat 12 part number terdaftar.
+- [Soft Starters](https://alfa.elektrindo.co.id/ca/soft-starters/): Memuat 11 part number terdaftar.
 - [PLC](https://alfa.elektrindo.co.id/ca/plc/): Memuat 11 part number terdaftar.
 - [Capacitors](https://alfa.elektrindo.co.id/ca/capacitors/): Memuat 10 part number terdaftar.
 - [Servo Module](https://alfa.elektrindo.co.id/ca/servo-module/): Memuat 9 part number terdaftar.
 - [Contactors](https://alfa.elektrindo.co.id/ca/contactors/): Memuat 9 part number terdaftar.
-- [Sensors](https://alfa.elektrindo.co.id/ca/sensors/): Memuat 9 part number terdaftar.
-- [Bridge Rectifiers](https://alfa.elektrindo.co.id/ca/bridge-rectifiers/): Memuat 9 part number terdaftar.
 - [IGBT Transistors](https://alfa.elektrindo.co.id/ca/igbt-transistors/): Memuat 8 part number terdaftar.
-- [Blade Fuse](https://alfa.elektrindo.co.id/ca/blade-fuse/): Memuat 8 part number terdaftar.
-- [Distance Sensor](https://alfa.elektrindo.co.id/ca/distance-sensor/): Memuat 8 part number terdaftar.
+- [Distance Sensors](https://alfa.elektrindo.co.id/ca/distance-sensors/): Memuat 8 part number terdaftar.
 - [Circuit Protection](https://alfa.elektrindo.co.id/ca/circuit-protection/): Memuat 8 part number terdaftar.
-- [Cartridge Fuses](https://alfa.elektrindo.co.id/ca/cartridge-fuses/): Memuat 8 part number terdaftar.
 - [Terminal Blocks](https://alfa.elektrindo.co.id/ca/terminal-blocks/): Memuat 8 part number terdaftar.
 - [Inverter Drive](https://alfa.elektrindo.co.id/ca/inverter-drive/): Memuat 7 part number terdaftar.
 - [Transformers](https://alfa.elektrindo.co.id/ca/transformers/): Memuat 7 part number terdaftar.
 - [Smart Camera](https://alfa.elektrindo.co.id/ca/smart-camera/): Memuat 7 part number terdaftar.
 - [Switching Power Supplies](https://alfa.elektrindo.co.id/ca/switching-power-supplies/): Memuat 6 part number terdaftar.
 - [Connectors](https://alfa.elektrindo.co.id/ca/connectors/): Memuat 6 part number terdaftar.
-- [SCR Modules](https://alfa.elektrindo.co.id/ca/scr-modules/): Memuat 6 part number terdaftar.
-- [Switches](https://alfa.elektrindo.co.id/ca/switches/): Memuat 6 part number terdaftar.
-- [Pressure Switch](https://alfa.elektrindo.co.id/ca/pressure-switch/): Memuat 6 part number terdaftar.
-- [SCRs](https://alfa.elektrindo.co.id/ca/scrs/): Memuat 5 part number terdaftar.
-- [Solid State Relay](https://alfa.elektrindo.co.id/ca/solid-state-relay/): Memuat 4 part number terdaftar.
-- [IGBT](https://alfa.elektrindo.co.id/ca/igbt/): Memuat 4 part number terdaftar.
+- [Limit Switches](https://alfa.elektrindo.co.id/ca/limit-switches/): Memuat 6 part number terdaftar.
+- [Pressure Switches](https://alfa.elektrindo.co.id/ca/pressure-switches/): Memuat 6 part number terdaftar.
+- [Surge Protection Devices](https://alfa.elektrindo.co.id/ca/surge-protection-devices/): Memuat 5 part number terdaftar.
+- [Solid State Relays](https://alfa.elektrindo.co.id/ca/solid-state-relays/): Memuat 4 part number terdaftar.
 - [Micro Controllers](https://alfa.elektrindo.co.id/ca/micro-controllers/): Memuat 4 part number terdaftar.
 - [Braking Resistor](https://alfa.elektrindo.co.id/ca/braking-resistor/): Memuat 4 part number terdaftar.
 - [Thermostat Controller](https://alfa.elektrindo.co.id/ca/thermostat-controller/): Memuat 4 part number terdaftar.
-- [Industrial Relay](https://alfa.elektrindo.co.id/ca/industrial-relay/): Memuat 3 part number terdaftar.
+- [Industrial Relays](https://alfa.elektrindo.co.id/ca/industrial-relays/): Memuat 3 part number terdaftar.
 - [I/O MODULE](https://alfa.elektrindo.co.id/ca/i-o-module/): Memuat 3 part number terdaftar.
 - [Micropulse transducer](https://alfa.elektrindo.co.id/ca/micropulse-transducer/): Memuat 3 part number terdaftar.
-- [Fuse Holder](https://alfa.elektrindo.co.id/ca/fuse-holder/): Memuat 3 part number terdaftar.
-- [Specialty Fuses](https://alfa.elektrindo.co.id/ca/specialty-fuses/): Memuat 3 part number terdaftar.
+- [Fuse Holders](https://alfa.elektrindo.co.id/ca/fuse-holders/): Memuat 3 part number terdaftar.
 - [Pressure Sensors](https://alfa.elektrindo.co.id/ca/pressure-sensors/): Memuat 3 part number terdaftar.
 - [Rotary Encoder](https://alfa.elektrindo.co.id/ca/rotary-encoder/): Memuat 3 part number terdaftar.
 - [Servo Amplifier](https://alfa.elektrindo.co.id/ca/servo-amplifier/): Memuat 2 part number terdaftar.
 - [PLC Modules](https://alfa.elektrindo.co.id/ca/plc-modules/): Memuat 2 part number terdaftar.
-- [Rectifiers](https://alfa.elektrindo.co.id/ca/rectifiers/): Memuat 2 part number terdaftar.
 - [Controllers](https://alfa.elektrindo.co.id/ca/controllers/): Memuat 2 part number terdaftar.
-- [Sensor](https://alfa.elektrindo.co.id/ca/sensor/): Memuat 2 part number terdaftar.
 - [Speed Sensors](https://alfa.elektrindo.co.id/ca/speed-sensors/): Memuat 2 part number terdaftar.
-- [Sensor Suhu](https://alfa.elektrindo.co.id/ca/sensor-suhu/): Memuat 2 part number terdaftar.
+- [Temperature Sensors](https://alfa.elektrindo.co.id/ca/temperature-sensors/): Memuat 2 part number terdaftar.
 - [Flow Sensors](https://alfa.elektrindo.co.id/ca/flow-sensors/): Memuat 2 part number terdaftar.
 - [Spindle Amplifier Module](https://alfa.elektrindo.co.id/ca/spindle-amplifier-module/): Memuat 1 part number terdaftar.
 - [Main Board](https://alfa.elektrindo.co.id/ca/main-board/): Memuat 1 part number terdaftar.
 - [Printed Circuit Board](https://alfa.elektrindo.co.id/ca/printed-circuit-board/): Memuat 1 part number terdaftar.
 - [Cooling Fan](https://alfa.elektrindo.co.id/ca/cooling-fan/): Memuat 1 part number terdaftar.
-- [Integrated Circuits](https://alfa.elektrindo.co.id/ca/integrated-circuits/): Memuat 1 part number terdaftar.
-- [Transistors Module](https://alfa.elektrindo.co.id/ca/transistors-module/): Memuat 1 part number terdaftar.
-- [Semiconductor Fuse](https://alfa.elektrindo.co.id/ca/semiconductor-fuse/): Memuat 1 part number terdaftar.
 - [Pulse Encoder](https://alfa.elektrindo.co.id/ca/pulse-encoder/): Memuat 1 part number terdaftar.
 - [Analog Input](https://alfa.elektrindo.co.id/ca/analog-input/): Memuat 1 part number terdaftar.
 - [Block Heater](https://alfa.elektrindo.co.id/ca/block-heater/): Memuat 1 part number terdaftar.
 - [Tubing kit](https://alfa.elektrindo.co.id/ca/tubing-kit/): Memuat 1 part number terdaftar.
-- [High Speed Fuse](https://alfa.elektrindo.co.id/ca/high-speed-fuse/): Memuat 1 part number terdaftar.
 - [Power Factor Correction](https://alfa.elektrindo.co.id/ca/power-factor-correction/): Memuat 1 part number terdaftar.
 - [Incremental Rotary Encoder](https://alfa.elektrindo.co.id/ca/incremental-rotary-encoder/): Memuat 1 part number terdaftar.
 - [Board Mount Pressure Sensors](https://alfa.elektrindo.co.id/ca/board-mount-pressure-sensors/): Memuat 1 part number terdaftar.
 - [Gate Drivers](https://alfa.elektrindo.co.id/ca/gate-drivers/): Memuat 1 part number terdaftar.
-- [Sensor Modules](https://alfa.elektrindo.co.id/ca/sensor-modules/): Memuat 1 part number terdaftar.
 - [Laser Diodes](https://alfa.elektrindo.co.id/ca/laser-diodes/): Memuat 1 part number terdaftar.
 - [Molded Case Circuit Breakers](https://alfa.elektrindo.co.id/ca/molded-case-circuit-breakers/): Memuat 1 part number terdaftar.
 - [MOSFETs](https://alfa.elektrindo.co.id/ca/mosfets/): Memuat 1 part number terdaftar.
@@ -144,7 +131,6 @@ Daftar seluruh kategori komponen elektronik industri yang tersedia di Alfa Elekt
 - [Actuator](https://alfa.elektrindo.co.id/ca/actuator/): Memuat 1 part number terdaftar.
 - [DC Fans](https://alfa.elektrindo.co.id/ca/dc-fans/): Memuat 1 part number terdaftar.
 - [Image Sensors](https://alfa.elektrindo.co.id/ca/image-sensors/): Memuat 1 part number terdaftar.
-- [Fuse Link Protistor](https://alfa.elektrindo.co.id/ca/fuse-link-protistor/): Memuat 1 part number terdaftar.
 - [Power Distribution Block](https://alfa.elektrindo.co.id/ca/power-distribution-block/): Memuat 1 part number terdaftar.
 - [Power Thyristor](https://alfa.elektrindo.co.id/ca/power-thyristor/): Memuat 1 part number terdaftar.
 - [Safety Relays](https://alfa.elektrindo.co.id/ca/safety-relays/): Memuat 1 part number terdaftar.
@@ -193,14 +179,14 @@ Daftar seluruh kategori komponen elektronik industri yang tersedia di Alfa Elekt
 
 ---
 
-## 5. Portofolio Brand & Produsen Terkemuka (76 Brand)
+## 5. Portofolio Brand & Produsen Terkemuka (73 Brand)
 
 Daftar brand industri global yang didukung oleh CV. Alfa Elektrindo:
 
-- [Infineon](https://alfa.elektrindo.co.id/ma/infineon/): Menangani 57 part number terdaftar.
+- [Infineon](https://alfa.elektrindo.co.id/ma/infineon/): Menangani 62 part number terdaftar.
+- [Semikron](https://alfa.elektrindo.co.id/ma/semikron/): Menangani 38 part number terdaftar.
+- [Eaton Bussmann](https://alfa.elektrindo.co.id/ma/eaton-bussmann/): Menangani 37 part number terdaftar.
 - [IXYS](https://alfa.elektrindo.co.id/ma/ixys/): Menangani 37 part number terdaftar.
-- [Semikron](https://alfa.elektrindo.co.id/ma/semikron/): Menangani 37 part number terdaftar.
-- [Eaton Bussmann](https://alfa.elektrindo.co.id/ma/eaton-bussmann/): Menangani 31 part number terdaftar.
 - [Telemecanique](https://alfa.elektrindo.co.id/ma/telemecanique/): Menangani 25 part number terdaftar.
 - [Omron](https://alfa.elektrindo.co.id/ma/omron/): Menangani 23 part number terdaftar.
 - [Siemens](https://alfa.elektrindo.co.id/ma/siemens/): Menangani 22 part number terdaftar.
@@ -208,6 +194,7 @@ Daftar brand industri global yang didukung oleh CV. Alfa Elektrindo:
 - [Fanuc](https://alfa.elektrindo.co.id/ma/fanuc/): Menangani 18 part number terdaftar.
 - [Mitsubishi Electric](https://alfa.elektrindo.co.id/ma/mitsubishi-electric/): Menangani 16 part number terdaftar.
 - [Eaton Cutler Hammer](https://alfa.elektrindo.co.id/ma/eaton-cutler-hammer/): Menangani 14 part number terdaftar.
+- [Fuji Electric](https://alfa.elektrindo.co.id/ma/fuji-electric/): Menangani 13 part number terdaftar.
 - [Allen Bradley](https://alfa.elektrindo.co.id/ma/allen-bradley/): Menangani 13 part number terdaftar.
 - [TDK Lambda](https://alfa.elektrindo.co.id/ma/tdk-lambda/): Menangani 13 part number terdaftar.
 - [Carlo Gavazzi](https://alfa.elektrindo.co.id/ma/carlo-gavazzi/): Menangani 12 part number terdaftar.
@@ -215,14 +202,13 @@ Daftar brand industri global yang didukung oleh CV. Alfa Elektrindo:
 - [Powerex](https://alfa.elektrindo.co.id/ma/powerex/): Menangani 11 part number terdaftar.
 - [Phoenix Contact](https://alfa.elektrindo.co.id/ma/phoenix-contact/): Menangani 11 part number terdaftar.
 - [ABB](https://alfa.elektrindo.co.id/ma/abb/): Menangani 10 part number terdaftar.
+- [Epcos](https://alfa.elektrindo.co.id/ma/epcos/): Menangani 10 part number terdaftar.
 - [Littelfuse](https://alfa.elektrindo.co.id/ma/littelfuse/): Menangani 10 part number terdaftar.
 - [PULS](https://alfa.elektrindo.co.id/ma/puls/): Menangani 9 part number terdaftar.
 - [Ferraz Shawmut](https://alfa.elektrindo.co.id/ma/ferraz-shawmut/): Menangani 9 part number terdaftar.
-- [Epcos](https://alfa.elektrindo.co.id/ma/epcos/): Menangani 9 part number terdaftar.
 - [Hengfu](https://alfa.elektrindo.co.id/ma/hengfu/): Menangani 9 part number terdaftar.
-- [Fuji Electric](https://alfa.elektrindo.co.id/ma/fuji-electric/): Menangani 8 part number terdaftar.
 - [Balluff](https://alfa.elektrindo.co.id/ma/balluff/): Menangani 8 part number terdaftar.
-- [STARPOWER](https://alfa.elektrindo.co.id/ma/starpower/): Menangani 8 part number terdaftar.
+- [Starpower](https://alfa.elektrindo.co.id/ma/starpower/): Menangani 8 part number terdaftar.
 - [Vishay](https://alfa.elektrindo.co.id/ma/vishay/): Menangani 8 part number terdaftar.
 - [Panasonic](https://alfa.elektrindo.co.id/ma/panasonic/): Menangani 7 part number terdaftar.
 - [Microchip Technology](https://alfa.elektrindo.co.id/ma/microchip-technology/): Menangani 7 part number terdaftar.
@@ -230,12 +216,12 @@ Daftar brand industri global yang didukung oleh CV. Alfa Elektrindo:
 - [KB Electronics](https://alfa.elektrindo.co.id/ma/kb-electronics/): Menangani 7 part number terdaftar.
 - [LEM](https://alfa.elektrindo.co.id/ma/lem/): Menangani 7 part number terdaftar.
 - [Crydom](https://alfa.elektrindo.co.id/ma/crydom/): Menangani 7 part number terdaftar.
-- [Bussmann](https://alfa.elektrindo.co.id/ma/bussmann/): Menangani 6 part number terdaftar.
 - [Autonics](https://alfa.elektrindo.co.id/ma/autonics/): Menangani 6 part number terdaftar.
 - [Veris Industries](https://alfa.elektrindo.co.id/ma/veris-industries/): Menangani 6 part number terdaftar.
 - [HellermannTyton](https://alfa.elektrindo.co.id/ma/hellermanntyton/): Menangani 6 part number terdaftar.
 - [Minarik Drives](https://alfa.elektrindo.co.id/ma/minarik-drives/): Menangani 6 part number terdaftar.
 - [SanRex](https://alfa.elektrindo.co.id/ma/sanrex/): Menangani 5 part number terdaftar.
+- [MTL](https://alfa.elektrindo.co.id/ma/mtl/): Menangani 5 part number terdaftar.
 - [STMicroelectronics](https://alfa.elektrindo.co.id/ma/stmicroelectronics/): Menangani 5 part number terdaftar.
 - [Mersen](https://alfa.elektrindo.co.id/ma/mersen/): Menangani 4 part number terdaftar.
 - [Danoterm](https://alfa.elektrindo.co.id/ma/danoterm/): Menangani 4 part number terdaftar.
@@ -247,8 +233,8 @@ Daftar brand industri global yang didukung oleh CV. Alfa Elektrindo:
 - [Kokonoe](https://alfa.elektrindo.co.id/ma/kokonoe/): Menangani 2 part number terdaftar.
 - [Sensirion](https://alfa.elektrindo.co.id/ma/sensirion/): Menangani 2 part number terdaftar.
 - [Koyo](https://alfa.elektrindo.co.id/ma/koyo/): Menangani 2 part number terdaftar.
+- [Wago](https://alfa.elektrindo.co.id/ma/wago/): Menangani 2 part number terdaftar.
 - [Davitu](https://alfa.elektrindo.co.id/ma/davitu/): Menangani 1 part number terdaftar.
-- [EPCOS TDK](https://alfa.elektrindo.co.id/ma/epcos-tdk/): Menangani 1 part number terdaftar.
 - [BEI Sensors](https://alfa.elektrindo.co.id/ma/bei-sensors/): Menangani 1 part number terdaftar.
 - [Turck](https://alfa.elektrindo.co.id/ma/turck/): Menangani 1 part number terdaftar.
 - [Bosch](https://alfa.elektrindo.co.id/ma/bosch/): Menangani 1 part number terdaftar.
@@ -266,10 +252,7 @@ Daftar brand industri global yang didukung oleh CV. Alfa Elektrindo:
 - [VINCOTECH](https://alfa.elektrindo.co.id/ma/vincotech/): Menangani 1 part number terdaftar.
 - [Pilz](https://alfa.elektrindo.co.id/ma/pilz/): Menangani 1 part number terdaftar.
 - [MOOG](https://alfa.elektrindo.co.id/ma/moog/): Menangani 1 part number terdaftar.
-- [Semikron Danfoss](https://alfa.elektrindo.co.id/ma/semikron-danfoss/): Menangani 1 part number terdaftar.
 - [IDEC](https://alfa.elektrindo.co.id/ma/idec/): Menangani 1 part number terdaftar.
-- [WAGO Corporation](https://alfa.elektrindo.co.id/ma/wago-corporation/): Menangani 1 part number terdaftar.
-- [Wago](https://alfa.elektrindo.co.id/ma/wago/): Menangani 1 part number terdaftar.
 - [Weidmuller](https://alfa.elektrindo.co.id/ma/weidmuller/): Menangani 1 part number terdaftar.
 - [Coherent](https://alfa.elektrindo.co.id/ma/coherent/): Menangani 1 part number terdaftar.
 - [Schneider Electric](https://alfa.elektrindo.co.id/ma/schneider-electric/): Menangani 1 part number terdaftar.
@@ -2536,9 +2519,34 @@ Bagi supervisor pemeliharaan pabrik, engineer instrumentasi kelistrikan, atau di
 
 ---
 
-## 8. Indeks Wawasan Teknis & Artikel Blog Terbit (73 Artikel)
+## 8. Indeks Wawasan Teknis & Artikel Blog Terbit (78 Artikel)
 
 Artikel teknis yang diterbitkan oleh Alfa Elektrindo membahas solusi rekayasa kelistrikan, mitigasi keausan termal semikonduktor, panduan perawatan motor drive, dan integrasi otomasi pabrik:
+
+### [Panduan Memilih Modul IGBT Fuji Electric 6MBP RH dan RA](https://alfa.elektrindo.co.id/blog/panduan-memilih-modul-igbt-fuji-electric-6mbp-rh-vs-ra/)
+- **URL**: https://alfa.elektrindo.co.id/blog/panduan-memilih-modul-igbt-fuji-electric-6mbp-rh-vs-ra/
+- **Tanggal Rilis**: 2026-11-14
+- **Ringkasan**: Panduan teknis memilih modul IGBT Fuji Electric 6MBP seri RH dan RA, mulai dari rating arus, proteksi overcurrent, paket P617 dan P610, torsi mounting, sampai pilihan seri.
+
+### [Membedakan Surge Protector MTL TP48 dan SD Series pada Panel Instrumen 4-20 mA](https://alfa.elektrindo.co.id/blog/surge-protector-mtl-loop-instrumen-4-20-ma/)
+- **URL**: https://alfa.elektrindo.co.id/blog/surge-protector-mtl-loop-instrumen-4-20-ma/
+- **Tanggal Rilis**: 2026-11-11
+- **Ringkasan**: Panduan memilih surge protector MTL TP48 dan SD series untuk melindungi loop instrumen 4-20 mA dari surja induksi kabel lapangan di area pabrik.
+
+### [Fungsi Brake Chopper Modul Rectifier Infineon DDB6U](https://alfa.elektrindo.co.id/blog/fungsi-brake-chopper-modul-rectifier-infineon-ddb6u/)
+- **URL**: https://alfa.elektrindo.co.id/blog/fungsi-brake-chopper-modul-rectifier-infineon-ddb6u/
+- **Tanggal Rilis**: 2026-11-09
+- **Ringkasan**: Pelajari arsitektur modul penyearah Infineon DDB6U, fungsi proteksi brake chopper IGBT, dan NTC termal pada inverter VFD industri bersama Alfa Elektrindo.
+
+### [Membedakan Polaritas Stud Diode Semikron SKN dan SKR agar Heatsink Tidak Short Circuit](https://alfa.elektrindo.co.id/blog/perbedaan-stud-diode-semikron-skn-dan-skr-pada-heatsink/)
+- **URL**: https://alfa.elektrindo.co.id/blog/perbedaan-stud-diode-semikron-skn-dan-skr-pada-heatsink/
+- **Tanggal Rilis**: 2026-11-05
+- **Ringkasan**: Panduan membedakan polaritas stud diode Semikron SKN dan SKR pada heatsink penyearah industri guna mencegah hubung singkat dan kerusakan wafer silikon.
+
+### [Troubleshooting Sensor Proximity Telemecanique OsiSense XS](https://alfa.elektrindo.co.id/blog/troubleshooting-sensor-proximity-telemecanique-osisense-xs/)
+- **URL**: https://alfa.elektrindo.co.id/blog/troubleshooting-sensor-proximity-telemecanique-osisense-xs/
+- **Tanggal Rilis**: 2026-11-02
+- **Ringkasan**: Panduan troubleshooting sensor proximity Telemecanique OsiSense XS untuk mengatasi false triggering, arus bocor 2-kawat, dan gangguan serbuk logam mesin pabrik.
 
 ### [Spesifikasi Power Supply Weidmuller PRO ECO 24V 3A](https://alfa.elektrindo.co.id/blog/spesifikasi-power-supply-weidmuller-pro-eco-24v-3a/)
 - **URL**: https://alfa.elektrindo.co.id/blog/spesifikasi-power-supply-weidmuller-pro-eco-24v-3a/

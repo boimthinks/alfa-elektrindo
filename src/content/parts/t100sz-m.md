@@ -4,7 +4,7 @@ title: |-
 slug: |-
   t100sz-m
 category: |-
-  Diode Modul
+  Diodes
 manufacturer: |-
   Crydom
 fifu_image_url: |-

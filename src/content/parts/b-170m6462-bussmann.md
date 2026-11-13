@@ -4,9 +4,9 @@ title: |-
 slug: |-
   b-170m6462-bussmann
 category: |-
-  Fuse
+  Fuses
 manufacturer: |-
-  Bussmann
+  Eaton Bussmann
 fifu_image_url: |-
   /placeholder-product.png
 pendahuluan: |-

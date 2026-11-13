@@ -4,7 +4,7 @@ title: |-
 slug: |-
   nls-series-ul-class-k5
 category: |-
-  Fuse
+  Fuses
 manufacturer: |-
   Littelfuse
 fifu_image_url: |-

@@ -4,7 +4,7 @@ title: |-
 slug: |-
   e160fee
 category: |-
-  Fuse
+  Fuses
 manufacturer: |-
   Eaton Bussmann
 fifu_image_url: |-

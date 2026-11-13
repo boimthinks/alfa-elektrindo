@@ -4,7 +4,7 @@ title: |-
 slug: |-
   kldr-2-25
 category: |-
-  Fuse
+  Fuses
 manufacturer: |-
   Littelfuse
 fifu_image_url: |-

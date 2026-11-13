@@ -201,3 +201,11 @@ Menu mobile: sidebar slide-in (tombol hamburger) dengan item yang sama.
 ## Deployment
 
 Static-only. Build = `npm run build` → `dist/`. Host apa pun yang serve `dist/`. Sitemap auto-generate via `src/pages/sitemap.xml.js`.
+
+---
+
+## Deployment Target
+
+- **Platform:** DomaiNesia (cPanel Addon Domain)
+- **Target Path:** `/home/apitowpc/alfa.elektrindo.co.id/`
+- **Catatan & Metode:** Gunakan skill `cpanel-domainesia`. Perintah cepat: `npm run deploy`

@@ -4,7 +4,7 @@ title: |-
 slug: |-
   ffp08s60s
 category: |-
-  Diode
+  Diodes
 manufacturer: |-
   Fairchild
 fifu_image_url: |-

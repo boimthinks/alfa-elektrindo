@@ -4,7 +4,7 @@ title: |-
 slug: |-
   gma-5-r
 category: |-
-  Cartridge Fuses
+  Fuses
 manufacturer: |-
   Eaton
 fifu_image_url: |-

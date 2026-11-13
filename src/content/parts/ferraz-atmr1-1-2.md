@@ -4,7 +4,7 @@ title: |-
 slug: |-
   ferraz-atmr1-1-2
 category: |-
-  Fuse
+  Fuses
 manufacturer: |-
   Ferraz Shawmut
 fifu_image_url: |-

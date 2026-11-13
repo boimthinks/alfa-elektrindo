@@ -4,7 +4,7 @@ title: |-
 slug: |-
   me112941small
 category: |-
-  SCRs
+  Thyristors
 manufacturer: |-
   Miller Electric
 fifu_image_url: |-

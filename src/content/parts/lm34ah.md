@@ -4,7 +4,7 @@ title: |-
 slug: |-
   lm34ah
 category: |-
-  Sensor Suhu
+  Temperature Sensors
 manufacturer: |-
   Texas Instruments
 fifu_image_url: |-

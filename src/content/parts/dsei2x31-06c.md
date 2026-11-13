@@ -4,7 +4,7 @@ title: |-
 slug: |-
   dsei2x31-06c
 category: |-
-  Diode
+  Diodes
 manufacturer: |-
   IXYS
 fifu_image_url: |-

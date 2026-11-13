@@ -4,7 +4,7 @@ title: |-
 slug: |-
   bussmann-170m6148
 category: |-
-  Specialty Fuses
+  Fuses
 manufacturer: |-
   Eaton Bussmann
 fifu_image_url: |-

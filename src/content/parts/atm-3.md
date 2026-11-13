@@ -4,7 +4,7 @@ title: |-
 slug: |-
   atm-3
 category: |-
-  Blade Fuse
+  Fuses
 manufacturer: |-
   Eaton Bussmann
 fifu_image_url: |-
