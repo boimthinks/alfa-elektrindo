@@ -325,3 +325,9 @@ Setelah menambah part atau artikel baru:
   - Verifikasi produksi: `/about-us/`, `/blog/panduan-memilih-modul-igbt-fuji-electric-6mbp-rh-vs-ra/`, `/part/6mbp30rh060/`, `/part/mtl-sd32/`, `/part/mtl-tp48/`, `/part/ddb6u84n16rr/`, `/part/a50l-0001-0338/`, `/ma/fuji-electric/`, `/ca/igbt-modules/`, `/contact-us/`, `/terms/`, dan `/sitemap.xml` semuanya HTTP 200.
   - Konten produksi terverifikasi: section "Perjalanan Kami" beserta ketiga domain historis tampil, modal awal tidak lagi muncul, JSON-LD `AboutPage` + `LocalBusiness` valid, artikel Fuji Electric memuat 10 link part plus autolink brand/kategori, `Article.image` absolut, dan seluruh gambar produk lokal merespons 200.
   - `sitemap.xml` produksi berisi 896 URL termasuk `/about-us/`.
+
+- **[2026-11-14]**: Sinkronisasi `llms.txt` dan `llms-full.txt` dengan data katalog. Commit `4480e54`.
+  - `scripts/gen-llms.js` dibuat baru: `public/llms.txt` dihitung otomatis dari sumber data (16.453 karakter, 611 part, 74 kategori, 73 brand, 78 artikel, 49 area). Isinya mencakup data badan usaha, sejarah singkat brand, statistik katalog, artikel pilar terbaru, dan cakupan area layanan.
+  - `scripts/gen-llms-full.js` diperbaiki: parser frontmatter block scalar (`|-`) kini membaca nilai multi-baris utuh, dan seksi baru **"Daftar Part Tergressor per Brand"** (sic: "Terdaftar") dibangkitkan otomatis dari `src/content/parts`. Part baru Fuji Electric (6MBP seri RH/RA, 2MBI, 6DI, A50L), MTL (TP48, SD07-SD55), dan Infineon DDB6U otomatis masuk. Ukuran file naik dari 411 KB ke 600 KB.
+  - `package.json` menambah script `gen:index`, `gen:llms`, `gen:llms-full`, `gen:all`.
+  - Deploy produksi sukses (`_deploy_1794553222.zip`). Verifikasi: `llms.txt` 200 (16.453 b), `llms-full.txt` 200 (600.139 b), part baru terdeteksi, section "Data Badan Usaha" dan domain historis `arjunaputrastore.com` terbaca.
