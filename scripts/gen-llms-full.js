@@ -11,8 +11,19 @@ const BLOG_DIR = join(ROOT, 'src/content/blog');
 const OUTPUT_PATH = join(ROOT, 'public/llms-full.txt');
 
 function readScalar(content, key) {
-  const m = content.match(new RegExp(`^${key}:\\s*(?:\\|-\\s*\\n\\s*([^\\n]+)|"([^"]*)")`, 'm'));
-  return m ? (m[1] || m[2] || '').trim() : null;
+  // Mendukung tiga bentuk nilai frontmatter:
+  //   key: nilai satu baris
+  //   key: "nilai dalam tanda kutip"
+  //   key: |-   (blok skalar berbaris jamak)
+  const block = content.match(new RegExp(`^${key}:\\s*\\|-[\\s]*\\n([\\s\\S]*?)(?=\\n[a-zA-Z_][\\w-]*:\\s*(?:\\|-|\\"|[^\\n])|\\n---)`, 'm'));
+  if (block) {
+    const lines = block[1].split('\n').map(l => l.replace(/^\s{2,4}/, '').trimEnd());
+    return lines.join('\n').trim();
+  }
+  const inline = content.match(new RegExp(`^${key}:\\s*(?:"([^"]*)"|([^\\n]*))`, 'm'));
+  if (!inline) return null;
+  const value = (inline[1] !== undefined ? inline[1] : inline[2] || '').trim();
+  return value || null;
 }
 
 function getBody(content) {
@@ -48,6 +59,25 @@ for (const file of partFiles) {
 const sortedCats = [...categories.entries()].sort((a, b) => b[1] - a[1]);
 const sortedBrands = [...brands.entries()].sort((a, b) => b[1] - a[1]);
 
+// 2b. Kumpulkan detail part per manufacturer untuk katalog part otomatis
+const partsByManufacturer = new Map();
+
+for (const file of partFiles) {
+  const content = readFileSync(join(PARTS_DIR, file), 'utf8');
+  const title = readScalar(content, 'title') || file.replace('.md', '');
+  const slug = readScalar(content, 'slug') || file.replace('.md', '');
+  const cat = readScalar(content, 'category') || '';
+  const man = readScalar(content, 'manufacturer') || '';
+  const intro = readScalar(content, 'pendahuluan') || '';
+  if (!man) continue;
+  if (!partsByManufacturer.has(man)) partsByManufacturer.set(man, []);
+  partsByManufacturer.get(man).push({ title, slug, cat, intro });
+}
+
+for (const list of partsByManufacturer.values()) {
+  list.sort((a, b) => (a.title < b.title ? -1 : a.title > b.title ? 1 : 0));
+}
+
 // 3. Gather blog articles
 const blogFiles = readdirSync(BLOG_DIR).filter(f => f.endsWith('.md'));
 const blogs = [];
@@ -62,6 +92,27 @@ for (const file of blogFiles) {
   }
 }
 blogs.sort((a, b) => (a.date < b.date ? 1 : -1));
+
+
+const BRAND_PART_BLOCK = `### Daftar Part Terdaftar per Brand (dibangkitkan otomatis dari katalog)
+
+Setiap entri di bawah ini diturunkan langsung dari data katalog src/content/parts, sehingga daftar ini selalu sinkron dengan halaman brand di situs. Tautan menuju halaman detail part memuat tabel spesifikasi lengkap dari datasheet pabrikan.
+
+`;
+
+let brandPartBlock = BRAND_PART_BLOCK;
+for (const [brandName, count] of sortedBrands) {
+  const list = partsByManufacturer.get(brandName);
+  if (!list || !list.length) continue;
+  const brandSlug = brandName.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+  brandPartBlock += `**[${brandName}](https://alfa.elektrindo.co.id/ma/${brandSlug}/)** - ${count} part terdaftar\n\n`;
+  for (const part of list) {
+    let desc = (part.intro || '').replace(/\s+/g, ' ').trim();
+    if (desc.length > 220) desc = desc.slice(0, desc.lastIndexOf(' ', 215)) + '...';
+    brandPartBlock += `- [${part.title}](https://alfa.elektrindo.co.id/part/${part.slug}/)${part.cat ? ' - ' + part.cat : ''}${desc ? '. ' + desc : ''}\n`;
+  }
+  brandPartBlock += `\n`;
+}
 
 let output = `# Alfa Elektrindo — Complete Technical Knowledge Base & Industrial Catalog (llms-full.txt)
 
@@ -242,6 +293,7 @@ Sebagai penyalur semikonduktor daya dan komponen industri terkemuka di Batam, CV
 
 ---
 
+${brandPartBlock}
 ## 7. Cakupan Wilayah Layanan Industri di Seluruh Indonesia (49 Area)
 
 CV. Alfa Elektrindo melayani pengadaan suku cadang komponen elektronik untuk fasilitas industri di 49 kabupaten/kota utama di Indonesia. Berikut adalah profil industri, karakteristik kebutuhan suku cadang, dan rute logistik untuk masing-masing area:

@@ -11,7 +11,11 @@
     "preview": "astro preview",
     "astro": "astro",
     "deploy": "python3 /home/abah/.config/opencode/skills/cpanel-domainesia/scripts/deploy.py",
-    "deploy:dry": "python3 /home/abah/.config/opencode/skills/cpanel-domainesia/scripts/deploy.py --dry-run"
+    "deploy:dry": "python3 /home/abah/.config/opencode/skills/cpanel-domainesia/scripts/deploy.py --dry-run",
+    "gen:index": "node scripts/gen-content-index.js",
+    "gen:llms": "node scripts/gen-llms.js",
+    "gen:llms-full": "node scripts/gen-llms-full.js",
+    "gen:all": "npm run gen:index && npm run gen:llms && npm run gen:llms-full"
   },
   "dependencies": {
     "@fontsource-variable/plus-jakarta-sans": "^5.3.0",
