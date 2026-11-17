@@ -81,6 +81,7 @@ const FEATURED_CATEGORIES = [
   ['IGBT Modules', 'Modul saklar daya berkecepatan tinggi untuk inverter motor AC, VFD, UPS sentral, dan konverter turbin angin (Fuji Electric 6MBP dan 2MBI, Infineon PrimePACK dan EconoPACK, Semikron SKM, Mitsubishi CM).'],
   ['Fuses', 'Sekring pelebur kecepatan tinggi dengan nilai I2t ultra-rendah untuk proteksi modul daya (Eaton Bussmann 170M, FWH, FWX, Ferraz Shawmut Protistor, Littelfuse).'],
   ['Thyristor Modules', 'Modul SCR dan thyristor industri terkontrol sudut fasa untuk soft starter motor AC dan penyearah terkontrol (Semikron SKKT, IXYS MCC, Infineon TT dan TZ, SanRex PK).'],
+  ['Thyristors', 'Thyristor diskrit, stud, dan kapsul press-pack untuk penyearah terkontrol, soft starter, dan pengendali daya AC (Semikron SKN dan SKR, Infineon T880N dan T640N, seri kapsul KP 300 A sampai 1500 A).'],
   ['Diodes', 'Modul dioda penyearah daya arus tinggi terisolasi DCB untuk bus DC inverter, tanur listrik, dan generator (Semikron SKKD dan SKKE, IXYS MDD, Infineon DD).'],
   ['Power Supplies', 'Catu daya switching presisi DIN-rail untuk kabinet kontrol industri (PULS, TDK-Lambda, Siemens SITOP, Weidmuller).'],
   ['Proximity Sensors', 'Sensor induktif dan kapasitif untuk deteksi objek tanpa kontak, tersedia dalam versi flush dan non-flush (Balluff, Omron, Sick, Telemecanique).'],
@@ -100,6 +101,7 @@ const FEATURED_BRANDS = [
   ['Eaton Bussmann', 'Sekring proteksi semikonduktor kecepatan tinggi seri 170M (square body flush end dan DIN 43653), FWH, FWX, KTK, LP-CC, FNQ, dan C14G.'],
   ['SanRex', 'Modul thyristor PK series, three-phase diode bridge rectifier DF series (DF50AA160, DF100AA160, DF150AA160), dan diode module PD series.'],
   ['MTL', 'Surge protection device untuk loop instrumen 4-20 mA (field-mounted TP48 dan rail DIN seri SD), serta barrier intrinsik safety ATEX.'],
+  ['Thyristor', 'Thyristor kontrol fase tipe kapsul press-pack seri KP dengan kode tegangan 1600 V, dari 300 A (KP300-16) sampai 1500 A (KP1500-16), untuk penyearah terkontrol, soft starter, dan pengendali daya AC industri.'],
   ['Telemecanique', 'Sakelar tekanan fluida XMLA dan XMLB, limit switch XCKM dan XCMD, dan kontaktor daya Schneider Electric.'],
   ['Omron', 'Sensor optik E3Z dan E3AS, proximity sensor E2B, Solid State Relay G3PE dan G3NA, dan PLC CP1E dan CJ2M.'],
   ['Siemens', 'PLC SIMATIC S7-1200 dan S7-1500, soft starter SIRIUS 3RW, catu daya SITOP, dan sekring SITOR.'],
@@ -138,7 +140,7 @@ Kontak dan Konsultasi:
 
 - [Beranda](${BASE}/): Informasi umum profil perusahaan, kategori terpopuler, merek terkemuka, dan komponen pilihan.
 - [Katalog Kategori](${BASE}/products/): Indeks ${catCount} kategori komponen elektronik industri (IGBT, sekring semikonduktor, PLC, inverter, sensor, kontaktor).
-- [Daftar Produsen](${BASE}/manufacturers/): Direktori ${brandCount} merek industri global terkemuka (Semikron, IXYS, Infineon, SanRex, LEM, Eaton Bussmann, Siemens, Mitsubishi, Fuji Electric, Omron, MTL).
+- [Daftar Produsen](${BASE}/manufacturers/): Direktori ${brandCount} merek industri global terkemuka (Semikron, IXYS, Infineon, SanRex, LEM, Eaton Bussmann, Siemens, Mitsubishi, Fuji Electric, Omron, MTL, Thyristor).
 - [Produk Terbaru](${BASE}/latest-products/): Katalog seluruh part number komponen industri yang terdaftar, total ${partCount} part.
 - [Blog Industri](${BASE}/blog/): Artikel teknis seputar semikonduktor daya, proteksi surge, kalibrasi sensor industri, panduan VFD, dan troubleshooting mesin, total ${blogs.length} artikel.
 - [Jual Komponen](${BASE}/jual-komponen/): Informasi penawaran pengadaan suku cadang khusus dan komponen surplus pabrik.

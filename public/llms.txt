@@ -23,15 +23,15 @@ Kontak dan Konsultasi:
 
 ## File Lengkap untuk LLM
 
-- [llms-full.txt](https://alfa.elektrindo.co.id/llms-full.txt): Berkas teks lengkap berisi profil perusahaan, katalog 74 kategori produk, daftar 73 brand produsen utama, lini komponen prioritas rekayasa industri, panduan teknis part obsolete, dan profil 49 kawasan industri layanan di seluruh Indonesia.
+- [llms-full.txt](https://alfa.elektrindo.co.id/llms-full.txt): Berkas teks lengkap berisi profil perusahaan, katalog 74 kategori produk, daftar 74 brand produsen utama, lini komponen prioritas rekayasa industri, panduan teknis part obsolete, dan profil 49 kawasan industri layanan di seluruh Indonesia.
 
 ## Halaman Utama
 
 - [Beranda](https://alfa.elektrindo.co.id/): Informasi umum profil perusahaan, kategori terpopuler, merek terkemuka, dan komponen pilihan.
 - [Katalog Kategori](https://alfa.elektrindo.co.id/products/): Indeks 74 kategori komponen elektronik industri (IGBT, sekring semikonduktor, PLC, inverter, sensor, kontaktor).
-- [Daftar Produsen](https://alfa.elektrindo.co.id/manufacturers/): Direktori 73 merek industri global terkemuka (Semikron, IXYS, Infineon, SanRex, LEM, Eaton Bussmann, Siemens, Mitsubishi, Fuji Electric, Omron, MTL).
-- [Produk Terbaru](https://alfa.elektrindo.co.id/latest-products/): Katalog seluruh part number komponen industri yang terdaftar, total 611 part.
-- [Blog Industri](https://alfa.elektrindo.co.id/blog/): Artikel teknis seputar semikonduktor daya, proteksi surge, kalibrasi sensor industri, panduan VFD, dan troubleshooting mesin, total 78 artikel.
+- [Daftar Produsen](https://alfa.elektrindo.co.id/manufacturers/): Direktori 74 merek industri global terkemuka (Semikron, IXYS, Infineon, SanRex, LEM, Eaton Bussmann, Siemens, Mitsubishi, Fuji Electric, Omron, MTL, Thyristor).
+- [Produk Terbaru](https://alfa.elektrindo.co.id/latest-products/): Katalog seluruh part number komponen industri yang terdaftar, total 616 part.
+- [Blog Industri](https://alfa.elektrindo.co.id/blog/): Artikel teknis seputar semikonduktor daya, proteksi surge, kalibrasi sensor industri, panduan VFD, dan troubleshooting mesin, total 79 artikel.
 - [Jual Komponen](https://alfa.elektrindo.co.id/jual-komponen/): Informasi penawaran pengadaan suku cadang khusus dan komponen surplus pabrik.
 - [Tentang Kami](https://alfa.elektrindo.co.id/about-us/): Profil badan usaha CV. Alfa Elektrindo, data legalitas, perjalanan brand, dan kapabilitas rantai pasok.
 - [Hubungi Kami](https://alfa.elektrindo.co.id/contact-us/): Informasi alamat fisik, nomor kontak teknis, email penawaran harga, dan peta lokasi.
@@ -41,6 +41,7 @@ Kontak dan Konsultasi:
 - [IGBT Modules](https://alfa.elektrindo.co.id/ca/igbt-modules/): Modul saklar daya berkecepatan tinggi untuk inverter motor AC, VFD, UPS sentral, dan konverter turbin angin (Fuji Electric 6MBP dan 2MBI, Infineon PrimePACK dan EconoPACK, Semikron SKM, Mitsubishi CM). Total 97 part terdaftar.
 - [Fuses](https://alfa.elektrindo.co.id/ca/fuses/): Sekring pelebur kecepatan tinggi dengan nilai I2t ultra-rendah untuk proteksi modul daya (Eaton Bussmann 170M, FWH, FWX, Ferraz Shawmut Protistor, Littelfuse). Total 64 part terdaftar.
 - [Thyristor Modules](https://alfa.elektrindo.co.id/ca/thyristor-modules/): Modul SCR dan thyristor industri terkontrol sudut fasa untuk soft starter motor AC dan penyearah terkontrol (Semikron SKKT, IXYS MCC, Infineon TT dan TZ, SanRex PK). Total 37 part terdaftar.
+- [Thyristors](https://alfa.elektrindo.co.id/ca/thyristors/): Thyristor diskrit, stud, dan kapsul press-pack untuk penyearah terkontrol, soft starter, dan pengendali daya AC (Semikron SKN dan SKR, Infineon T880N dan T640N, seri kapsul KP 300 A sampai 1500 A). Total 24 part terdaftar.
 - [Diodes](https://alfa.elektrindo.co.id/ca/diodes/): Modul dioda penyearah daya arus tinggi terisolasi DCB untuk bus DC inverter, tanur listrik, dan generator (Semikron SKKD dan SKKE, IXYS MDD, Infineon DD). Total 44 part terdaftar.
 - [Power Supplies](https://alfa.elektrindo.co.id/ca/power-supplies/): Catu daya switching presisi DIN-rail untuk kabinet kontrol industri (PULS, TDK-Lambda, Siemens SITOP, Weidmuller). Total 30 part terdaftar.
 - [Proximity Sensors](https://alfa.elektrindo.co.id/ca/proximity-sensors/): Sensor induktif dan kapasitif untuk deteksi objek tanpa kontak, tersedia dalam versi flush dan non-flush (Balluff, Omron, Sick, Telemecanique). Total 22 part terdaftar.
@@ -60,6 +61,7 @@ Kontak dan Konsultasi:
 - [Eaton Bussmann](https://alfa.elektrindo.co.id/ma/eaton-bussmann/): Sekring proteksi semikonduktor kecepatan tinggi seri 170M (square body flush end dan DIN 43653), FWH, FWX, KTK, LP-CC, FNQ, dan C14G. Total 37 part terdaftar.
 - [SanRex](https://alfa.elektrindo.co.id/ma/sanrex/): Modul thyristor PK series, three-phase diode bridge rectifier DF series (DF50AA160, DF100AA160, DF150AA160), dan diode module PD series. Total 5 part terdaftar.
 - [MTL](https://alfa.elektrindo.co.id/ma/mtl/): Surge protection device untuk loop instrumen 4-20 mA (field-mounted TP48 dan rail DIN seri SD), serta barrier intrinsik safety ATEX. Total 5 part terdaftar.
+- [Thyristor](https://alfa.elektrindo.co.id/ma/thyristor/): Thyristor kontrol fase tipe kapsul press-pack seri KP dengan kode tegangan 1600 V, dari 300 A (KP300-16) sampai 1500 A (KP1500-16), untuk penyearah terkontrol, soft starter, dan pengendali daya AC industri. Total 5 part terdaftar.
 - [Telemecanique](https://alfa.elektrindo.co.id/ma/telemecanique/): Sakelar tekanan fluida XMLA dan XMLB, limit switch XCKM dan XCMD, dan kontaktor daya Schneider Electric. Total 25 part terdaftar.
 - [Omron](https://alfa.elektrindo.co.id/ma/omron/): Sensor optik E3Z dan E3AS, proximity sensor E2B, Solid State Relay G3PE dan G3NA, dan PLC CP1E dan CJ2M. Total 23 part terdaftar.
 - [Siemens](https://alfa.elektrindo.co.id/ma/siemens/): PLC SIMATIC S7-1200 dan S7-1500, soft starter SIRIUS 3RW, catu daya SITOP, dan sekring SITOR. Total 22 part terdaftar.
@@ -67,6 +69,7 @@ Kontak dan Konsultasi:
 
 ## Panduan Rekayasa Teknis dan Artikel Pilar
 
+- [Cara Membaca Kode Thyristor KP dan Memilih Kapsul yang Tepat](https://alfa.elektrindo.co.id/blog/cara-membaca-kode-thyristor-kp-dan-memilih-kapsul/): Panduan membaca kode thyristor kapsul KP, dari arti angka arus dan kode tegangan sampai kecocokan outline dengan klem heatsink, agar penggantian tidak berakhir dengan kapsul retak.
 - [Panduan Memilih Modul IGBT Fuji Electric 6MBP RH dan RA](https://alfa.elektrindo.co.id/blog/panduan-memilih-modul-igbt-fuji-electric-6mbp-rh-vs-ra/): Panduan teknis memilih modul IGBT Fuji Electric 6MBP seri RH dan RA, mulai dari rating arus, proteksi overcurrent, paket P617 dan P610, torsi mounting, sampai pilihan seri.
 - [Membedakan Surge Protector MTL TP48 dan SD Series pada Panel Instrumen 4-20 mA](https://alfa.elektrindo.co.id/blog/surge-protector-mtl-loop-instrumen-4-20-ma/): Panduan memilih surge protector MTL TP48 dan SD series untuk melindungi loop instrumen 4-20 mA dari surja induksi kabel lapangan di area pabrik.
 - [Fungsi Brake Chopper Modul Rectifier Infineon DDB6U](https://alfa.elektrindo.co.id/blog/fungsi-brake-chopper-modul-rectifier-infineon-ddb6u/): Pelajari arsitektur modul penyearah Infineon DDB6U, fungsi proteksi brake chopper IGBT, dan NTC termal pada inverter VFD industri bersama Alfa Elektrindo.
@@ -78,7 +81,6 @@ Kontak dan Konsultasi:
 - [Panduan Fuse High Speed Bussmann 170M dan Ferraz Shawmut](https://alfa.elektrindo.co.id/blog/panduan-fuse-high-speed-bussmann-170m-ferraz-shawmut/): Pelajari panduan memilih fuse high speed Bussmann 170M dan Ferraz Protistor untuk proteksi modul inverter. Dapatkan produk original di Alfa Elektrindo Batam.
 - [Penyebab Modul IGBT Inverter Meledak dan Solusi Penggantian](https://alfa.elektrindo.co.id/blog/penyebab-modul-igbt-inverter-meledak-dan-solusi-penggantian/): Ketahui penyebab modul IGBT inverter meledak dan solusi penggantian seri Infineon serta Mitsubishi di Alfa Elektrindo Batam.
 - [Panduan Modul Daya IXYS MCC MCD MDD dan Penyearah VVZ](https://alfa.elektrindo.co.id/blog/panduan-modul-daya-ixys-mcc-mcd-mdd-penyearah-vvz/): Panduan memilih modul daya IXYS MCC, MCD, MDD, dan penyearah VVZ industri. Pelajari topologi sirkuit dan proteksi komponen di Alfa Elektrindo Batam.
-- [Sensor Arus Closed-Loop LEM LF Series Proteksi Inverter Industri](https://alfa.elektrindo.co.id/blog/sensor-arus-closed-loop-lem-lf-series-proteksi-inverter/): Pelajari keunggulan sensor arus closed loop LEM LF Series untuk proteksi modul IGBT dan inverter motor industri. Konsultasi stok di Alfa Elektrindo Batam.
 
 ## Cakupan 49 Wilayah Layanan Industri di Indonesia
 

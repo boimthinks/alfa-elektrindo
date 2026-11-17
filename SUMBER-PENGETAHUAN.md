@@ -120,7 +120,7 @@ Tagline siap copy-paste untuk heading, CTA, atau caption media sosial. Semua dit
 
 Kategori komponen utama yang tersedia di katalog markdown (nama kategori bersifat kanonik, lihat `PRIORITAS-OPTIMASI-KATALOG.md` bagian 2A):
 
-1. **Semikonduktor Daya** — `IGBT Modules` (91 part), `IGBT Transistors`, `Thyristor Modules` (37 part), `Thyristors` (19 part), `Diodes` (44 part), `Bridge Rectifiers` (14 part). Ini klaster komponen inti: Semikron, Infineon, IXYS, Mitsubishi Electric, Fuji Electric, Starpower, SanRex.
+1. **Semikonduktor Daya** — `IGBT Modules` (97 part), `IGBT Transistors`, `Thyristor Modules` (37 part), `Thyristors` (24 part: termasuk seri KP kapsul 300-1500 A), `Diodes` (44 part), `Bridge Rectifiers` (14 part). Ini klaster komponen inti: Semikron, Infineon, IXYS, Mitsubishi Electric, Fuji Electric, Starpower, SanRex.
 2. **Proteksi Daya** — `Fuses` (64 part: high speed Bussmann 170M, Ferraz Protistor, NH/gG, cartridge, blade) dan `Fuse Holders`. Termasuk klaster semikonduktor fuse aR/IEC 60269-4.
 3. **Sensor Industri** — `Proximity Sensors` (22 part), `Photoelectric Sensors` (21 part), `Distance Sensors`, `Pressure Sensors`, `Pressure Switches`, `Temperature Sensors`, `Sensors`.
 4. **Instrumentasi & Transduser** — `Transducers` (13 part: LEM LF series/closed-loop Hall, Carlo Gavazzi), `Micropulse transducer`.

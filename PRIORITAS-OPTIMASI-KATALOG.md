@@ -18,7 +18,7 @@ Dokumen ini adalah **panduan kerja prioritas utama** di Alfa Elektrindo untuk me
 
 ## 2. Matriks Audit Brand & Series Target
 
-Total katalog awal saat audit: **548 part**. Kondisi akhir **2026-11-11**: **606 part**, **77 artikel blog**, **75 kategori**, **73 brand** (setelah konsolidasi taksonomi kategori & manufacturer serta batch MTL).
+Total katalog awal saat audit: **548 part**. Kondisi akhir **2026-11-17**: **616 part**, **78 artikel blog**, **74 kategori**, **74 brand** (setelah konsolidasi taksonomi kategori & manufacturer, batch MTL, Fuji Electric, dan KP Thyristor).
 
 | No | Brand | Target Series / Prefix | Status di Website | Part yang Tersedia Saat Ini | Rencana Aksi Bertahap |
 |:---|:---|:---|:---|:---|:---|
@@ -45,7 +45,7 @@ Total katalog awal saat audit: **548 part**. Kondisi akhir **2026-11-11**: **606
 | 4 | **SanRex** | `PK` (Thyristor Module) | **Ada (1)** | `PK55FG120` | Input varian PK90, PK110, PK160 |
 | | | `DF` (Diode Module) | **Ada (3)** | `DF50AA160`, `DF100AA160`, `DF150AA160` | Selesai di-input |
 | | | `PWB` (Thyristor Bridge) | **Ada (1)** | `PWB130A40` | Selesai di-input |
-| 5 | **Thyristor** | `KP` (Disc / Hockey Puk) | **Belum Ada (0)** | *(Belum ada file)* | **Prioritas Input**: KP series phase control thyristor |
+| 5 | **Thyristor** | `KP` (Disc / Hockey Puk) | **Ada (5)** | `KP300-16`, `KP500-16`, `KP800-16`, `KP1000-16`, `KP1500-16` | Batch 1 selesai di-input (capsule/press-pack 300 A s.d. 1500 A, VRRM 1600 V). Lanjut kode tegangan tinggi (KP500A kelas 2500-6500 V) dan varian `KK` fast switching |
 | 6 | **LEM** | `LF` (Current Transducer) | **Ada (7)** | `LF 205-S`, `LF 305-S`, `LF 505-S`, `LF 1005-S`, `LF 2005-S`, `LF 310-S`, `LF 510-S` | Batch 1 selesai di-input (200A - 2000A) |
 | 7 | **Telemecanique** | `XS` (Inductive Sensor) | **Ada (10)** | `XS1N18PA349D`, `XS618B1MAL2`, `XS7C1A1PBM8`, `XS8E1A1PAL01M12`, dll. | Artikel pilar troubleshooting terbit (`troubleshooting-sensor-proximity-telemecanique-osisense-xs`) |
 | 8 | **MTL** | `TP` (Field Transmitter SPD) | **Ada (1)** | `MTL TP48` | Batch 1 selesai di-input (field-mounted SPD 2/3/4 kawat, 20 kA) |
@@ -93,6 +93,7 @@ Sejak **2026-11-11** kategori dan brand dikonsolidasi agar setiap halaman arsip 
 - `Wago` (bukan `WAGO Corporation`).
 - `Starpower` (bukan `STARPOWER`).
 - `Ferraz Shawmut` (brand Protistor) dan `Mersen` (NH/gG) tetap dipisah karena lini produk berbeda.
+- `Thyristor` — penanda generik untuk thyristor KP tipe kapsul/press-pack yang dijual tanpa pabrikan tunggal. Arsipnya `/ma/thyristor/`. Kata generik `thyristor` sengaja dimasukkan ke `skipList` autolink agar tidak menaut otomatis ke arsip brand ini di dalam artikel.
 
 ### Redirect URL lama
 
@@ -331,3 +332,25 @@ Setelah menambah part atau artikel baru:
   - `scripts/gen-llms-full.js` diperbaiki: parser frontmatter block scalar (`|-`) kini membaca nilai multi-baris utuh, dan seksi baru **"Daftar Part Tergressor per Brand"** (sic: "Terdaftar") dibangkitkan otomatis dari `src/content/parts`. Part baru Fuji Electric (6MBP seri RH/RA, 2MBI, 6DI, A50L), MTL (TP48, SD07-SD55), dan Infineon DDB6U otomatis masuk. Ukuran file naik dari 411 KB ke 600 KB.
   - `package.json` menambah script `gen:index`, `gen:llms`, `gen:llms-full`, `gen:all`.
   - Deploy produksi sukses (`_deploy_1794553222.zip`). Verifikasi: `llms.txt` 200 (16.453 b), `llms-full.txt` 200 (600.139 b), part baru terdeteksi, section "Data Badan Usaha" dan domain historis `arjunaputrastore.com` terbaca.
+
+- **[2026-11-17]**: Input 5 part number pertama brand **Thyristor** (brand target #5, sebelumnya 0 part) untuk seri `KP` phase control thyristor tipe kapsul/press-pack:
+  - `KP300-16` (300 A / 1600 V, IFSM 3,8 kA, I²t 72,2 kA²s, RTH 0,055 °C/W, klem 5,3-10 kN, outline F3/E2/E4).
+  - `KP500-16` (500 A / 1600 V, IFSM 6,4 kA, I²t 204,8 kA²s, RTH 0,035 °C/W, klem 15-20 kN, outline F4/E4).
+  - `KP800-16` (800 A / 1600 V, IFSM 10 kA, I²t 500 kA²s, RTH 0,032 °C/W, klem 15-20 kN, outline F5/E6).
+  - `KP1000-16` (1000 A / 1600 V, IFSM 13 kA, I²t 845 kA²s, RTH 0,022 °C/W, klem 21-30 kN, outline F6/E7).
+  - `KP1500-16` (1500 A / 1600 V, IFSM 20 kA, I²t 2000 kA²s, RTH 0,017 °C/W, klem 27-34 kN, outline E8/E9).
+  - Semua angka diambil dari tabel "Chinese Type Phase Control Thyristors (Capsule Version)" pada **LJ-MD Catalog 2025** (diodethyristor.com), bukan estimasi. Kode tegangan 16 setara VRRM 1600 V sesuai aturan `code x 100 = VRRM`; I²t dihitung dengan `0,005 x IFSM²` pada 50 Hz. Fitur bersama: proses difusi penuh, gerbang pusat, pendinginan dua sisi, Tjm 125 °C, IGT 35-300 mA, VGT 0,8-3,0 V, dan dV/dt minimal 500-800 V/µs.
+  - Kategori kanonik `Thyristors` bertambah dari 19 menjadi **24 part**, brand baru `Thyristor` aktif di `/ma/thyristor/` dengan 5 produk. Total katalog naik dari 611 menjadi **616 part**.
+  - Gambar produk memakai `/placeholder-product.png` sampai foto kapsul KP asli tersedia.
+  - Kata generik `thyristor` ditambahkan ke `skipList` di `scripts/gen-autolink-terms.js` supaya autolink tidak mengubah setiap kata "Thyristor" di artikel menjadi tautan ke arsip brand. Tautan kategori `Thyristors` tetap berfungsi.
+  - `CONTENT_INDEX.md` disinkronkan (74 kategori, 74 brand, 78 artikel), `autolink-terms.ts` dan `llms.txt` diregenerasi (616 part), build statis SSG **907 halaman** sukses diverifikasi. Kelima URL part, `/ma/thyristor/`, `/ca/thyristors/`, dan sitemap (902 URL) terverifikasi ada di `dist/`.
+  - Catatan lanjutan: varian kode tegangan tinggi (2500-6500 V) dan seri `KK` fast switching belum di-input. Artikel pilar pendukung untuk KP belum ditulis.
+
+- **[2026-11-17]**: Integrasi gambar lokal untuk kelima part KP Thyristor dan terbit artikel pilar pendukungnya.
+  - `public/img/kp300-16.webp`, `kp500-16.webp`, `kp800-16.webp`, `kp1000-16.webp`, dan `kp1500-16.webp` dihubungkan ke masing-masing file part. Tidak ada lagi part KP yang memakai `/placeholder-product.png`. Label tiap foto diperiksa terhadap part number: `KP300A-16` cocok, `KP800A1600` cocok, `KP500A1600V` cocok, sementara `kp1500-16` memakai foto berlabel `KP1500A1800` sehingga keterangan kode tegangan pada bodi kapsul ditambahkan di bagian penjelasan spesifikasi.
+  - Koreksi tabel `KP500-16`: outline diubah dari `F4, E4` menjadi `F5` mengikuti kode `F5*1*` yang tercetak pada kapsul di foto, dan ditambah paragraf dimensi F5 (diameter luar 66 mm, tinggi 17 mm) agar pembeli mencocokkan klem sebelum memesan.
+  - Artikel pilar terbit: `cara-membaca-kode-thyristor-kp-dan-memilih-kapsul` (*Cara Membaca Kode Thyristor KP dan Memilih Kapsul yang Tepat*), 1.539 kata, judul 60 karakter, meta description 157 karakter, 7 H2, seluruh paragraf maksimal 4 kalimat, tanpa em dash dan tanpa huruf tebal. Membahas arti kode KP (angka arus pada heatsink 55 °C dan kode tegangan ×100), penentuan kelas arus dari daya buang nyata, tabel kecocokan outline F3/F4/F5/F6 dengan tekanan klem, pemaralelan thyristor, dan koordinasi sekring aR memakai batas I²t 72,2 hingga 2000 kA²s. Menautkan kelima part KP plus `/ca/thyristors/` dan `/ca/thyristor-capsules/` tidak dipakai karena kategorinya `Thyristors`.
+  - Cover artikel memakai foto produk `public/img/kp1000-16.webp` karena pembuatan gambar AI tidak tersedia di sesi ini.
+  - Perbaikan template `src/pages/blog/[slug].astro`: variabel `randomProducts` sebelumnya dihitung dan dioper ke props tetapi tidak pernah dirender, sehingga tidak ada satu pun artikel yang menaut ke halaman part. Ditambahkan blok **"Produk yang Tersedia"** berisi 6 kartu produk acak tepat di atas blok artikel terkait. Verifikasi: 79 dari 79 artikel kini memuat blok tersebut, menambah jalur internal link dari blog ke katalog part.
+  - `CONTENT_INDEX.md` disinkronkan (74 kategori, 74 brand, 79 artikel), autolink terms `thyristor` tetap di-skip, build statis SSG **908 halaman** sukses diverifikasi. Artikel masuk sitemap, listing `/blog/`, dan seluruh tautan part serta arsip terverifikasi resolve di HTML hasil build.
+  - Catatan: kategori `Thyristors` pada bagian 2A sudah mencakup thyristor stud, disc, dan diskrit, sehingga part KP tidak memerlukan kategori baru.

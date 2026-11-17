@@ -71,9 +71,9 @@ Daftar seluruh kategori komponen elektronik industri yang tersedia di Alfa Elekt
 - [Diodes](https://alfa.elektrindo.co.id/ca/diodes/): Memuat 44 part number terdaftar.
 - [Thyristor Modules](https://alfa.elektrindo.co.id/ca/thyristor-modules/): Memuat 37 part number terdaftar.
 - [Power Supplies](https://alfa.elektrindo.co.id/ca/power-supplies/): Memuat 30 part number terdaftar.
+- [Thyristors](https://alfa.elektrindo.co.id/ca/thyristors/): Memuat 24 part number terdaftar.
 - [Proximity Sensors](https://alfa.elektrindo.co.id/ca/proximity-sensors/): Memuat 22 part number terdaftar.
 - [Photoelectric Sensors](https://alfa.elektrindo.co.id/ca/photoelectric-sensors/): Memuat 21 part number terdaftar.
-- [Thyristors](https://alfa.elektrindo.co.id/ca/thyristors/): Memuat 19 part number terdaftar.
 - [Servo Motor](https://alfa.elektrindo.co.id/ca/servo-motor/): Memuat 17 part number terdaftar.
 - [Drives](https://alfa.elektrindo.co.id/ca/drives/): Memuat 15 part number terdaftar.
 - [Bridge Rectifiers](https://alfa.elektrindo.co.id/ca/bridge-rectifiers/): Memuat 14 part number terdaftar.
@@ -179,7 +179,7 @@ Daftar seluruh kategori komponen elektronik industri yang tersedia di Alfa Elekt
 
 ---
 
-## 5. Portofolio Brand & Produsen Terkemuka (73 Brand)
+## 5. Portofolio Brand & Produsen Terkemuka (74 Brand)
 
 Daftar brand industri global yang didukung oleh CV. Alfa Elektrindo:
 
@@ -221,6 +221,7 @@ Daftar brand industri global yang didukung oleh CV. Alfa Elektrindo:
 - [HellermannTyton](https://alfa.elektrindo.co.id/ma/hellermanntyton/): Menangani 6 part number terdaftar.
 - [Minarik Drives](https://alfa.elektrindo.co.id/ma/minarik-drives/): Menangani 6 part number terdaftar.
 - [SanRex](https://alfa.elektrindo.co.id/ma/sanrex/): Menangani 5 part number terdaftar.
+- [Thyristor](https://alfa.elektrindo.co.id/ma/thyristor/): Menangani 5 part number terdaftar.
 - [MTL](https://alfa.elektrindo.co.id/ma/mtl/): Menangani 5 part number terdaftar.
 - [STMicroelectronics](https://alfa.elektrindo.co.id/ma/stmicroelectronics/): Menangani 5 part number terdaftar.
 - [Mersen](https://alfa.elektrindo.co.id/ma/mersen/): Menangani 4 part number terdaftar.
@@ -976,6 +977,14 @@ Setiap entri di bawah ini diturunkan langsung dari data katalog src/content/part
 - [DF50AA160](https://alfa.elektrindo.co.id/part/df50aa160/) - IGBT Modules. Produk unggulan dari SanRex, yaitu Discrete Semiconductor Modules DF50AA160, memberikan solusi handal untuk kebutuhan di bidang elektronika dan kelistrikan. Keunggulan utama produk ini terletak pada kemampuannya...
 - [PK55FG120](https://alfa.elektrindo.co.id/part/pk55fg120/) - Power Thyristor. Modul PK55FG120 SANREX menawarkan solusi andal untuk pengelolaan daya tinggi dalam berbagai aplikasi industri. Dengan efisiensi tinggi dan kemampuan penanganan arus besar, produk ini tidak hanya mengurangi...
 - [PWB130A40](https://alfa.elektrindo.co.id/part/pwb130a40/) - Thyristor Modules. SanRex PWB130A40 adalah modul thyristor tiga fase yang dirancang khusus untuk aplikasi penyearah tegangan rendah. Modul ini menawarkan arus maju rata-rata (IT(AV)) sebesar 130A per perangkat dan mampu menangani...
+
+**[Thyristor](https://alfa.elektrindo.co.id/ma/thyristor/)** - 5 part terdaftar
+
+- [KP1000-16](https://alfa.elektrindo.co.id/part/kp1000-16/) - Thyristors. KP1000-16 adalah thyristor kontrol fase tipe kapsul dengan arus rata-rata 1000 A pada suhu heatsink 55 °C dan tegangan balik berulang 1600 V. Arus lonjakan 13 kA dan dV/dt minimal 800 V/µs membuatnya sesuai untuk...
+- [KP1500-16](https://alfa.elektrindo.co.id/part/kp1500-16/) - Thyristors. KP1500-16 adalah thyristor kontrol fase tipe kapsul dengan arus rata-rata 1500 A pada suhu heatsink 55 °C dan tegangan balik berulang 1600 V. Arus lonjakan 20 kA dan RTH(j-hs) 0,017 °C/W menjadikannya pilihan untuk...
+- [KP300-16](https://alfa.elektrindo.co.id/part/kp300-16/) - Thyristors. KP300-16 adalah thyristor kontrol fase tipe kapsul dengan arus rata-rata 300 A pada suhu heatsink 55 °C dan tegangan balik berulang 1600 V. Komponen ini memakai proses difusi penuh, struktur gerbang pusat, dan...
+- [KP500-16](https://alfa.elektrindo.co.id/part/kp500-16/) - Thyristors. KP500-16 adalah thyristor kontrol fase tipe kapsul dengan arus rata-rata 500 A pada suhu heatsink 55 °C dan tegangan balik berulang 1600 V. Proses difusi penuh, gerbang pusat, dan pendinginan dua sisi memberi...
+- [KP800-16](https://alfa.elektrindo.co.id/part/kp800-16/) - Thyristors. KP800-16 adalah thyristor kontrol fase tipe kapsul dengan arus rata-rata 800 A pada suhu heatsink 55 °C dan tegangan balik berulang 1600 V. Arus lonjakannya mencapai 10 kA dengan ketahanan dV/dt minimal 800 V/µs....
 
 **[MTL](https://alfa.elektrindo.co.id/ma/mtl/)** - 5 part terdaftar
 
@@ -3353,9 +3362,14 @@ Bagi supervisor pemeliharaan pabrik, engineer instrumentasi kelistrikan, atau di
 
 ---
 
-## 8. Indeks Wawasan Teknis & Artikel Blog Terbit (78 Artikel)
+## 8. Indeks Wawasan Teknis & Artikel Blog Terbit (79 Artikel)
 
 Artikel teknis yang diterbitkan oleh Alfa Elektrindo membahas solusi rekayasa kelistrikan, mitigasi keausan termal semikonduktor, panduan perawatan motor drive, dan integrasi otomasi pabrik:
+
+### [Cara Membaca Kode Thyristor KP dan Memilih Kapsul yang Tepat](https://alfa.elektrindo.co.id/blog/cara-membaca-kode-thyristor-kp-dan-memilih-kapsul/)
+- **URL**: https://alfa.elektrindo.co.id/blog/cara-membaca-kode-thyristor-kp-dan-memilih-kapsul/
+- **Tanggal Rilis**: 2026-11-17
+- **Ringkasan**: Panduan membaca kode thyristor kapsul KP, dari arti angka arus dan kode tegangan sampai kecocokan outline dengan klem heatsink, agar penggantian tidak berakhir dengan kapsul retak.
 
 ### [Panduan Memilih Modul IGBT Fuji Electric 6MBP RH dan RA](https://alfa.elektrindo.co.id/blog/panduan-memilih-modul-igbt-fuji-electric-6mbp-rh-vs-ra/)
 - **URL**: https://alfa.elektrindo.co.id/blog/panduan-memilih-modul-igbt-fuji-electric-6mbp-rh-vs-ra/

@@ -16,7 +16,7 @@ function readBlockScalar(content, key) {
 const categories = new Set();
 const manufacturers = new Set();
 const skipList = [
-  'sensor', 'switch', 'diode', 'capacitor', 'controller', 'drive', 
+  'sensor', 'switch', 'diode', 'thyristor', 'capacitor', 'controller', 'drive',
   'relay', 'module', 'data', 'power', 'filter', 'input', 'output'
 ];
 

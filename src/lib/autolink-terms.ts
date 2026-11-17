@@ -595,6 +595,7 @@ export const skipList = [
   "sensor",
   "switch",
   "diode",
+  "thyristor",
   "capacitor",
   "controller",
   "drive",

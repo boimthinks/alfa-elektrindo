@@ -122,6 +122,29 @@ const schema = JSON.stringify({
             </div>
           </div>
 
+          <!-- Produk terkait (memakai randomProducts yang sudah tersedia) -->
+          {randomProducts.length > 0 && (
+            <div class="mt-20 pt-16 border-t border-divider">
+              <div class="flex items-center gap-6 mb-10">
+                <h3 class="eyebrow text-navy">Produk yang Tersedia</h3>
+                <div class="h-px flex-grow bg-divider"></div>
+              </div>
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {randomProducts.map(product => (
+                  <a href={`/part/${product.slug}/`} class="hard-card overflow-hidden group flex flex-col h-full hover:-translate-y-1 transition-transform duration-300">
+                    <div class="product-image-container h-[110px] !p-3">
+                      <div class="w-full h-full group-hover:scale-105 transition-transform duration-500" style={`background-image: url('${product.fifu_image_url || '/placeholder-product.png'}'); background-size: contain; background-position: center; background-repeat: no-repeat;`}></div>
+                    </div>
+                    <div class="p-4 flex flex-col flex-grow border-t border-divider">
+                      <h4 class="font-mono text-xs font-bold text-navy line-clamp-2 group-hover:text-primary transition-colors leading-snug">{product.title}</h4>
+                      <p class="mt-auto pt-2 text-[9px] font-mono text-gray-400 uppercase tracking-widest">{product.category} · {product.manufacturer}</p>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+
           <!-- Artikel Terkait (setelah CTA) -->
           {otherArticles.length > 0 && (
             <div class="mt-20 pt-16 border-t border-divider">

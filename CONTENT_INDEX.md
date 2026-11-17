@@ -9,9 +9,9 @@ Daftar ini memuat kategori, brand, artikel yang sudah terbit, dan ide artikel ya
 - Diodes (44 part)
 - Thyristor Modules (37 part)
 - Power Supplies (30 part)
+- Thyristors (24 part)
 - Proximity Sensors (22 part)
 - Photoelectric Sensors (21 part)
-- Thyristors (19 part)
 - Servo Motor (17 part)
 - Drives (15 part)
 - Bridge Rectifiers (14 part)
@@ -79,7 +79,7 @@ Daftar ini memuat kategori, brand, artikel yang sudah terbit, dan ide artikel ya
 - Relay Sockets (1 part)
 - Ambient Light Sensors (1 part)
 
-## 2. Brand / Manufacturer (73)
+## 2. Brand / Manufacturer (74)
 - Infineon (62 part)
 - Semikron (38 part)
 - Eaton Bussmann (37 part)
@@ -118,6 +118,7 @@ Daftar ini memuat kategori, brand, artikel yang sudah terbit, dan ide artikel ya
 - HellermannTyton (6 part)
 - Minarik Drives (6 part)
 - SanRex (5 part)
+- Thyristor (5 part)
 - MTL (5 part)
 - STMicroelectronics (5 part)
 - Mersen (4 part)
@@ -154,9 +155,10 @@ Daftar ini memuat kategori, brand, artikel yang sudah terbit, dan ide artikel ya
 - Coherent (1 part)
 - Schneider Electric (1 part) 
  
-## 3. Indeks Artikel Terbit (78)
+## 3. Indeks Artikel Terbit (79)
 | Judul Artikel | Slug | Tanggal |
 | :--- | :--- | :--- |
+| Cara Membaca Kode Thyristor KP dan Memilih Kapsul yang Tepat | cara-membaca-kode-thyristor-kp-dan-memilih-kapsul | 2026-11-17 |
 | Panduan Memilih Modul IGBT Fuji Electric 6MBP RH dan RA | panduan-memilih-modul-igbt-fuji-electric-6mbp-rh-vs-ra | 2026-11-14 |
 | Membedakan Surge Protector MTL TP48 dan SD Series pada Panel Instrumen 4-20 mA | surge-protector-mtl-loop-instrumen-4-20-ma | 2026-11-11 |
 | Fungsi Brake Chopper Modul Rectifier Infineon DDB6U | fungsi-brake-chopper-modul-rectifier-infineon-ddb6u | 2026-11-09 |
