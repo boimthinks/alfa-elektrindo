@@ -408,3 +408,10 @@ Setelah menambah part atau artikel baru:
   - Sesuai aturan humanizer: tanpa em dash, tanpa huruf tebal, paragraf maksimal 4 kalimat, 7 H2.
   - Cover artikel memakai `public/img/penyebab-modul-igbt-inverter-meledak-dan-solusi-penggantian_poco.webp` (foto produk Starpower spesifik belum tersedia).
 - **[2026-11-18]**: Verifikasi Tahap C: `node scripts/gen-content-index.js` (80 artikel) lalu `npm run build` sukses **913 halaman** (naik dari 908), sitemap **908 URL**. JSON-LD `Product` ter-render pada keempat part baru, meta description dan `<title>` artikel Starpower sesuai frontmatter.
+- **[2026-11-18]**: Integrasi gambar produk lokal batch prioritas IGBT:
+  - Part Fuji Electric baru (`6mbp50rta060`, `6mbp50rtb060`, `7mbp50ra060`, `7mbp100ra060`) dihubungkan ke `public/img/<slug>.webp` sesuai nama file gambar yang diunggah. Tidak ada lagi placeholder pada batch Fuji ini.
+  - Part Starpower `GD300HFL120C2ST` dan `GD50HFU120C1S` dihubungkan ke `public/img/starpower-gd300hfl120c2st.webp` dan `gd50hfu120c1s.webp`. Label bodi `GD300HFL120C6S` pada foto GD300 berbeda akhiran dari part number pemesanan, sehingga ditambah paragraf keterangan label di `penjelasan_spesifikasi`. Placeholder IGBT tersisa turun dari 42 menjadi 40 part.
+  - Cover artikel Starpower diduplikasi ke `public/img/modul-igbt-starpower-gd-series-pengganti-ekonomis_poco.webp` agar nama file konsisten dengan slug artikel.
+  - JSON-LD `Product.image` dan `Article.image` terverifikasi merender URL absolut `https://alfa.elektrindo.co.id/img/...` di hasil build.
+- **[2026-11-18]**: Commit `a74864c` dan deploy produksi cPanel DomaiNesia sukses (upload `_deploy_1794986512.zip`, ekstraksi ke `/home/apitowpc/alfa.elektrindo.co.id`, verifikasi index.html OK).
+  - Verifikasi live semuanya HTTP 200: keempat part Fuji baru, kedua part Starpower, artikel pilar Starpower, serta gambar `6mbp50rta060.webp` dan `starpower-gd300hfl120c2st.webp`.
