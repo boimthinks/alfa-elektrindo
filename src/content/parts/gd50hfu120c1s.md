@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   Starpower
 fifu_image_url: |-
-  /placeholder-product.png
+  /img/gd50hfu120c1s.webp
 pendahuluan: |-
   Modul GD50HFU120C1S dari STARPOWER menawarkan kombinasi kinerja tinggi, daya tahan luar biasa, dan efisiensi energi yang mengesankan. Dengan kemampuan untuk mengelola arus hingga 78 ampere dan daya disipasi sebesar 414 watt, modul ini menjadi pilihan ideal untuk aplikasi yang memerlukan pengaturan daya yang presisi. Produk ini unggul dalam mengurangi kehilangan daya, meningkatkan stabilitas operasional, dan mendukung operasi di lingkungan bersuhu tinggi hingga 150 °C.
 spesifikasi: |-

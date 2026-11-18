@@ -6,6 +6,42 @@ Dokumen ini adalah **panduan kerja prioritas utama** di Alfa Elektrindo untuk me
 
 ---
 
+## 0. PRIORITAS UTAMA: IGBT Modules (berlaku sejak 2026-11-17)
+
+**Keputusan strategis: penjualan IGBT didorong lebih dahulu sebelum brand/kategori lain.** Kategori `IGBT Modules` adalah kategori terbesar (±96 part) dengan nilai transaksi tertinggi, dan 70% konversi B2B berasal dari exact part number. Seluruh kapasitas kerja (input part, gambar, artikel pilar) dialokasikan dulu ke klaster IGBT di bawah ini sebelum kembali ke thyristor, dioda, fuse, sensor, atau SPD.
+
+### 0A. Pembersihan gambar placeholder IGBT (PRIORITAS #1 — 42 part teridentifikasi)
+Audit 2026-11-17: masih ada **42 part kategori `IGBT Modules`** memakai `/placeholder-product.png`. Daftar (per brand):
+
+| Brand | Part placeholder |
+|:---|:---|
+| **Infineon** | `FF150R12KS4`, `FF200R12KT4`, `FF200R17KE3`, `FF225R12ME4`, `FF300R12KS4`, `FF300R12ME4-B60`, `FF300R17KE3`, `FF400R12KT3`, `FF400R12KT4`, `FF450R12KE4`, `FF900R12IP4`, `FP10R12YT3`, `FP25R12U1T4`, `FP25R12W2T4`, `FP25R12W2T4_B11`, `FP35R12W2T4`, `FP40R12KE3`, `FP50R12KT3`, `FP50R12KT4`, `FP75R12KT4-B15`, `FS150R17KE3FG-S1`, `FS225R12KE3`, `FS225R12KE3-AGDR-71C-S`, `FS300R12KE3`, `FS300R12KE3-AGDR-72C`, `FS30R06XE3`, `FS450R12KE3-S1`, `FZ600R12KE3`, `FZ2400R12HP4` |
+| **Semikron** | `BSM15GP120`, `BSM35GP120`, `BSM50GP120-2`, `BSM150GB120DN2`, `BSM300GB120DLC`, `BSM100GD120DN2` |
+| **Mitsubishi** | `CM300DY1-24NF` |
+| **Starpower** | `GD50HFU120C1S`, `GD300HFL120C2ST` |
+| **IXYS** | `IXGN400N60A3`, `IXXN110N65B4H1` |
+| **Lainnya** | `P830A3203` |
+
+Urutan pengerjaan: mulai dari **Infineon FF/FS** (sudah punya artikel pilar `penyebab-modul-igbt-inverter-meledak-dan-solusi-penggantian` sehingga trafiknya sudah berjalan), lalu **FP**, lalu **Semikron BSM/SKM**, **Mitsubishi CM**, **Starpower GD**, **IXYS**. Setiap part yang mendapat foto lokal wajib diperiksa labelnya terhadap part number (pola kerja seperti batch KP dan Fuji 2MBI300U2B-060-50).
+
+### 0B. Input part number IGBT yang belum ada (PRIORITAS #2)
+- ~~**Fuji Electric**: `6MBP50RTA060`, `6MBP50RTB060`, `7MBP50RA060`, `7MBP100RA060`.~~ ✅ Selesai 2026-11-18 (total Fuji kini 17 part).
+- **Infineon FP**: lengkapi varian FP lainnya.
+- **Semikron SKM**: tambah varian dual/single pack; **SKiiP**: varian MiniSKiiP.
+- **Starpower GD**: varian lanjutan + konten substitusi ekonomis IGBT.
+
+### 0C. Artikel pilar IGBT (PRIORITAS #3)
+Klaster 3 diperluas menjadi klaster prioritas tunggal IGBT. Target artikel:
+- ~~**Starpower**: artikel pilar pertama (substitusi ekonomis modul IGBT untuk pengganti Infineon/Mitsubishi).~~ ✅ Terbit 2026-11-18 (`modul-igbt-starpower-gd-series-pengganti-ekonomis`).
+- **Infineon FP series**: panduan memilih FP untuk drive kecil-menengah (belum ada artikel dedicated FP).
+- **Semikron SKM/BSM**: panduan penggantian modul IGBT SKM/BSM pada inverter lama.
+- **Mitsubishi CM vs PM**: melengkapi artikel yang sudah terbit dengan sudut pandang substitusi.
+
+### 0D. Brand/kategori lain (ditunda)
+Semua item non-IGBT pada matriks bagian 2 (Semikron SKKT/SKKH/SKKD, SanRex PK, Thyristor KP tegangan tinggi & KK, MTL SD varian, varian TT/DDB, artikel SanRex) **ditunda sampai prioritas 0A-0C selesai**, kecuali ada permintaan pelanggan mendesak.
+
+---
+
 ## 1. Latar Belakang & Masalah
 - **Kebutuhan**: Mengoptimalkan penjualan komponen spesifik untuk brand manufaktur industri terkemuka.
 - **Karakteristik Pencarian Industri (B2B)**: 70% konversi berasal dari pencarian exact part number (`/part/[slug]`), 20% dari brand/kategori (`/ma/[slug]`, `/ca/[slug]`), dan 10% dari artikel edukasi teknis / troubleshooting (`/blog/[slug]`).
@@ -354,3 +390,21 @@ Setelah menambah part atau artikel baru:
   - Perbaikan template `src/pages/blog/[slug].astro`: variabel `randomProducts` sebelumnya dihitung dan dioper ke props tetapi tidak pernah dirender, sehingga tidak ada satu pun artikel yang menaut ke halaman part. Ditambahkan blok **"Produk yang Tersedia"** berisi 6 kartu produk acak tepat di atas blok artikel terkait. Verifikasi: 79 dari 79 artikel kini memuat blok tersebut, menambah jalur internal link dari blog ke katalog part.
   - `CONTENT_INDEX.md` disinkronkan (74 kategori, 74 brand, 79 artikel), autolink terms `thyristor` tetap di-skip, build statis SSG **908 halaman** sukses diverifikasi. Artikel masuk sitemap, listing `/blog/`, dan seluruh tautan part serta arsip terverifikasi resolve di HTML hasil build.
   - Catatan: kategori `Thyristors` pada bagian 2A sudah mencakup thyristor stud, disc, dan diskrit, sehingga part KP tidak memerlukan kategori baru.
+
+- **[2026-11-17]**: **Perubahan arah strategis — IGBT diprioritaskan.** Ditambahkan bagian 0 di atas dokumen: seluruh kapasitas kerja dialihkan ke penjualan IGBT terlebih dahulu (pembersihan 42 gambar placeholder `IGBT Modules`, input part FP/SKM/SKiiP/Fuji/Starpower, artikel pilar Starpower & Infineon FP). Item non-IGBT (SKKT/SKKH, SanRex PK, KP tegangan tinggi, MTL SD varian) ditunda.
+  - Audit cepat: 42 part `IGBT Modules` masih memakai `/placeholder-product.png`, terbesar Infineon (29 part FF/FP/FS/FZ), Semikron BSM (6), Starpower GD (2), IXYS (2), Mitsubishi CM (1), P830A3203 (1). Daftar lengkap ada di bagian 0A.
+
+- **[2026-11-18]**: Eksekusi prioritas IGBT (0B dan 0C). Batch part Fuji Electric 4 part number baru:
+  - `6MBP50RTA060` (600 V / 50 A, R-IPM3 6 in 1 tanpa brake, PC 144 W, VCE(sat) 2,2/2,7 V, IOC 75 A, tDOC 5 µs, Rth(j-c) 0,87 °C/W, fSW 1-20 kHz, massa ±450 g).
+  - `6MBP50RTB060` (600 V / 50 A, IPM-R3 6 in 1 paket P610, PC 144 W, VCE(sat) terminal maks 2,5 V / chip 2,0 V, VF terminal maks 2,6 V / chip 1,6 V, ton 1,2 µs / toff 3,6 µs / trr 0,3 µs, PAV 30 mJ, Rth(j-c) IGBT 0,87 / FWD 1,263 °C/W, imunitas noise 2,0 kV rectangular dan 5,0 kV surge, massa 450 g).
+  - `7MBP50RA060` (600 V / 50 A, R-IPM 7 in 1 paket P610 dengan brake 30 A + FRD, PC 198 W inverter / 120 W brake, IOC inverter 75 A / brake 45 A, TcOH 110-125 °C, tDOC 10 µs / tSC 12 µs, Rth(j-c) IGBT 0,63 / FWD 1,33 / brake 1,04 °C/W, massa 440 g).
+  - `7MBP100RA060` (600 V / 100 A, R-IPM 7 in 1 paket P611 dengan brake 50 A, PC 400 W inverter / 198 W brake, IOC inverter 150 A / brake 75 A, Rth(j-c) IGBT 0,31 / FWD 0,70 / brake 0,63 °C/W, Rth(c-f) 0,05 °C/W, massa 440 g).
+  - Sumber data: datasheet resmi `7MBP50RA060` dan `7MBP100RA060` (Fuji IGBT-IPM R series) serta `6MBP50RTB060` (IPM-R3 series), ditambah Application Manual `REH983a` untuk struktur seri RT/RTB (R-IPM3) dan konfigurasi paket P610/P611. Semua part kategori `IGBT Modules`, brand `Fuji Electric`, gambar sementara `/placeholder-product.png`.
+  - Total part Fuji Electric naik dari 13 menjadi **17 part**.
+- **[2026-11-18]**: Terbit artikel pilar pertama brand **Starpower** (Prioritas 0C): `modul-igbt-starpower-gd-series-pengganti-ekonomis` (*Modul IGBT Starpower GD Series sebagai Pengganti Ekonomis*), judul 58 karakter, meta description 157 karakter.
+  - Membahas posisi Starpower GD series sebagai alternatif pengganti modul Infineon/Mitsubishi, prinsip pencocokan tegangan (wajib kelas sama), arus (kelas sama atau satu tingkat di atas), dan topologi (dual ke dual, sixpack ke sixpack, PIM ke PIM).
+  - Tabel kecocokan 6 part katalog riil: `GD35PIY120C5SN`, `GD50HCU120C8S`, `GD75FFY120C5S`, `GD100PIY120C6SN`, `GD300HFY120C6S`, `GD600HFY120C2S`, dengan pembanding `FF300R12KT4` dan `CM300DY-24T`.
+  - Batasan penggantian (posisi terminal, muatan gerbang, desat protection), prosedur penggantian aman (discharge DC bus, pasta termal 50-100 µm, kunci torsi M5 2,5-4 Nm, uji beban bertahap), dan checklist 7 butir pemesanan.
+  - Sesuai aturan humanizer: tanpa em dash, tanpa huruf tebal, paragraf maksimal 4 kalimat, 7 H2.
+  - Cover artikel memakai `public/img/penyebab-modul-igbt-inverter-meledak-dan-solusi-penggantian_poco.webp` (foto produk Starpower spesifik belum tersedia).
+- **[2026-11-18]**: Verifikasi Tahap C: `node scripts/gen-content-index.js` (80 artikel) lalu `npm run build` sukses **913 halaman** (naik dari 908), sitemap **908 URL**. JSON-LD `Product` ter-render pada keempat part baru, meta description dan `<title>` artikel Starpower sesuai frontmatter.

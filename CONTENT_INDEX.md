@@ -4,7 +4,7 @@ Daftar ini memuat kategori, brand, artikel yang sudah terbit, dan ide artikel ya
 > File ini di-generate otomatis oleh `scripts/gen-content-index.js`. Jangan edit bagian Kategori/Brand/Artikel secara manual; jalankan ulang script setelah ada perubahan katalog atau artikel baru.
 
 ## 1. Kategori Produk (74)
-- IGBT Modules (97 part)
+- IGBT Modules (101 part)
 - Fuses (64 part)
 - Diodes (44 part)
 - Thyristor Modules (37 part)
@@ -89,9 +89,9 @@ Daftar ini memuat kategori, brand, artikel yang sudah terbit, dan ide artikel ya
 - Siemens (22 part)
 - Sick (20 part)
 - Fanuc (18 part)
+- Fuji Electric (17 part)
 - Mitsubishi Electric (16 part)
 - Eaton Cutler Hammer (14 part)
-- Fuji Electric (13 part)
 - Allen Bradley (13 part)
 - TDK Lambda (13 part)
 - Carlo Gavazzi (12 part)
@@ -155,9 +155,10 @@ Daftar ini memuat kategori, brand, artikel yang sudah terbit, dan ide artikel ya
 - Coherent (1 part)
 - Schneider Electric (1 part) 
  
-## 3. Indeks Artikel Terbit (79)
+## 3. Indeks Artikel Terbit (80)
 | Judul Artikel | Slug | Tanggal |
 | :--- | :--- | :--- |
+| Modul IGBT Starpower GD Series sebagai Pengganti Ekonomis | modul-igbt-starpower-gd-series-pengganti-ekonomis | 2026-11-18 |
 | Cara Membaca Kode Thyristor KP dan Memilih Kapsul yang Tepat | cara-membaca-kode-thyristor-kp-dan-memilih-kapsul | 2026-11-17 |
 | Panduan Memilih Modul IGBT Fuji Electric 6MBP RH dan RA | panduan-memilih-modul-igbt-fuji-electric-6mbp-rh-vs-ra | 2026-11-14 |
 | Membedakan Surge Protector MTL TP48 dan SD Series pada Panel Instrumen 4-20 mA | surge-protector-mtl-loop-instrumen-4-20-ma | 2026-11-11 |

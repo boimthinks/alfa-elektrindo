@@ -8,7 +8,7 @@ category: |-
 manufacturer: |-
   Starpower
 fifu_image_url: |-
-  /placeholder-product.png
+  /img/starpower-gd300hfl120c2st.webp
 pendahuluan: |-
   Modul IGBT GD300HFL120C2ST menawarkan solusi ideal untuk berbagai aplikasi yang membutuhkan pengelolaan daya tinggi dengan efisiensi termal unggul dan kemampuan switching cepat. Produk ini dirancang untuk mengurangi kerugian daya secara signifikan, memperpanjang masa pakai sistem, dan memberikan performa stabil pada berbagai kondisi lingkungan yang ekstrem. Dengan keunggulan ini, modul ini menjadi pilihan utama bagi industri yang mengutamakan efisiensi operasional dan pengurangan biaya jangka panjang.
 spesifikasi: |-
@@ -23,6 +23,7 @@ spesifikasi: |-
   Desain Modul : SMD dengan housing berpendingin</p>
 penjelasan_spesifikasi: |-
   <p>Modul <strong>GD300HFL120C2ST</strong> dirancang dengan tegangan maksimum kolektor-emitor (Vce) sebesar <strong>1200V</strong>, yang memastikan kompatibilitas dengan berbagai sistem tegangan tinggi. Dengan kapasitas arus maksimum hingga <strong>300A</strong>, modul ini cocok untuk aplikasi yang memerlukan daya besar seperti inverter tenaga surya, drive motor industri, dan konverter daya.</p>
+  <p>Penandaan pada bodi modul pada foto terbaca GD300HFL120C6S, penandaan varian keluarga GD300HF 1200 V yang sama, sedangkan identitas pemesanan mengikuti part number GD300HFL120C2ST pada halaman ini. Perbedaan akhiran kode menunjukkan varian konfigurasi, sehingga pembeli disarankan mencocokkan part number dengan modul terpasang sebelum memesan.</p>
   <p><strong>Frekuensi switching</strong> yang dapat mencapai <strong>20 kHz</strong> memberikan fleksibilitas untuk berbagai aplikasi dengan tuntutan switching cepat, sekaligus menjaga efisiensi sistem. Kapasitansi input sebesar <strong>7800 pF</strong> memastikan pengoperasian modul yang stabil pada tingkat switching tinggi.</p>
   <p>Untuk mengoptimalkan disipasi panas, modul ini dilengkapi dengan <strong>resistansi termal (Rth)</strong> rendah sebesar <strong>0,125 °C/W</strong>. Desain ini didukung oleh housing berpendingin yang memastikan stabilitas termal pada suhu operasi antara <strong>-40°C hingga 150°C</strong>, menjadikannya ideal untuk lingkungan yang keras dan aplikasi berat.</p>
   <p>Konfigurasi <strong>half-bridge</strong> yang fleksibel memberikan kemudahan integrasi ke dalam berbagai topologi rangkaian daya. Dengan isolasi dielektrik <strong>2500V AC</strong>, modul ini menjamin keselamatan dan keandalan dalam operasi jangka panjang.</p>
