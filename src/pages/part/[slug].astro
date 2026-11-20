@@ -99,7 +99,7 @@ const metaDescription = `Jual ${product.title} ${product.category} ${product.man
             </div>
             <div class="flex items-center justify-between py-4">
               <span class="eyebrow text-gray-400">Manufacturer</span>
-              <a href={`/ma/${(product.manufacturer || '').toLowerCase().replace(/[^a-z0-9]+/g, '-')}/`} class="font-mono text-sm font-bold text-primary text-right hover:text-primary-dark">{product.manufacturer}</a>
+              <a href={`/ma/${(product.manufacturer || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}/`} class="font-mono text-sm font-bold text-primary text-right hover:text-primary-dark">{product.manufacturer}</a>
             </div>
             <div class="flex items-center justify-between py-4">
               <span class="eyebrow text-gray-400">Category</span>

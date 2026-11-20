@@ -62,4 +62,8 @@
   RewriteRule ^ma/epcos-tdk/?$ /ma/epcos/ [R=301,L]
   RewriteRule ^ma/wago-corporation/?$ /ma/wago/ [R=301,L]
   RewriteRule ^ma/semikron-danfoss/?$ /ma/semikron/ [R=301,L]
+
+  # --- Normalisasi double slash (mis. /ma//panasonic/ -> /ma/panasonic/) ---
+  RewriteCond %{REQUEST_URI} ^(.*)//+(.*)$
+  RewriteRule ^ %1/%2 [R=301,L]
 </IfModule>
