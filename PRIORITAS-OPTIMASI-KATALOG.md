@@ -43,6 +43,56 @@ Klaster 3 diperluas menjadi klaster prioritas tunggal IGBT. Target artikel:
 ### 0D. Brand/kategori lain (ditunda)
 Semua item non-IGBT pada matriks bagian 2 (Semikron SKKT/SKKH/SKKD, SanRex PK, Thyristor KP tegangan tinggi & KK, MTL SD varian, varian TT/DDB, artikel SanRex) **ditunda sampai prioritas 0A-0C selesai**, kecuali ada permintaan pelanggan mendesak.
 
+### 0E. Part lama era WordPress yang belum di-input (dari laporan 404 GSC, audit 2026-11-20)
+
+Dari audit 122 URL 404 Google Search Console (2026-11-20), teridentifikasi **33 part number** yang pernah terindeks Google di era WordPress namun **belum ada di katalog Astro**. Saat ini semua URL lama tersebut dialihkan 301 ke arsip brand/kategori terdekat di `public/.htaccess` (blok F). **Setiap kali part di bawah ini di-input, tambahkan redirect 301 spesifik di bagian F `.htaccess`** (pola: `RewriteRule ^part/<slug-lama>/?$ /part/<slug-baru>/ [R=301,L]`) agar pengunjung dari Google jatuh langsung ke halaman part, bukan arsip.
+
+Part dengan padanan slug polos yang sudah ada di katalog (tinggal tambah redirect spesifik): `FF300R12KT4` (`infineon-igbt-ff300r12kt4`), `HMCP050K2C` (`eaton-mccb-hmcp050k2c`), `DF100AA160` (`sanrex-igbt-df100aa160`), `SKM200GB125D` (`semikron-igbt-skm200gb125d`).
+
+Daftar 33 part yang belum di-input (format: part number — brand kanonik — slug URL lama):
+
+| Part Number | Brand kanonik | Kategori disarankan | Slug URL lama (WordPress) |
+|:---|:---|:---|:---|
+| `FS100R12KE3` | Infineon | IGBT Modules | `infineon-igbt-fs100r12ke3` |
+| `FS75R12KE3` | Infineon | IGBT Modules | `infineon-igbt-fs75r12ke3` |
+| `FF450R12KT4` | Infineon | IGBT Modules | `infineon-igbt-ff450r12kt4` |
+| `6MBP150RTM060-10` | Fuji Electric | IGBT Modules | `fuji-electric-igbt-6mbp150rtm060-10` |
+| `7MBR25SA120H-70` | Fuji Electric | IGBT Modules | `fuji-electric-igbt-7mbr25sa120h-70` |
+| `2MBI300P-140-03` | Fuji Electric | IGBT Modules | `fuji-electric-igbt-2mbi300p-140-03` |
+| `PTSA204176-01` | Fuji Electric | IGBT Modules | `fuji-electric-igbt-ptsa204176-01` |
+| `SKB 30-16A1` | Semikron | Bridge Rectifiers | `semikron-bridge-rectifier-skb-30-16a1` |
+| `SKKH 57/16` | Semikron | Thyristor Modules | `semikron-igbt-skkh57-16` |
+| `SKKH 132/16E` | Semikron | Thyristor Modules | `semikron-igbt-skkh-132-16e` |
+| `SKKT 57/08 E` | Semikron | Thyristor Modules | `semikron-thyristor-modules-skkt-57-08e` |
+| `MWI100-12E8` | IXYS | Diodes | `ixys-diode-modules-mwi100-12e8` |
+| `MCC312-18IO1` | IXYS | Thyristor Modules | `ixys-thyristor-modules-mcc312-18io1` |
+| `DD240KB160` | SanRex | Diodes | `sanrex-diode-modules-dd240kb160` |
+| `DF30AA160` | SanRex | Diodes | `sanrex-igbt-df30aa160` |
+| `170M4258` | Eaton Bussmann | Fuses | `bussman-fuse-170m4258` |
+| `170M5146` | Eaton Bussmann | Fuses | `bussmann-fuse-170m5146` |
+| `M50100THA1600-8700` | Crydom | Solid State Relays | `crydom-solid-state-relay-m50100tha1600-8700` |
+| `E6C2-CWZ6C` | Omron | Rotary Encoder | `omron-rotary-encoder-e6c2-cwz6c` |
+| `DZ47sLE` | Delixi | Molded Case Circuit Breakers | `delixi-mcb-dz47sle` |
+| `DCS800-S02-0450-05` | ABB | Drives | `abb-dc-converter-dcs800-s02-0450-05` |
+| `CXA-P1212B-WJL` | TDK-Lambda | Power Supplies | `tdk-inverter-cxa-p1212b-wjl` |
+| `6RX1240-0AK01` | Siemens | PLC | `siemens-communications-board-6rx1240-0ak01` |
+| `PC00661B` | Vacon | Drives | `vacon-inverter-driver-broad-pc00661b` |
+| `MFC200-18` | Hangzhou Touzhi | IGBT Modules | `hangzhou-touzhi-electric-power-module-mfc200-18` |
+| `MDS100B-16` | Siling Electronics | IGBT Modules | `siling-electronics-igbt-mds100b-16` |
+| `IRKT71/12` | IOR | Thyristor Modules | `ior-thyristor-modules-irkt-71-12` |
+| `BKT0005-BKT-67M-005-U-S92` | Balluff | Proximity Sensors | `balluff-sensor-bkt0005-bkt-67m-005-u-s92` |
+| `S5-5-A2-32` | Datalogic | Photoelectric Sensors | `datalogic-sensor-s5-5-a2-32` |
+| `MJ2-1703` | Moujen | Limit Switches | `moujen-limit-switches-mj2-1703` |
+| `HB2E-DC24V-2` | Panasonic | Industrial Relays | `nais-relay-hb2e-dc24v-2` |
+| `A50L-1-0125A` | Toshiba | IGBT Transistors | `toshiba-transistor-module-a50l-1-0125a` |
+| `CAL22SH` | Nagohari Industri | Pneumatic / Coupling | `nagohari-industri-quick-coupling-cal22sh` |
+
+Catatan pengerjaan:
+- Prioritaskan part IGBT/semikonduktor daya (Infineon FS/FF, Fuji 6MBP/2MBI, Semikron SKKH/SKKT, IXYS, SanRex) karena menyambung dengan Prioritas 0A-0C; part aksesori (sensor, relay, coupling) menyusul.
+- Brand di atas yang belum punya arsip aktif (Delixi, Vacon, Datalogic, Moujen, Siling, IOR, Hangzhou Touzhi, Nagohari) akan otomatis muncul di `/ma/[slug]/` begitu part pertama di-input.
+- Semua part baru wajib mengikuti taksonomi kanonik bagian 2A dan alur Tahap A-C.
+
+
 ---
 
 ## 1. Latar Belakang & Masalah
@@ -435,11 +485,17 @@ Setelah menambah part atau artikel baru:
   - Kategori `IGBT Modules` naik dari 101 menjadi **109 part**; brand Semikron 38 menjadi **44 part**; Infineon 61 menjadi **64 part**. Total katalog naik dari 620 menjadi **628 part**.
   - Verifikasi Tahap C: `node scripts/gen-content-index.js` lalu `npm run build` sukses; ke-9 halaman `dist/part/<slug>/index.html` terverifikasi ada. Placeholder IGBT kini **47 part** (39 part lama + 8 part baru; FP25R12W2T4 sudah lama memakai placeholder sehingga tidak menambah hitungan).
   - Catatan lanjutan: gambar produk batch ini perlu difoto dan dicek labelnya (Prioritas 0A), dan artikel pilar Infineon FP (0C) tinggal eksekusi karena bahan dari 9 part baru ini sudah siap.
-- **[2026-11-20]**: Terbit artikel pilar dedicated pertama untuk **Infineon FP series** (Prioritas 0C), via skill `pakar-entity-seo` (riset keyword/entity/outline) dan `penulis-ahli` (penulisan akhir):
-  - Slug: `panduan-memilih-modul-pim-infineon-fp-series`, file `src/content/blog/panduan-memilih-modul-pim-infineon-fp-series.md` (±1.700 kata).
+- **[2026-11-20]**: Terbit artikel pilar dedicated pertama untuk **Infineon FP series** (Prioritas 0C), via skill `pakar-entity-seo` (riset keyword/entity/outline) dan `penulis-ahli` (penulisan akhir):  - Slug: `panduan-memilih-modul-pim-infineon-fp-series`, file `src/content/blog/panduan-memilih-modul-pim-infineon-fp-series.md` (±1.700 kata).
   - Judul: "Panduan Kode Modul PIM Infineon FP Series untuk Drive Motor" (60 karakter), meta description 152 karakter.
   - Sudut pandang non-komoditas: modul FP paling sering salah beli karena housing tidak dicocokkan, bukan salah arus. Isi: anatomi PIM (penyearah B6 + brake chopper + sixpack inverter + NTC), pembacaan kode FP50R12KT4G dengan tabel, komparasi housing EasyPIM 2B (48,0 x 56,7 mm, pin solder/ScrewClamp) vs EconoPIM 2 (45,0 x 107,0 mm) vs EconoPIM 3 (62,0 x 122,0 mm, sekrup), tabel 11 part FP katalog dengan link ke semua halaman part, tiga jebakan pemesanan (KT4 vs KT4G beda housing, _B11 hanya beda pin, trip overvoltage sering karena braking resistor putus), acuan arus modul terhadap daya motor 400 V, prosedur penggantian 5 langkah, checklist 7 butir, CTA WhatsApp 0812-682-6672.
   - Internal link: 11 part FP series (`fp10r12yt3` s.d. `fp75r12kt4-b15`) plus autolink `/ma/infineon/`, `/ca/igbt-modules/`, dan artikel `penyebab-modul-igbt-inverter-meledak-dan-solusi-penggantian`.
   - Cover memakai duplikat `public/img/panduan-memilih-modul-pim-infineon-fp-series_poco.webp` (dari cover artikel IGBT meledak) agar nama file konsisten dengan slug; pembuatan gambar AI sedang tidak tersedia.
   - Sesuai aturan humanizer: tanpa em dash/en dash, tanpa huruf tebal, tanpa titik dua di heading, paragraf maksimal 4 kalimat, H2 utama 7 buah plus satu H3.
   - Verifikasi: `node scripts/gen-content-index.js` (81 artikel) lalu `npm run build` sukses; sitemap 917 URL, `<title>` dan meta description ter-render, JSON-LD `Article.image` absolut, dan seluruh 11 link part + arsip brand/kategori terverifikasi resolve di HTML hasil build. `SUMBER-PENGETAHUAN.md` section 10.1 diperbarui.
+
+- **[2026-11-20]**: **Perbaikan 404 massal dari Google Search Console** (122 URL, mayoritas warisan era WordPress):
+  - `public/.htaccess` ditambah ~100 aturan redirect 301: sisa WordPress (`/feed/`, `/wp-*`, `/wp-json/` → halaman induk), halaman statis lama (`/terms-and-conditions/` → `/terms/`, `/jual/` → `/jual-komponen/`), pagination WP (`/ma/x/page/2/` → `/ma/x/`), taksonomi lama (`/ca/sensor-suhu-non-kontak/` → `/ca/temperature-sensors/`), 40 artikel blog lama → padanan slug Astro, dan 37 part lama → slug polos atau arsip brand terdekat.
+  - Semua target redirect divalidasi script agar tidak ada redirect ke 404 baru.
+  - `public/robots.txt`: disallow `/wp-*`, `/feed/`, dan `?nocache=`.
+  - Terbit halaman 404 kustom `src/pages/404.astro` (tautan cepat Home/Katalog/Brands + CTA WhatsApp) dan `ErrorDocument 404 /404.html` di `.htaccess`; verifikasi live tetap HTTP 404 asli.
+  - Enam part lama belum di-input beserta daftar lengkapnya dikatalogkan di bagian **0E** di atas untuk dikerjakan bertahap.
