@@ -16,6 +16,7 @@ export async function GET() {
     '/terms/',
     '/cookie-policy/',
     '/jual-komponen/',
+    // '/temp/' sengaja dikecualikan: halaman internal untuk pelacakan gambar placeholder
     ...part.map(p => `/part/${p.slug}/`),
     ...blog.map(b => `/blog/${b.slug}/`),
     ...area.map(a => `/area/${a.slug}/`),

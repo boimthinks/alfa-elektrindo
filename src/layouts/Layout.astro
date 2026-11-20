@@ -9,9 +9,10 @@ interface Props {
 	title: string;
 	description?: string;
 	schema?: string;
+	noindex?: boolean;
 }
 
-const { title, description = "Supplier Komponen Elektronik Industri dan Pabrikasi di Batam. Sedia komponen usang dan sulit ditemukan.", schema } = Astro.props;
+const { title, description = "Supplier Komponen Elektronik Industri dan Pabrikasi di Batam. Sedia komponen usang dan sulit ditemukan.", schema, noindex = false } = Astro.props;
 
 // Canonical URL: buang query string (mis. ?nocache=...) dan normalisasi double slash
 const canonicalPath = Astro.url.pathname.replace(/\/{2,}/g, '/');
@@ -29,6 +30,7 @@ const canonicalUrl = `https://alfa.elektrindo.co.id${canonicalPath}`;
 		<title>{title}</title>
 		<meta name="description" content={description} />
 		<link rel="canonical" href={canonicalUrl} />
+		{noindex && <meta name="robots" content="noindex, nofollow" />}
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 		
 		<!-- Open Graph / Facebook -->

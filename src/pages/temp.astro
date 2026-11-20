@@ -1,0 +1,64 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getAllData } from '../lib/data';
+
+export async function getStaticPaths() {
+  // Halaman internal: selalu satu path /temp
+  return [{ params: { slug: undefined } }];
+}
+
+const { part } = await getAllData();
+
+// Part yang masih memakai gambar placeholder (atau tanpa gambar sama sekali)
+const placeholderParts = part
+  .filter(p => !p.fifu_image_url || p.fifu_image_url.includes('placeholder-product'))
+  .sort((a, b) => (a.manufacturer || '').localeCompare(b.manufacturer || '') || a.title.localeCompare(b.title));
+
+const total = placeholderParts.length;
+
+// Kelompokkan per manufacturer agar mudah dikerjakan bertahap
+const byManufacturer = new Map();
+for (const p of placeholderParts) {
+  const key = p.manufacturer || '(Tanpa Manufacturer)';
+  if (!byManufacturer.has(key)) byManufacturer.set(key, []);
+  byManufacturer.get(key).push(p);
+}
+const sortedBrands = [...byManufacturer.entries()].sort((a, b) => b[1].length - a[1].length);
+---
+
+<Layout title={`Daftar Part Placeholder (${total}) | Internal`} description="Halaman internal untuk melacak part yang masih memakai gambar placeholder." noindex={true}>
+  <section class="py-12 bg-paper min-h-screen">
+    <div class="container mx-auto px-4">
+      <div class="hard-card p-8 mb-10">
+        <h1 class="text-2xl font-mono font-bold text-navy uppercase tracking-widest mb-3">Part Placeholder Tracker</h1>
+        <p class="text-gray-600 text-sm mb-4">
+          Halaman internal (noindex). Part dengan gambar placeholder akan otomatis hilang dari daftar ini
+          begitu <code class="bg-gray-100 px-1 rounded">fifu_image_url</code> di frontmatter diisi gambar asli.
+        </p>
+        <div class="flex items-center gap-4 font-mono">
+          <span class="text-4xl font-bold text-primary">{total}</span>
+          <span class="text-sm uppercase tracking-widest text-gray-500">part masih placeholder<br/>dari {part.length} total part</span>
+        </div>
+      </div>
+
+      {sortedBrands.map(([brand, items]) => (
+        <div class="mb-10">
+          <div class="flex items-center gap-4 mb-4">
+            <h2 class="eyebrow text-navy uppercase tracking-widest">{brand}</h2>
+            <span class="text-xs font-mono font-bold text-white bg-primary rounded px-2 py-0.5">{items.length}</span>
+            <div class="h-px flex-grow bg-divider"></div>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {items.map(p => (
+              <a href={`/part/${p.slug}/`} class="hard-card p-3 block hover:border-primary transition-colors">
+                <div class="w-full h-24 mb-2 rounded bg-gray-100 border border-divider" style={`background-image: url('${p.fifu_image_url || '/placeholder-product.png'}'); background-size: contain; background-position: center; background-repeat: no-repeat;`}></div>
+                <div class="font-mono text-xs font-bold text-navy break-words">{p.title}</div>
+                <div class="text-[10px] font-mono text-gray-400 uppercase mt-1">{p.category || '—'}</div>
+              </a>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+</Layout>
