@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="404 - Halaman Tidak Ditemukan | Alfa Elektrindo" description="Halaman tidak ditemukan. Jelajahi katalog komponen elektronik industri Alfa Elektrindo atau hubungi kami via WhatsApp." noindex={true}>
+  <section class="py-20 bg-paper min-h-[60vh]">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <div class="hard-card p-10 md:p-14 text-center shadow-[10px_10px_0_0_rgba(0,122,255,0.18)] relative overflow-hidden">
+        <div class="absolute inset-0 blueprint-grid opacity-30 pointer-events-none"></div>
+
+        <div class="relative z-10">
+          <span class="eyebrow text-gray-400 uppercase tracking-widest">Error Code</span>
+          <h1 class="font-mono font-black text-navy text-7xl md:text-8xl tracking-tighter my-4">
+            4<span class="text-primary">0</span>4
+          </h1>
+          <p class="text-navy font-mono font-bold uppercase tracking-widest text-sm mb-2">Komponen Tidak Ditemukan</p>
+          <p class="text-gray-600 text-sm leading-relaxed max-w-md mx-auto mb-10">
+            Halaman yang Anda cari mungkin sudah dipindahkan, dihapus, atau alamatnya salah.
+            Silakan gunakan tautan cepat di bawah untuk melanjutkan pencarian komponen Anda.
+          </p>
+
+          <div class="flex flex-col sm:flex-row justify-center gap-3 mb-10 font-mono">
+            <a href="/" class="bg-navy text-white px-6 py-3 rounded text-xs font-bold uppercase tracking-widest hover:bg-primary transition-all shadow-hard">
+              Kembali ke Home
+            </a>
+            <a href="/products/" class="bg-white text-navy border border-divider px-6 py-3 rounded text-xs font-bold uppercase tracking-widest hover:border-primary hover:text-primary transition-all">
+              Lihat Katalog
+            </a>
+            <a href="/manufacturers/" class="bg-white text-navy border border-divider px-6 py-3 rounded text-xs font-bold uppercase tracking-widest hover:border-primary hover:text-primary transition-all">
+              Cari Brand
+            </a>
+          </div>
+
+          <div class="border-t border-divider pt-8">
+            <p class="eyebrow text-gray-400 uppercase tracking-widest mb-4">Tidak menemukan part number yang dicari?</p>
+            <p class="text-gray-600 text-sm mb-5">
+              Kami berspesialisasi menyediakan komponen usang dan sulit ditemukan.
+              Kirim part number Anda, tim kami akan cek ketersediaan dan balas cepat.
+            </p>
+            <a href="https://wa.me/628126826672?text=Halo, saya mencari komponen dengan part number: "
+               class="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded text-xs font-bold uppercase tracking-widest shadow-hard hover:opacity-90 transition-all">
+              <span class="material-icons-round">chat</span> Tanya via WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
