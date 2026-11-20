@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
+Disallow: /wp-admin/
+Disallow: /wp-json/
+Disallow: /wp-content/
+Disallow: /wp-includes/
+Disallow: /feed/
+Disallow: /*/feed/
+Disallow: /*?nocache=
 
 Sitemap: https://alfa.elektrindo.co.id/sitemap.xml

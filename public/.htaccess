@@ -1,9 +1,10 @@
 # ============================================================
 # Konfigurasi Apache — alfa.elektrindo.co.id (DomaiNesia cPanel)
-# 1. Redirect 301 — Konsolidasi taksonomi kategori & brand (2026-11-11)
-#    Tujuan: menjaga peringkat URL arsip lama yang digabung/rename
-#    sehingga tidak menghasilkan 404 setelah build ulang.
-# 2. Canonical host: http -> https dan www -> non-www
+# 1. Redirect 301 — URL era WordPress/situs lama -> struktur Astro
+#    (perbaikan laporan 404 Google Search Console, 2026-11-20)
+# 2. Redirect 301 — Konsolidasi taksonomi kategori & brand (2026-11-11)
+# 3. Canonical host: http -> https dan www -> non-www
+# 4. Normalisasi double slash
 # Catatan: JANGAN memakai directive `Options` di shared hosting
 #          DomaiNesia karena dapat memicu HTTP 500.
 # ============================================================
@@ -19,6 +20,127 @@
   # --- Canonical protokol: paksa HTTPS ---
   RewriteCond %{HTTPS} off
   RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+  # --- Normalisasi double slash (mis. /ma//panasonic/ -> /ma/panasonic/) ---
+  RewriteCond %{REQUEST_URI} ^(.*)//+(.*)$
+  RewriteRule ^ %1/%2 [R=301,L]
+
+  # ##########################################################
+  # ###  A. SISA WORDPRESS — CLEANUP TOTAL (2026-11-20)     ###
+  # ##########################################################
+
+  # Feed WordPress (RSS): redirect ke halaman induknya
+  RewriteRule ^blog/[^/]+/feed/?$ /blog/ [R=301,L]
+  RewriteRule ^(ca|ma|area)/[^/]+/feed/?$ /$1/ [R=301,L]
+  RewriteRule ^feed/?$ / [R=301,L]
+
+  # Endpoint & aset WordPress: redirect ke homepage
+  RewriteRule ^wp-json/.*$ / [R=301,L]
+  RewriteRule ^wp-admin/.*$ / [R=301,L]
+  RewriteRule ^wp-login\.php$ / [R=301,L]
+  RewriteRule ^wp-content/.*$ / [R=301,L]
+  RewriteRule ^wp-includes/.*$ / [R=301,L]
+  RewriteRule ^xmlrpc\.php$ / [R=301,L]
+
+  # ##########################################################
+  # ###  B. HALAMAN STATIS LAMA (2026-11-20)                ###
+  # ##########################################################
+
+  RewriteRule ^terms-and-conditions/?$ /terms/ [R=301,L]
+  RewriteRule ^jual/?$ /jual-komponen/ [R=301,L]
+  RewriteRule ^jual/photo-sensor-autonics/?$ /ca/photoelectric-sensors/ [R=301,L]
+
+  # ##########################################################
+  # ###  C. PAGINATION LAMA (WordPress /page/N/)            ###
+  # ##########################################################
+
+  RewriteRule ^(ma|ca|blog|area)/[^/]+/page/[0-9]+/?$ /$1/ [R=301,L]
+  RewriteRule ^(ma|ca|blog|area)/page/[0-9]+/?$ /$1/ [R=301,L]
+
+  # ##########################################################
+  # ###  D. TAKSONOMI LAMA — kategori & brand (2026-11-20)  ###
+  # ##########################################################
+
+  RewriteRule ^ca/sensor-suhu-non-kontak/?$ /ca/temperature-sensors/ [R=301,L]
+  RewriteRule ^ca/power-thyristor/?$ /ca/thyristors/ [R=301,L]
+  RewriteRule ^ca/incremental-rotary-encoder/?$ /ca/rotary-encoder/ [R=301,L]
+
+  # ##########################################################
+  # ###  E. ARTIKEL BLOG LAMA (slug WordPress -> Astro)     ###
+  # ##########################################################
+
+  RewriteRule ^blog/anoda-katoda/?$ /blog/anoda-dan-katoda-pengertian-fungsi-dan-perbedaannya/ [R=301,L]
+  RewriteRule ^apa-itu-switch-debouncer-bagaimanakah-cara-kerjanya/?$ /blog/apa-itu-sistem-otomasi-industri/ [R=301,L]
+  RewriteRule ^dasar-dasar-c-pada-arduino-perangkat-lunak-dan-kelas-kustom/?$ /blog/ac-drives-sifat-dasar-terminologi-dan-teori/ [R=301,L]
+  RewriteRule ^stwbc-ep-dan-stwlc33-solusi-pengisian-daya-nirkabel-15-w-pertama-st/?$ /blog/kenali-penyebab-dan-solusi-sekring-sering-putus/ [R=301,L]
+  RewriteRule ^beralih-ke-berbagai-relay/?$ /blog/allen-bradley-raksasa-industri-otomasi/ [R=301,L]
+  RewriteRule ^tutorial-sekering/?$ /blog/kenali-penyebab-dan-solusi-sekring-sering-putus/ [R=301,L]
+  RewriteRule ^meringankan-aplikasi-desain-kota-yang-bijaksana/?$ /blog/thyristors-untuk-aplikasi-elektronika-daya/ [R=301,L]
+  RewriteRule ^blog/memahami-datasheet-komponen-elektronik/?$ /blog/panduan-praktis-memahami-datasheet-komponen-elektronik/ [R=301,L]
+  RewriteRule ^blog/bagaimana-cara-memilih-kapasitor-yang-tepat-untuk-proyek-anda-/?$ /blog/bagaimana-cara-memilih-kapasitor-yang-tepat-untuk-proyek-anda/ [R=301,L]
+  RewriteRule ^blog/braking-resistor/?$ /blog/braking-resistor-mengoptimalkan-efisiensi-dan-keandalan-sistem-pengendalian-motor/ [R=301,L]
+  RewriteRule ^blog/apa-itu-sistem-otomasi-industri-/?$ /blog/apa-itu-sistem-otomasi-industri/ [R=301,L]
+  RewriteRule ^blog/solusi-sekring-sering-putus/?$ /blog/kenali-penyebab-dan-solusi-sekring-sering-putus/ [R=301,L]
+  RewriteRule ^blog/cara-kerja-igbt/?$ /blog/cara-kerja-igbt-penjelasan-lengkap-dan-aplikasinya-dalam-inverter-serta-saklar-elektronik/ [R=301,L]
+  RewriteRule ^blog/igbt-dan-fungsinya/?$ /blog/pengenalan-dan-fungsi-igbt/ [R=301,L]
+  RewriteRule ^blog/circuit-protection/?$ /blog/panduan-lengkap-tentang-circuit-protection-pentingnya-dan-perkembangannya/ [R=301,L]
+  RewriteRule ^blog/peralatan-input/?$ /blog/peralatan-input-dalam-sistem-otomasi-industri/ [R=301,L]
+  RewriteRule ^blog/mengoptimalkan-efisiensi-daya-dengan-stgsb200m65df2ag/?$ /blog/mengoptimalkan-efisiensi-daya-dengan-stgsb200m65df2ag-igbt-berkinerja-tinggi-untuk-aplikasi-industri-dan-otomotif/ [R=301,L]
+  RewriteRule ^blog/distributor-produk-otomasi/?$ /blog/distributor-otomasi-penghubung-strategis-dalam-dunia-industri-4-0/ [R=301,L]
+  RewriteRule ^blog/kerugian-downtime-mesin-pabrik/?$ /blog/mengurai-kerugian-tersembunyi-akibat-downtime-mesin-pabrik/ [R=301,L]
+  RewriteRule ^blog/kesalahan-instalasi-drive-motor/?$ /blog/5-kesalahan-fatal-dalam-instalasi-drive-motor-dan-cara-mencegahnya/ [R=301,L]
+  RewriteRule ^blog/solusi-komponen-tdk-lambda/?$ /blog/solusi-komponen-tdk-lambda-yang-sulit-ditemukan/ [R=301,L]
+  RewriteRule ^blog/igbt-650v-240a-dalam-industri-dan-otomotif/?$ /blog/optimalisasi-efisiensi-daya-dengan-igbt-650v-240a-dalam-aplikasi-industri-dan-otomotif/ [R=301,L]
+  RewriteRule ^blog/eaton-bussman/?$ /blog/perusahaan-eaton-bussmann-pelopor-perlindungan-sirkuit-listrik/ [R=301,L]
+  RewriteRule ^blog/komponen-elektronik-langka-yang-masih-dicari/?$ /blog/komponen-elektronik-langka-yang-masih-dicari-di-pasar-untuk-industri-dan-pabrikasi/ [R=301,L]
+  RewriteRule ^blog/allen-bradley-powerflex/?$ /blog/allen-bradley-powerflex-solusi-cerdas-untuk-pengendalian-daya/ [R=301,L]
+  RewriteRule ^menyajikan-mtl-barrier-manual/?$ /blog/surge-protector-mtl-loop-instrumen-4-20-ma/ [R=301,L]
+  RewriteRule ^menyajikan-hasil-untuk-sic-mosfet-igbt/?$ /blog/cara-membaca-kode-thyristor-kp-dan-memilih-kapsul/ [R=301,L]
+  RewriteRule ^alat-standar-dalam-memonitor-radiasi/?$ /blog/elektrolit-dalam-elektronik/ [R=301,L]
+  RewriteRule ^emc-fase-tunggal-dengan-koleksi-fmbb-ep-nya/?$ /blog/transformator-dalam-elektronika-daya/ [R=301,L]
+  RewriteRule ^meretas-jembatan-rf-sonoff-433/?$ /blog/cara-kerja-sensor-proximity-kapasitif/ [R=301,L]
+  RewriteRule ^laser-tube-rs2048cjc-pemotongan-laser/?$ /blog/datasheet-komponen-langka-solusi-untuk-mesin-usang/ [R=301,L]
+  RewriteRule ^mencari-pemakaian-tapak-jejak-dengan-openmv-cam-h7-plus/?$ /blog/cara-membaca-kode-thyristor-kp-dan-memilih-kapsul/ [R=301,L]
+  RewriteRule ^sistem-penyaringan-fase-tunggal-berbasis-nanokristalin-komersial-dan-klinis/?$ /blog/braking-resistor-mengoptimalkan-efisiensi-dan-keandalan-sistem-pengendalian-motor/ [R=301,L]
+  RewriteRule ^modul-superkapasitor-eaton-tersedia-dari-newark/?$ /blog/perusahaan-eaton-bussmann-pelopor-perlindungan-sirkuit-listrik/ [R=301,L]
+  RewriteRule ^penerapan-sediakan-daya-pengalih-tegangan-kontinu-bebas-flicker/?$ /blog/transformator-dalam-elektronika-daya/ [R=301,L]
+  RewriteRule ^seeeduino-xiao-papan-ekspansi/?$ /blog/cara-kerja-sensor-proximity-kapasitif/ [R=301,L]
+  RewriteRule ^latar-belakang-tabung-vakum-di-era-jadul/?$ /blog/era-baru-otomasi-industri-teknologi-yang-mengubah-cara-kerja-pabrik-di-indonesia/ [R=301,L]
+  RewriteRule ^sensor-kekuatan-cahaya-tanpa-kabel-sensecap-lorawan-us915mhz/?$ /blog/memahami-sensor-proximity-teknologi-mendeteksi-objek-tanpa-sentuhan/ [R=301,L]
+  RewriteRule ^feature-igbt-module-x-series/?$ /blog/modul-igbt-starpower-gd-series-pengganti-ekonomis/ [R=301,L]
+  RewriteRule ^blog/ketergantungan-industri-batam-terhadap-komponen-elektronik-impor/?$ /blog/ [R=301,L]
+
+  # ##########################################################
+  # ###  F. PART LAMA (slug WordPress -> slug Astro)        ###
+  # ##########################################################
+
+  # Part dengan padanan slug polos di Astro
+  RewriteRule ^part/infineon-igbt-ff300r12kt4/?$ /part/ff300r12kt4/ [R=301,L]
+  RewriteRule ^part/eaton-mccb-hmcp050k2c/?$ /part/hmcp050k2c/ [R=301,L]
+  RewriteRule ^part/omron-rotary-encoder-e6c2-cwz6c/?$ /ma/omron/ [R=301,L]
+
+  # Part lama yang BELUM di-input ke katalog Astro -> arsip brand/kategori terdekat
+  RewriteRule ^part/infineon-igbt-.*$ /ma/infineon/ [R=301,L]
+  RewriteRule ^part/bussman(n)?-fuse-.*$ /ma/eaton-bussmann/ [R=301,L]
+  RewriteRule ^part/semikron-.*$ /ma/semikron/ [R=301,L]
+  RewriteRule ^part/fuji-electric-.*$ /ma/fuji-electric/ [R=301,L]
+  RewriteRule ^part/sanrex-.*$ /ma/sanrex/ [R=301,L]
+  RewriteRule ^part/ixys-.*$ /ma/ixys/ [R=301,L]
+  RewriteRule ^part/crydom-.*$ /ma/crydom/ [R=301,L]
+  RewriteRule ^part/vacon-.*$ /ca/inverter-drive/ [R=301,L]
+  RewriteRule ^part/hangzhou-.*$ /ma/eaton-bussmann/ [R=301,L]
+  RewriteRule ^part/delixi-.*$ /ca/molded-case-circuit-breakers/ [R=301,L]
+  RewriteRule ^part/nagohari-.*$ /ma/smc-corporation/ [R=301,L]
+  RewriteRule ^part/abb-.*$ /ma/abb/ [R=301,L]
+  RewriteRule ^part/balluff-.*$ /ma/balluff/ [R=301,L]
+  RewriteRule ^part/datalogic-.*$ /ca/photoelectric-sensors/ [R=301,L]
+  RewriteRule ^part/ior-.*$ /ca/thyristor-modules/ [R=301,L]
+  RewriteRule ^part/tdk-.*$ /ma/tdk-lambda/ [R=301,L]
+  RewriteRule ^part/siemens-.*$ /ma/siemens/ [R=301,L]
+  RewriteRule ^part/moujen-.*$ /ca/limit-switches/ [R=301,L]
+  RewriteRule ^part/toshiba-.*$ /ma/fanuc/ [R=301,L]
+  RewriteRule ^part/siling-.*$ /ca/igbt-modules/ [R=301,L]
+  RewriteRule ^part/nais-.*$ /ma/panasonic/ [R=301,L]
 
   # --- Kategori: Diodes ---
   RewriteRule ^ca/diode-modul/?$ /ca/diodes/ [R=301,L]
@@ -62,8 +184,4 @@
   RewriteRule ^ma/epcos-tdk/?$ /ma/epcos/ [R=301,L]
   RewriteRule ^ma/wago-corporation/?$ /ma/wago/ [R=301,L]
   RewriteRule ^ma/semikron-danfoss/?$ /ma/semikron/ [R=301,L]
-
-  # --- Normalisasi double slash (mis. /ma//panasonic/ -> /ma/panasonic/) ---
-  RewriteCond %{REQUEST_URI} ^(.*)//+(.*)$
-  RewriteRule ^ %1/%2 [R=301,L]
 </IfModule>
