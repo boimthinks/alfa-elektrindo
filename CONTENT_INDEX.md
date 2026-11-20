@@ -4,7 +4,7 @@ Daftar ini memuat kategori, brand, artikel yang sudah terbit, dan ide artikel ya
 > File ini di-generate otomatis oleh `scripts/gen-content-index.js`. Jangan edit bagian Kategori/Brand/Artikel secara manual; jalankan ulang script setelah ada perubahan katalog atau artikel baru.
 
 ## 1. Kategori Produk (74)
-- IGBT Modules (101 part)
+- IGBT Modules (109 part)
 - Fuses (64 part)
 - Diodes (44 part)
 - Thyristor Modules (37 part)
@@ -80,8 +80,8 @@ Daftar ini memuat kategori, brand, artikel yang sudah terbit, dan ide artikel ya
 - Ambient Light Sensors (1 part)
 
 ## 2. Brand / Manufacturer (74)
-- Infineon (62 part)
-- Semikron (38 part)
+- Infineon (64 part)
+- Semikron (44 part)
 - Eaton Bussmann (37 part)
 - IXYS (37 part)
 - Telemecanique (25 part)
@@ -155,9 +155,10 @@ Daftar ini memuat kategori, brand, artikel yang sudah terbit, dan ide artikel ya
 - Coherent (1 part)
 - Schneider Electric (1 part) 
  
-## 3. Indeks Artikel Terbit (80)
+## 3. Indeks Artikel Terbit (81)
 | Judul Artikel | Slug | Tanggal |
 | :--- | :--- | :--- |
+| Panduan Kode Modul PIM Infineon FP Series untuk Drive Motor | panduan-memilih-modul-pim-infineon-fp-series | 2026-11-20 |
 | Modul IGBT Starpower GD Series sebagai Pengganti Ekonomis | modul-igbt-starpower-gd-series-pengganti-ekonomis | 2026-11-18 |
 | Cara Membaca Kode Thyristor KP dan Memilih Kapsul yang Tepat | cara-membaca-kode-thyristor-kp-dan-memilih-kapsul | 2026-11-17 |
 | Panduan Memilih Modul IGBT Fuji Electric 6MBP RH dan RA | panduan-memilih-modul-igbt-fuji-electric-6mbp-rh-vs-ra | 2026-11-14 |

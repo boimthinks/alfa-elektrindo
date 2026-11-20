@@ -10,30 +10,33 @@ Dokumen ini adalah **panduan kerja prioritas utama** di Alfa Elektrindo untuk me
 
 **Keputusan strategis: penjualan IGBT didorong lebih dahulu sebelum brand/kategori lain.** Kategori `IGBT Modules` adalah kategori terbesar (±96 part) dengan nilai transaksi tertinggi, dan 70% konversi B2B berasal dari exact part number. Seluruh kapasitas kerja (input part, gambar, artikel pilar) dialokasikan dulu ke klaster IGBT di bawah ini sebelum kembali ke thyristor, dioda, fuse, sensor, atau SPD.
 
-### 0A. Pembersihan gambar placeholder IGBT (PRIORITAS #1 — 42 part teridentifikasi)
-Audit 2026-11-17: masih ada **42 part kategori `IGBT Modules`** memakai `/placeholder-product.png`. Daftar (per brand):
+### 0A. Pembersihan gambar placeholder IGBT (PRIORITAS #1 — 47 part teridentifikasi)
+Audit 2026-11-20: masih ada **47 part kategori `IGBT Modules`** memakai `/placeholder-product.png` (39 part sisa audit sebelumnya + 8 part baru batch 0B 2026-11-20 yang belum ada fotonya). Daftar (per brand):
 
 | Brand | Part placeholder |
 |:---|:---|
-| **Infineon** | `FF150R12KS4`, `FF200R12KT4`, `FF200R17KE3`, `FF225R12ME4`, `FF300R12KS4`, `FF300R12ME4-B60`, `FF300R17KE3`, `FF400R12KT3`, `FF400R12KT4`, `FF450R12KE4`, `FF900R12IP4`, `FP10R12YT3`, `FP25R12U1T4`, `FP25R12W2T4`, `FP25R12W2T4_B11`, `FP35R12W2T4`, `FP40R12KE3`, `FP50R12KT3`, `FP50R12KT4`, `FP75R12KT4-B15`, `FS150R17KE3FG-S1`, `FS225R12KE3`, `FS225R12KE3-AGDR-71C-S`, `FS300R12KE3`, `FS300R12KE3-AGDR-72C`, `FS30R06XE3`, `FS450R12KE3-S1`, `FZ600R12KE3`, `FZ2400R12HP4` |
-| **Semikron** | `BSM15GP120`, `BSM35GP120`, `BSM50GP120-2`, `BSM150GB120DN2`, `BSM300GB120DLC`, `BSM100GD120DN2` |
+| **Infineon** | `FF150R12KS4`, `FF200R12KT4`, `FF200R17KE3`, `FF225R12ME4`, `FF300R12KS4`, `FF300R12ME4-B60`, `FF300R17KE3`, `FF400R12KT3`, `FF400R12KT4`, `FF450R12KE4`, `FF900R12IP4`, `FP10R12YT3`, `FP15R12W2T4`*, `FP25R12U1T4`, `FP25R12W2T4`, `FP25R12W2T4_B11`, `FP35R12W2T4`, `FP40R12KE3`, `FP50R12KT3`, `FP50R12KT4`, `FP50R12KT4G`*, `FP75R12KT4-B15`, `FS150R17KE3FG-S1`, `FS225R12KE3`, `FS225R12KE3-AGDR-71C-S`, `FS300R12KE3`, `FS300R12KE3-AGDR-72C`, `FS30R06XE3`, `FS450R12KE3-S1`, `FZ600R12KE3`, `FZ2400R12HP4` |
+| **Semikron** | `BSM15GP120`, `BSM35GP120`, `BSM50GP120-2`, `BSM150GB120DN2`, `BSM300GB120DLC`, `BSM100GD120DN2`, `SKM150GB12T4`*, `SKM200GB12T4`*, `SKM400GB123D`*, `SKM400GB126D`*, `SKiiP 13AC12T4V1`*, `SKiiP 23AC12T4V1`* |
 | **Mitsubishi** | `CM300DY1-24NF` |
 | **Starpower** | `GD50HFU120C1S`, `GD300HFL120C2ST` |
 | **IXYS** | `IXGN400N60A3`, `IXXN110N65B4H1` |
 | **Lainnya** | `P830A3203` |
 
-Urutan pengerjaan: mulai dari **Infineon FF/FS** (sudah punya artikel pilar `penyebab-modul-igbt-inverter-meledak-dan-solusi-penggantian` sehingga trafiknya sudah berjalan), lalu **FP**, lalu **Semikron BSM/SKM**, **Mitsubishi CM**, **Starpower GD**, **IXYS**. Setiap part yang mendapat foto lokal wajib diperiksa labelnya terhadap part number (pola kerja seperti batch KP dan Fuji 2MBI300U2B-060-50).
+Tanda `*` = part baru batch 0B 2026-11-20 yang belum punya foto.
+
+Urutan pengerjaan: mulai dari **Infineon FF/FS** (sudah punya artikel pilar `penyebab-modul-igbt-inverter-meledak-dan-solusi-penggantian` sehingga trafiknya sudah berjalan), lalu **FP**, lalu **Semikron BSM/SKM/SKiiP**, **Mitsubishi CM**, **Starpower GD**, **IXYS**. Setiap part yang mendapat foto lokal wajib diperiksa labelnya terhadap part number (pola kerja seperti batch KP dan Fuji 2MBI300U2B-060-50).
 
 ### 0B. Input part number IGBT yang belum ada (PRIORITAS #2)
 - ~~**Fuji Electric**: `6MBP50RTA060`, `6MBP50RTB060`, `7MBP50RA060`, `7MBP100RA060`.~~ ✅ Selesai 2026-11-18 (total Fuji kini 17 part).
-- **Infineon FP**: lengkapi varian FP lainnya.
-- **Semikron SKM**: tambah varian dual/single pack; **SKiiP**: varian MiniSKiiP.
+- ~~**Infineon FP**: batch 1 (3 part) — `FP15R12W2T4`, `FP25R12W2T4` (ditulis ulang berbasis datasheet), `FP50R12KT4G`.~~ ✅ Selesai 2026-11-20. Lanjut: varian `FP10R12W1T4`, `FP15R12W1T4`, `FP25R12W2T4P`, `FP50R12W2T7`.
+- ~~**Semikron SKM**: batch 1 (4 part) — `SKM150GB12T4`, `SKM200GB12T4`, `SKM400GB123D`, `SKM400GB126D`.~~ ✅ Selesai 2026-11-20. Lanjut: `SKM100GB12T4`, `SKM300GB12T4`, `SKM75GB063D`, `SKM200GB063D`.
+- ~~**SKiiP / MiniSKiiP**: batch 1 (2 part) — `SKiiP 13AC12T4V1` (housing II 1), `SKiiP 23AC12T4V1` (housing II 2).~~ ✅ Selesai 2026-11-20. Lanjut: `SKiiP 24AC12T4V1`, `SKiiP 25AC12T4V1`, `SKiiP 12AC12T4V1`.
 - **Starpower GD**: varian lanjutan + konten substitusi ekonomis IGBT.
 
 ### 0C. Artikel pilar IGBT (PRIORITAS #3)
 Klaster 3 diperluas menjadi klaster prioritas tunggal IGBT. Target artikel:
 - ~~**Starpower**: artikel pilar pertama (substitusi ekonomis modul IGBT untuk pengganti Infineon/Mitsubishi).~~ ✅ Terbit 2026-11-18 (`modul-igbt-starpower-gd-series-pengganti-ekonomis`).
-- **Infineon FP series**: panduan memilih FP untuk drive kecil-menengah (belum ada artikel dedicated FP).
+- ~~**Infineon FP series**: panduan memilih FP untuk drive kecil-menengah (belum ada artikel dedicated FP).~~ ✅ Terbit 2026-11-20 (`panduan-memilih-modul-pim-infineon-fp-series`).
 - **Semikron SKM/BSM**: panduan penggantian modul IGBT SKM/BSM pada inverter lama.
 - **Mitsubishi CM vs PM**: melengkapi artikel yang sudah terbit dengan sudut pandang substitusi.
 
@@ -54,17 +57,17 @@ Semua item non-IGBT pada matriks bagian 2 (Semikron SKKT/SKKH/SKKD, SanRex PK, T
 
 ## 2. Matriks Audit Brand & Series Target
 
-Total katalog awal saat audit: **548 part**. Kondisi akhir **2026-11-17**: **616 part**, **78 artikel blog**, **74 kategori**, **74 brand** (setelah konsolidasi taksonomi kategori & manufacturer, batch MTL, Fuji Electric, dan KP Thyristor).
+Total katalog awal saat audit: **548 part**. Kondisi akhir **2026-11-20**: **628 part**, **80 artikel blog**, **74 kategori**, **74 brand** (setelah konsolidasi taksonomi kategori & manufacturer, batch MTL, Fuji Electric, KP Thyristor, serta batch 0B IGBT Semikron/Infineon).
 
 | No | Brand | Target Series / Prefix | Status di Website | Part yang Tersedia Saat Ini | Rencana Aksi Bertahap |
 |:---|:---|:---|:---|:---|:---|
 | 1 | **Semikron** | `SKN` (Stud Diode Anoda) | **Ada (3)** | `SKN 100/16`, `SKN 240-16`, `SKN 71/12 UNF` | Artikel pilar Klaster 2 terbit (`perbedaan-stud-diode-semikron-skn-dan-skr-pada-heatsink`) |
 | | | `SKR` (Stud Diode Katoda) | **Ada (3)** | `SKR 100/16`, `SKR 26/16`, `SKR 71/16` | Artikel pilar Klaster 2 terbit (`perbedaan-stud-diode-semikron-skn-dan-skr-pada-heatsink`) |
-| | | `SKM` (IGBT Module) | **Ada (6)** | `SKM195GB066D`, `SKM200GB125D`, `SKM400GAL12E4`, `SKM400GB066D`, `SKM400GB125D`, `SKM75GB12T4` | Tambah varian dual/single pack |
+| | | `SKM` (IGBT Module) | **Ada (10)** | `SKM75GB12T4`, `SKM150GB12T4`, `SKM200GB12T4`, `SKM195GB066D`, `SKM200GB125D`, `SKM400GAL12E4`, `SKM400GB066D`, `SKM400GB123D`, `SKM400GB125D`, `SKM400GB126D` | Batch 1 selesai 2026-11-20 (seri T4 1200 V 150/200 A + GB123D/GB126D 400 A). Lanjut varian 600 V dan 1700 V |
 | | | `SKKT` (Thyristor Module) | **Ada (5)** | `SKKT 132/16 E`, `SKKT 57/16 E`, `SKKT 106/16 E`, `SKKT 162/16 E`, `SKKT 250/16 E` | Lengkap varian SEMIPACK 1, 2, 3 |
 | | | `SKKH` (Thyristor/Diode) | **Ada (4)** | `SKKH 107/16 E`, `SKKH 72/16 E`, `SKKH 162/16 E`, `SKKH 250/16 E` | Lengkap varian SEMIPACK 1, 2, 3 |
 | | | `SKKD` (Diode Module) | **Ada (3)** | `SKKD 46/16`, `SKKD 100/16`, `SKKD 162/16` | Lengkap varian SEMIPACK 1 & 2 |
-| | | `SKIIP` (IPM / Intelligent) | **Ada (1)** | `SKiiP 37AC12T4V1` | Input varian MiniSKiiP / SKiiP |
+| | | `SKIIP` (IPM / Intelligent) | **Ada (3)** | `SKiiP 37AC12T4V1`, `SKiiP 13AC12T4V1`, `SKiiP 23AC12T4V1` | Batch 1 MiniSKiiP selesai 2026-11-20 (housing II 1 dan II 2, 1200 V / 25 A nom). Lanjut `SKiiP 24AC12T4V1`, `SKiiP 25AC12T4V1` |
 | | | `SKKE` (Diode Module) | **Ada (4)** | `SKKE 81/16`, `SKKE 162/16`, `SKKE 380/16`, `SKKE 600/16` | Selesai di-input (SEMIPACK 1, 2, 3, 4) |
 | | | `SKVC` (Varistor Module) | **Ada (1)** | `SKVC 20A-460` | Selesai di-input (Modul proteksi MOV) |
 | | | `SKKQ` (Thyristor Module) | **Ada (2)** | `SKKQ 430/14 E`, `SKKQ 560/14 E` | Selesai di-input (SEMIPACK 5 arus besar) |
@@ -74,7 +77,7 @@ Total katalog awal saat audit: **548 part**. Kondisi akhir **2026-11-17**: **616
 | | | `MCD` (Thyristor/Diode) | **Ada (5)** | `MCD 26-16IO1B`, `MCD 44-16IO1B`, `MCD 95-16IO1B`, `MCD 162-16IO1B`, `MCD 312-16IO1` | Selesai di-input (27A s.d. 320A) |
 | | | `VVZ` (Bridge Rectifier) | **Ada (3)** | `VVZ 40-16IO1`, `VVZ 70-16IO7`, `VVZ 110-16IO7` | Selesai di-input (3-phase half-controlled) |
 | 3 | **Infineon** | `FF` (Dual IGBT Module) | **Ada (15)** | `FF150R12KS4`, `FF200R12KT4`, `FF300R12KT4`, `FF450R12KE4`, dll. | Artikel pilar terbit |
-| | | `FP` (Dual IGBT Module) | **Ada (9)** | `FP25R12W2T4`, `FP40R12KE3`, `FP50R12KT4`, `FP75R12KT4-B15`, dll. | Tambah varian FP |
+| | | `FP` (Dual IGBT Module / PIM) | **Ada (12)** | `FP10R12YT3`, `FP15R12W2T4`, `FP25R12W2T4`, `FP25R12U1T4`, `FP25R12W2T4_B11`, `FP35R12W2T4`, `FP40R12KE3`, `FP50R12KT3`, `FP50R12KT4`, `FP50R12KT4G`, `FP75R12KT4-B15` | Batch 1 selesai 2026-11-20 (FP15R12W2T4 baru, FP25R12W2T4 ditulis ulang berbasis datasheet IGBT4, FP50R12KT4G baru). Lanjut varian W1T4, W2T4P, W2T7 |
 | | | `TT` (Thyristor Module) | **Ada (4)** | `TT120N16SOF`, `TT142N16KOF`, `TT285N16KOF`, `TT500N16KOF` | Tambah varian TT |
 | | | `FS` (Sixpack IGBT) | **Ada (5)** | `FS150R17KE3FG-S1`, `FS225R12KE3`, `FS300R12KE3`, `FS450R12KE3-S1`, `FS30R06XE3` | Artikel pilar terbit |
 | | | `DDB` (Diode Bridge) | **Ada (5)** | `DDB6U84N16RR`, `DDB6U104N16RR`, `DDB6U134N16RR`, `DDB6U145N16L`, `DDB6U205N16L` | Batch 1 selesai di-input (EconoBRIDGE™ + IsoPACK™); lanjut varian `DDB6U50N16W1R`, `DDB6U75N16W1R`, `DDB6U30N08VR` |
@@ -415,3 +418,28 @@ Setelah menambah part atau artikel baru:
   - JSON-LD `Product.image` dan `Article.image` terverifikasi merender URL absolut `https://alfa.elektrindo.co.id/img/...` di hasil build.
 - **[2026-11-18]**: Commit `a74864c` dan deploy produksi cPanel DomaiNesia sukses (upload `_deploy_1794986512.zip`, ekstraksi ke `/home/apitowpc/alfa.elektrindo.co.id`, verifikasi index.html OK).
   - Verifikasi live semuanya HTTP 200: keempat part Fuji baru, kedua part Starpower, artikel pilar Starpower, serta gambar `6mbp50rta060.webp` dan `starpower-gd300hfl120c2st.webp`.
+- **[2026-11-20]**: Eksekusi Prioritas 0B batch 1 — input 9 part number baru kategori `IGBT Modules` (Semikron SKM/SKiiP dan Infineon FP), seluruh angka dari datasheet resmi:
+  - Semikron SKM (4 part, half bridge SEMITRANS 3):
+    - `SKM200GB12T4` (1200 V, IC 200 A @ Tc 80 °C, ICRM 600 A, IGBT4 fast trench + CAL4, Tj sampai 175 °C, tpsc 10 µs, Visol AC 2500 V, 106 x 62 x 31 mm).
+    - `SKM150GB12T4` (1200 V, IC maks 232 A @ 25 °C, ICnom 150 A, ICRM 450 A, IGBT4 + CAL4).
+    - `SKM400GB123D` (1200 V, IC 400 A @ 25 °C / 330 A @ 80 °C, ICRM 600 A, Pc 2500 W, trench gate, Tj sampai 150 °C).
+    - `SKM400GB126D` (1200 V, IC 470 A @ 25 °C / ICnom 300 A @ 80 °C, trench gate, UL E63532, 106,4 x 61,4 x 30,5 mm).
+  - Semikron SKiiP MiniSKiiP (2 part, sixpack spring contact):
+    - `SKiiP 13AC12T4V1` (1200 V, IC 41 A / ICnom 25 A, ICRM 75 A, MiniSKiiP II 1, 42 x 40 x 16 mm, VCE(sat) 1,85 V, inverter ±14 kVA / motor ±7,5 kW, UL E63532).
+    - `SKiiP 23AC12T4V1` (1200 V, IC 41 A / ICnom 25 A, MiniSKiiP II 2, 59 x 52 x 16 mm, chip dan arus identik dengan 13AC namun housing beda sehingga tidak saling substitusi).
+  - Infineon FP (3 part, PIM EasyPIM/EconoPIM):
+    - `FP15R12W2T4` (1200 V / 15 A, EasyPIM 2B 48 x 56,7 mm, IGBT4 T4 + Emitter Controlled 4, Ptot 145 W, Cies 890 pF, PIM rectifier + brake chopper + inverter 3 fasa + NTC).
+    - `FP25R12W2T4` — **ditulis ulang total** berbasis datasheet FP25R12W2T4 (Infineon): koreksi judul dari "Fp25r12w2t4" menjadi "FP25R12W2T4", arus dari 39 A menjadi IC nom 25 A, paket dari "EasyPACK 2B" menjadi EasyPIM 2B, format spesifikasi diubah ke tabel HTML standar, klaim tanpa sumber dihapus.
+    - `FP50R12KT4G` (1200 V / 50 A @ 25 °C, ICM 100 A, VCE(sat) 1,85 V @ 25 °C / 2,15 V @ 125 °C, VGE(th) 5,2-6,4 V, EconoPIM 3, IGBT4 + EC4, NTC, RGint 0,05 ohm).
+  - Sumber data: datasheet resmi Semikron (SKM200GB12T4/SKM150GB12T4/SKM400GB123D/SKM400GB126D, SKiiP 13AC12T4V1/SKiiP 23AC12T4V1) dan Infineon (FP50R12KT4G DS rev 1.10, FP15R12W2T4, FP25R12W2T4). Semua part gambar sementara `/placeholder-product.png` (masuk hitungan 0A).
+  - Kategori `IGBT Modules` naik dari 101 menjadi **109 part**; brand Semikron 38 menjadi **44 part**; Infineon 61 menjadi **64 part**. Total katalog naik dari 620 menjadi **628 part**.
+  - Verifikasi Tahap C: `node scripts/gen-content-index.js` lalu `npm run build` sukses; ke-9 halaman `dist/part/<slug>/index.html` terverifikasi ada. Placeholder IGBT kini **47 part** (39 part lama + 8 part baru; FP25R12W2T4 sudah lama memakai placeholder sehingga tidak menambah hitungan).
+  - Catatan lanjutan: gambar produk batch ini perlu difoto dan dicek labelnya (Prioritas 0A), dan artikel pilar Infineon FP (0C) tinggal eksekusi karena bahan dari 9 part baru ini sudah siap.
+- **[2026-11-20]**: Terbit artikel pilar dedicated pertama untuk **Infineon FP series** (Prioritas 0C), via skill `pakar-entity-seo` (riset keyword/entity/outline) dan `penulis-ahli` (penulisan akhir):
+  - Slug: `panduan-memilih-modul-pim-infineon-fp-series`, file `src/content/blog/panduan-memilih-modul-pim-infineon-fp-series.md` (±1.700 kata).
+  - Judul: "Panduan Kode Modul PIM Infineon FP Series untuk Drive Motor" (60 karakter), meta description 152 karakter.
+  - Sudut pandang non-komoditas: modul FP paling sering salah beli karena housing tidak dicocokkan, bukan salah arus. Isi: anatomi PIM (penyearah B6 + brake chopper + sixpack inverter + NTC), pembacaan kode FP50R12KT4G dengan tabel, komparasi housing EasyPIM 2B (48,0 x 56,7 mm, pin solder/ScrewClamp) vs EconoPIM 2 (45,0 x 107,0 mm) vs EconoPIM 3 (62,0 x 122,0 mm, sekrup), tabel 11 part FP katalog dengan link ke semua halaman part, tiga jebakan pemesanan (KT4 vs KT4G beda housing, _B11 hanya beda pin, trip overvoltage sering karena braking resistor putus), acuan arus modul terhadap daya motor 400 V, prosedur penggantian 5 langkah, checklist 7 butir, CTA WhatsApp 0812-682-6672.
+  - Internal link: 11 part FP series (`fp10r12yt3` s.d. `fp75r12kt4-b15`) plus autolink `/ma/infineon/`, `/ca/igbt-modules/`, dan artikel `penyebab-modul-igbt-inverter-meledak-dan-solusi-penggantian`.
+  - Cover memakai duplikat `public/img/panduan-memilih-modul-pim-infineon-fp-series_poco.webp` (dari cover artikel IGBT meledak) agar nama file konsisten dengan slug; pembuatan gambar AI sedang tidak tersedia.
+  - Sesuai aturan humanizer: tanpa em dash/en dash, tanpa huruf tebal, tanpa titik dua di heading, paragraf maksimal 4 kalimat, H2 utama 7 buah plus satu H3.
+  - Verifikasi: `node scripts/gen-content-index.js` (81 artikel) lalu `npm run build` sukses; sitemap 917 URL, `<title>` dan meta description ter-render, JSON-LD `Article.image` absolut, dan seluruh 11 link part + arsip brand/kategori terverifikasi resolve di HTML hasil build. `SUMBER-PENGETAHUAN.md` section 10.1 diperbarui.
